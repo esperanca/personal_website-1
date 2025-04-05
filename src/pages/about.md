@@ -48,6 +48,10 @@ Judge: Categories Health & Wellness, Craft and Innovation - Use of Data
 Talk: Visualizing Processes in DesignOps <br /> 
 [video](https://www.youtube.com/watch?v=0s_kaD_tphs)
 
+**Butter Bootcamp** - London (Remote), Uk  \
+Talk: Don’t leave anything to chance: Planning workshops  \
+[Video](https://www.youtube.com/watch?v=WuXEMNW5jFg)
+
 #### 2021 
 **Remote Design Week** \
 Workshop: Unblocking Asynchronous Creativity
@@ -59,6 +63,7 @@ Talk: Going Fast and Slow
 #### 2019
 **Co-piloto** - Brasília, BR  \
 Oficina: Prototipando Interfaces de Voz 
+
 
 #### 2014
 **Behance Portfolio Reviews** - Brasília, BR  \ 
