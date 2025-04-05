@@ -5,4 +5,4 @@ metaDesc: Equilibrando criatividade e pragmatismo, ajudo equipes multidisciplina
 introImage: images/intro-image.png
 ---
 
-## Equilibrando criatividade e pragmatismo, ajudo equipes multidisciplinares a criar serviços e experiências excelentes.
+## Equilibrando criatividade e pragmatismo, lidero equipes multidisciplinares na criação de serviços online excelentes.
