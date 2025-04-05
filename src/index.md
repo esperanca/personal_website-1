@@ -1,10 +1,8 @@
 ---
 layout: home
-metaTitle: Daniel Souza -  Information Architect and Design Researcher
-metaDesc: Daniel Souza -  Information Architect and Design Researcher. Jiggling
-  creativity and pragmatism, I help multi-disciplinary teams to design & build
-  excellent services and experiences.
+metaTitle: Daniel Souza -  Arquiteto de Informação e Pesquisador de UX
+metaDesc: Equilibrando criatividade e pragmatismo, ajudo equipes multidisciplinares a criar serviços e experiências excelentes.
 introImage: images/intro-image.png
 ---
 
-## Juggling creativity and pragmatism, I help multi-disciplinary teams to design & build excellent services and experiences.
+## Equilibrando criatividade e pragmatismo, ajudo equipes multidisciplinares a criar serviços e experiências excelentes.

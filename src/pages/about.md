@@ -1,23 +1,22 @@
 ---
 layout: layouts/page.njk
-title: About
-permalink: /about/index.html
+title: Sobre
+permalink: /sobre/index.html
 socialImage: "/images/daniel_souza_photo.jpg"
 ---
 ![A photograph of Daniel Souza](/images/daniel_souza_photo.jpg "A photograph of Daniel Souza ")
 
-Design executives and leaders often hire me when they need to scale their design and research teams. Or when they have high-stakes projects that require an experienced, hands-on design lead with business acumen to deliver the impossible.  
+Executivos e líderes de design me contratam quando precisam escalar suas equipes de design e pesquisa. Ou quando um projetos de alto risco exigem um líder de design com atuação prática e visão de negócios. 
 
-I've led product, content and service design teams at Babylon Health, Farfetch and British Telecom. And also worked in consultancies like Publicis Sapient, Isobar and Wunderman.
+Liderei equipes de design de produto, conteúdo e serviços na Babylon Health, Farfetch e British Telecom. Também atuei em consultorias como Publicis Sapient, Isobar e Wunderman.
+Minha experiência abrange diversos setores: serviços financeiros, saúde, mídia, e-commerce e telecomunicações.
 
-My experience covers a range of industries: financial services, healthcare, media, and e-commerce to telecommunications.
+Uma das minhas principais habilidades é aumentar a produtividade das equipes, cultivando um ambiente que favorece a experimentação e a inovação. Meu foco está na criação de segurança psicológica, processos escaláveis e sistemas de apoio robustos.
 
-One of my core strengths is enhancing team productivity by cultivating an environment that promotes experimentation and innovation. I focus on creating psychological safety, scalable processes and robust support systems.
+### Atualmente
+Liderando equipes de design no Itaú Unibanco
 
-### Currently
-Leading design teams at [Itaú Unibanco](https://www.itau.com.br) 
-
-### Highlights: 
+### Destaques: 
 
 **Babylon Health - DNA Design System** \
 [Reducing the time from idea to code by 20%, through design systems adoption](https://danielsouza.org/about/cases/babylon.html)
@@ -56,8 +55,6 @@ Workshop: Unblocking Asynchronous Creativity
 #### 2020 
 **DesignOps Assembly** - London, UK \
 Talk: Going Fast and Slow 
-
-
 
 
 
