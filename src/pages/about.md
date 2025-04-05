@@ -28,7 +28,7 @@ Enabling business to securely share their accounts and reducing task time from 1
 **Banco do Brasil** \
 Adding 2 million monthly visits in 12 months by rethinking how to serve customers online  
 
-### Speaking and interviews
+### Entrevistas, palestras, workshops
 
 #### 2023
 
@@ -56,9 +56,18 @@ Workshop: Unblocking Asynchronous Creativity
 **DesignOps Assembly** - London, UK \
 Talk: Going Fast and Slow 
 
+#### 2019
+**Co-piloto** - Brasília, BR  \
+Oficina: Prototipando Interfaces de Voz 
+
+#### 2014
+**Behance Portfolio Reviews** - Brasília, BR  \ 
+Palestra: Qual a diferença do portfólio de um designer para UX Designer?  \ 
+[Video](https://www.youtube.com/watch?v=SsGyaFkVlak)
+
 #### 2010
 
-**Dia Mundial da Usabilidade** Brasília, DF \
-Palestra: Design de Serviços
+**Dia Mundial da Usabilidade** Brasília, BR \
+Palestra: Design de Serviços  \
 [Video.](https://www.youtube.com/watch?v=ycDuNi215U8) [Slides](https://www.slideshare.net/slideshow/design-de-servios-16297181/16297181)
 
