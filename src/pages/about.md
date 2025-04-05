@@ -56,5 +56,9 @@ Workshop: Unblocking Asynchronous Creativity
 **DesignOps Assembly** - London, UK \
 Talk: Going Fast and Slow 
 
+#### 2010
 
+**Dia Mundial da Usabilidade** Brasília, DF \
+Palestra: Design de Serviços
+[Video.](https://www.youtube.com/watch?v=ycDuNi215U8) [Slides](https://www.slideshare.net/slideshow/design-de-servios-16297181/16297181)
 

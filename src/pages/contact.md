@@ -1,6 +1,6 @@
 ---
-title: 'Contact'
-permalink: '/contact/index.html'
+title: 'Contato'
+permalink: '/contato/index.html'
 layout: 'layouts/contact.njk'
 ---
 
