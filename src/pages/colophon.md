@@ -1,18 +1,32 @@
 ---
 layout: layouts/page.njk
-title: Colophon
+title: Créditos
 permalink: /colophon/index.html
 socialImage: ""
 ---
 
-How we made this website
+## Como esse site foi criado.
 
-This site is designed and written by me, from London. I use Figma, IAWriter and Obsidian. I use a Mac Mini with a Thunderbolt display. I am grateful for the amazing folks that supported me on this project.
+Este site tem o mesmo estilo e tecnologia do [meu site original](https://danielsouza.org) em inglês. 
+Tudo aqui foi desenhado e escrito por mim, mas com a ajuda de várias pessoas. 
 
-The excellent Yuri Del Duca helped me with typography. Typeset used is Playfair Display and Noto Sans, provided by Google Fonts.
+## As adoráveis pessoas que me ajudaram: 
 
-My profile photo was taken by Leiliane Valadares.
+[Yuri Del Duca](https://yuridelduca.com) me deu suporte na tipografia. Usamos Playfair Display para os títulos, e Noto Sans para o corpo. Essas fontes disponíveis no Google Fonts.
 
-The illustration in the home was created by Saulo Cruz. CSS and 11ty implementation by [Yinka Adedire](https://twitter.com/yinkakun).
+Minha foto de perfil na página sobre é da [Leiliane Valadares](https://www.leiliane.com.br).
 
-This site is powered by Hylia and hosted by Netlify
+A ilustração do meu avatar é do [Saulo Cruz](https://www.instagram.com/_saulocruz/). 
+
+A implementação do CSS e 11ty é do Yinka Adedire, com base no tema Hylia de [Andy Bell](https://bell.bz). 
+
+## Detalhes técnicos: 
+Para o versionamento, github. 
+Para o design e desenvolvimento, Figma e VSCode.
+Para escrever, IA Writer e Obsidian.
+Para publicar, netlify. 
+
+
+A última atualização aconteceu em: {{post.data}}
+
+Conteúdos e códigos deste website são livres de inteligência artificial.   

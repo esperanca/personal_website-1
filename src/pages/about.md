@@ -48,31 +48,31 @@ Judge: Categories Health & Wellness, Craft and Innovation - Use of Data
 Talk: Visualizing Processes in DesignOps <br /> 
 [video](https://www.youtube.com/watch?v=0s_kaD_tphs)
 
-**Butter Bootcamp** - London (Remote), Uk  \
+**Butter Bootcamp** - London (Remote), UK  \
 Talk: Don’t leave anything to chance: Planning workshops  \
 [Video](https://www.youtube.com/watch?v=WuXEMNW5jFg)
 
 #### 2021 
-**Remote Design Week** \
+**Remote Design Week**
 Workshop: Unblocking Asynchronous Creativity
 
 #### 2020 
-**DesignOps Assembly** - London, UK \
+**DesignOps Assembly** - London, UK
 Talk: Going Fast and Slow 
 
 #### 2019
-**Co-piloto** - Brasília, BR  \
+**Co-piloto** - Brasília, BR 
 Oficina: Prototipando Interfaces de Voz 
 
 
 #### 2014
-**Behance Portfolio Reviews** - Brasília, BR  \ 
-Palestra: Qual a diferença do portfólio de um designer para UX Designer?  \ 
+**Behance Portfolio Reviews** - Brasília, BR  
+Palestra: Qual a diferença do portfólio de um designer para UX Designer? 
 [Video](https://www.youtube.com/watch?v=SsGyaFkVlak)
 
 #### 2010
 
-**Dia Mundial da Usabilidade** Brasília, BR \
-Palestra: Design de Serviços  \
+**Dia Mundial da Usabilidade** Brasília, BR
+Palestra: Design de Serviços 
 [Video.](https://www.youtube.com/watch?v=ycDuNi215U8) [Slides](https://www.slideshare.net/slideshow/design-de-servios-16297181/16297181)
 
