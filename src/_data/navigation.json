@@ -1,8 +1,8 @@
 {
   "items": [
     {
-      "text": "about",
-      "url": "/about",
+      "text": "sobre",
+      "url": "/sobre",
       "external": false
     },
     {
@@ -11,8 +11,8 @@
       "external": false
     },
     {
-      "text": "contact",
-      "url": "/contact",
+      "text": "contato",
+      "url": "/contato",
       "external": false
     }
   ]
