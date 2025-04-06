@@ -1,12 +1,9 @@
 ---
-title: 'Thank you'
+title: 'Obrigado'
 permalink: '/thank-you/index.html'
 ---
 
-Obrigada!
+Obrigado!
 
-You are all set.
+Eu normalmente respondo meus e-mails no mesmo dia durante a semana. 
 
-I normally send the e-mail the last day of the month. You will get a confirmation in your e-mail in a few minutes.
-
-See you soon.
