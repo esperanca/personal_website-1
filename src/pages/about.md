@@ -4,16 +4,18 @@ title: Sobre
 permalink: /sobre/index.html
 socialImage: "/images/daniel_souza_photo.jpg"
 ---
-Executivos e líderes de design me contratam quando precisam escalar suas equipes de design e pesquisa. Ou quando projetos de alto risco exigem um líder de design com atuação prática, visão de negócios e com capacidade de navegar e direcionar e integrar diversas disciplinas. 
+Executivos e líderes de design me contratam quando precisam escalar suas equipes de design e pesquisa. Ou quando uma iniciativa de alto risco exige um líder de design com atuação prática, visão de negócios e capacidade de direcionar e integrar diversas disciplinas. 
 
-![A photograph of Daniel Souza](/images/daniel_souza_photo_profile_color.jpg "Foto de Daniel Souza ")
+![Foto de Daniel Souza - um homem pardo, de barba média, usando óculos.](/images/daniel_souza_photo_profile_color.jpg "Foto de Daniel Souza ")
 
-Liderei equipes de design de produto, conteúdo e serviços na Babylon Health, Farfetch, British Telecom e na Doctoralia. Também atuei em consultorias como Publicis Sapient, Isobar e Wunderman.
+Liderei equipes de design de produto, conteúdo e serviços na Babylon Health, Farfetch, British Telecom e na Doctoralia. 
+
+Também atuei em consultorias como Publicis Sapient, Isobar e Wunderman.
 
 Uma das minhas principais habilidades é aumentar a produtividade das equipes, cultivando um ambiente que favorece a experimentação e a inovação. 
 
 ### Atualmente
-Liderando equipes de design e experiência no Itaú Unibanco
+Parte da liderança de design no Itaú Unibanco. 
 
 ### Destaques: 
 
