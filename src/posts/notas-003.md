@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-title: "Notas de campo: Lentes de AI, OOUX e Concepts"
+title: "Notas: AI, OOUX e Conceitos"
 date: 2025-03-01T22:04:43.390Z
 tags:
   - danbrown
@@ -11,23 +11,23 @@ tags:
   - orca
 ---
 
-## Objetos, conceitos, lentes: o design antes do design de produto
+## O design antes do design de produto
 
-Se design é política, protótipos são muitas vezes a estrela dos palanques. Um bom protótipo move montanhas. 
+Se design é política, protótipos são muitas vezes a estrela dos palanques. Um bom protótipo move montanhas. Já diziam os irmãos IDEO: 
 
 > “Se uma imagem vale por mil palavras, um protótipo vale por mil reuniões.” — Tom & David Kelley
 
-Mas a vida real dos times de produto é um pouco mais complexa. Um protótipo provavelmente não será suficiente se você não trabalha em uma start-up.   
+Mas a vida real dos times de produto não é tão fácil. Um protótipo provavelmente será suficiente se você trabalha em uma start-up ou em uma empresa pequena. Mas em corporações, tudo é mais complicado.     
 
-Para navegar com calmaria na complexidade, e ser o melhor parceiro dos times de tecnologia, é preciso entender que nem tudo que descreve a experiência cabe na documentação de UI. 
+Para navegar com calmaria na complexidade, e ser o melhor parceiro dos times de tecnologia, é preciso entender que nem tudo que descreve e especifica a experiência cabe na documentação de UI. 
 
-Temos que ampliar nossas caixas de ferramentas, apurar nossa linguagem e fazer o design antes do design.
+Temos que ampliar nossas caixas de ferramentas, apurar nossa linguagem e fazer o "design antes do design".
 
-Designers de serviço conseguem fazer isso muito bem usando a linguagem de jornadas.
+Designers de serviço fazem isso muito bem usando a linguagem de jornadas.
 
-Mas ainda existe um vácuo: o entendimento de como o sistema deve funcionar, e sua relação com os dados.    
+Mas ainda existe um vácuo: o entendimento de como o sistema deve funcionar, e sua relação com os dados e plataformas tecnológicas.  
 
-Antigamente tinha uma galera que só fazia isso: os arquitetos de informação. O trabalho deles era usar sitegramas, fluxos, wireframes, diagramas para modelar websites e portais complexos. Estavam bem próximos do que chamamos de modelagem das estruturas de dados (e metadados).    
+Antigamente tinha um pessoal que só fazia isso: os arquitetos de informação. O trabalho deles era usar sitegramas, fluxos, wireframes, diagramas para modelar websites e portais complexos. Estavam bem próximos do que chamamos de modelagem das estruturas de dados.
 
 Central na ideia de modelagem, quando falamos de ambientes de [informação compartilhados](https://www.linkedin.com/pulse/your-next-design-tool-shared-information-environment-model-davis-zanue/) é descrever as partes do sistema de forma compreensiva. 
 
@@ -61,6 +61,7 @@ Todas essas técnicas, é claro, serão insuficientes sem um entendimento profun
 
  Se o seu desafio é esse, recomendo o trabalho de Indi Young. Curiosamente, ela também usa a palavra Concept de maneira bastante peculiar. Vou escrever sobre isso depois.   
 
-Me parece que temos, de novo, que reinventar UX. E abraçar a complexidade, para conseguir entregar a simplicidade necessária. E para isso, teremos que desaprender e reaprender.   
+Me parece que temos, de novo, que reinventar UX. E abraçar a complexidade, para conseguir entregar a simplicidade necessária. E para isso, teremos que desaprender e reaprender.    
 
 > "Os analfabetos do século 21 não serão aqueles que não sabem ler e escrever, mas aqueles que não conseguem aprender, desaprender e reaprender." - Alvin Tofler.
+
