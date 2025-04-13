@@ -52,26 +52,27 @@ Talk: Don’t leave anything to chance: Planning workshops  \
 [Video](https://www.youtube.com/watch?v=WuXEMNW5jFg)
 
 #### 2021 
-**Remote Design Week**
+**Remote Design Week** <br />
 Workshop: Unblocking Asynchronous Creativity
 
 #### 2020 
-**DesignOps Assembly** - London, UK
+**DesignOps Assembly** - London, UK<br />
 Talk: Going Fast and Slow 
 
 #### 2019
-**Co-piloto** - Brasília, BR 
+**Co-piloto** - Brasília, BR <br />
 Oficina: Prototipando Interfaces de Voz 
 
 
 #### 2014
-**Behance Portfolio Reviews** - Brasília, BR  
-Palestra: Qual a diferença do portfólio de um designer para UX Designer? 
+**Behance Portfolio Reviews** - Brasília, BR  <br />
+Palestra: Qual a diferença do portfólio de um designer para UX Designer? <br />
 [Video](https://www.youtube.com/watch?v=SsGyaFkVlak)
 
 #### 2010
 
-**Dia Mundial da Usabilidade** Brasília, BR
-Palestra: Design de Serviços 
-[Video.](https://www.youtube.com/watch?v=ycDuNi215U8) [Slides](https://www.slideshare.net/slideshow/design-de-servios-16297181/16297181)
+**Dia Mundial da Usabilidade** Brasília, BR <br />
+Palestra: Design de Serviços <br />
+[Video.](https://www.youtube.com/watch?v=ycDuNi215U8) 
+[Slides](https://www.slideshare.net/slideshow/design-de-servios-16297181/16297181)
 
