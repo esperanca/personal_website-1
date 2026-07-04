@@ -1,94 +1,92 @@
----
-layout: false
----
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Revisão anotada — Confiável ou só convincente? Quatro palavras que toda interface de IA precisa responder</title>
+<title>Confiável ou só convincente? Quatro questões que interfaces geradas por IA devem responder</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --ink:#000036;
-  --accent:#0979fa;
-  --white:#ffffff;
-  --gray-2:#d1d0d2;
-  --gray-1:#e8e7e8;
-  --wash:#f5f5f5;
-  --display:"Playfair Display", Georgia, "Times New Roman", serif;
-  --sans:"Noto Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-}
+:root{--ink:#000036;--accent:#0979fa;--white:#ffffff;--gray-2:#d1d0d2;--gray-1:#e8e7e8;--wash:#f5f5f5;--display:"Playfair Display",Georgia,"Times New Roman",serif;--sans:"Noto Sans",system-ui,-apple-system,"Segoe UI",sans-serif;}
 *{box-sizing:border-box;}
 body{margin:0;background:var(--white);color:var(--ink);font-family:var(--sans);font-size:1rem;line-height:1.6;-webkit-font-smoothing:antialiased;}
 h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;}
 ::selection{background:var(--ink);color:#fff;}
-
 .wrapper{max-width:1440px;margin-inline:auto;padding-inline:1.25rem;}
-.inner-wrapper{max-width:90ch;}
-@media (min-width:64em){.wrapper{padding-inline:3rem;}}
-@media (min-width:80em){.wrapper{padding-inline:7.5rem;}}
-
-/* Masthead simplificado */
+@media(min-width:64em){.wrapper{padding-inline:3rem;}}
+@media(min-width:80em){.wrapper{padding-inline:7.5rem;}}
 .site-header{background:var(--ink);color:#fff;font-size:1.125rem;text-transform:uppercase;font-weight:900;padding:1.25rem 0;}
 .site-header__wrapper{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.5rem;}
-.site-header__site-name{text-transform:lowercase;}
-.site-header__counter{font-size:.8rem;font-weight:400;text-transform:none;opacity:.85;}
-
-/* Título e corpo */
-.post{margin-top:2.5rem;margin-bottom:4rem;}
-.post h1{font-size:2.5rem;}
-.meta-info{opacity:.7;margin-top:.75rem;}
-.post__body{font-size:1.125rem;margin-top:1.5rem;}
+.post{margin-top:2.5rem;margin-bottom:5rem;}
+.post h1{font-size:2.5rem;font-family:var(--display);font-weight:400;margin:0;}
+.meta-info{opacity:.7;margin-top:.75rem;font-size:.95rem;}
+.post__body{font-size:1.125rem;margin-top:2rem;max-width:90ch;overflow:visible;position:relative;}
 .post__body p{margin-top:1.5rem;line-height:1.6;}
-.post__body h2{font-size:2.25rem;text-transform:none;margin-top:3rem;}
-.post__body h3{font-size:1.5rem;text-transform:none;margin-top:2rem;}
 .post__body strong{font-weight:bold;font-size:.9em;}
-.post__body a{color:var(--ink);text-decoration-color:var(--accent);text-decoration-thickness:2px;}
+.post__body h2{font-family:var(--display);font-weight:400;font-size:2.25rem;text-transform:capitalize;margin-top:3rem;}
+.post__body ul{margin-top:1.5rem;padding-left:1.5rem;}
+.post__body li{margin-top:.5rem;line-height:1.6;}
+.post__body a{color:inherit;text-decoration:underline;}
+.post__body a:hover{color:var(--accent);}
 .post__body ol{margin-top:1.5rem;padding-left:1.5rem;}
-.post__body ol li{margin-top:.6rem;line-height:1.6;}
-.post__body ul{margin-top:1rem;padding-left:1.5rem;}
-.post__body ul li{margin-top:.6rem;line-height:1.6;}
+.post__body ol li{margin-top:.75rem;}
+.post__body blockquote{font-style:italic;border:1px solid rgba(0,0,0,.1);border-left:5px solid var(--ink);padding:1.25rem .75rem;margin-top:2rem;}
+.post__body blockquote p{opacity:.85;margin-top:0;}
 
-/* Layout em duas colunas: texto + painel de comentários */
-.layout{display:flex;gap:3rem;align-items:flex-start;margin-top:1rem;}
-.post-column{flex:1 1 auto;min-width:0;}
-.comments-panel{flex:0 0 320px;border-left:1px solid var(--gray-1);padding-left:2rem;position:sticky;top:1.5rem;max-height:calc(100vh - 3rem);overflow-y:auto;}
-@media (max-width:900px){
-  .layout{flex-direction:column;}
-  .comments-panel{flex:none;width:100%;border-left:0;border-top:1px solid var(--gray-1);padding-left:0;padding-top:2rem;margin-top:1rem;position:static;max-height:none;}
+/* ── Sidenotes (Tufte-style) ───────────────────────── */
+.sn-input{display:none;}
+.sn-label{
+  font-size:.68em;
+  vertical-align:super;
+  color:var(--accent);
+  font-weight:900;
+  font-family:var(--sans);
+  line-height:0;
+  cursor:default;
+  user-select:none;
 }
-
-.comments-panel-header{display:flex;justify-content:space-between;align-items:baseline;gap:.75rem;}
-.comments-panel h2{font-size:1.4rem;text-transform:capitalize;}
-.export-btn{font-family:var(--display);font-weight:700;font-size:.75rem;border:1px solid var(--ink);border-radius:20px;background:transparent;color:var(--ink);padding:.35rem .9rem;cursor:pointer;white-space:nowrap;transition:opacity .2s ease;}
-.export-btn:hover:not(:disabled){opacity:.6;}
-.export-btn:disabled{opacity:.3;cursor:not-allowed;}
-.comments-empty{opacity:.7;font-size:.9rem;margin-top:.75rem;}
-.comments-list{list-style:none;margin:1rem 0 0;padding:0;display:flex;flex-direction:column;gap:1.1rem;}
-.comment-item{border:1px solid var(--gray-1);padding:.9rem 1rem;cursor:pointer;transition:background .2s ease;}
-.comment-item:hover{background:var(--wash);}
-.comment-item.flash{background:rgba(9,121,250,.12);}
-.comment-type{display:inline-block;background:var(--ink);color:#fff;font-size:.7rem;font-weight:900;text-transform:uppercase;letter-spacing:.03em;padding:.2rem .5rem;}
-.comment-excerpt{font-style:italic;font-size:.85rem;border-left:3px solid var(--ink);padding-left:.6rem;margin:.6rem 0;opacity:.85;}
-.comment-text{font-size:.9rem;margin:.4rem 0 0;}
-.comment-remove{display:inline-block;margin-top:.6rem;background:none;border:0;color:var(--ink);opacity:.6;font-size:.75rem;text-decoration:underline;cursor:pointer;padding:0;font-family:var(--sans);}
-.comment-remove:hover{opacity:1;color:var(--accent);}
-
-/* Highlight no texto */
-mark.highlight{background:rgba(9,121,250,.18);border-bottom:2px solid var(--accent);padding:.05em 0;cursor:pointer;}
-mark.highlight.flash{background:rgba(9,121,250,.42);}
-
-/* Popup de seleção */
-.selection-popup{position:absolute;z-index:1000;width:300px;background:#fff;border:1px solid var(--ink);padding:1rem;box-shadow:0 6px 24px rgba(0,0,54,.18);}
-.selection-popup label{display:block;font-size:.7rem;font-weight:900;text-transform:uppercase;letter-spacing:.03em;margin-bottom:.3rem;}
-.selection-popup select,.selection-popup textarea{width:100%;border:1px solid var(--gray-2);padding:.5rem;font-family:var(--sans);font-size:.9rem;margin-bottom:.75rem;background:#fff;color:var(--ink);}
-.selection-popup textarea{min-height:70px;resize:vertical;}
-.popup-actions{display:flex;justify-content:flex-end;gap:.5rem;}
-.popup-btn{font-family:var(--display);font-weight:700;font-size:.85rem;border:0;border-radius:20px;background:var(--ink);color:#fff;padding:.45rem 1.15rem;cursor:pointer;transition:opacity .2s ease;}
-.popup-btn:hover{opacity:.8;}
-.popup-btn--ghost{background:transparent;color:var(--ink);border:1px solid var(--ink);}
-
+.sidenote{
+  float:right;
+  clear:right;
+  margin-right:-23rem;
+  width:20rem;
+  font-size:.82rem;
+  line-height:1.6;
+  color:var(--ink);
+  opacity:.72;
+  padding-left:.9rem;
+  border-left:2px solid var(--gray-2);
+  margin-top:1.75rem;
+}
+.sidenote .sn-num{
+  font-size:.75em;
+  vertical-align:super;
+  color:var(--accent);
+  font-weight:900;
+  line-height:0;
+  margin-right:.15em;
+}
+@media(max-width:1200px){
+  .sidenote{margin-right:-18rem;width:15.5rem;}
+}
+@media(max-width:860px){
+  .sn-label{cursor:pointer;}
+  .sidenote{
+    display:none;
+    float:none;
+    clear:none;
+    margin:0.5rem 0 0;
+    width:100%;
+    border-left:3px solid var(--accent);
+    border-top:0;
+    padding:.55rem .8rem;
+    background:var(--wash);
+    opacity:1;
+    font-size:.875rem;
+    margin-right:0;
+  }
+  .sn-input:checked + .sidenote{display:block;}
+}
+/* ───────────────────────────────────────────────────── */
 :focus-visible{outline:1px solid var(--ink);}
 </style>
 </head>
@@ -96,353 +94,105 @@ mark.highlight.flash{background:rgba(9,121,250,.42);}
 
 <header class="site-header">
   <div class="wrapper site-header__wrapper">
-    <span class="site-header__site-name">revisão anotada</span>
-    <span class="site-header__counter" id="comment-count">0 comentários</span>
+    <span style="text-transform:lowercase;">prefácio</span>
+    <span style="font-size:.8rem;font-weight:400;text-transform:none;opacity:.85;">Desenhando Confiança · v.0.5</span>
   </div>
 </header>
 
 <main class="wrapper">
   <article class="post">
-    <div class="inner-wrapper">
-      <h1>Confiável ou só convincente? Quatro palavras que toda interface de IA precisa responder</h1>
-      <p class="meta-info">v.0.3 — Aguardando contribuições · 01/07/2026</p>
-      <p class="meta-info">Revisão: Daniel Souza</p>
-      <p class="meta-info">Revisão anotada — artigo do LinkedIn (Pulse), prévia do livro. Selecione qualquer trecho do texto abaixo para marcar um tipo de revisão e adicionar um comentário.</p>
-    </div>
 
-    <div class="layout">
-      <div class="post-column">
-        <div class="inner-wrapper">
-          <div class="post__body" id="text-body">
-            <p>Existe um momento em que tecnologias disruptivas deixam de ser novidade para entusiastas e passam a fazer parte do cotidiano de todo mundo. Geoffrey Moore chamou esse momento de <a href="https://en.wikipedia.org/wiki/Crossing_the_Chasm" target="_blank" rel="noopener">cruzar o abismo</a>. O Gartner descreve uma fase parecida: o <a href="https://www.gartner.com/en/research/methodologies/gartner-hype-cycle" target="_blank" rel="noopener">vale do desencanto</a>. Os nomes vêm de modelos diferentes, mas descrevem o mesmo tipo de território: a tecnologia já é real demais para ignorar, mas ainda estranha o suficiente para assustar.</p>
-            <p>Com a IA generativa não foi diferente. Em alguns casos, essa desconfiança chegou aos tribunais. Em novembro de 2022, Jake Moffatt precisava comprar passagens de última hora para o velório de sua avó. Antes de fechar a compra, perguntou ao chatbot da Air Canada se poderia solicitar a tarifa de luto depois da viagem. O chatbot respondeu que sim. Moffatt comprou as passagens pelo valor cheio e, em seguida, pediu o reembolso parcial. A empresa recusou. Levada a um tribunal canadense, a empresa alegou que o chatbot era uma entidade separada e que não respondia pelo que ele afirmava. Em fevereiro de 2024, <a href="https://www.cbc.ca/news/canada/british-columbia/air-canada-chatbot-lawsuit-1.7116416" target="_blank" rel="noopener">o tribunal rejeitou o argumento</a> e condenou a Air Canada a pagar a diferença, reconhecendo que a empresa responde por todo conteúdo publicado em seu site, incluindo as respostas do chatbot. A decisão se tornou um dos primeiros sinais jurídicos relevantes sobre responsabilidade por respostas automatizadas em interfaces conversacionais.</p>
-            <p>O caso concentra, de uma vez só, os quatro problemas que este texto vai destrinchar:</p>
-            <ul>
-              <li><strong>Transparência</strong> — o chatbot não deixou claro em quais políticas ou informações da empresa estava baseando sua resposta.</li>
-              <li><strong>Explicabilidade</strong> — o chatbot afirmou que o desconto poderia ser solicitado depois da compra, mas não explicou qual regra da empresa sustentava essa conclusão.</li>
-              <li><strong>Verificabilidade</strong> — a resposta não oferecia um link, uma referência ou qualquer forma de confirmar a informação antes da compra.</li>
-              <li><strong>Compreensibilidade</strong> — a resposta era clara e fácil de entender. Justamente por isso, o passageiro confiou nela.</li>
-            </ul>
-            <p>Esses quatro conceitos não são sinônimos nem intercambiáveis, mas camadas complementares na construção da confiança.</p>
+    <h1>Confiável ou só convincente? Quatro questões que interfaces geradas por IA devem responder</h1>
+    <p class="meta-info">v.0.5 · julho 2026 · <a href="mailto:danieliscoding@gmail.com" style="color:inherit;">danieliscoding@gmail.com</a><br>Prefácio do livro <em>Desenhando Confiança</em>.</p>
 
-            <h2>Transparência</h2>
-            <p>Transparência é o grau em que o sistema deixa claro como opera: que dados usa, quais são seus limites, que regras segue, quem responde por ele. A pergunta aqui é diferente: o que está acontecendo por trás da experiência?</p>
-            <p>Essa ideia vem de uma tradição mais larga, de governança e accountability, e aparece com força nas <a href="https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai" target="_blank" rel="noopener">Ethics Guidelines for Trustworthy AI</a> da União Europeia e no <a href="https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf" target="_blank" rel="noopener">AI Risk Management Framework</a> do NIST.</p>
-            <p>Documentar regras não é a mesma coisa que explicar uma decisão. Um sistema pode parecer transparente e, ainda assim, ser opaco.</p>
+    <div class="post__body">
 
-            <h2>Explicabilidade</h2>
-            <p>Explicabilidade é a capacidade de um sistema justificar a própria resposta, decisão ou recomendação. Responde a uma pergunta específica: por que isso aconteceu?</p>
-            <p>O termo ganhou peso com o programa XAI da DARPA, liderado por <a href="https://doi.org/10.1609/aimag.v40i2.2850" target="_blank" rel="noopener">David Gunning e David Aha</a>, e foi refinado depois por pesquisadores como <a href="https://arxiv.org/abs/1706.07269" target="_blank" rel="noopener">Tim Miller</a> e por instituições como o <a href="https://www.nist.gov/publications/four-principles-explainable-artificial-intelligence" target="_blank" rel="noopener">NIST</a>.</p>
-            <p>Um agente explicável não esconde o próprio raciocínio. Mostra os critérios que pesaram na decisão, mesmo que de forma resumida.</p>
+<p>Existe um momento em que uma tecnologia disruptiva deixa de ser novidade para entusiastas e passa a fazer parte do cotidiano de todo mundo: estranha o suficiente para assustar, próxima demais para ignorar<label for="sn-1" class="sn-label">1</label><input type="checkbox" id="sn-1" class="sn-input"/><span class="sidenote"><span class="sn-num">1</span>O Gartner chama esse momento de vale da desilusão: quando o entusiasmo inicial cede à realidade das limitações, e a adoção acontece antes dos critérios para avaliar o que foi adotado.</span>. Interfaces conversacionais chegaram assim.</p>
 
-            <h2>Verificabilidade</h2>
-            <p>Verificabilidade é a possibilidade de checar se uma resposta está correta, sustentada por fontes ou de acordo com critérios definidos. A pergunta que ela responde é direta: isso pode ser confirmado?</p>
-            <p>Vem de uma linhagem antiga: ciência, auditoria, verificação formal em engenharia de software. Ganhou um capítulo recente com a IA generativa, na pesquisa de Nelson F. Liu, Tianyi Zhang e Percy Liang sobre buscadores que respondem com citação de fonte. <a href="https://arxiv.org/abs/2304.09848" target="_blank" rel="noopener">Os três auditaram quatro motores de busca generativos</a> e encontraram um padrão revelador: só 51,5% das frases produzidas tinham sustentação completa nas citações.</p>
-            <p>Na pesquisa de Liu, Zhang e Liang, quase metade das frases passava o teste de fluência sem passar o teste de sustentação. Verificabilidade é a diferença entre os dois testes: a possibilidade de confrontar uma resposta com uma fonte externa e citável, não apenas com a coerência do próprio sistema.</p>
+<p>Em novembro de 2022, Jake Moffatt entrou no site da Air Canada com uma pergunta prática: se ele comprasse passagens de última hora para o velório de sua avó, poderia pedir o desconto de tarifa de luto<label for="sn-2" class="sn-label">2</label><input type="checkbox" id="sn-2" class="sn-input"/><span class="sidenote"><span class="sn-num">2</span>Tarifas de luto (bereavement fares) são descontos que companhias aéreas oferecem a passageiros que precisam viajar com urgência pela morte ou iminência de morte de um familiar próximo. As políticas e requisitos documentais variam por empresa.</span> depois de voltar? Antes de gastar dinheiro, ele quis confirmar as regras. Perguntou ao chatbot e fez uma captura de tela com a resposta. A resposta confirmava que o reembolso poderia ser solicitado depois da viagem. Ele comprou as passagens. Voltou. Pediu o reembolso. Semanas depois, a Air Canada recusou.</p>
 
-            <h2>Compreensibilidade</h2>
-            <p>Compreensibilidade é a qualidade de uma explicação ser entendida pela pessoa certa, no contexto certo, no nível de detalhe certo. A pergunta muda de novo: o usuário entendeu o suficiente para decidir, agir ou contestar?</p>
-            <p><a href="https://arxiv.org/abs/1710.00794" target="_blank" rel="noopener">Derek Doran, Sarah Schulz e Tarek Besold</a> separam sistemas compreensíveis de sistemas apenas interpretáveis. O interpretável produz uma explicação tecnicamente válida; o compreensível produz uma explicação que a pessoa do outro lado consegue usar. <a href="https://arxiv.org/abs/1706.07269" target="_blank" rel="noopener">Tim Miller</a> trouxe as ciências sociais para esse debate, mostrando como humanos processam explicações na prática — não como um sistema deveria, em teoria, produzi-las.</p>
-            <p>Esse é o termo mais próximo do trabalho de um designer de conteúdo. Uma explicação pode estar tecnicamente correta e ainda causar confusão ou desentendimento. O inverso é ainda mais perigoso: uma explicação clara sobre uma informação errada convence com mais eficiência do que uma confusa. Compreensibilidade sem transparência, explicabilidade e verificabilidade não é virtude — é risco.</p>
+<p>Moffatt não deixou por isso mesmo. Nos meses seguintes, trocou e-mails com a companhia, recebeu respostas negativas e decidiu levar o caso ao Civil Resolution Tribunal da British Columbia<label for="sn-3" class="sn-label">3</label><input type="checkbox" id="sn-3" class="sn-input"/><span class="sidenote"><span class="sn-num">3</span>O Civil Resolution Tribunal (CRT) é um tribunal administrativo online da British Columbia, Canadá, para disputas de pequenas causas. Funciona sem audiências presenciais; suas decisões têm força legal equivalente à de um tribunal convencional.</span>. Em fevereiro de 2024, o tribunal condenou a Air Canada a pagar a diferença e registrou algo além da condenação: não havia razão para Moffatt saber que uma parte do site era mais confiável do que outra. A empresa não explicou por que a página de tarifas de luto deveria ser considerada mais autoritativa do que o chatbot.</p>
 
-            <h2>Por que isso importa para designers e para quem constrói agentes generativos</h2>
-            <p>Desenhar para confiança significa decidir, em cada interface e em cada resposta, que tipo de confiança o produto está pedindo da pessoa.</p>
-            <p>O sistema mostra de onde fala? Isso é transparência. Mostra por que respondeu assim? Isso é explicabilidade. Permite conferir se está certo? Isso é verificabilidade. Ajuda a pessoa entender o suficiente para agir? Isso é compreensibilidade.</p>
-            <p>Quando uma interface de IA não responde a essas perguntas, ela ainda pode soar clara, útil e segura. Esse é justamente o problema. A confiança começa quando a resposta deixa de ser apenas convincente e passa a ser confiável.</p>
+<p>A falha documentada no processo não foi ausência de informação. O site tinha informação. O que faltava eram qualidades que a resposta não entregou.</p>
 
-            <h2>Referências</h2>
-            <ol>
-              <li>CBC News (2024). <a href="https://www.cbc.ca/news/canada/british-columbia/air-canada-chatbot-lawsuit-1.7116416" target="_blank" rel="noopener">Air Canada found liable for chatbot's bad advice on bereavement rates</a>.</li>
-              <li>Gunning, D. &amp; Aha, D. (2019). <a href="https://doi.org/10.1609/aimag.v40i2.2850" target="_blank" rel="noopener">DARPA's Explainable Artificial Intelligence (XAI) Program</a>. <em>AI Magazine</em>.</li>
-              <li>Miller, T. (2019). <a href="https://arxiv.org/abs/1706.07269" target="_blank" rel="noopener">Explanation in Artificial Intelligence: Insights from the Social Sciences</a>. <em>Artificial Intelligence</em>.</li>
-              <li>NIST (2021). <a href="https://www.nist.gov/publications/four-principles-explainable-artificial-intelligence" target="_blank" rel="noopener">Four Principles of Explainable Artificial Intelligence (NISTIR 8312)</a>.</li>
-              <li>High-Level Expert Group on AI, Comissão Europeia (2019). <a href="https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai" target="_blank" rel="noopener">Ethics Guidelines for Trustworthy AI</a>.</li>
-              <li>NIST (2023). <a href="https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf" target="_blank" rel="noopener">AI Risk Management Framework (AI RMF 1.0)</a>.</li>
-              <li>Liu, N. F., Zhang, T. &amp; Liang, P. (2023). <a href="https://arxiv.org/abs/2304.09848" target="_blank" rel="noopener">Evaluating Verifiability in Generative Search Engines</a>. <em>Findings of EMNLP</em>.</li>
-              <li>Doran, D., Schulz, S. &amp; Besold, T. R. (2017). <a href="https://arxiv.org/abs/1710.00794" target="_blank" rel="noopener">What Does Explainable AI Really Mean? A New Conceptualization of Perspectives</a>.</li>
-              <li>Moore, G. A. (1991). <em>Crossing the Chasm: Marketing and Selling High-Tech Products to Mainstream Customers</em>. HarperCollins. <a href="https://en.wikipedia.org/wiki/Crossing_the_Chasm" target="_blank" rel="noopener">Ver resumo</a>.</li>
-              <li>Gartner. <a href="https://www.gartner.com/en/research/methodologies/gartner-hype-cycle" target="_blank" rel="noopener">Gartner Hype Cycle Research Methodology</a>.</li>
-            </ol>
-          </div>
-        </div>
-      </div>
+<p>O chatbot da Air Canada era convencional. No fim daquele mesmo novembro, a OpenAI lançou o ChatGPT. Nos anos seguintes, a IA generativa se tornou a base das interfaces conversacionais: sistemas mais fluidos, mais persuasivos, mais difíceis de checar. O problema que levou Moffatt ao tribunal ficou mais comum, não mais raro.</p>
 
-      <aside class="comments-panel" id="comments-panel">
-        <div class="comments-panel-header">
-          <h2>Comentários</h2>
-          <button type="button" id="export-btn" class="export-btn" disabled>Exportar .md</button>
-        </div>
-        <p class="comments-empty" id="comments-empty">Nenhum comentário ainda. Selecione um trecho no texto ao lado.</p>
-        <ul class="comments-list" id="comments-list"></ul>
-      </aside>
+<p>O caso concentra, de uma vez só, os quatro problemas que este texto vai destrinchar:</p>
+
+<ul>
+<li><strong>Transparência</strong> — o chatbot não deixou claro em quais políticas ou informações da empresa estava baseando sua resposta.</li>
+<li><strong>Explicabilidade</strong> — o chatbot afirmou que o desconto poderia ser solicitado depois da compra, mas não explicou qual regra da empresa sustentava essa conclusão.</li>
+<li><strong>Verificabilidade</strong> — a resposta não oferecia um link, uma referência ou qualquer forma de confirmar a informação antes da compra.</li>
+<li><strong>Compreensibilidade</strong> — a resposta era clara e fácil de entender. Justamente por isso, o passageiro confiou nela.</li>
+</ul>
+
+<p>Esses quatro conceitos não são sinônimos nem intercambiáveis, mas camadas complementares na construção da confiança.</p>
+
+<h2>Transparência</h2>
+
+<p>Transparência é o grau em que o sistema deixa claro como opera: que dados usa, quais são seus limites, que regras segue, quem responde por ele.</p>
+
+<p>Essa ideia vem da governança pública e da responsabilidade institucional. Foi incorporada às <a href="https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai">Ethics Guidelines for Trustworthy AI</a> da União Europeia e ao <a href="https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf">AI Risk Management Framework</a> do NIST<label for="sn-4" class="sn-label">4</label><input type="checkbox" id="sn-4" class="sn-input"/><span class="sidenote"><span class="sn-num">4</span>O National Institute of Standards and Technology é uma agência federal americana que desenvolve padrões técnicos e frameworks de gestão de risco.</span> como princípio central.</p>
+
+<blockquote><p>Documentar regras não é a mesma coisa que explicar uma decisão. Um sistema pode parecer transparente e, ainda assim, ser opaco.</p></blockquote>
+
+<p>Um exemplo comum: "Não foi possível aprovar sua solicitação." A interface encerra a conversa. Não revela quais dados foram usados, se havia algum desatualizado, se houve revisão real ou somente uma resposta automática.</p>
+
+<h2>Explicabilidade</h2>
+
+<p>Explicabilidade é a capacidade de um sistema justificar a própria resposta, decisão ou recomendação. Responde a uma pergunta específica: por que isso aconteceu?</p>
+
+<p>O termo ganhou peso com o programa XAI da DARPA<label for="sn-5" class="sn-label">5</label><input type="checkbox" id="sn-5" class="sn-input"/><span class="sidenote"><span class="sn-num">5</span>A Defense Advanced Research Projects Agency é a agência de pesquisa avançada do Departamento de Defesa americano. Seu programa XAI (Explainable AI, 2016–2021) financiou boa parte da pesquisa contemporânea sobre explicabilidade — e estabeleceu a distinção entre modelos de alto desempenho e modelos compreensíveis como um problema de design, não só de engenharia.</span>, liderado por <a href="https://doi.org/10.1609/aimag.v40i2.2850">David Gunning e David Aha</a>, e foi refinado depois por pesquisadores como <a href="https://arxiv.org/abs/1706.07269">Tim Miller</a> e por instituições como o NIST.</p>
+
+<p>Um agente explicável não esconde o próprio raciocínio. Mostra os critérios que pesaram na decisão, mesmo que de forma resumida.</p>
+
+<h2>Verificabilidade</h2>
+
+<p>Verificabilidade é a possibilidade de checar se uma resposta está correta, sustentada por fontes ou de acordo com critérios definidos. A pergunta que ela responde é direta: isso pode ser confirmado?</p>
+
+<p>Vem de uma linhagem antiga: ciência, auditoria, verificação formal em engenharia de software. Ganhou um capítulo recente com a IA generativa, na pesquisa de Nelson F. Liu, Tianyi Zhang e Percy Liang sobre buscadores que respondem com citação de fonte. <a href="https://arxiv.org/abs/2304.09848">Os três auditaram quatro motores de busca generativos</a> e encontraram um padrão revelador: só 51,5% das frases produzidas tinham sustentação completa nas citações.</p>
+
+<p>Quase metade das frases passava o teste de fluência sem passar o teste de sustentação. Verificabilidade é a diferença entre os dois testes: a possibilidade de confrontar uma resposta com uma fonte externa e citável, não apenas com a coerência do próprio sistema.</p>
+
+<h2>Compreensibilidade</h2>
+
+<p>Compreensibilidade é a qualidade de uma explicação ser entendida pela pessoa certa, no contexto certo, no nível de detalhe certo. A pergunta muda de novo: o usuário entendeu o suficiente para decidir, agir ou contestar?</p>
+
+<p><a href="https://arxiv.org/abs/1710.00794">Derek Doran, Sarah Schulz e Tarek Besold</a> separam sistemas compreensíveis de sistemas apenas interpretáveis. O interpretável produz uma explicação tecnicamente válida; o compreensível produz uma explicação que a pessoa do outro lado consegue usar. <a href="https://arxiv.org/abs/1706.07269">Tim Miller</a> trouxe as ciências sociais para esse debate, mostrando como humanos processam explicações na prática — não como um sistema deveria, em teoria, produzi-las.</p>
+
+<p>Esse é o termo mais próximo do trabalho de um designer de conteúdo. Uma explicação pode estar tecnicamente correta e ainda causar confusão. O inverso é mais perigoso: uma explicação clara sobre uma informação errada convence com mais eficiência do que uma confusa. Compreensibilidade sem transparência, explicabilidade e verificabilidade não é virtude — é risco.</p>
+
+<h2>Por que isso importa para designers e para quem constrói agentes generativos</h2>
+
+<p>Desenhar para confiança significa decidir, em cada interface e em cada resposta, que tipo de confiança o produto está pedindo da pessoa.</p>
+
+<p>O sistema mostra de onde fala? Isso é transparência. Mostra por que respondeu assim? Isso é explicabilidade. Permite conferir se está certo? Isso é verificabilidade. Ajuda a pessoa entender o suficiente para agir? Isso é compreensibilidade.</p>
+
+<p>Quando uma interface de IA não responde a essas perguntas, ela ainda pode soar clara, útil e segura. Esse é justamente o problema. A confiança começa quando a resposta deixa de ser apenas convincente e passa a ser confiável.</p>
+
+<p>O trabalho de um designer sempre foi traduzir intenção em comportamento. Com agentes de IA, essa tradução ficou mais complexa.</p>
+<p>Este livro propõe um caminho concreto. Ao longo dos capítulos, você vai aprender a escrever critérios que especificam o comportamento de um agente — não diretrizes de tom, mas condições verificáveis: quando declarar premissas, quando pedir confirmação, quando reconhecer incerteza. Vai entender como avaliar um agente antes de confiar nele, usando evals como parte do processo de design, não como pós-produção de engenharia. E vai aprender a reconhecer cada momento em que o agente para, pergunta, limita ou escala como uma decisão de experiência — algo que você pode, e deve, tomar conscientemente.</p>
+<p>Ao final, a pergunta que orienta seu trabalho se expande. Deixa de ser apenas "essa experiência é fácil de usar?" e passa a incluir: "essa experiência pode ser compreendida, avaliada e contestada?"</p>
+<p>Essa segunda pergunta é o que separa um agente que convence de um agente que merece ser confiado.</p>
+
+<h2>Referências</h2>
+
+<ol>
+<li>CBC News (2024). <a href="https://www.cbc.ca/news/canada/british-columbia/air-canada-chatbot-lawsuit-1.7116416">Air Canada found liable for chatbot's bad advice on bereavement rates</a>.</li>
+<li>Gunning, D. &amp; Aha, D. (2019). <a href="https://doi.org/10.1609/aimag.v40i2.2850">DARPA's Explainable Artificial Intelligence (XAI) Program</a>. <em>AI Magazine</em>.</li>
+<li>Miller, T. (2019). <a href="https://arxiv.org/abs/1706.07269">Explanation in Artificial Intelligence: Insights from the Social Sciences</a>. <em>Artificial Intelligence</em>.</li>
+<li>NIST (2021). <a href="https://www.nist.gov/publications/four-principles-explainable-artificial-intelligence">Four Principles of Explainable Artificial Intelligence (NISTIR 8312)</a>.</li>
+<li>High-Level Expert Group on AI, Comissão Europeia (2019). <a href="https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai">Ethics Guidelines for Trustworthy AI</a>.</li>
+<li>NIST (2023). <a href="https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf">AI Risk Management Framework (AI RMF 1.0)</a>.</li>
+<li>Liu, N. F., Zhang, T. &amp; Liang, P. (2023). <a href="https://arxiv.org/abs/2304.09848">Evaluating Verifiability in Generative Search Engines</a>. <em>Findings of EMNLP</em>.</li>
+<li>Doran, D., Schulz, S. &amp; Besold, T. R. (2017). <a href="https://arxiv.org/abs/1710.00794">What Does Explainable AI Really Mean? A New Conceptualization of Perspectives</a>.</li>
+<li>Moore, G. A. (1991). <em>Crossing the Chasm</em>. HarperCollins.</li>
+<li>Gartner. <a href="https://www.gartner.com/en/research/methodologies/gartner-hype-cycle">Gartner Hype Cycle Research Methodology</a>.</li>
+</ol>
+
     </div>
   </article>
 </main>
-
-<div id="selection-popup" class="selection-popup" hidden>
-  <label for="popup-type">Tipo de revisão</label>
-  <select id="popup-type">
-    <option value="Clareza">Clareza</option>
-    <option value="Estrutura / Argumento">Estrutura / Argumento</option>
-    <option value="Vocabulário / Termo técnico">Vocabulário / Termo técnico</option>
-    <option value="Citação / Referência">Citação / Referência</option>
-    <option value="Gramática / Concordância">Gramática / Concordância</option>
-    <option value="Estilo / Tom">Estilo / Tom</option>
-    <option value="Outro">Outro</option>
-  </select>
-  <label for="popup-comment">Comentário</label>
-  <textarea id="popup-comment" placeholder="O que precisa mudar aqui?"></textarea>
-  <div class="popup-actions">
-    <button type="button" id="popup-cancel" class="popup-btn popup-btn--ghost">Cancelar</button>
-    <button type="button" id="popup-confirm" class="popup-btn">Comentar</button>
-  </div>
-</div>
-
-<script>
-(function(){
-  const textBody = document.getElementById('text-body');
-  const popup = document.getElementById('selection-popup');
-  const typeSelect = document.getElementById('popup-type');
-  const commentInput = document.getElementById('popup-comment');
-  const confirmBtn = document.getElementById('popup-confirm');
-  const cancelBtn = document.getElementById('popup-cancel');
-  const commentsList = document.getElementById('comments-list');
-  const commentsEmpty = document.getElementById('comments-empty');
-  const commentCount = document.getElementById('comment-count');
-  const exportBtn = document.getElementById('export-btn');
-
-  let pendingRange = null;
-  let annotations = [];
-  let nextId = 1;
-
-  function escapeHtml(str){
-    const div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
-  }
-
-  function updateCount(){
-    const n = annotations.length;
-    commentCount.textContent = n + (n === 1 ? ' comentário' : ' comentários');
-    commentsEmpty.style.display = n ? 'none' : 'block';
-    exportBtn.disabled = n === 0;
-  }
-
-  function hidePopup(){
-    popup.hidden = true;
-    pendingRange = null;
-    commentInput.value = '';
-    typeSelect.selectedIndex = 0;
-  }
-
-  function positionPopup(rect){
-    const popupWidth = 300;
-    let left = rect.left + window.scrollX + rect.width / 2 - popupWidth / 2;
-    left = Math.max(16, Math.min(left, window.scrollX + window.innerWidth - popupWidth - 16));
-    let top = rect.bottom + window.scrollY + 10;
-    popup.style.left = left + 'px';
-    popup.style.top = top + 'px';
-  }
-
-  // Coleta os nós de texto afetados por um Range, mesmo quando ele cruza
-  // múltiplos elementos (ex.: um trecho que atravessa um <strong> ou dois <p>).
-  function getTextNodesInRange(range){
-    if (range.startContainer === range.endContainer && range.startContainer.nodeType === 3) {
-      return [range.startContainer];
-    }
-    let root = range.commonAncestorContainer;
-    if (root.nodeType === 3) root = root.parentNode;
-    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
-      acceptNode: function(node){
-        return range.intersectsNode(node) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
-      }
-    });
-    const nodes = [];
-    let n;
-    while ((n = walker.nextNode())) nodes.push(n);
-    return nodes;
-  }
-
-  function highlightRange(range, id){
-    const nodes = getTextNodesInRange(range);
-    nodes.forEach(function(node){
-      const start = (node === range.startContainer) ? range.startOffset : 0;
-      const end = (node === range.endContainer) ? range.endOffset : node.textContent.length;
-      if (start >= end) return;
-      const mark = document.createElement('mark');
-      mark.className = 'highlight';
-      mark.dataset.annId = id;
-      const r = document.createRange();
-      r.setStart(node, start);
-      r.setEnd(node, end);
-      r.surroundContents(mark);
-    });
-  }
-
-  function flashElement(el){
-    el.classList.add('flash');
-    setTimeout(function(){ el.classList.remove('flash'); }, 1200);
-  }
-
-  function renderComment(ann){
-    const li = document.createElement('li');
-    li.className = 'comment-item';
-    li.dataset.annId = ann.id;
-    li.innerHTML =
-      '<span class="comment-type">' + escapeHtml(ann.type) + '</span>' +
-      '<blockquote class="comment-excerpt">' + escapeHtml(ann.excerpt) + '</blockquote>' +
-      (ann.comment ? '<p class="comment-text">' + escapeHtml(ann.comment) + '</p>' : '') +
-      '<button type="button" class="comment-remove">remover comentário</button>';
-
-    li.addEventListener('click', function(e){
-      if (e.target.classList.contains('comment-remove')) return;
-      const mark = textBody.querySelector('mark[data-ann-id="' + ann.id + '"]');
-      if (mark) {
-        mark.scrollIntoView({behavior:'smooth', block:'center'});
-        flashElement(mark);
-      }
-    });
-    li.querySelector('.comment-remove').addEventListener('click', function(e){
-      e.stopPropagation();
-      removeAnnotation(ann.id);
-    });
-    commentsList.appendChild(li);
-  }
-
-  function removeAnnotation(id){
-    annotations = annotations.filter(function(a){ return a.id !== id; });
-    const li = commentsList.querySelector('li[data-ann-id="' + id + '"]');
-    if (li) li.remove();
-    textBody.querySelectorAll('mark[data-ann-id="' + id + '"]').forEach(function(mark){
-      const parent = mark.parentNode;
-      while (mark.firstChild) parent.insertBefore(mark.firstChild, mark);
-      parent.removeChild(mark);
-      parent.normalize();
-    });
-    updateCount();
-  }
-
-  // Devolve as anotações na ordem em que aparecem no texto (não na ordem em
-  // que foram criadas). Uma anotação pode ter mais de um <mark> — quando a
-  // seleção cruzou vários nós — por isso descarta-se IDs repetidos.
-  function getOrderedAnnotations(){
-    const marks = Array.from(textBody.querySelectorAll('mark.highlight'));
-    const seen = new Set();
-    const ordered = [];
-    marks.forEach(function(mark){
-      const id = mark.dataset.annId;
-      if (seen.has(id)) return;
-      seen.add(id);
-      const ann = annotations.find(function(a){ return a.id === id; });
-      if (ann) ordered.push(ann);
-    });
-    return ordered;
-  }
-
-  function getDocumentTitle(){
-    const h1 = document.querySelector('.post h1');
-    return h1 ? h1.textContent.trim() : 'Texto';
-  }
-
-  function slugify(str){
-    return str
-      .toLowerCase()
-      .normalize('NFD').replace(/[̀-ͯ]/g, '')
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/(^-|-$)/g, '') || 'documento';
-  }
-
-  function buildMarkdownExport(){
-    const ordered = getOrderedAnnotations();
-    const title = getDocumentTitle();
-    const now = new Date().toLocaleString('pt-BR');
-    let md = '# Comentários — ' + title + '\n\n';
-    md += 'Exportado em ' + now + ' · ' + ordered.length +
-      (ordered.length === 1 ? ' comentário' : ' comentários') + '\n\n---\n\n';
-    ordered.forEach(function(ann, i){
-      md += '## ' + (i + 1) + '. ' + ann.type + '\n\n';
-      md += '> ' + ann.excerpt.split('\n').join('\n> ') + '\n\n';
-      if (ann.comment) md += ann.comment + '\n\n';
-    });
-    return md;
-  }
-
-  function downloadFile(content, filename, mime){
-    const blob = new Blob([content], {type: mime});
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    setTimeout(function(){ URL.revokeObjectURL(url); }, 200);
-  }
-
-  exportBtn.addEventListener('click', function(){
-    if (!annotations.length) return;
-    const md = buildMarkdownExport();
-    downloadFile(md, 'comentarios-' + slugify(getDocumentTitle()) + '.md', 'text/markdown');
-  });
-
-  textBody.addEventListener('mouseup', function(){
-    setTimeout(function(){
-      const sel = window.getSelection();
-      if (!sel || sel.isCollapsed || sel.rangeCount === 0) return;
-      const range = sel.getRangeAt(0);
-      if (!textBody.contains(range.commonAncestorContainer)) return;
-      const text = sel.toString().trim();
-      if (!text) return;
-      pendingRange = range.cloneRange();
-      positionPopup(range.getBoundingClientRect());
-      popup.hidden = false;
-      commentInput.focus();
-    }, 0);
-  });
-
-  // Clicar num trecho já destacado (sem arrastar) rola até o comentário correspondente.
-  textBody.addEventListener('click', function(e){
-    const mark = e.target.closest('mark.highlight');
-    if (!mark) return;
-    const sel = window.getSelection();
-    if (sel && !sel.isCollapsed) return;
-    const li = commentsList.querySelector('li[data-ann-id="' + mark.dataset.annId + '"]');
-    if (li) {
-      li.scrollIntoView({behavior:'smooth', block:'center'});
-      flashElement(li);
-    }
-  });
-
-  cancelBtn.addEventListener('click', function(){
-    window.getSelection().removeAllRanges();
-    hidePopup();
-  });
-
-  confirmBtn.addEventListener('click', function(){
-    if (!pendingRange) return;
-    const ann = {
-      id: 'ann-' + (nextId++),
-      type: typeSelect.value,
-      comment: commentInput.value.trim(),
-      excerpt: pendingRange.toString()
-    };
-    highlightRange(pendingRange, ann.id);
-    annotations.push(ann);
-    renderComment(ann);
-    updateCount();
-    window.getSelection().removeAllRanges();
-    hidePopup();
-  });
-
-  document.addEventListener('mousedown', function(e){
-    if (!popup.hidden && !popup.contains(e.target) && !textBody.contains(e.target)) {
-      hidePopup();
-    }
-  });
-
-  updateCount();
-})();
-</script>
 
 </body>
 </html>
