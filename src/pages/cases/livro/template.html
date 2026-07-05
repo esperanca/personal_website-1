@@ -3,6 +3,16 @@ layout: false
 permalink: /cases/livro/template/
 ---
 
+<!--
+  Desenhando Confiança — Template
+  v0.2 — 05/07 12:55
+  - Ajuste de centralização: bloco texto+sidenotes agora centralizado corretamente
+  - Incremento de espaçamento vertical e largura de colunas
+
+  v0.1 — 05/07 12:41
+  - Template inicial com sidenotes Tufte-style, email integrado, conteúdo v09
+-->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -18,6 +28,7 @@ h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;}
 ::selection{background:var(--ink);color:#fff;}
 a{color:inherit;}
 .wrapper{max-width:1440px;margin-inline:auto;padding-inline:1.25rem;}
+.post{margin:0 auto;max-width:calc(52rem + 26rem + 3rem);padding-inline:0;}
 .inner-wrapper{max-width:52rem;margin-inline:auto;}
 @media(min-width:64em){.wrapper{padding-inline:3rem;}}
 @media(min-width:80em){.wrapper{padding-inline:7.5rem;}}
