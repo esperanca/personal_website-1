@@ -1,0 +1,168 @@
+---
+layout: false
+permalink: /cases/livro/template/
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Desenhando Confiança — Template</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#000036;
+  --accent:#0979fa;
+  --white:#ffffff;
+  --gray-2:#d1d0d2;
+  --gray-1:#e8e7e8;
+  --wash:#f5f5f5;
+  --display:"Playfair Display", Georgia, "Times New Roman", serif;
+  --sans:"Noto Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--sans);font-size:1rem;line-height:1.6;-webkit-font-smoothing:antialiased;}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;}
+::selection{background:var(--ink);color:#fff;}
+a{color:inherit;}
+
+.wrapper{max-width:1440px;margin-inline:auto;padding-inline:1.25rem;}
+.inner-wrapper{max-width:44rem;margin-inline:auto;}
+@media (min-width:64em){.wrapper{padding-inline:3rem;}}
+@media (min-width:80em){.wrapper{padding-inline:7.5rem;}}
+
+/* Masthead */
+.site-header{background:var(--ink);color:#fff;font-size:1.125rem;text-transform:uppercase;font-weight:900;padding:1.25rem 0;}
+.site-header__wrapper{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.5rem;}
+.site-header__site-name{color:inherit;text-decoration:none;text-transform:lowercase;margin-right:2rem;}
+.site-header a{display:inline-flex;align-items:center;color:inherit;text-decoration:none;padding:.5rem;border:1px solid transparent;transition:color .2s ease;gap:.5rem;}
+.site-header a:hover{color:rgba(255,255,255,.7);}
+.site-header__email-icon{width:1.25rem;height:1.25rem;flex-shrink:0;}
+.site-header__email-icon svg{width:100%;height:100%;fill:currentColor;}
+.nav__list{display:flex;gap:2rem;list-style:none;margin:0;padding:0;}
+
+/* Cabeçalho do documento */
+.doc-head{padding:3.5rem 0 1.5rem;border-bottom:1px solid var(--gray-2);}
+.doc-head h1{font-size:3rem;line-height:1.1;}
+.doc-head .subtitle{font-family:var(--display);font-size:1.375rem;margin-top:.5rem;}
+.meta-info{opacity:.7;margin-top:1rem;font-size:.95rem;}
+
+/* Sumário */
+.toc{margin:2.5rem 0 1rem;padding:1.5rem 0;border-bottom:1px solid var(--gray-2);}
+.toc h2{font-family:var(--sans);font-weight:700;text-transform:uppercase;font-size:1rem;letter-spacing:.04em;margin-bottom:1rem;}
+.toc ol{list-style:none;margin:0;padding:0;}
+.toc li{margin:.5rem 0;padding-left:0;}
+.toc .toc-part{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;padding:.35rem 0;border-bottom:1px solid var(--gray-1);}
+.toc a{text-decoration:none;font-size:1.05rem;}
+.toc a:hover{color:var(--accent);}
+.toc .sub{padding-left:1.25rem;font-size:.95rem;opacity:.85;}
+.status{font-family:var(--sans);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;opacity:.6;white-space:nowrap;}
+
+/* Corpo */
+.post__body{font-size:1.125rem;}
+.post__body p{margin-top:1.6rem;line-height:1.62;}
+.post__body h2{font-size:2.25rem;text-transform:capitalize;margin-top:3rem;}
+.post__body h3{font-size:1.5rem;text-transform:capitalize;margin-top:2rem;}
+.post__body strong{font-weight:bold;font-size:.9em;}
+.post__body a:not([class]){color:inherit;text-decoration:underline;}
+.post__body a:not([class]):hover{color:var(--accent);}
+.post__body ul{margin-top:1.6rem;padding-left:1.25rem;}
+.post__body li{margin:.6rem 0;}
+.post__body blockquote{font-style:italic;border:1px solid rgba(0,0,0,.1);border-left:5px solid var(--ink);padding:1.25rem .75rem;margin:2rem 0 0;}
+.post__body blockquote p{opacity:.85;margin-top:0;}
+hr.rule{border:0;border-top:1px solid var(--gray-2);margin:2.75rem 0;}
+
+/* Divisor de seção do livro */
+.section-flag{margin:4rem 0 0;padding-top:2rem;border-top:2px solid var(--ink);}
+.section-flag .kicker{font-family:var(--sans);font-weight:700;text-transform:uppercase;font-size:.8rem;letter-spacing:.08em;opacity:.6;}
+.section-flag h2{font-size:2.5rem;margin-top:.4rem;text-transform:none;}
+.section-flag .note{opacity:.7;font-size:.95rem;margin-top:.5rem;}
+
+/* Notas e referências */
+sup a{text-decoration:none;color:var(--accent);font-size:.7em;padding:0 .1em;}
+.refs, .notes{font-size:.98rem;}
+.refs h2, .notes h2{font-size:1.5rem;text-transform:capitalize;margin-top:2.5rem;}
+.refs ol{padding-left:1.4rem;}
+.refs li, .notes li{margin:.5rem 0;line-height:1.5;}
+.notes ol{padding-left:1.4rem;}
+
+/* Rodapé */
+.site-footer{background:var(--ink);color:#fff;padding:2rem 0;margin-top:4rem;}
+.site-footer a{color:inherit;text-decoration:underline;}
+.site-footer a:hover{color:rgba(255,255,255,.7);}
+:focus-visible{outline:1px solid var(--ink);}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrapper site-header__wrapper">
+    <a class="site-header__site-name" href="#">@danielsouza</a>
+    <nav class="nav"><ul class="nav__list">
+      <li><a href="#sumario">Sumário</a></li>
+      <li><a href="#secao-1">Seção 1</a></li>
+      <li><a href="mailto:danieliscoding@gmail.com" class="site-header__email-icon" title="Enviar email">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-label="Email">
+          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+      </a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main class="wrapper">
+  <article class="post inner-wrapper">
+
+    <div class="doc-head">
+      <h1>Desenhando Confiança</h1>
+      <div class="subtitle">Adicione o subtítulo do capítulo aqui</div>
+      <p class="meta-info">Daniel Souza · <strong>v0.1</strong> · Data</p>
+    </div>
+
+    <!-- SUMÁRIO -->
+    <nav class="toc" id="sumario">
+      <h2>Sumário</h2>
+      <ol>
+        <li class="toc-part"><a href="#secao-1">Seção 1</a><span class="status">conteúdo</span></li>
+        <li class="toc-part"><a href="#secao-2">Seção 2</a><span class="status">conteúdo</span></li>
+      </ol>
+    </nav>
+
+    <!-- SEÇÃO 1 -->
+    <section class="section-flag" id="secao-1">
+      <div class="kicker">Seção 1</div>
+      <h2>Título da Seção 1</h2>
+    </section>
+    <div class="post__body">
+      <p>Insira o conteúdo da seção 1 aqui.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+      <h2 id="secao-2">Seção 2</h2>
+      <p>Insira o conteúdo da seção 2 aqui.</p>
+
+      <div class="refs">
+        <h2>Referências</h2>
+        <ol>
+          <li>Autor (Ano). Título da referência.</li>
+          <li>Outro Autor (Ano). Outra referência.</li>
+        </ol>
+      </div>
+
+      <div class="notes">
+        <h2>Notas</h2>
+        <ol>
+          <li id="nota-1">Insira a nota aqui. <a href="#ref-1">↩</a></li>
+        </ol>
+      </div>
+    </div>
+
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrapper">Desenhando Confiança · Daniel Souza · Feito com carinho no Brasil.</div>
+</footer>
+
+</body>
+</html>

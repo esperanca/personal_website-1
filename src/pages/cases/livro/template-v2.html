@@ -1,0 +1,640 @@
+---
+layout: false
+permalink: /cases/livro/template-v2/
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Desenhando Confiança — Template v2</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#000036;
+  --accent:#0979fa;
+  --white:#ffffff;
+  --off-white:#f9f9f8;
+  --gray-light:#eaeaea;
+  --gray-medium:#d1d0d2;
+  --gray-dark:#787774;
+  --display:"Playfair Display", Georgia, "Times New Roman", serif;
+  --sans:"Noto Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  background:var(--white);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:1rem;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+h1,h2,h3,h4{
+  font-family:var(--display);
+  font-weight:400;
+  margin:0;
+  letter-spacing:-0.02em;
+}
+
+h1{
+  font-size:3.5rem;
+  line-height:1.1;
+}
+
+h2{
+  font-size:2.25rem;
+  line-height:1.2;
+  margin-top:4rem;
+  margin-bottom:1.5rem;
+}
+
+h3{
+  font-size:1.5rem;
+  margin-top:2.5rem;
+  margin-bottom:1rem;
+}
+
+::selection{
+  background:var(--ink);
+  color:var(--white);
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+p{
+  margin:0;
+  line-height:1.65;
+  color:var(--ink);
+}
+
+p + p{
+  margin-top:1.5rem;
+}
+
+/* Layout Grid */
+.wrapper{
+  max-width:1440px;
+  margin-inline:auto;
+  padding-inline:1.25rem;
+}
+
+.inner-wrapper{
+  max-width:44rem;
+  margin-inline:auto;
+}
+
+@media (min-width:64em){
+  .wrapper{
+    padding-inline:3rem;
+  }
+}
+
+@media (min-width:80em){
+  .wrapper{
+    padding-inline:7.5rem;
+  }
+}
+
+/* Header */
+.site-header{
+  background:var(--ink);
+  color:var(--white);
+  padding:2rem 0;
+  position:sticky;
+  top:0;
+  z-index:100;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.site-header__wrapper{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:2rem;
+  flex-wrap:wrap;
+}
+
+.site-header__site-name{
+  font-size:1.125rem;
+  text-transform:uppercase;
+  font-weight:900;
+  letter-spacing:0.05em;
+  color:inherit;
+  text-decoration:none;
+  text-transform:lowercase;
+}
+
+.nav__list{
+  display:flex;
+  gap:2.5rem;
+  list-style:none;
+  margin:0;
+  padding:0;
+  align-items:center;
+}
+
+.nav__list a{
+  font-size:0.95rem;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  font-weight:500;
+  transition:opacity 200ms ease;
+  display:inline-flex;
+  align-items:center;
+  gap:0.5rem;
+}
+
+.nav__list a:hover{
+  opacity:0.7;
+}
+
+.site-header__email-icon{
+  width:1.25rem;
+  height:1.25rem;
+  flex-shrink:0;
+}
+
+.site-header__email-icon svg{
+  width:100%;
+  height:100%;
+  fill:currentColor;
+}
+
+/* Document Header */
+.doc-head{
+  padding:6rem 0 3rem;
+  border-bottom:1px solid var(--gray-light);
+  animation:fadeIn 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.doc-head h1{
+  margin-bottom:1rem;
+}
+
+.doc-head .subtitle{
+  font-family:var(--display);
+  font-size:1.5rem;
+  font-weight:400;
+  color:var(--gray-dark);
+  margin-bottom:1.5rem;
+}
+
+.meta-info{
+  font-size:0.9rem;
+  color:var(--gray-dark);
+  letter-spacing:0.03em;
+}
+
+/* Table of Contents */
+.toc{
+  margin:4rem 0 0;
+  padding:3rem 0;
+  border-bottom:1px solid var(--gray-light);
+  animation:fadeIn 600ms cubic-bezier(0.16, 1, 0.3, 1) 150ms both;
+}
+
+.toc h2{
+  font-family:var(--sans);
+  font-weight:900;
+  text-transform:uppercase;
+  font-size:0.85rem;
+  letter-spacing:0.08em;
+  margin-bottom:2rem;
+  color:var(--ink);
+}
+
+.toc ol{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.toc li{
+  margin:0;
+  padding:0;
+}
+
+.toc .toc-part{
+  display:flex;
+  justify-content:space-between;
+  gap:1.5rem;
+  align-items:baseline;
+  padding:0.75rem 0;
+  border-bottom:1px solid var(--gray-light);
+}
+
+.toc .toc-part:last-child{
+  border-bottom:none;
+}
+
+.toc a{
+  font-size:1.1rem;
+  color:var(--ink);
+  text-decoration:none;
+  transition:color 200ms ease;
+  flex:1;
+}
+
+.toc a:hover{
+  color:var(--accent);
+}
+
+.toc .sub{
+  padding-left:2rem;
+  font-size:0.95rem;
+  opacity:0.7;
+}
+
+.status{
+  font-family:var(--sans);
+  font-size:0.7rem;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  opacity:0.5;
+  white-space:nowrap;
+}
+
+/* Content Body */
+.post__body{
+  font-size:1.125rem;
+  line-height:1.65;
+  animation:fadeIn 600ms cubic-bezier(0.16, 1, 0.3, 1) 300ms both;
+}
+
+.post__body a:not([class]){
+  color:var(--accent);
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:0.2em;
+  transition:opacity 200ms ease;
+}
+
+.post__body a:not([class]):hover{
+  opacity:0.8;
+}
+
+.post__body ul{
+  margin:1.5rem 0;
+  padding-left:1.5rem;
+  list-style:none;
+}
+
+.post__body ul li{
+  margin:0.75rem 0;
+  padding-left:1.25rem;
+  position:relative;
+}
+
+.post__body ul li:before{
+  content:"–";
+  position:absolute;
+  left:0;
+  color:var(--accent);
+}
+
+.post__body ol{
+  margin:1.5rem 0;
+  padding-left:1.5rem;
+}
+
+.post__body ol li{
+  margin:0.75rem 0;
+}
+
+.post__body blockquote{
+  margin:2.5rem 0;
+  padding:2rem;
+  border:1px solid var(--gray-light);
+  border-left:3px solid var(--ink);
+  background:var(--off-white);
+  font-style:italic;
+  font-size:1.05rem;
+}
+
+.post__body blockquote p{
+  opacity:0.9;
+  margin:0;
+}
+
+.post__body blockquote p + p{
+  margin-top:1rem;
+}
+
+hr.rule{
+  border:0;
+  border-top:1px solid var(--gray-light);
+  margin:3.5rem 0;
+  height:0;
+}
+
+/* Section Flags */
+.section-flag{
+  margin:5rem 0 0;
+  padding:3rem 0 2rem;
+  border-top:2px solid var(--ink);
+  animation:fadeIn 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.section-flag .kicker{
+  font-family:var(--sans);
+  font-weight:900;
+  text-transform:uppercase;
+  font-size:0.75rem;
+  letter-spacing:0.08em;
+  color:var(--gray-dark);
+  margin-bottom:1rem;
+}
+
+.section-flag h2{
+  margin-top:0;
+  margin-bottom:1rem;
+}
+
+.section-flag .note{
+  font-size:0.95rem;
+  color:var(--gray-dark);
+  font-style:italic;
+  margin:0;
+}
+
+/* References & Notes */
+.refs,
+.notes{
+  margin-top:3rem;
+}
+
+.refs h2,
+.notes h2{
+  font-size:1.5rem;
+  margin-top:0;
+  margin-bottom:1.5rem;
+}
+
+.refs ol,
+.notes ol{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.refs li,
+.notes li{
+  margin:0.75rem 0;
+  padding-left:1.75rem;
+  position:relative;
+  font-size:0.95rem;
+  line-height:1.6;
+}
+
+.refs li:before,
+.notes li:before{
+  content:attr(data-count);
+  position:absolute;
+  left:0;
+  font-weight:700;
+  color:var(--accent);
+  font-size:0.8rem;
+}
+
+/* Superscript Links */
+sup a{
+  text-decoration:none;
+  color:var(--accent);
+  font-size:0.7em;
+  padding:0 0.1em;
+  transition:opacity 200ms ease;
+}
+
+sup a:hover{
+  opacity:0.7;
+}
+
+/* Footer */
+.site-footer{
+  background:var(--ink);
+  color:var(--white);
+  padding:3rem 0;
+  margin-top:5rem;
+  border-top:1px solid rgba(0,0,0,.1);
+  font-size:0.9rem;
+  opacity:0.8;
+}
+
+.site-footer a{
+  color:inherit;
+  text-decoration:underline;
+  transition:opacity 200ms ease;
+}
+
+.site-footer a:hover{
+  opacity:0.7;
+}
+
+/* Animations */
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(12px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:2px;
+}
+
+/* Responsive */
+@media (max-width:768px){
+  h1{
+    font-size:2.25rem;
+  }
+
+  h2{
+    font-size:1.75rem;
+  }
+
+  .doc-head{
+    padding:3rem 0 2rem;
+  }
+
+  .nav__list{
+    gap:1.5rem;
+  }
+
+  .toc .toc-part{
+    flex-direction:column;
+    gap:0.5rem;
+  }
+
+  .section-flag{
+    margin:3rem 0 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrapper site-header__wrapper">
+    <a class="site-header__site-name" href="#">@danielsouza</a>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a href="#sumario">Sumário</a></li>
+        <li><a href="#secao-1">Conteúdo</a></li>
+        <li><a href="mailto:danieliscoding@gmail.com" class="site-header__email-icon" title="Enviar email">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-label="Email">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+        </a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrapper">
+  <article class="post inner-wrapper">
+
+    <div class="doc-head">
+      <h1>Desenhando Confiança</h1>
+      <div class="subtitle">Design, agentes de IA e verificabilidade em serviços financeiros</div>
+      <p class="meta-info">Daniel Souza · Prévia consolidada · <strong>v2.0</strong> · 5 de julho de 2026</p>
+    </div>
+
+    <!-- SUMÁRIO -->
+    <nav class="toc" id="sumario">
+      <h2>Sumário</h2>
+      <ol>
+        <li class="toc-part"><a href="#prefacio">Prefácio — Design e Qualidade</a><span class="status">pronto</span></li>
+        <li class="toc-part"><a href="#capitulo-1">Capítulo 1 — Confiável ou só convincente?</a><span class="status">base · a encurtar</span></li>
+        <li class="sub toc-part"><a href="#transparencia">Transparência</a><span class="status">migra p/ Cap. 2</span></li>
+        <li class="sub toc-part"><a href="#explicabilidade">Explicabilidade</a><span class="status">migra p/ Cap. 3</span></li>
+        <li class="sub toc-part"><a href="#verificabilidade">Verificabilidade</a><span class="status">migra p/ Cap. 4</span></li>
+        <li class="sub toc-part"><a href="#compreensibilidade">Compreensibilidade</a><span class="status">migra p/ Cap. 5</span></li>
+        <li class="toc-part"><span>Capítulo 2 — Transparência</span><span class="status">a desenvolver</span></li>
+        <li class="toc-part"><span>Capítulo 3 — Explicabilidade</span><span class="status">a desenvolver</span></li>
+        <li class="toc-part"><span>Capítulo 4 — Verificabilidade</span><span class="status">a desenvolver</span></li>
+        <li class="toc-part"><span>Capítulo 5 — Compreensibilidade</span><span class="status">a desenvolver</span></li>
+      </ol>
+    </nav>
+
+    <!-- PREFÁCIO -->
+    <section class="section-flag" id="prefacio">
+      <div class="kicker">Prefácio</div>
+      <h2>Design e Qualidade</h2>
+    </section>
+    <div class="post__body">
+      <p>Design e qualidade sempre estiveram ligados. Mas o que entendemos por qualidade em design nunca foi fixo.</p>
+      <p>Durante décadas, a qualidade mais visível esteve na superfície. Interface bem composta, hierarquia clara, experiência agradável e bem acabada. Para muita gente, design ainda significa isso: aparência refinada, acabamento cuidadoso, a camada final que facilita o entendimento e o desejo de usar algo.</p>
+      <p>A disciplina sempre atuou além disso.</p>
+      <p>A interação humano-computador trouxe critérios mais profundos. Usabilidade. Acessibilidade. Prevenção de erro. Feedback. Consistência. A qualidade deixou de ser apenas visual e passou a ser medida pelo que a pessoa conseguia fazer: a clareza da ação, a redução do atrito, a capacidade de um sistema responder de forma previsível e segura.</p>
+      <p>Com o amadurecimento dos produtos digitais, a régua se moveu de novo. Não bastava desenhar telas eficientes. Era preciso desenhar jornadas coerentes, experiências íntegras, relações contínuas entre canais e momentos. A qualidade deixou de depender da beleza isolada de uma interface e passou a depender da coesão do sistema.</p>
+      <p>Agora, com sistemas generativos e agênticos, estamos diante de outro deslocamento.</p>
+      <p>O designer deixa de atuar apenas sobre a superfície visível. Passa a influenciar sistemas que interpretam contexto, produzem linguagem, tomam decisões e executam ações em nome das pessoas. A interface importa, mas é insuficiente. O comportamento do sistema vira material de design.</p>
+      <p>Isso reescreve a pergunta.</p>
+      <p>Não basta perguntar se a experiência é clara ou acessível. É preciso perguntar se o sistema é transparente sobre como opera. Se suas decisões são explicáveis. Se seu comportamento é verificável. Se seus limites são compreensíveis. E, no fim, se a pessoa entende o que está acontecendo e quem responde quando algo falha.</p>
+      <p>A qualidade em design deixa de ser propriedade da experiência percebida. Passa a ser propriedade do sistema em funcionamento.</p>
+
+      <hr class="rule">
+
+      <!-- CAPÍTULO 1 -->
+      <section class="section-flag" id="capitulo-1">
+        <div class="kicker">Capítulo 1</div>
+        <h2>Confiável ou só convincente?</h2>
+        <p class="note">Quatro questões que interfaces geradas por IA devem responder.</p>
+      </section>
+
+      <p>Existe um momento em que uma tecnologia disruptiva deixa de ser novidade para entusiastas e passa a fazer parte do cotidiano de todo mundo: estranha o suficiente para assustar, próxima demais para ignorar<sup><a href="#nota-1" id="ref-1">1</a></sup>. Interfaces conversacionais chegaram assim.</p>
+      <p>Em novembro de 2022, Jake Moffatt entrou no site da Air Canada com uma pergunta prática: se ele comprasse passagens de última hora para o velório de sua avó, poderia pedir o desconto de tarifa de luto<sup><a href="#nota-2" id="ref-2">2</a></sup> depois de voltar? Antes de gastar dinheiro, ele quis confirmar as regras. Perguntou ao chatbot e fez uma captura de tela com a resposta. A resposta confirmava que o reembolso poderia ser solicitado depois da viagem. Ele comprou as passagens. Voltou. Pediu o reembolso. Semanas depois, a Air Canada recusou.</p>
+      <p>Moffatt não deixou por isso mesmo. Nos meses seguintes, trocou e-mails com a companhia, recebeu respostas negativas e decidiu levar o caso ao Civil Resolution Tribunal da British Columbia<sup><a href="#nota-3" id="ref-3">3</a></sup>. Em fevereiro de 2024, o tribunal condenou a Air Canada a pagar a diferença e registrou algo além da condenação: não havia razão para Moffatt saber que uma parte do site era mais confiável do que outra. A empresa não explicou por que a página de tarifas de luto deveria ser considerada mais autoritativa do que o chatbot.</p>
+      <p>A falha documentada no processo não foi ausência de informação. O site tinha informação. O que faltava eram qualidades que a resposta não entregou.</p>
+      <p>O chatbot da Air Canada era convencional. No fim daquele mesmo novembro, a OpenAI lançou o ChatGPT. Nos anos seguintes, a IA generativa se tornou a base das interfaces conversacionais: sistemas mais fluidos, mais persuasivos, mais difíceis de checar. O problema que levou Moffatt ao tribunal ficou mais comum, não mais raro.</p>
+      <p>O caso concentra, de uma vez só, os quatro problemas que este texto vai destrinchar:</p>
+
+      <ul>
+        <li><strong>Transparência:</strong> o chatbot não deixou claro em quais políticas ou informações da empresa estava baseando sua resposta.</li>
+        <li><strong>Explicabilidade:</strong> o chatbot afirmou que o desconto poderia ser solicitado depois da compra, mas não explicou qual regra da empresa sustentava essa conclusão.</li>
+        <li><strong>Verificabilidade:</strong> a resposta não oferecia um link, uma referência ou qualquer forma de confirmar a informação antes da compra.</li>
+        <li><strong>Compreensibilidade:</strong> a resposta era clara e fácil de entender. Justamente por isso, o passageiro confiou nela.</li>
+      </ul>
+
+      <p>Esses quatro conceitos não são sinônimos nem intercambiáveis, mas camadas complementares na construção da confiança.</p>
+
+      <h2 id="transparencia">Transparência</h2>
+      <p>Transparência é o grau em que o sistema deixa claro como opera: que dados usa, quais são seus limites, que regras segue, quem responde por ele.</p>
+      <p>Essa ideia vem da governança pública e da responsabilidade institucional. Foi incorporada às <em>Ethics Guidelines for Trustworthy AI</em> da União Europeia e ao <em>AI Risk Management Framework</em> do NIST<sup><a href="#nota-4" id="ref-4">4</a></sup> como princípio central.</p>
+      <blockquote><p>Documentar regras não é a mesma coisa que explicar uma decisão. Um sistema pode parecer transparente e, ainda assim, ser opaco.</p></blockquote>
+      <p>Um exemplo comum: "Não foi possível aprovar sua solicitação." A interface encerra a conversa. Não revela quais dados foram usados, se havia algum desatualizado, se houve revisão real ou somente uma resposta automática.</p>
+
+      <h2 id="explicabilidade">Explicabilidade</h2>
+      <p>Explicabilidade é a capacidade de um sistema justificar a própria resposta, decisão ou recomendação. Responde a uma pergunta específica: por que isso aconteceu?</p>
+      <p>O termo ganhou peso com o programa XAI da DARPA<sup><a href="#nota-5" id="ref-5">5</a></sup>, liderado por David Gunning e David Aha, e foi refinado depois por pesquisadores como Tim Miller e por instituições como o NIST.</p>
+      <p>Um agente explicável não esconde o próprio raciocínio. Mostra os critérios que pesaram na decisão, mesmo que de forma resumida.</p>
+
+      <h2 id="verificabilidade">Verificabilidade</h2>
+      <p>Verificabilidade é a possibilidade de checar se uma resposta está correta, sustentada por fontes ou de acordo com critérios definidos. A pergunta que ela responde é direta: isso pode ser confirmado?</p>
+      <p>Vem de uma linhagem antiga: ciência, auditoria, verificação formal em engenharia de software. Ganhou um capítulo recente com a IA generativa, na pesquisa de Nelson F. Liu, Tianyi Zhang e Percy Liang sobre buscadores que respondem com citação de fonte. Os três auditaram quatro motores de busca generativos e encontraram um padrão revelador: só 51,5% das frases produzidas tinham sustentação completa nas citações.</p>
+      <p>Quase metade das frases passava o teste de fluência sem passar o teste de sustentação. Verificabilidade é a diferença entre os dois testes: a possibilidade de confrontar uma resposta com uma fonte externa e citável, não apenas com a coerência do próprio sistema.</p>
+
+      <h2 id="compreensibilidade">Compreensibilidade</h2>
+      <p>Compreensibilidade é a qualidade de uma explicação ser entendida pela pessoa certa, no contexto certo, no nível de detalhe certo. A pergunta muda de novo: o usuário entendeu o suficiente para decidir, agir ou contestar?</p>
+      <p>Derek Doran, Sarah Schulz e Tarek Besold separam sistemas compreensíveis de sistemas apenas interpretáveis. O interpretável produz uma explicação tecnicamente válida; o compreensível produz uma explicação que a pessoa do outro lado consegue usar. Tim Miller trouxe as ciências sociais para esse debate, mostrando como humanos processam explicações na prática, não como um sistema deveria, em teoria, produzi-las.</p>
+      <p>Esse é o termo mais próximo do trabalho de um designer de conteúdo. Uma explicação pode estar tecnicamente correta e ainda causar confusão. O inverso é mais perigoso: uma explicação clara sobre uma informação errada convence com mais eficiência do que uma confusa. Compreensibilidade sem transparência, explicabilidade e verificabilidade não é virtude: é risco.</p>
+
+      <h2>Por que isso importa para designers e para quem constrói agentes generativos</h2>
+      <p>Desenhar para confiança significa decidir, em cada interface e em cada resposta, que tipo de confiança o produto está pedindo da pessoa.</p>
+      <p>O sistema mostra de onde fala? Isso é transparência. Mostra por que respondeu assim? Isso é explicabilidade. Permite conferir se está certo? Isso é verificabilidade. Ajuda a pessoa entender o suficiente para agir? Isso é compreensibilidade.</p>
+      <p>Quando uma interface de IA não responde a essas perguntas, ela ainda pode soar clara, útil e segura. Esse é justamente o problema. A confiança começa quando a resposta deixa de ser apenas convincente e passa a ser confiável.</p>
+      <p>O trabalho de um designer sempre foi traduzir intenção em comportamento. Com agentes de IA, essa tradução ficou mais complexa.</p>
+      <p>Este livro propõe um caminho concreto. Ao longo dos capítulos, você vai aprender a escrever critérios que especificam o comportamento de um agente: não diretrizes de tom, mas condições verificáveis. Quando declarar premissas, quando pedir confirmação, quando reconhecer incerteza. Vai entender como avaliar um agente antes de confiar nele, Ao final, a pergunta que orienta seu trabalho se expande. Deixa de ser apenas "essa experiência é fácil de usar?" e passa a incluir: "essa experiência pode ser compreendida, avaliada e contestada?"</p>
+      <p>Essa segunda pergunta é o que separa um agente que convence de um agente que merece ser confiado.</p>
+
+      <div class="refs">
+        <h2>Referências</h2>
+        <ol>
+          <li>CBC News (2024). Air Canada found liable for chatbot's bad advice on bereavement rates.</li>
+          <li>Gunning, D. &amp; Aha, D. (2019). DARPA's Explainable Artificial Intelligence (XAI) Program. <em>AI Magazine</em>.</li>
+          <li>Miller, T. (2019). Explanation in Artificial Intelligence: Insights from the Social Sciences. <em>Artificial Intelligence</em>.</li>
+          <li>NIST (2021). Four Principles of Explainable Artificial Intelligence (NISTIR 8312).</li>
+          <li>High-Level Expert Group on AI, Comissão Europeia (2019). Ethics Guidelines for Trustworthy AI.</li>
+          <li>NIST (2023). AI Risk Management Framework (AI RMF 1.0).</li>
+          <li>Liu, N. F., Zhang, T. &amp; Liang, P. (2023). Evaluating Verifiability in Generative Search Engines. <em>Findings of EMNLP</em>.</li>
+          <li>Doran, D., Schulz, S. &amp; Besold, T. R. (2017). What Does Explainable AI Really Mean? A New Conceptualization of Perspectives.</li>
+        </ol>
+      </div>
+
+      <div class="notes">
+        <h2>Notas</h2>
+        <ol>
+          <li id="nota-1">O Gartner chama esse momento de vale da desilusão: quando o entusiasmo inicial cede à realidade das limitações, e a adoção acontece antes dos critérios para avaliar o que foi adotado. <a href="#ref-1">↩</a></li>
+          <li id="nota-2">Tarifas de luto (bereavement fares) são descontos que companhias aéreas oferecem a passageiros que precisam viajar com urgência pela morte ou iminência de morte de um familiar próximo. As políticas e requisitos documentais variam por empresa. <a href="#ref-2">↩</a></li>
+          <li id="nota-3">O Civil Resolution Tribunal (CRT) é um tribunal administrativo online da British Columbia, Canadá, para disputas de pequenas causas. Funciona sem audiências presenciais; suas decisões têm força legal equivalente à de um tribunal convencional. <a href="#ref-3">↩</a></li>
+          <li id="nota-4">O National Institute of Standards and Technology é uma agência federal americana que desenvolve padrões técnicos e frameworks de gestão de risco. <a href="#ref-4">↩</a></li>
+          <li id="nota-5">A Defense Advanced Research Projects Agency é a agência de pesquisa avançada do Departamento de Defesa americano. Seu programa XAI (Explainable AI, 2016–2021) financiou boa parte da pesquisa contemporânea sobre explicabilidade e estabeleceu a distinção entre modelos de alto desempenho e modelos compreensíveis como um problema de design, não só de engenharia. <a href="#ref-5">↩</a></li>
+        </ol>
+      </div>
+    </div>
+
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrapper">Desenhando Confiança · v2.0 · Daniel Souza · Feito com carinho no Brasil.</div>
+</footer>
+
+</body>
+</html>
