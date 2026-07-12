@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ title }}</title>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+	<style>
+		{% include "css/style.css" %}
+	</style>
+</head>
+<body>
+
+<header class="livro-header">
+	<div class="wrapper livro-header__wrapper">
+		<div class="livro-header__top">
+			<span class="livro-header__title">{{ subtitle }}</span>
+			<button class="livro-toc-toggle" aria-expanded="false" aria-label="Mostrar índice" id="toc-toggle">
+				Ver índice
+			</button>
+			<span class="livro-header__meta">{{ collection }} · {{ version }}</span>
+		</div>
+	</div>
+	<nav class="livro-toc" hidden id="toc-nav">
+		<div class="wrapper">
+			<ul class="livro-toc__list">
+			{%- for item in tableOfContents -%}
+				<li><a href="#{{ item.id }}">{{ item.title }}</a></li>
+			{%- endfor -%}
+			</ul>
+		</div>
+	</nav>
+</header>
+
+<main class="wrapper">
+	<article class="livro-article">
+		<h1 class="livro-title">{{ title }}</h1>
+		<p class="livro-meta">{{ version }} · julho de 2026 · <a href="mailto:{{ contact }}">{{ contact }}</a><br>{{ preface }}</p>
+
+		<div class="livro-body">
+			{{ content | safe }}
+		</div>
+	</article>
+</main>
+
+<script>
+	const toggleBtn = document.getElementById('toc-toggle');
+	const tocNav = document.getElementById('toc-nav');
+
+	toggleBtn.addEventListener('click', () => {
+		const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+		toggleBtn.setAttribute('aria-expanded', !isExpanded);
+		if (isExpanded) {
+			tocNav.setAttribute('hidden', '');
+		} else {
+			tocNav.removeAttribute('hidden');
+		}
+	});
+
+	// Fechar índice ao clicar em um link
+	document.querySelectorAll('.livro-toc__list a').forEach(link => {
+		link.addEventListener('click', () => {
+			toggleBtn.setAttribute('aria-expanded', 'false');
+			tocNav.setAttribute('hidden', '');
+		});
+	});
+</script>
+
+</body>
+</html>

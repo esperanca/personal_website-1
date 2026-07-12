@@ -1,0 +1,312 @@
+// ──────────────────────────────────────────────────────
+// LIVRO · Design System
+// ──────────────────────────────────────────────────────
+
+:root {
+  --ink: #000036;
+  --accent: #0979fa;
+  --white: #ffffff;
+  --gray-2: #d1d0d2;
+  --gray-1: #e8e7e8;
+  --wash: #f5f5f5;
+  --display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --sans: "Noto Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--display);
+  font-weight: 400;
+  margin: 0;
+}
+
+::selection {
+  background: var(--ink);
+  color: #fff;
+}
+
+a {
+  color: inherit;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+
+  @media (min-width: 64em) {
+    padding-inline: 3rem;
+  }
+
+  @media (min-width: 80em) {
+    padding-inline: 7.5rem;
+  }
+}
+
+// ──────────────────────────────────────────────────────
+// HEADER
+// ──────────────────────────────────────────────────────
+
+.livro-header {
+  background: var(--ink);
+  color: #fff;
+  padding: 1.25rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__title {
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    flex: 0 1 auto;
+  }
+
+  &__meta {
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-transform: none;
+    opacity: 0.85;
+    flex: 0 0 auto;
+  }
+}
+
+.livro-toc-toggle {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.5rem 1rem;
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 2px;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  &[aria-expanded="true"] {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.livro-toc {
+  background: rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 0;
+
+  &[hidden] {
+    display: none;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  &__list a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    color: #fff;
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: var(--accent);
+      border-left-color: var(--accent);
+      padding-left: 1rem;
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--accent);
+    }
+  }
+}
+
+// ──────────────────────────────────────────────────────
+// ARTICLE
+// ──────────────────────────────────────────────────────
+
+.livro-article {
+  margin: 2.5rem auto 5rem;
+  max-width: 90ch;
+  position: relative;
+}
+
+.livro-title {
+  font-size: 2.5rem;
+  font-family: var(--display);
+  font-weight: 400;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.2;
+}
+
+.livro-meta {
+  opacity: 0.7;
+  margin: 0 0 2rem 0;
+  font-size: 0.95rem;
+
+  a {
+    text-decoration: underline;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
+
+// ──────────────────────────────────────────────────────
+// BODY
+// ──────────────────────────────────────────────────────
+
+.livro-body {
+  font-size: 1.125rem;
+
+  p {
+    margin-top: 1.8rem;
+    line-height: 1.7;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 2.25rem;
+    text-transform: capitalize;
+    margin-top: 3.5rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.1;
+    scroll-margin-top: 150px;
+  }
+
+  h3 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    scroll-margin-top: 150px;
+  }
+
+  strong {
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+
+  a:not([class]) {
+    color: inherit;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
+  ul {
+    margin-top: 1.6rem;
+    padding-left: 1.25rem;
+    list-style: disc;
+  }
+
+  li {
+    margin: 0.6rem 0;
+    line-height: 1.7;
+  }
+
+  ol {
+    margin-top: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  blockquote {
+    font-style: italic;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: 5px solid var(--ink);
+    padding: 1.25rem 0.75rem;
+    margin: 2rem 0 0;
+    background: var(--wash);
+
+    p {
+      opacity: 0.85;
+      margin-top: 0;
+    }
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--gray-2);
+    margin: 2.75rem 0;
+  }
+}
+
+// ──────────────────────────────────────────────────────
+// REFERENCES & FOOTNOTES
+// ──────────────────────────────────────────────────────
+
+.livro-body ol {
+  &:last-of-type {
+    font-size: 0.98rem;
+
+    li {
+      margin: 0.5rem 0;
+      line-height: 1.5;
+    }
+  }
+}
+
+// ──────────────────────────────────────────────────────
+// ACCESSIBILITY
+// ──────────────────────────────────────────────────────
+
+:focus-visible {
+  outline: 1px solid var(--ink);
+  outline-offset: 2px;
+}

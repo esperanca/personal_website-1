@@ -50,6 +50,7 @@ module.exports = function (eleventyConfig) {
 
   // Layout aliases
   eleventyConfig.addLayoutAlias('home', 'layouts/home.njk');
+  eleventyConfig.addLayoutAlias('livro', 'layouts/livro.njk');
 
   // Transforms
   eleventyConfig.addTransform('htmlmin', htmlMinTransform);
