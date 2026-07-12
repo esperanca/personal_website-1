@@ -3,10 +3,10 @@ layout: livro
 title: "Desenhando Confiança"
 subtitle: "Design, agentes de IA e verificabilidade em serviços financeiros"
 collection: "Prévia consolidada"
-version: "v0.9 · 4 de julho de 2026"
+version: ""
 date: 2026-07-04
 contact: "danieliscoding@gmail.com"
-preface: "Daniel Souza · Capítulos e prefácio"
+preface: "@danielsouza"
 permalink: /cases/livro/
 tableOfContents:
   - { id: "prefacio", title: "Prefácio — Design e Qualidade" }
@@ -17,15 +17,15 @@ tableOfContents:
   - { id: "compreensibilidade", title: "Compreensibilidade" }
 ---
 
-## Prefácio {#prefacio}
+## Prefácio
 
 ### Design e Qualidade
 
-Design e qualidade sempre estiveram ligados. Mas o que entendemos por qualidade em design nunca foi fixo.
+Design e qualidade sempre estiveram ligados. Mas definir qualidade em design nunca foi fácil.
 
-Durante décadas, a qualidade mais visível esteve na superfície. Interface bem composta, hierarquia clara, experiência agradável e bem acabada. Para muita gente, design ainda significa isso: aparência refinada, acabamento cuidadoso, a camada final que facilita o entendimento e o desejo de usar algo.
+Durante décadas, a qualidade mais visível esteve na superfície. Interface bem composta, hierarquia clara, composição, contraste. Para muita gente, design ainda significa "fazer ficar bonito". A camada final que facilita o entendimento e o desejo de usar algo melhorando estética e comunicação.
 
-A disciplina sempre atuou além disso.
+Mas a disciplina sempre ambicinou mais do que isso. 
 
 A interação humano-computador trouxe critérios mais profundos. Usabilidade. Acessibilidade. Prevenção de erro. Feedback. Consistência. A qualidade deixou de ser apenas visual e passou a ser medida pelo que a pessoa conseguia fazer: a clareza da ação, a redução do atrito, a capacidade de um sistema responder de forma previsível e segura.
 
@@ -43,7 +43,7 @@ A qualidade em design deixa de ser propriedade da experiência percebida. Passa 
 
 ---
 
-## Capítulo 1 {#capitulo-1}
+## Capítulo 1
 
 ### Confiável ou só convincente?
 
@@ -66,7 +66,7 @@ O caso concentra, de uma vez só, os quatro problemas que este texto vai destrin
 
 Esses quatro conceitos não são sinônimos nem intercambiáveis, mas camadas complementares na construção da confiança.
 
-## Transparência {#transparencia}
+## Transparência
 
 Transparência é o grau em que o sistema deixa claro como opera: que dados usa, quais são seus limites, que regras segue, quem responde por ele.
 
@@ -76,7 +76,7 @@ Essa ideia vem da governança pública e da responsabilidade institucional. Foi 
 
 Um exemplo comum: "Não foi possível aprovar sua solicitação." A interface encerra a conversa. Não revela quais dados foram usados, se havia algum desatualizado, se houve revisão real ou somente uma resposta automática.
 
-## Explicabilidade {#explicabilidade}
+## Explicabilidade
 
 Explicabilidade é a capacidade de um sistema justificar a própria resposta, decisão ou recomendação. Responde a uma pergunta específica: por que isso aconteceu?
 
@@ -84,7 +84,7 @@ O termo ganhou peso com o programa XAI da DARPA[^5], liderado por David Gunning 
 
 Um agente explicável não esconde o próprio raciocínio. Mostra os critérios que pesaram na decisão, mesmo que de forma resumida.
 
-## Verificabilidade {#verificabilidade}
+## Verificabilidade
 
 Verificabilidade é a possibilidade de checar se uma resposta está correta, sustentada por fontes ou de acordo com critérios definidos. A pergunta que ela responde é direta: isso pode ser confirmado?
 
@@ -92,7 +92,7 @@ Vem de uma linhagem antiga: ciência, auditoria, verificação formal em engenha
 
 Quase metade das frases passava o teste de fluência sem passar o teste de sustentação. Verificabilidade é a diferença entre os dois testes: a possibilidade de confrontar uma resposta com uma fonte externa e citável, não apenas com a coerência do próprio sistema.
 
-## Compreensibilidade {#compreensibilidade}
+## Compreensibilidade
 
 Compreensibilidade é a qualidade de uma explicação ser entendida pela pessoa certa, no contexto certo, no nível de detalhe certo. A pergunta muda de novo: o usuário entendeu o suficiente para decidir, agir ou contestar?
 

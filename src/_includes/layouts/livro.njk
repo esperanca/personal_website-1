@@ -14,11 +14,11 @@
 <header class="livro-header">
 	<div class="wrapper livro-header__wrapper">
 		<div class="livro-header__top">
-			<span class="livro-header__title">{{ subtitle }}</span>
+			<span class="livro-header__title">{{ title }}</span>
 			<button class="livro-toc-toggle" aria-expanded="false" aria-label="Mostrar índice" id="toc-toggle">
 				Ver índice
 			</button>
-			<span class="livro-header__meta">{{ collection }} · {{ version }}</span>
+			<span class="livro-header__author">{{ preface }}</span>
 		</div>
 	</div>
 	<nav class="livro-toc" hidden id="toc-nav">
@@ -35,7 +35,6 @@
 <main class="wrapper">
 	<article class="livro-article">
 		<h1 class="livro-title">{{ title }}</h1>
-		<p class="livro-meta">{{ version }} · julho de 2026 · <a href="mailto:{{ contact }}">{{ contact }}</a><br>{{ preface }}</p>
 
 		<div class="livro-body">
 			{{ content | safe }}
@@ -57,9 +56,15 @@
 		}
 	});
 
-	// Fechar índice ao clicar em um link
+	// Fechar índice ao clicar em um link e scroll suave para a seção
 	document.querySelectorAll('.livro-toc__list a').forEach(link => {
-		link.addEventListener('click', () => {
+		link.addEventListener('click', (e) => {
+			e.preventDefault();
+			const href = link.getAttribute('href');
+			const target = document.querySelector(href);
+			if (target) {
+				target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			}
 			toggleBtn.setAttribute('aria-expanded', 'false');
 			tocNav.setAttribute('hidden', '');
 		});

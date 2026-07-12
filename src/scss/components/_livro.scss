@@ -89,6 +89,7 @@ a {
     text-transform: uppercase;
     font-weight: 900;
     flex: 0 1 auto;
+    color: var(--accent);
   }
 
   &__meta {
@@ -96,6 +97,14 @@ a {
     font-weight: 400;
     text-transform: none;
     opacity: 0.85;
+    flex: 0 0 auto;
+  }
+
+  &__author {
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-transform: none;
+    color: var(--white);
     flex: 0 0 auto;
   }
 }

@@ -19,12 +19,15 @@ const markdownLibrary = markdownIt({
   permalinkSpace: true,
   permalinkBefore: false,
   level: [1, 2, 3],
-  slugify: (s) =>
-    s
-      .trim()
+  slugify: (s) => {
+    const text = s.replace(/{#[\w-]+}/g, '').trim();
+    return text
       .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
       .replace(/[\s+~\/]/g, '-')
-      .replace(/[().`,%·'"!?¿:@*]/g, ''),
+      .replace(/[().`,%·'"!?¿:@*]/g, '');
+  },
 });
 
 // Import filters
