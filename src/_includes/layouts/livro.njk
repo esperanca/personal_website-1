@@ -4,27 +4,23 @@
   <main id="main-content" tabindex="-1" class="page">
     <div class="wrapper">
       <article class="post">
-        <h1 class="livro-title">Desenhando Confiança</h1>
+
+        <h1>Desenhando Confiança</h1>
 
         {% if subtitle %}
-          <p class="meta-subtitle">{{ subtitle }}</p>
+          <p class="meta-info">{{ subtitle }}</p>
         {% endif %}
 
         <p class="meta-info">
-          {% if preface %}
-            <span>por {{ preface }}</span>
-          {% endif %}
-          {% if date %}
-            <span> · <time datetime="{{ date | postDate }}" class="dt-published">{{ date | postDate }}</time></span>
-          {% endif %}
-          {% if version %}
-            <span> · v{{ version }}</span>
-          {% endif %}
+          {% if version %}v{{ version }} · {% endif %}
+          {% if date %}<time datetime="{{ date | postDate }}" class="dt-published">{{ date | postDate }}</time>{% if preface %} · {% endif %}{% endif %}
+          {% if preface %}por {{ preface }}{% endif %}
         </p>
 
         <div class="post__body">
           {{ content | safe }}
         </div>
+
       </article>
     </div>
   </main>

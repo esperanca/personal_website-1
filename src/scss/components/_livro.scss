@@ -1,5 +1,5 @@
 // ──────────────────────────────────────────────────────
-// LIVRO · Design System
+// LIVRO · Design System (from livro-v02.html)
 // ──────────────────────────────────────────────────────
 
 :root {
@@ -56,22 +56,9 @@ a {
   }
 }
 
-// ──────────────────────────────────────────────────────
-// ARTICLE
-// ──────────────────────────────────────────────────────
-
 .post {
-  margin-top: 0;
+  margin-top: 1rem;
   margin-bottom: 5rem;
-  max-width: 70%;
-}
-
-.livro-title {
-  font-size: 3.5rem;
-  font-family: var(--display);
-  font-weight: 400;
-  margin: 0.625rem 0 1rem 0;
-  line-height: 1.1;
 }
 
 .post h1 {
@@ -79,15 +66,6 @@ a {
   font-family: var(--display);
   font-weight: 400;
   margin: 0;
-}
-
-.meta-subtitle {
-  font-family: var(--display);
-  font-size: 1.25rem;
-  font-weight: 400;
-  margin: 0.5rem 0 1.5rem 0;
-  color: var(--ink);
-  opacity: 0.8;
 }
 
 .meta-info {
@@ -99,72 +77,68 @@ a {
 .post__body {
   font-size: 1.125rem;
   margin-top: 2rem;
-  max-width: none;
+  max-width: 90ch;
   overflow: visible;
   position: relative;
+}
 
-  p {
-    margin-top: 1.5rem;
-    line-height: 1.6;
+.post__body p {
+  margin-top: 1.5rem;
+  line-height: 1.6;
+}
 
-    &:first-child {
-      margin-top: 0;
-    }
-  }
+.post__body strong {
+  font-weight: bold;
+  font-size: 0.9em;
+}
 
-  strong {
-    font-weight: bold;
-    font-size: 0.9em;
-  }
+.post__body h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 2.25rem;
+  text-transform: capitalize;
+  margin-top: 3rem;
+}
 
-  h2 {
-    font-family: var(--display);
-    font-weight: 400;
-    font-size: 2.25rem;
-    text-transform: capitalize;
-    margin-top: 3rem;
-  }
+.post__body ul {
+  margin-top: 1.5rem;
+  padding-left: 1.5rem;
+}
 
-  ul {
-    margin-top: 1.5rem;
-    padding-left: 1.5rem;
-  }
+.post__body li {
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
 
-  li {
-    margin-top: 0.5rem;
-    line-height: 1.6;
-  }
+.post__body a {
+  color: inherit;
+  text-decoration: underline;
+}
 
-  a {
-    color: inherit;
-    text-decoration: underline;
+.post__body a:hover {
+  color: var(--accent);
+}
 
-    &:hover {
-      color: var(--accent);
-    }
-  }
+.post__body ol {
+  margin-top: 1.5rem;
+  padding-left: 1.5rem;
+}
 
-  ol {
-    margin-top: 1.5rem;
-    padding-left: 1.5rem;
-  }
+.post__body ol li {
+  margin-top: 0.75rem;
+}
 
-  ol li {
-    margin-top: 0.75rem;
-  }
+.post__body blockquote {
+  font-style: italic;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 5px solid var(--ink);
+  padding: 1.25rem 0.75rem;
+  margin-top: 2rem;
+}
 
-  blockquote {
-    font-style: italic;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-left: 5px solid var(--ink);
-    padding: 1.25rem 0.75rem;
-    margin-top: 2rem;
-
-    p {
-      opacity: 0.85;
-      margin-top: 0;
-    }
-  }
+.post__body blockquote p {
+  opacity: 0.85;
+  margin-top: 0;
 }
 
 // ──────────────────────────────────────────────────────
@@ -198,15 +172,15 @@ a {
   padding-left: 0.9rem;
   border-left: 2px solid var(--gray-2);
   margin-top: 1.75rem;
+}
 
-  .sn-num {
-    font-size: 0.75em;
-    vertical-align: super;
-    color: var(--accent);
-    font-weight: 900;
-    line-height: 0;
-    margin-right: 0.15em;
-  }
+.sidenote .sn-num {
+  font-size: 0.75em;
+  vertical-align: super;
+  color: var(--accent);
+  font-weight: 900;
+  line-height: 0;
+  margin-right: 0.15em;
 }
 
 @media (max-width: 1200px) {
