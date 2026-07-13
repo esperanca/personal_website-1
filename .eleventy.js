@@ -4,12 +4,12 @@ const svgContents = require('eleventy-plugin-svg-contents');
 const fs = require('fs');
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
-const markdownSidenotes = require('./src/plugins/markdown-sidenotes');
+const markdownItFootnote = require('markdown-it-footnote');
 const {DateTime} = require('luxon');
 
 const markdownLibrary = markdownIt({
   html: true,
-}).use(markdownSidenotes).use(markdownItAnchor, {
+}).use(markdownItFootnote).use(markdownItAnchor, {
   permalink: true,
   permalinkClass: 'tdbc-anchor',
   permalinkSymbol: `
@@ -37,6 +37,7 @@ const w3DateFilter = require('./src/filters/w3-date-filter.js');
 
 // Import transforms
 const htmlMinTransform = require('./src/transforms/html-min-transform.js');
+const footnotesToSidenotes = require('./src/transforms/footnotes-to-sidenotes.js');
 
 // Import data files
 const site = require('./src/_data/site.json');
@@ -57,6 +58,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addLayoutAlias('livro', 'layouts/livro.njk');
 
   // Transforms
+  eleventyConfig.addTransform('footnotes-to-sidenotes', footnotesToSidenotes);
   eleventyConfig.addTransform('htmlmin', htmlMinTransform);
 
   // Passthrough copy
