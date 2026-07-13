@@ -1,75 +1,41 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{ title }}</title>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-	<style>
-		{% include "css/style.css" %}
-	</style>
-</head>
-<body>
+{% extends 'layouts/page.njk' %}
 
-<header class="livro-header">
-	<div class="wrapper livro-header__wrapper">
-		<div class="livro-header__top">
-			<span class="livro-header__title">{{ title }}</span>
-			<button class="livro-toc-toggle" aria-expanded="false" aria-label="Mostrar índice" id="toc-toggle">
-				Ver índice
-			</button>
-			<span class="livro-header__author">{{ preface }}</span>
-		</div>
-	</div>
-	<nav class="livro-toc" hidden id="toc-nav">
-		<div class="wrapper">
-			<ul class="livro-toc__list">
-			{%- for item in tableOfContents -%}
-				<li><a href="#{{ item.id }}">{{ item.title }}</a></li>
-			{%- endfor -%}
-			</ul>
-		</div>
-	</nav>
-</header>
+{% block content %}
+  <main id="main-content" tabindex="-1" class="page">
+    <div class="page__header-wrapper">
+      <div class="page__inner-wrapper">
+        <h1>{{ collection }}</h1>
+      </div>
+    </div>
 
-<main class="wrapper">
-	<article class="livro-article">
-		<h1 class="livro-title">{{ title }}</h1>
+    <div>
+      <div class="inner-wrapper">
+        <header>
+          <h2>{{ title }}</h2>
 
-		<div class="livro-body">
-			{{ content | safe }}
-		</div>
-	</article>
-</main>
+          {% if subtitle %}
+            <p class="subtitle">{{ subtitle }}</p>
+          {% endif %}
 
-<script>
-	const toggleBtn = document.getElementById('toc-toggle');
-	const tocNav = document.getElementById('toc-nav');
+          <p class="meta-info">
+            {% if preface %}
+              <span>por {{ preface }}</span>
+            {% endif %}
+            {% if date %}
+              <span> · <time datetime="{{ date | postDate }}" class="dt-published">{{ date | postDate }}</time></span>
+            {% endif %}
+            {% if version %}
+              <span> · v{{ version }}</span>
+            {% endif %}
+          </p>
+        </header>
 
-	toggleBtn.addEventListener('click', () => {
-		const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-		toggleBtn.setAttribute('aria-expanded', !isExpanded);
-		if (isExpanded) {
-			tocNav.setAttribute('hidden', '');
-		} else {
-			tocNav.removeAttribute('hidden');
-		}
-	});
-
-	// Fechar índice ao clicar em um link e scroll suave para a seção
-	document.querySelectorAll('.livro-toc__list a').forEach(link => {
-		link.addEventListener('click', (e) => {
-			e.preventDefault();
-			const href = link.getAttribute('href');
-			const target = document.querySelector(href);
-			if (target) {
-				target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-			}
-			toggleBtn.setAttribute('aria-expanded', 'false');
-			tocNav.setAttribute('hidden', '');
-		});
-	});
-</script>
-
-</body>
-</html>
+        <article>
+          <div class="page__content">
+            {{ content | safe }}
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+{% endblock %}

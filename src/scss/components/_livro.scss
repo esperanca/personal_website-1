@@ -312,6 +312,80 @@ a {
 }
 
 // ──────────────────────────────────────────────────────
+// SIDENOTES (Tufte-style)
+// ──────────────────────────────────────────────────────
+
+.sn-input {
+  display: none;
+}
+
+.sn-label {
+  font-size: 0.68em;
+  vertical-align: super;
+  color: var(--accent);
+  font-weight: 900;
+  font-family: var(--sans);
+  line-height: 0;
+  cursor: default;
+  user-select: none;
+}
+
+.sidenote {
+  float: right;
+  clear: right;
+  margin-right: -28rem;
+  width: 25.3rem;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--ink);
+  opacity: 0.72;
+  padding-left: 1.2rem;
+  border-left: 2px solid var(--gray-2);
+  margin-top: 1.75rem;
+
+  .sn-num {
+    font-size: 0.75em;
+    vertical-align: super;
+    color: var(--accent);
+    font-weight: 900;
+    line-height: 0;
+    margin-right: 0.15em;
+  }
+}
+
+@media (max-width: 1300px) {
+  .sidenote {
+    margin-right: -22rem;
+    width: 19.8rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .sn-label {
+    cursor: pointer;
+  }
+
+  .sidenote {
+    display: none;
+    float: none;
+    clear: none;
+    margin: 0.5rem 0 0;
+    width: 100%;
+    border-left: 3px solid var(--accent);
+    border-top: 0;
+    padding: 0.55rem 0.8rem;
+    background: var(--wash);
+    opacity: 1;
+    font-size: 0.875rem;
+    margin-right: 0;
+  }
+
+  .sn-input:checked + .sidenote {
+    display: block;
+  }
+}
+
+// ──────────────────────────────────────────────────────
 // ACCESSIBILITY
 // ──────────────────────────────────────────────────────
 

@@ -1,140 +1,99 @@
 ---
 layout: livro
-title: "Desenhando Confiança"
-subtitle: "Design, agentes de IA e verificabilidade em serviços financeiros"
-collection: "Prévia consolidada"
-version: ""
-date: 2026-07-04
+title: Abertura
+subtitle: "Um livro sobre design, IA e confiança"
+collection: Livro
+status: revisado
+date: 2026-07-12
 contact: "danieliscoding@gmail.com"
 preface: "@danielsouza"
 permalink: /cases/livro/
-tableOfContents:
-  - { id: "prefacio", title: "Prefácio — Design e Qualidade" }
-  - { id: "capitulo-1", title: "Capítulo 1 — Confiável ou só convincente?" }
-  - { id: "transparencia", title: "Transparência" }
-  - { id: "explicabilidade", title: "Explicabilidade" }
-  - { id: "verificabilidade", title: "Verificabilidade" }
-  - { id: "compreensibilidade", title: "Compreensibilidade" }
 ---
+
+## Epígrafe
+
+Este é um livro para quem faz design. Design no sentido de projetar. Dar forma intencional a uma experiência, um produto, um serviço, um sistema. E fazer isso de um jeito _designerly_[^1]. Nigel Cross cunhou este termo em 1982 para nomear um modo próprio de conhecer, que não é o do cientista nem o do filósofo. Pensar fazendo: desenhar, modelar, prototipar, comparar alternativas, aprender com as formas provisórias que emergem do fazer.
+
+Nigel Cross defendia que há uma forma própria de conhecimento no design. Uma inteligência que não se reduz à ciência, à arte ou à engenharia, mas dialoga com as três.
+
+O trabalho do designer está nesse vaivém. Formular o problema enquanto se busca uma solução. Tornar visível o que ainda é vago. Criar condições para que uma decisão possa ser discutida, testada e melhorada.
+
+Quero te convidar para ter uma conversa de design sobre um tópico atual e urgente. Na boca do povo, poderíamos dizer que é sobre IA que alucina. Mas é um pouco mais que isso. Vamos explorar um _wicked problem_[^2] de escala global: como projetar sistemas automatizados mais úteis, rápidos e convenientes, sem empobrecer a capacidade humana de formular perguntas, avaliar alternativas e decidir com responsabilidade?
+
+Esse desafio vale independentemente do seu título: product designer, content designer, product manager e até um vibe coder de final de semana[^3]. Algumas coisas que você deve saber antes de começar:
+
+- É provável que algum novo modelo de linguagem ou tecnologia consiga em breve responder várias das questões que vamos abordar neste livro.
+- Se você já tem experiência em engenharia de software, MLOps ou Machine Learning, é bem possível que este conteúdo soe básico para você. Se esse for o caso, no final do livro tem uma lista de recursos que podem ser úteis.
+
+Mesmo que o problema sociotécnico seja resolvido pela tecnologia, acredito que o vocabulário e as ideias deste livro podem ajudar você a continuar pensando, decidindo e desenhando um mundo mediado por IA, particularmente no contexto de interfaces generativas e agentes[^4].
+
+O livro está estruturado em três partes:
+
+- Uma introdução teórica que define as qualidades de um sistema confiável
+- Um conjunto de práticas, disciplinas e recursos para perfis não técnicos desenharem confiança
+- Um catálogo de design patterns[^5] para interfaces de usuário e jornadas generativas
+
+Este livro é o resultado de alguns meses de pesquisa e curadoria do conhecimento de vários autores que admiro, que nunca se esquivaram de temas complexos nem se contentaram com respostas simplistas. Somei a essas vozes minha opinião e algumas experiências pessoais para defender uma tese: agentes confiáveis não resultam somente de modelos melhores, mais rápidos ou mesmo de interfaces mais polidas. Resultam de uma combinação mais difícil: linguagem clara, limites explícitos, boas decisões de interação, critérios verificáveis e responsabilidade distribuída.
+
+Não é meu objetivo tentar transformar designers, product managers, pesquisadores ou estrategistas em engenheiros. A proposta é outra: oferecer linguagem, critérios e ferramentas para que perfis não técnicos consigam participar melhor da construção desses sistemas.
+
+Tentei usar a linguagem mais simples possível. O livro tem exemplos, notas de rodapé e itens de glossário que podem tornar sua leitura mais fluida. O site do livro tem ferramentas adicionais, entrevistas e artigos.
+
+Tenho três compromissos com você: ser claro o bastante para começar, rigoroso o bastante para valer o esforço, e aberto o bastante para que a conversa continue depois da última página.
+
+Boa leitura!
 
 ## Prefácio
 
-### Design e Qualidade
+Em uma noite fria em Vancouver, em novembro de 2022, Jake Moffatt recebeu a notícia do falecimento de sua avó. Ele entrou no site da Air Canada com uma pergunta prática: se ele comprasse passagens de última hora para o velório, poderia pedir o desconto de tarifa de luto[^6] depois de voltar?
 
-Design e qualidade sempre estiveram ligados. Mas definir qualidade em design nunca foi fácil.
+Antes de comprar a passagem, ele quis confirmar as regras. Perguntou ao chatbot do site e fez uma captura de tela com a resposta, que confirmava que ele poderia pedir o reembolso em até noventa dias depois da viagem. Ele comprou as passagens no mesmo dia, fez a viagem, e quando voltou pediu o reembolso. A Air Canada recusou o pedido.
 
-Durante décadas, a qualidade mais visível esteve na superfície. Interface bem composta, hierarquia clara, composição, contraste. Para muita gente, design ainda significa "fazer ficar bonito". A camada final que facilita o entendimento e o desejo de usar algo melhorando estética e comunicação.
+Jake Moffatt não deixou por isso mesmo. Nos meses seguintes, trocou e-mails com a companhia e recebeu respostas negativas. Em fevereiro de 2023, a empresa admitiu: o chatbot tinha usado "palavras enganosas", e se recusou novamente a pagar.
 
-Mas a disciplina sempre ambicinou mais do que isso. 
+Moffatt decidiu levar o caso ao Civil Resolution Tribunal da British Columbia[^7]. No processo, a defesa surpreendeu: a Air Canada alegou não responder pelo que dizem seus representantes, chatbot incluído, como se a ferramenta fosse uma entidade jurídica à parte. Em fevereiro de 2024, o tribunal chamou a tese de "notável", rejeitou o argumento e condenou a empresa a pagar 812 dólares canadenses.
 
-A interação humano-computador trouxe critérios mais profundos. Usabilidade. Acessibilidade. Prevenção de erro. Feedback. Consistência. A qualidade deixou de ser apenas visual e passou a ser medida pelo que a pessoa conseguia fazer: a clareza da ação, a redução do atrito, a capacidade de um sistema responder de forma previsível e segura.
+O tribunal apontou que Moffatt não tinha razão nenhuma para saber que uma parte do site merecia mais crédito do que a outra. A empresa nunca explicou por que a página de tarifas era mais confiável. O chatbot não dizia onde buscava as respostas, nem permitia verificar. Soava convincente demais para questionar.
 
-Com o amadurecimento dos produtos digitais, a régua se moveu de novo. Não bastava desenhar telas eficientes. Era preciso desenhar jornadas coerentes, experiências íntegras, relações contínuas entre canais e momentos. A qualidade deixou de depender da beleza isolada de uma interface e passou a depender da coesão do sistema.
+A Air Canada não explicou como o chatbot funcionava. Nem para Moffatt, nem para o tribunal: a decisão registra que a empresa não apresentou nenhuma informação sobre a natureza do seu chatbot[^8]. O que se sabe é o que ele fez: inventou uma política que não existia.
 
-Agora, com sistemas generativos e agênticos, estamos diante de outro deslocamento.
+Este é um caso emblemático pela desproporção: 812 dólares de condenação, manchetes no mundo inteiro. A decisão nomeou o que a indústria já sabia e evitava dizer. O risco não está no sistema falhar; está no sistema falhar parecendo infalível.
 
-O designer deixa de atuar apenas sobre a superfície visível. Passa a influenciar sistemas que interpretam contexto, produzem linguagem, tomam decisões e executam ações em nome das pessoas. A interface importa, mas é insuficiente. O comportamento do sistema vira material de design.
+Essa desconfiança tem respaldo em números. Um levantamento de incidentes de IA catalogou 233 casos em 2024, alta de 56,4% sobre o ano anterior, boa parte deles seguindo o mesmo padrão do caso Moffatt: uma resposta convincente tomada como verdade antes de ser checada[^9].
 
-Isso reescreve a pergunta.
+A mesma decisão firmou um segundo entendimento, o da responsabilidade. A tese da entidade separada perdeu no Canadá e voltou a perder onde reapareceu: em 2026, um tribunal alemão condenou uma clínica pelo que seu chatbot dizia sobre os próprios médicos[^10]. Nenhuma jurisdição aceitou, até hoje, que o software responde sozinho.
 
-Não basta perguntar se a experiência é clara ou acessível. É preciso perguntar se o sistema é transparente sobre como opera. Se suas decisões são explicáveis. Se seu comportamento é verificável. Se seus limites são compreensíveis. E, no fim, se a pessoa entende o que está acontecendo e quem responde quando algo falha.
+Em 2026, assistentes de IA estão em todos os lugares: o ChatGPT sozinho tem 900 milhões de usuários semanais e recebe 2,5 bilhões de prompts por dia. Quase 29 mil a cada segundo[^11].
 
-A qualidade em design deixa de ser propriedade da experiência percebida. Passa a ser propriedade do sistema em funcionamento.
+Os chatbots meio burros, de que a gente fazia piada, ficaram fluentes e convincentes. Para o brasileiro, essa mudança não chegou como tecnologia nova; chegou como conversa nova. A vida do país já corria dentro do WhatsApp: o bom dia no grupo da família, o áudio de três minutos, o boleto, a consulta, a venda[^12]. Quando a máquina aprendeu a conversar, entrou pelo lugar onde o brasileiro passa o dia: a janela de mensagens. O círculo azul da Meta AI apareceu ali em outubro de 2024, sem convite e sem botão de sair.
 
----
+E quando uma interface conversacional (um chatbot, um assistente) substitui a consulta a informações, documentos oficiais, e até a execução de tarefas de forma autônoma, o desenho destes sistemas tem que prever consequências e riscos novos.
 
-## Capítulo 1
+Em domínios regulados, saúde, finanças, governo, essa confusão entre fluência e confiabilidade não é apenas incômodo. A pessoa que recebe uma resposta de um chatbot sobre quando tomar um medicamento, ou se pode fazer um investimento financeiro, está tomando uma decisão de verdade.
 
-### Confiável ou só convincente?
+O que a interface mostra é a conversa. O que não é transparente às vezes é o resto: de onde vem a resposta, por que saiu assim, se é verdadeira, o que ela significa, quem responde quando falha. Dessas cinco perguntas, os tribunais já resolveram a última, de Vancouver a Hamm. As outras quatro me parecem um bom problema de design. Tornar visível o que a fluência esconde é parte da resposta, e este livro dá um nome a cada parte: transparência, explicabilidade, verificabilidade, compreensibilidade.
 
-Existe um momento em que uma tecnologia disruptiva deixa de ser novidade para entusiastas e passa a fazer parte do cotidiano de todo mundo: estranha o suficiente para assustar, próxima demais para ignorar[^1]. Interfaces conversacionais chegaram assim.
 
-Em novembro de 2022, Jake Moffatt entrou no site da Air Canada com uma pergunta prática: se ele comprasse passagens de última hora para o velório de sua avó, poderia pedir o desconto de tarifa de luto[^2] depois de voltar? Antes de gastar dinheiro, ele quis confirmar as regras. Perguntou ao chatbot e fez uma captura de tela com a resposta. A resposta confirmava que o reembolso poderia ser solicitado depois da viagem. Ele comprou as passagens. Voltou. Pediu o reembolso. Semanas depois, a Air Canada recusou.
+[^1]: É a capacidade de pensar por meio do projeto. O designer coloca uma hipótese no mundo (um rascunho, um protótipo, uma jornada) e usa essa forma provisória para aprender, discutir, decidir e transformar a própria compreensão do problema.
 
-Moffatt não deixou por isso mesmo. Nos meses seguintes, trocou e-mails com a companhia, recebeu respostas negativas e decidiu levar o caso ao Civil Resolution Tribunal da British Columbia[^3]. Em fevereiro de 2024, o tribunal condenou a Air Canada a pagar a diferença e registrou algo além da condenação: não havia razão para Moffatt saber que uma parte do site era mais confiável do que outra. A empresa não explicou por que a página de tarifas de luto deveria ser considerada mais autoritativa do que o chatbot.
+[^2]: Wicked problems são problemas complexos, ambíguos e socialmente situados, que não têm uma formulação definitiva nem uma solução final. Cada tentativa de resolvê-los muda o próprio entendimento do problema. O termo foi cunhado por **Horst W. J. Rittel** e **Melvin M. Webber**, no artigo **"Dilemmas in a General Theory of Planning"** (2025).
 
-A falha documentada no processo não foi ausência de informação. O site tinha informação. O que faltava eram qualidades que a resposta não entregou.
+[^3]: Vibe coder é quem usa IA para transformar uma ideia ou objetivo em software, guiando o processo por prompts, ajustes, testes e feedback, mesmo sem controlar cada detalhe técnico do código produzido.
 
-O chatbot da Air Canada era convencional. No fim daquele mesmo novembro, a OpenAI lançou o ChatGPT. Nos anos seguintes, a IA generativa se tornou a base das interfaces conversacionais: sistemas mais fluidos, mais persuasivos, mais difíceis de checar. O problema que levou Moffatt ao tribunal ficou mais comum, não mais raro.
+[^4]: Um agente de IA é um sistema que, além de conversar, consegue interpretar um objetivo, planejar passos, usar ferramentas, tomar decisões intermediárias e executar ações em nome do usuário dentro de certos limites.
 
-O caso concentra, de uma vez só, os quatro problemas que este texto vai destrinchar:
+[^5]: Um design pattern captura a relação entre contexto, problema e solução, oferecendo uma forma reutilizável de resolver uma situação recorrente sem prescrever uma implementação única.
 
-- **Transparência:** o chatbot não deixou claro em quais políticas ou informações da empresa estava baseando sua resposta.
-- **Explicabilidade:** o chatbot afirmou que o desconto poderia ser solicitado depois da compra, mas não explicou qual regra da empresa sustentava essa conclusão.
-- **Verificabilidade:** a resposta não oferecia um link, uma referência ou qualquer forma de confirmar a informação antes da compra.
-- **Compreensibilidade:** a resposta era clara e fácil de entender. Justamente por isso, o passageiro confiou nela.
+[^6]: A Air Canada oferecia desconto de tarifa de luto para quem comprava passagens aéreas após a perda de um parente próximo, mas com regras específicas sobre timing e comprovação. A página oficial de "Bereavement travel" excluía pedidos retroativos, feitos depois da viagem: o oposto exato do que o chatbot informou.
 
-Esses quatro conceitos não são sinônimos nem intercambiáveis, mas camadas complementares na construção da confiança.
+[^7]: _Moffatt v. Air Canada_, 2024 BCCRT 149, Civil Resolution Tribunal de British Columbia. Julgamento: 14 de fevereiro de 2024. Decisão disponível em [https://www.canlii.org/en/bc/bccrt/doc/2024/2024bccrt149/2024bccrt149.html](https://www.canlii.org/en/bc/bccrt/doc/2024/2024bccrt149/2024bccrt149.html). Linha do tempo do caso: consulta ao chatbot e primeira compra em 11 de novembro de 2022; pedido de reembolso em 17 de novembro de 2022; admissão das "misleading words" pela Air Canada em 8 de fevereiro de 2023; abertura do processo no tribunal em fevereiro de 2023.
 
-## Transparência
+[^8]: A natureza técnica do chatbot nunca foi esclarecida. A decisão registra que a Air Canada não apresentou informação sobre o sistema, nem sobre quem o projetou ou programou. Análises posteriores presumem um modelo generativo, porque o chatbot produziu uma política inexistente em vez de repetir textos pré-escritos. Isso é incompatível com sistemas determinísticos, em que a mesma entrada produz sempre a mesma saída, escolhida entre respostas pré-aprovadas (St-Hilaire, _UBC Law Review_, v. 58, n. 2, 2025).
 
-Transparência é o grau em que o sistema deixa claro como opera: que dados usa, quais são seus limites, que regras segue, quem responde por ele.
+[^9]: AI Incident Database (Stanford HAI, AI Index Report 2025).
 
-Essa ideia vem da governança pública e da responsabilidade institucional. Foi incorporada às *Ethics Guidelines for Trustworthy AI* da União Europeia e ao *AI Risk Management Framework* do NIST[^4] como princípio central.
+[^10]: Em 12 de maio de 2026, o Oberlandesgericht Hamm, tribunal de segunda instância da Renânia do Norte-Vestfália, condenou a empresa Aesthetify GmbH a deixar de atribuir aos seus dois sócios títulos de especialista médico que o chatbot do site inventava. Processo I-4 UKl 3/25; cabe recurso ao Bundesgerichtshof, a mais alta corte cível alemã.
 
-> Documentar regras não é a mesma coisa que explicar uma decisão. Um sistema pode parecer transparente e, ainda assim, ser opaco.
+[^11]: Estatísticas de 2026: ChatGPT (900M usuários semanais), Gemini (900M+ mensais). Base: relatórios públicos das empresas. Frequência de prompts: estimativa do setor.
 
-Um exemplo comum: "Não foi possível aprovar sua solicitação." A interface encerra a conversa. Não revela quais dados foram usados, se havia algum desatualizado, se houve revisão real ou somente uma resposta automática.
-
-## Explicabilidade
-
-Explicabilidade é a capacidade de um sistema justificar a própria resposta, decisão ou recomendação. Responde a uma pergunta específica: por que isso aconteceu?
-
-O termo ganhou peso com o programa XAI da DARPA[^5], liderado por David Gunning e David Aha, e foi refinado depois por pesquisadores como Tim Miller e por instituições como o NIST.
-
-Um agente explicável não esconde o próprio raciocínio. Mostra os critérios que pesaram na decisão, mesmo que de forma resumida.
-
-## Verificabilidade
-
-Verificabilidade é a possibilidade de checar se uma resposta está correta, sustentada por fontes ou de acordo com critérios definidos. A pergunta que ela responde é direta: isso pode ser confirmado?
-
-Vem de uma linhagem antiga: ciência, auditoria, verificação formal em engenharia de software. Ganhou um capítulo recente com a IA generativa, na pesquisa de Nelson F. Liu, Tianyi Zhang e Percy Liang sobre buscadores que respondem com citação de fonte. Os três auditaram quatro motores de busca generativos e encontraram um padrão revelador: só 51,5% das frases produzidas tinham sustentação completa nas citações.
-
-Quase metade das frases passava o teste de fluência sem passar o teste de sustentação. Verificabilidade é a diferença entre os dois testes: a possibilidade de confrontar uma resposta com uma fonte externa e citável, não apenas com a coerência do próprio sistema.
-
-## Compreensibilidade
-
-Compreensibilidade é a qualidade de uma explicação ser entendida pela pessoa certa, no contexto certo, no nível de detalhe certo. A pergunta muda de novo: o usuário entendeu o suficiente para decidir, agir ou contestar?
-
-Derek Doran, Sarah Schulz e Tarek Besold separam sistemas compreensíveis de sistemas apenas interpretáveis. O interpretável produz uma explicação tecnicamente válida; o compreensível produz uma explicação que a pessoa do outro lado consegue usar. Tim Miller trouxe as ciências sociais para esse debate, mostrando como humanos processam explicações na prática — não como um sistema deveria, em teoria, produzi-las.
-
-Esse é o termo mais próximo do trabalho de um designer de conteúdo. Uma explicação pode estar tecnicamente correta e ainda causar confusão. O inverso é mais perigoso: uma explicação clara sobre uma informação errada convence com mais eficiência do que uma confusa. Compreensibilidade sem transparência, explicabilidade e verificabilidade não é virtude — é risco.
-
-### Por que isso importa para designers e para quem constrói agentes generativos
-
-Desenhar para confiança significa decidir, em cada interface e em cada resposta, que tipo de confiança o produto está pedindo da pessoa.
-
-O sistema mostra de onde fala? Isso é transparência. Mostra por que respondeu assim? Isso é explicabilidade. Permite conferir se está certo? Isso é verificabilidade. Ajuda a pessoa entender o suficiente para agir? Isso é compreensibilidade.
-
-Quando uma interface de IA não responde a essas perguntas, ela ainda pode soar clara, útil e segura. Esse é justamente o problema. A confiança começa quando a resposta deixa de ser apenas convincente e passa a ser confiável.
-
-O trabalho de um designer sempre foi traduzir intenção em comportamento. Com agentes de IA, essa tradução ficou mais complexa.
-
-Este livro propõe um caminho concreto. Ao longo dos capítulos, você vai aprender a escrever critérios que especificam o comportamento de um agente — não diretrizes de tom, mas condições verificáveis: quando declarar premissas, quando pedir confirmação, quando reconhecer incerteza. Vai entender como avaliar um agente antes de confiar nele, usando evals como parte do processo de design, não como pós-produção de engenharia. E vai aprender a reconhecer cada momento em que o agente para, pergunta, limita ou escala como uma decisão de experiência — algo que você pode, e deve, tomar conscientemente.
-
-Ao final, a pergunta que orienta seu trabalho se expande. Deixa de ser apenas "essa experiência é fácil de usar?" e passa a incluir: "essa experiência pode ser compreendida, avaliada e contestada?"
-
-Essa segunda pergunta é o que separa um agente que convence de um agente que merece ser confiado.
-
-## Referências
-
-1. CBC News (2024). Air Canada found liable for chatbot's bad advice on bereavement rates.
-2. Gunning, D. & Aha, D. (2019). DARPA's Explainable Artificial Intelligence (XAI) Program. *AI Magazine*.
-3. Miller, T. (2019). Explanation in Artificial Intelligence: Insights from the Social Sciences. *Artificial Intelligence*.
-4. NIST (2021). Four Principles of Explainable Artificial Intelligence (NISTIR 8312).
-5. High-Level Expert Group on AI, Comissão Europeia (2019). Ethics Guidelines for Trustworthy AI.
-6. NIST (2023). AI Risk Management Framework (AI RMF 1.0).
-7. Liu, N. F., Zhang, T. & Liang, P. (2023). Evaluating Verifiability in Generative Search Engines. *Findings of EMNLP*.
-8. Doran, D., Schulz, S. & Besold, T. R. (2017). What Does Explainable AI Really Mean? A New Conceptualization of Perspectives.
-9. Moore, G. A. (1991). *Crossing the Chasm*. HarperCollins.
-10. Gartner. Gartner Hype Cycle Research Methodology.
-
-[^1]: O Gartner chama esse momento de vale da desilusão: quando o entusiasmo inicial cede à realidade das limitações, e a adoção acontece antes dos critérios para avaliar o que foi adotado.
-
-[^2]: Tarifas de luto (bereavement fares) são descontos que companhias aéreas oferecem a passageiros que precisam viajar com urgência pela morte ou iminência de morte de um familiar próximo. As políticas e requisitos documentais variam por empresa.
-
-[^3]: O Civil Resolution Tribunal (CRT) é um tribunal administrativo online da British Columbia, Canadá, para disputas de pequenas causas. Funciona sem audiências presenciais; suas decisões têm força legal equivalente à de um tribunal convencional.
-
-[^4]: O National Institute of Standards and Technology é uma agência federal americana que desenvolve padrões técnicos e frameworks de gestão de risco.
-
-[^5]: A Defense Advanced Research Projects Agency é a agência de pesquisa avançada do Departamento de Defesa americano. Seu programa XAI (Explainable AI, 2016–2021) financiou boa parte da pesquisa contemporânea sobre explicabilidade — e estabeleceu a distinção entre modelos de alto desempenho e modelos compreensíveis como um problema de design, não só de engenharia.
+[^12]: Pesquisa Ipsos/Google (2024, 21 países): 54% dos brasileiros relataram já ter usado IA generativa, contra 48% da média global.
