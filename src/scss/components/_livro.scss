@@ -65,6 +65,23 @@ a {
   margin-bottom: 5rem;
 }
 
+.livro-title {
+  font-size: 3.5rem;
+  font-family: var(--display);
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+  line-height: 1.1;
+}
+
+.livro-section {
+  font-size: 1.75rem;
+  font-family: var(--display);
+  font-weight: 400;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.2;
+  opacity: 0.8;
+}
+
 .post h1 {
   font-size: 2.5rem;
   font-family: var(--display);
