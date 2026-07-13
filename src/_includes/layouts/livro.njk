@@ -1,23 +1,17 @@
 {% extends 'layouts/page.njk' %}
 
 {% block content %}
-  <main id="main-content" tabindex="-1" class="page">
-    <div class="page__header-wrapper">
-      <div class="page__inner-wrapper">
-        <h1>{{ collection }}</h1>
-      </div>
-    </div>
-
-    <div>
-      <div class="inner-wrapper">
-        <header>
-          <h2>{{ title }}</h2>
+  <main id="main-content" tabindex="-1" class="page livro-page">
+    <div class="livro-page__container">
+      <div class="livro-page__main">
+        <header class="livro-page__header">
+          <h1>{{ title }}</h1>
 
           {% if subtitle %}
-            <p class="subtitle">{{ subtitle }}</p>
+            <p class="livro-page__subtitle">{{ subtitle }}</p>
           {% endif %}
 
-          <p class="meta-info">
+          <p class="livro-page__meta">
             {% if preface %}
               <span>por {{ preface }}</span>
             {% endif %}
@@ -30,12 +24,19 @@
           </p>
         </header>
 
-        <article>
-          <div class="page__content">
-            {{ content | safe }}
-          </div>
+        <article class="livro-page__article">
+          {{ content | safe }}
         </article>
       </div>
+
+      <aside class="livro-page__sidebar">
+        <div class="livro-page__sidebar-content">
+          <h2 class="livro-page__sidebar-title">{{ title }}</h2>
+          {% if collection %}
+            <p class="livro-page__sidebar-collection">{{ collection }}</p>
+          {% endif %}
+        </div>
+      </aside>
     </div>
   </main>
 {% endblock %}

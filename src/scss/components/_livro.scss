@@ -11,6 +11,181 @@
   --wash: #f5f5f5;
   --display: "Playfair Display", Georgia, "Times New Roman", serif;
   --sans: "Noto Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --livro-max-width: 1600px;
+  --livro-content-width: 80%;
+  --livro-sidebar-width: 20%;
+}
+
+.livro-page {
+  max-width: var(--livro-max-width);
+  margin: 0 auto;
+}
+
+.livro-page__container {
+  display: grid;
+  grid-template-columns: var(--livro-content-width) var(--livro-sidebar-width);
+  gap: 3rem;
+  padding: 4rem 3rem;
+  max-width: 100%;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+}
+
+.livro-page__main {
+  min-width: 0;
+}
+
+.livro-page__sidebar {
+  position: sticky;
+  top: 2rem;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+  padding: 2rem;
+  background: var(--wash);
+  border: 1px solid var(--gray-2);
+  border-radius: 4px;
+
+  @media (max-width: 1200px) {
+    position: static;
+    max-height: auto;
+    sticky: none;
+  }
+}
+
+.livro-page__sidebar-content {
+  font-size: 0.95rem;
+}
+
+.livro-page__sidebar-title {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.livro-page__sidebar-collection {
+  opacity: 0.7;
+  margin: 0;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.livro-page__header {
+  margin-bottom: 2rem;
+
+  h1 {
+    font-family: var(--display);
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 0 0 1rem 0;
+    line-height: 1.1;
+    color: var(--ink);
+  }
+}
+
+.livro-page__subtitle {
+  font-family: var(--display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0.5rem 0 1.5rem 0;
+  color: var(--ink);
+  opacity: 0.8;
+}
+
+.livro-page__meta {
+  font-size: 0.95rem;
+  opacity: 0.7;
+  margin: 0;
+
+  span {
+    display: inline;
+  }
+
+  time {
+    font-style: italic;
+  }
+}
+
+.livro-page__article {
+  font-size: 1.125rem;
+  line-height: 1.8;
+
+  h2 {
+    font-family: var(--display);
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 2.5rem 0 1rem 0;
+    line-height: 1.2;
+    color: var(--ink);
+  }
+
+  h3 {
+    font-family: var(--display);
+    font-size: 1.375rem;
+    font-weight: 400;
+    margin: 1.8rem 0 0.8rem 0;
+    line-height: 1.2;
+    color: var(--ink);
+  }
+
+  p {
+    margin: 1.5rem 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: underline;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  ul, ol {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+  }
+
+  li {
+    margin: 0.5rem 0;
+    line-height: 1.7;
+  }
+
+  blockquote {
+    font-style: italic;
+    border: 1px solid var(--gray-2);
+    border-left: 4px solid var(--ink);
+    padding: 1.25rem 0.75rem;
+    margin: 2rem 0;
+    background: var(--wash);
+    opacity: 0.85;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  sup a {
+    text-decoration: none;
+    font-size: 0.7em;
+    padding: 0 0.1em;
+  }
 }
 
 * {
@@ -331,17 +506,18 @@ a {
 }
 
 .sidenote {
-  float: right;
-  clear: right;
-  margin-right: -28rem;
-  width: 25.3rem;
-  font-size: 0.82rem;
+  display: none;
+  float: none;
+  clear: none;
+  margin: 1.5rem 0;
+  width: 100%;
+  font-size: 0.85rem;
   line-height: 1.6;
   color: var(--ink);
-  opacity: 0.72;
-  padding-left: 1.2rem;
-  border-left: 2px solid var(--gray-2);
-  margin-top: 1.75rem;
+  opacity: 0.8;
+  padding: 1rem;
+  border-left: 3px solid var(--accent);
+  background: rgba(9, 121, 250, 0.05);
 
   .sn-num {
     font-size: 0.75em;
@@ -353,35 +529,28 @@ a {
   }
 }
 
-@media (max-width: 1300px) {
-  .sidenote {
-    margin-right: -22rem;
-    width: 19.8rem;
-  }
+.sn-input:checked + .sidenote {
+  display: block;
 }
 
-@media (max-width: 860px) {
+@media (min-width: 1200px) {
   .sn-label {
-    cursor: pointer;
+    cursor: default;
   }
 
   .sidenote {
-    display: none;
-    float: none;
-    clear: none;
-    margin: 0.5rem 0 0;
-    width: 100%;
-    border-left: 3px solid var(--accent);
-    border-top: 0;
-    padding: 0.55rem 0.8rem;
-    background: var(--wash);
-    opacity: 1;
-    font-size: 0.875rem;
-    margin-right: 0;
-  }
-
-  .sn-input:checked + .sidenote {
     display: block;
+    float: right;
+    clear: right;
+    margin: 0 0 1.5rem 2rem;
+    width: 20vw;
+    max-width: 250px;
+    background: transparent;
+    border: none;
+    border-left: 2px solid var(--gray-2);
+    padding: 0 0 0 1rem;
+    opacity: 0.7;
+    font-size: 0.8rem;
   }
 }
 
