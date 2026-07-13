@@ -1,23 +1,18 @@
 {% extends 'layouts/page.njk' %}
 
 {% block content %}
-  <main id="main-content" tabindex="-1" class="page">
+  <main id="main-content" tabindex="-1" class="livro-page">
     <div class="wrapper">
-      <article class="post">
+      <article class="livro-post">
 
         <h1>Desenhando Confiança</h1>
 
-        {% if subtitle %}
-          <p class="meta-info">{{ subtitle }}</p>
-        {% endif %}
-
-        <p class="meta-info">
-          {% if version %}v{{ version }} · {% endif %}
-          {% if date %}<time datetime="{{ date | postDate }}" class="dt-published">{{ date | postDate }}</time>{% if preface %} · {% endif %}{% endif %}
-          {% if preface %}por {{ preface }}{% endif %}
+        <p class="livro-meta">
+          {% if subtitle %}{{ subtitle }}<br>{% endif %}
+          {% if version %}v{{ version }} · {% endif %}{% if date %}<time datetime="{{ date | postDate }}" class="dt-published">{{ date | postDate }}</time>{% endif %}{% if preface %} · {{ preface }}{% endif %}
         </p>
 
-        <div class="post__body">
+        <div class="livro-body">
           {{ content | safe }}
         </div>
 
