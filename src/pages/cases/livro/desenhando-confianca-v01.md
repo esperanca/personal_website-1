@@ -1,13 +1,14 @@
 ---
 layout: livro
-title: "Desenhando Confiança"
+title: "Desenhando Confiança (v01 — Archivado)"
 subtitle: "Design, agentes de IA e verificabilidade em serviços financeiros"
 collection: "Prévia consolidada"
 version: ""
 date: 2026-07-04
 contact: "danieliscoding@gmail.com"
 preface: "@danielsouza"
-permalink: /cases/livro/
+permalink: false
+eleventyExcludeFromCollections: true
 tableOfContents:
   - { id: "prefacio", title: "Prefácio — Design e Qualidade" }
   - { id: "capitulo-1", title: "Capítulo 1 — Confiável ou só convincente?" }
