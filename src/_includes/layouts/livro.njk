@@ -1,21 +1,37 @@
-{% extends 'layouts/base.njk' %}
+{% extends 'layouts/page.njk' %}
 
 {% block content %}
-  <main class="wrapper">
-    <article class="post">
-
-      <h1>{{ title }}</h1>
-      <p class="meta-info">
-        {% if version %}v{{ version }} · {% endif %}
-        {% if date %}<time datetime="{{ date | postDate }}" class="dt-published">{{ date | postDate }}</time> · {% endif %}
-        {% if preface %}<span>{{ preface }}</span>{% endif %}
-        {% if subtitle %}<br><em>{{ subtitle }}</em>{% endif %}
-      </p>
-
-      <div class="post__body">
-        {{ content | safe }}
+  <main id="main-content" tabindex="-1" class="page">
+    <div class="page__header-wrapper">
+      <div class="page__inner-wrapper">
+        <h1>{{ collection }}</h1>
       </div>
+    </div>
 
-    </article>
+    <div class="wrapper">
+      <article class="post">
+        <h1>{{ title }}</h1>
+
+        {% if subtitle %}
+          <p class="meta-subtitle">{{ subtitle }}</p>
+        {% endif %}
+
+        <p class="meta-info">
+          {% if preface %}
+            <span>por {{ preface }}</span>
+          {% endif %}
+          {% if date %}
+            <span> · <time datetime="{{ date | postDate }}" class="dt-published">{{ date | postDate }}</time></span>
+          {% endif %}
+          {% if version %}
+            <span> · v{{ version }}</span>
+          {% endif %}
+        </p>
+
+        <div class="post__body">
+          {{ content | safe }}
+        </div>
+      </article>
+    </div>
   </main>
 {% endblock %}

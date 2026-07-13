@@ -72,6 +72,15 @@ a {
   margin: 0;
 }
 
+.meta-subtitle {
+  font-family: var(--display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0.5rem 0 1.5rem 0;
+  color: var(--ink);
+  opacity: 0.8;
+}
+
 .meta-info {
   opacity: 0.7;
   margin-top: 0.75rem;
