@@ -4,11 +4,12 @@ const svgContents = require('eleventy-plugin-svg-contents');
 const fs = require('fs');
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
+const markdownSidenotes = require('./src/plugins/markdown-sidenotes');
 const {DateTime} = require('luxon');
 
 const markdownLibrary = markdownIt({
   html: true,
-}).use(markdownItAnchor, {
+}).use(markdownSidenotes).use(markdownItAnchor, {
   permalink: true,
   permalinkClass: 'tdbc-anchor',
   permalinkSymbol: `
