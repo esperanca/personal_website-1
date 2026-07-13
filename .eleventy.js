@@ -48,6 +48,13 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_FULL);
   });
 
+  eleventyConfig.addFilter('livroDate', (dateObj) => {
+    return DateTime.fromJSDate(dateObj)
+      .setZone('America/Sao_Paulo')
+      .setLocale('pt-BR')
+      .toFormat("d 'de' MMMM 'de' yyyy · HH:mm");
+  });
+
   // Filters
   eleventyConfig.addFilter('dateFilter', dateFilter);
   eleventyConfig.addFilter('w3DateFilter', w3DateFilter);

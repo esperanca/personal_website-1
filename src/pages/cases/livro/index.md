@@ -1,10 +1,10 @@
 ---
 layout: livro
-title: Abertura
+title: "Desenhando Confiança"
 subtitle: "Um livro sobre design, IA e confiança"
 collection: Livro
 status: revisado
-date: 2026-07-12
+date: 2026-07-12T22:45:00-03:00
 contact: "danieliscoding@gmail.com"
 preface: "@danielsouza"
 permalink: /cases/livro/
@@ -86,9 +86,9 @@ O que a interface mostra é a conversa. O que não é transparente às vezes é 
 
 [^6]: A Air Canada oferecia desconto de tarifa de luto para quem comprava passagens aéreas após a perda de um parente próximo, mas com regras específicas sobre timing e comprovação. A página oficial de "Bereavement travel" excluía pedidos retroativos, feitos depois da viagem: o oposto exato do que o chatbot informou.
 
-[^7]: _Moffatt v. Air Canada_, 2024 BCCRT 149, Civil Resolution Tribunal de British Columbia. Julgamento: 14 de fevereiro de 2024. Decisão disponível em [https://www.canlii.org/en/bc/bccrt/doc/2024/2024bccrt149/2024bccrt149.html](https://www.canlii.org/en/bc/bccrt/doc/2024/2024bccrt149/2024bccrt149.html). Linha do tempo do caso: consulta ao chatbot e primeira compra em 11 de novembro de 2022; pedido de reembolso em 17 de novembro de 2022; admissão das "misleading words" pela Air Canada em 8 de fevereiro de 2023; abertura do processo no tribunal em fevereiro de 2023.
+[^7]: _Moffatt v. Air Canada_, 2024 BCCRT 149, Civil Resolution Tribunal de British Columbia. Julgamento: 14 de fevereiro de 2024. Decisão disponível no [CanLII](https://www.canlii.org/en/bc/bccrt/doc/2024/2024bccrt149/2024bccrt149.html). Linha do tempo do caso: consulta ao chatbot e primeira compra em 11 de novembro de 2022; pedido de reembolso em 17 de novembro de 2022; admissão das "misleading words" pela Air Canada em 8 de fevereiro de 2023; abertura do processo no tribunal em fevereiro de 2023.
 
-[^8]: A natureza técnica do chatbot nunca foi esclarecida. A decisão registra que a Air Canada não apresentou informação sobre o sistema, nem sobre quem o projetou ou programou. Análises posteriores presumem um modelo generativo, porque o chatbot produziu uma política inexistente em vez de repetir textos pré-escritos. Isso é incompatível com sistemas determinísticos, em que a mesma entrada produz sempre a mesma saída, escolhida entre respostas pré-aprovadas (St-Hilaire, _UBC Law Review_, v. 58, n. 2, 2025).
+[^8]: Análises posteriores presumem um modelo generativo: inventar uma política é incompatível com sistemas determinísticos, que respondem sempre com textos pré-aprovados (St-Hilaire, _UBC Law Review_, v. 58, n. 2, 2025).
 
 [^9]: AI Incident Database (Stanford HAI, AI Index Report 2025).
 

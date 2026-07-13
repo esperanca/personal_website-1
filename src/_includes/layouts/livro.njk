@@ -9,7 +9,7 @@
 
         <p class="livro-meta">
           {% if subtitle %}{{ subtitle }}<br>{% endif %}
-          {% if version %}v{{ version }} · {% endif %}{% if date %}<time datetime="{{ date | postDate }}" class="dt-published">{{ date | postDate }}</time>{% endif %}{% if preface %} · {{ preface }}{% endif %}
+          {% if version %}v{{ version }} · {% endif %}{% if date %}<time datetime="{{ date | w3DateFilter }}" class="dt-published">{{ date | livroDate }}</time>{% endif %}{% if preface %} · {{ preface }}{% endif %}
         </p>
 
         <div class="livro-body">
