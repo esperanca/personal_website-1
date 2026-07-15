@@ -29,4 +29,6 @@ Para publicar, netlify.
 
 A última atualização aconteceu em: {{post.data}}
 
-Conteúdos e códigos deste website são livres de inteligência artificial.   
+Códigos deste website são criados com a assistência de inteligência artificial (Claude).
+
+Todos os textos são escritos por mim, e passam por revisão da Leiliane. 
