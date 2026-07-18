@@ -21,6 +21,8 @@ Quando falamos de adoção de novas tecnologias, principalmente na era da IA gen
 
 A agência é a capacidade de uma pessoa fazer escolhas conscientes e agir sobre o mundo de acordo com suas intenções e objetivos, influenciando as próprias ações e as circunstâncias ao seu redor.
 
+![Moore e adoção de tecnologias.](/images/curva-moore.png "Adoção de tecnologias")
+
 Quando Moore (1991) conceituou seu abismo (que descreve a dificuldade de uma tecnologia passar do mercado dos entusiastas e primeiros usuários para o público mais amplo e pragmático.) com certeza não imaginou todas as nuances filosóficas, econômicas e epistêmicas relacionadas ao uso de AI. Aliás a teoria de Moore é bem pragmática e mais focada em fatores racionais como risco, dificuldade de uso, ausência de benefícios. A lente é a do mercado. 
 
 Produtar nunca foi só sobre a "coisa" construída. Mas num cenário em que está cada vez mais fácil desenhar e implementar quase qualquer software, me parece que pensar na forma como as pessoas comuns adotam as coisas que construímos será cada vez mais importante. 
