@@ -19,7 +19,7 @@ Existe um provérbio africano que descreve exatamente esse gesto: "Ninguém expe
 
 Quando falamos de adoção de novas tecnologias, principalmente na era da IA generativa, sempre penso no conceito de agência, da teoria social cognitiva (Bandura, 2018): 
 
->> A agência é a capacidade de uma pessoa fazer escolhas conscientes e agir sobre o mundo de acordo com suas intenções e objetivos, influenciando as próprias ações e as circunstâncias ao seu redor.
+A agência é a capacidade de uma pessoa fazer escolhas conscientes e agir sobre o mundo de acordo com suas intenções e objetivos, influenciando as próprias ações e as circunstâncias ao seu redor.
 
 Quando Moore (1991) conceituou seu abismo (que descreve a dificuldade de uma tecnologia passar do mercado dos entusiastas e primeiros usuários para o público mais amplo e pragmático.) com certeza não imaginou todas as nuances filosóficas, econômicas e epistêmicas relacionadas ao uso de AI. Aliás a teoria de Moore é bem pragmática e mais focada em fatores racionais como risco, dificuldade de uso, ausência de benefícios. A lente é a do mercado. 
 
@@ -29,13 +29,14 @@ Produtar nunca foi só sobre a "coisa" construída. Mas num cenário em que est�
 
 A pergunta que devíamos fazer antes de lançar qualquer coisa não é "quão rápido as pessoas vão adotar isso". É onde fica o chão firme, pra quem ainda não confia. E quando falamos de confiança e AI generativa, é impossível ignorar a importância dos fenômenos psicológicos no contexto de adoção. 
 
-A conversa sobre utilidade e até precisão da AI cada vez perde mais a importância. E tópicos como perda de autonomia, baixa autoeficácia e ameaça a identidade profissional e a aversão a incerteza se tornam o centro da questão.
+A conversa sobre utilidade e até precisão da AI cada vez perde mais a importância. E tópicos como perda de autonomia, ameaça a identidade profissional e a aversão a incerteza se tornam o centro da questão.
 
 Pode ser que a maioria das pessoas nem ligue para isso. E pode ser que muitas não tenham escolha. Mas as que ligam, com certeza serão bastante vocais. Historiadores como E.P. Thompson mostram que os luditas não eram simplesmente inimigos das máquinas. Resistir não é necessariamente rejeitar o futuro. Pode ser uma tentativa de preservar alguma agência sobre ele. 
 
-Precisamos de mais Bandura e talvez rever Moore e o que ele falou sobre os pragmáticos. 
+Precisamos de mais Bandura e talvez rever o que Moore falou sobre os pragmáticos. 
 
 Se criar novas coisas no mundo ficou exponencialmente mais fácil, vamos ter que falar mais e mais sobre adoção, risco e confiança. 
+
 
 
 BANDURA, Albert. _Self-efficacy: the exercise of control_. New York: W. H. Freeman, 1997.
