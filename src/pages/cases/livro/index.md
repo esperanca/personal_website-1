@@ -1,7 +1,7 @@
 ---
 layout: livro
 title: "Desenhando Confiança"
-subtitle: "Um livro sobre design, IA e confiança"
+subtitle: "Design, IA e confiança em interfaces generativas e agentes"
 collection: Livro
 status: revisado
 date: 2026-07-12T22:45:00-03:00
@@ -10,7 +10,7 @@ preface: "@danielsouza"
 permalink: /cases/livro/
 ---
 
-## Epígrafe
+## Introdução {#introducao}
 
 Este é um livro para quem faz design. Design no sentido de projetar. Dar forma intencional a uma experiência, um produto, um serviço, um sistema. E fazer isso de um jeito _designerly_[^1]. Nigel Cross cunhou este termo em 1982 para nomear um modo próprio de conhecer, que não é o do cientista nem o do filósofo. Pensar fazendo: desenhar, modelar, prototipar, comparar alternativas, aprender com as formas provisórias que emergem do fazer.
 
@@ -43,7 +43,7 @@ Tenho três compromissos com você: ser claro o bastante para começar, rigoroso
 
 Boa leitura!
 
-## Prefácio
+## Prefácio {#prefacio}
 
 Em uma noite fria em Vancouver, em novembro de 2022, Jake Moffatt recebeu a notícia do falecimento de sua avó. Ele entrou no site da Air Canada com uma pergunta prática: se ele comprasse passagens de última hora para o velório, poderia pedir o desconto de tarifa de luto[^6] depois de voltar?
 
@@ -97,3 +97,40 @@ O que a interface mostra é a conversa. O que não é transparente às vezes é 
 [^11]: Estatísticas de 2026: ChatGPT (900M usuários semanais), Gemini (900M+ mensais). Base: relatórios públicos das empresas. Frequência de prompts: estimativa do setor.
 
 [^12]: Pesquisa Ipsos/Google (2024, 21 países): 54% dos brasileiros relataram já ter usado IA generativa, contra 48% da média global.
+
+---
+
+## Sumário
+
+- [Introdução](#introducao)
+- [Prefácio](#prefacio)
+
+### Parte I — O que torna um sistema confiável
+
+- Transparência
+- Explicabilidade
+- Verificabilidade
+- Compreensibilidade
+- Domínios regulados e legislação
+- O agente confiável
+
+### Parte II — Práticas para desenhar confiança
+
+- Conteúdo responsável e compreensível
+- De onde vem a resposta
+- Evals: critérios e medição
+- Governança como experiência
+- Medindo confiança, adoção e autonomia
+
+### Parte III — Catálogo de padrões
+
+- Padrões para interfaces e jornadas generativas
+- Fechamento
+- O novo papel dos designers
+
+### Seções adicionais
+
+- Glossário
+- Notas
+- Links e recursos
+- Índice remissivo
