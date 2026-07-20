@@ -1,7 +1,7 @@
 ---
 layout: livro
-title: "Designing Trust in Agentic Experiences"
-subtitle: "A book about design, AI, and trust"
+title: "Designing Trust"
+subtitle: "Design, AI, and trust in generative interfaces and agents"
 collection: Book
 status: revisado
 date: 2026-07-12T22:45:00-03:00
@@ -10,7 +10,7 @@ preface: "@danielsouza"
 permalink: /cases/book/
 ---
 
-## Introduction
+## Introduction {#introduction}
 
 This is a book for those who do design. Design in the sense of creating. Giving intentional form to an experience, a product, a service, a system. And doing it in a _designerly_[^1] way. Nigel Cross coined this term in 1982 to name a way of knowing that is neither the scientist's nor the philosopher's. Thinking by doing: sketching, modeling, prototyping, comparing alternatives, learning from the provisional forms that emerge from making.
 
@@ -43,7 +43,7 @@ I have three commitments to you: be clear enough to begin, rigorous enough to be
 
 Happy reading!
 
-## Preface
+## Preface {#preface}
 
 On a cold night in Vancouver, in November 2022, Jake Moffatt received news of his grandmother's death. He went to the Air Canada website with a practical question: if he bought last-minute tickets for the funeral, could he request the bereavement fare discount[^6] after he returned?
 
@@ -97,3 +97,40 @@ What the interface shows is the conversation. What's sometimes not transparent i
 [^11]: 2026 Statistics: ChatGPT (900M weekly users), Gemini (900M+ monthly). Source: public company reports. Prompt frequency: industry estimate.
 
 [^12]: Ipsos/Google research (2024, 21 countries): 54% of Brazilians reported already having used generative AI, compared to 48% of the global average.
+
+---
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Preface](#preface)
+
+### Part I — What Makes a System Trustworthy
+
+- Transparency
+- Explainability
+- Verifiability
+- Comprehensibility
+- Regulated Domains and Legislation
+- The Trustworthy Agent
+
+### Part II — Practices for Designing Trust
+
+- Responsible, Comprehensible Content
+- Where the Answer Comes From
+- Evals: Criteria and Measurement
+- Governance as Experience
+- Measuring Trust, Adoption, and Autonomy
+
+### Part III — A Pattern Catalog
+
+- Patterns for Generative Interfaces and Journeys
+- Fechamento → Closing
+- The New Role of Designers
+
+### Additional Sections
+
+- Glossary
+- Notes
+- Links and Resources
+- Index
