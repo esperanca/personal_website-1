@@ -1,6 +1,6 @@
 ---
 layout: livro
-title: "Drawing Trust"
+title: "Designing Trust in Agentic Experiences"
 subtitle: "A book about design, AI, and trust"
 collection: Book
 status: revisado
@@ -10,7 +10,7 @@ preface: "@danielsouza"
 permalink: /cases/book/
 ---
 
-## Epigraph
+## Introduction
 
 This is a book for those who do design. Design in the sense of creating. Giving intentional form to an experience, a product, a service, a system. And doing it in a _designerly_[^1] way. Nigel Cross coined this term in 1982 to name a way of knowing that is neither the scientist's nor the philosopher's. Thinking by doing: sketching, modeling, prototyping, comparing alternatives, learning from the provisional forms that emerge from making.
 
