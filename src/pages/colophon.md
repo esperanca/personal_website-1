@@ -22,7 +22,7 @@ A implementação do CSS e 11ty é do Yinka Adedire, com base no tema Hylia de [
 
 ## Detalhes técnicos: 
 Para o versionamento, github. 
-Para o design e desenvolvimento, Figma e VSCode.
+Para o design e desenvolvimento, Figma, VSCode e Claude
 Para escrever, IA Writer e Obsidian.
 Para publicar, netlify. 
 
@@ -31,4 +31,4 @@ A última atualização aconteceu em: {{post.data}}
 
 Códigos deste website são criados com a assistência de inteligência artificial (Claude).
 
-Todos os textos são escritos por mim, e passam por revisão da Leiliane. 
+Todos os textos são escritos por mim e normalmente passam por revisão da Leiliane. 
