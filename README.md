@@ -1,6 +1,6 @@
-# This is my personal website, powered by Eleventy and Hilya.
+# Esse é meu site pessoal em português
 
-Live Site: <https://danielsouza.org>
+Endereço: https://danielsouza.com
 
 ## Local Install
 
