@@ -125,16 +125,6 @@ ol.perguntas-list li::before{content:counter(pergunta) ". ";font-weight:900;colo
 <header class="site-header">
   <div class="wrapper site-header__wrapper">
     <a class="site-header__site-name" href="#inicio">@danielsouza</a>
-    <nav class="nav" aria-label="Principal"><ul class="nav__list">
-      <li><a href="#inicio">Início</a></li>
-      <li><a href="#tan">Tan et al.</a></li>
-      <li><a href="#qualidade">Qualidade</a></li>
-      <li><a href="#metodos">Métodos</a></li>
-      <li><a href="#brasil">PME Brasil</a></li>
-      <li><a href="#lider">Perguntas</a></li>
-      <li><a href="#instituicoes">Instituições</a></li>
-      <li><a href="#referencias">Referências</a></li>
-    </ul></nav>
   </div>
 </header>
 
@@ -174,7 +164,7 @@ ol.perguntas-list li::before{content:counter(pergunta) ". ";font-weight:900;colo
 
         <blockquote>
           <p>"Slower algorithmic advice can be judged as more accurate or trustworthy because delays are read as signs of deliberation."</p>
-          <p style="font-size:.9em; margin-top:1rem;">Tan, Messerschmidt, Yin, Nov (2026)</p>
+          <p style="font-size:.9em; margin-top:1rem;"><a href="#ref-tan">Tan, Messerschmidt, Yin, Nov (2026)</a></p>
         </blockquote>
 
         <h3>Por Que Importa em Banking para PME</h3>
@@ -206,7 +196,7 @@ ol.perguntas-list li::before{content:counter(pergunta) ". ";font-weight:900;colo
 
         <h3>O Que PMEs Brasileiras Realmente Buscam</h3>
 
-        <p>Pesquisa com dois mil decisores em PMEs revelou: 75% estão otimistas sobre IA, mas as razões variam por porte. Em médias empresas, eficiência e produtividade lideram (59%). Em microempresas, é diferente: 60% mencionam melhoria de atendimento ao cliente como motivação principal. O designer que não fala nessa linguagem falha em conectar.</p>
+        <p>Pesquisa com dois mil decisores em PMEs<a href="#ref-microsoft" style="text-decoration:none;"><sup>[1]</sup></a> revelou: 75% estão otimistas sobre IA, mas as razões variam por porte. Em médias empresas, eficiência e produtividade lideram (59%). Em microempresas, é diferente: 60% mencionam melhoria de atendimento ao cliente como motivação principal. O designer que não fala nessa linguagem falha em conectar.</p>
 
         <p>Redução de custos? Apenas 13% mencionam. A PME investe em IA não para cortar gente. Investe para fazer melhor ou processar mais rápido.</p>
 
@@ -284,14 +274,14 @@ ol.perguntas-list li::before{content:counter(pergunta) ". ";font-weight:900;colo
 
         <h2 id="brasil">PMEs no Brasil: Dados Atuais</h2>
 
-        <p><strong>Familiaridade:</strong> 96% conhecem ferramentas GenAI (Sebrae/FGV/Google, dez 2025)</p>
-        <p><strong>Uso real:</strong> 46% usam IA em operações (contra 63% em empresas maiores)</p>
+        <p><strong>Familiaridade:</strong> 96% conhecem ferramentas GenAI<a href="#ref-sebrae" style="text-decoration:none;"><sup>[2]</sup></a> (dez 2025)</p>
+        <p><strong>Uso real:</strong> 46% usam IA em operações (contra 63% em empresas maiores)<a href="#ref-sebrae" style="text-decoration:none;"><sup>[2]</sup></a></p>
 
-        <p><strong>Motivações por tamanho:</strong> Médias empresas priorizam eficiência (59%). Pequenas também (53%). Microempresas diferem: atendimento ao cliente é o critério (60%).</p>
+        <p><strong>Motivações por tamanho:</strong> Médias empresas priorizam eficiência (59%). Pequenas também (53%). Microempresas diferem: atendimento ao cliente é o critério (60%)<a href="#ref-microsoft" style="text-decoration:none;"><sup>[1]</sup></a>.</p>
 
-        <p><strong>Maiores barreiras:</strong> Não saber como aplicar a tecnologia (unanimidade). Recrutar talento especializado (28%). Capacitar time interno (24%, chegando a 33% em médias empresas).</p>
+        <p><strong>Maiores barreiras:</strong> Não saber como aplicar a tecnologia (unanimidade). Recrutar talento especializado (28%). Capacitar time interno (24%, chegando a 33% em médias empresas)<a href="#ref-sebrae" style="text-decoration:none;"><sup>[2]</sup></a>.</p>
 
-        <p><strong>Já em uso:</strong> Atendimento ao cliente (73%), pesquisa online (66%), serviços personalizados (65%).</p>
+        <p><strong>Já em uso:</strong> Atendimento ao cliente (73%), pesquisa online (66%), serviços personalizados (65%)<a href="#ref-sebrae" style="text-decoration:none;"><sup>[2]</sup></a>.</p>
 
         <h3>Cinco Eixos de Pesquisa para Contexto Brasileiro (com Hipóteses Testáveis)</h3>
 
@@ -559,83 +549,6 @@ ol.perguntas-list li::before{content:counter(pergunta) ". ";font-weight:900;colo
           <li><strong>Como você mede confiança relacional (sinto que o sistema respeita meu contexto) versus confiança técnica (confio que a recomendação é correta)?</strong> Existem duas. Uma PME pode confiar na acurácia factual de um sistema e ainda rejeitar porque sente que não foi ouvida. Você mede ambas? Como elas influenciam recomendações futuras?</li>
         </ol>
 
-        <h2 id="instituicoes">Instituições Financeiras com Agentes IA para Clientes (Brasil, 2026)</h2>
-
-        <p>Panorama atual de implementação em produção e em testes com clientes PME e pequenos investidores.</p>
-
-        <div class="instituicoes-list">
-
-          <div class="instituicao-card">
-            <h4>Banco do Brasil</h4>
-            <div class="agent-name">ARI (Agente de Recomendações com IA)</div>
-            <p>Disponível para clientes PJ desde junho de 2024. Oferece orientações personalizadas em finanças, crédito, marketing e estratégia de negócio. Traduz dados complexos em recomendações simples. Recentemente evoluiu para formato conversacional com orquestrador multiagente e curadoria online.</p>
-            <p class="agent-status">Status: Em expansão | Público: PME (PJ)</p>
-          </div>
-
-          <div class="instituicao-card">
-            <h4>Itaú Unibanco</h4>
-            <div class="agent-name">Inteligência de Investimentos Itaú</div>
-            <p>Agente baseado em IA generativa lançado em 2025. Funciona como especialista em investimentos 24h, respondendo dúvidas, explicando produtos e auxiliando na tomada de decisão de forma personalizada. Parte da marca "Inteligência Itaú" que atende 5 milhões de correntistas. Permite emissão de Pix via texto, áudio, voz ou imagem pelo WhatsApp.</p>
-            <p class="agent-status">Status: Produção | Público: Varejo e Wealth</p>
-          </div>
-
-          <div class="instituicao-card">
-            <h4>Banco do Brasil</h4>
-            <div class="agent-name">Plataforma Conversacional (Genérica)</div>
-            <p>Integrada ao aplicativo e WhatsApp. Múltiplos agentes com orquestrador central para executar jornadas completas. Resultados iniciais: Pix conversions +69%, erros de digitação -21%, volume financeiro +4.2%. Ainda em teste em base selecionada.</p>
-            <p class="agent-status">Status: Testes | Público: Varejo</p>
-          </div>
-
-          <div class="instituicao-card">
-            <h4>Banco Inter</h4>
-            <div class="agent-name">400+ Agentes IA Internos e Cliente-Facing</div>
-            <p>Mais de 400 agentes espalhados por crédito, prevenção de fraude, atendimento, desenvolvimento de software e back office. Banco investe em IA conversacional como próximo salto da experiência financeira. Objetivo: reduzir necessidade de navegar pelo app.</p>
-            <p class="agent-status">Status: Produção | Público: Varejo e Interno</p>
-          </div>
-
-          <div class="instituicao-card">
-            <h4>Bradesco</h4>
-            <div class="agent-name">Agentes IA Multidisciplinares</div>
-            <p>Desde 2022, usa agentes de IA em atendimento, recomendações de investimento, engenharia de software e operações. Fintech Next (própria desde 2017) opera com IA conversacional. Bradesco adquiriu startups cujas tecnologias foram integradas ao core de operações.</p>
-            <p class="agent-status">Status: Produção | Público: Varejo e Next (Fintech)</p>
-          </div>
-
-          <div class="instituicao-card">
-            <h4>Santander Brasil</h4>
-            <div class="agent-name">Plataforma Conversacional Genérica</div>
-            <p>Investe em IA conversacional para simplificar atendimento e executar transações. Proposta alinha com movimento setor: captar pedidos em linguagem natural, executar operações e oferecer recomendações personalizadas.</p>
-            <p class="agent-status">Status: Testes | Público: Varejo</p>
-          </div>
-
-          <div class="instituicao-card">
-            <h4>C6 Bank</h4>
-            <div class="agent-name">Agentes para Atendimento Conversacional</div>
-            <p>Integrado ao ecossistema digital do banco. Foco em simplificar interface e executar tarefas via conversação natural.</p>
-            <p class="agent-status">Status: Testes/Produção | Público: Varejo</p>
-          </div>
-
-          <div class="instituicao-card">
-            <h4>XP Investimentos</h4>
-            <div class="agent-name">Agente Conversacional (Teste Visa Agentic Ready)</div>
-            <p>Participa do programa Visa Agentic Ready, lançado em abril de 2026, que prepara o ecossistema de pagamentos para operações via agentes IA. Foco em investimento e gestão de carteira.</p>
-            <p class="agent-status">Status: Testes | Público: Investidores</p>
-          </div>
-
-          <div class="instituicao-card">
-            <h4>Dock</h4>
-            <div class="agent-name">Infraestrutura Agentic para Parceiros</div>
-            <p>Plataforma que fornece infraestrutura para agentes IA de seus clientes (bancos, fintechs). Participa de Visa Agentic Ready. Posicionamento: enabler de ecossistema agentic para setor.</p>
-            <p class="agent-status">Status: Produção (B2B) | Público: Empresas de Pagamento</p>
-          </div>
-
-          <div class="instituicao-card">
-            <h4>Mercado Pago</h4>
-            <div class="agent-name">Assistente de Gestão Financeira</div>
-            <p>Oferece recomendações de IA para gestão financeira em plataforma. Confiança de usuários em IA para finanças ainda é barreira (34% confiam totalmente), mas banco investe em aumentar adoção via transparência de dados e suporte humano.</p>
-            <p class="agent-status">Status: Produção | Público: Pequenos Investidores e PME</p>
-          </div>
-
-        </div>
 
         <h2>Checklist de Design para Líderes de Produto</h2>
 
@@ -676,32 +589,32 @@ ol.perguntas-list li::before{content:counter(pergunta) ". ";font-weight:900;colo
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr id="ref-tan">
               <td><strong>Tan, Messerschmidt, Yin, Nov (2026)</strong><br/>The Impact of Response Latency and Task Type on Human-LLM Interaction and Perception</td>
               <td>Paper, CHI 2026</td>
               <td><a href="https://arxiv.org/abs/2604.06183">arXiv 2604.06183</a></td>
             </tr>
-            <tr>
+            <tr id="ref-sebrae">
               <td><strong>Sebrae, FGV IBRE, Google (2025)</strong><br/>Uso de IA nos Negócios — Pesquisa com ~5.000 empresas brasileiras</td>
               <td>Pesquisa mercado</td>
               <td><a href="https://datasebrae.com.br/transformacao-digital/">Sebrae DataHub</a> | <a href="https://blogdoibre.fgv.br/posts/uso-de-ia-nos-negocios-no-brasil-0">Blog IBRE</a></td>
             </tr>
-            <tr>
+            <tr id="ref-microsoft">
               <td><strong>Microsoft, Edelman (2025)</strong><br/>IA em Micro, Pequenas e Médias Empresas: Tendências, Desafios e Oportunidades</td>
               <td>Pesquisa mercado</td>
               <td><a href="https://news.microsoft.com/source/latam/features/noticias-da-microsoft/75-das-mpmes-no-brasil-estao-otimistas-sobre-o-impacto-da-inteligencia-artificial-em-seus-negocios-aponta-estudo-da-microsoft/">Microsoft LATAM</a></td>
             </tr>
-            <tr>
+            <tr id="ref-clark">
               <td><strong>Clark, Doyle, Garaialde et al. (2019)</strong><br/>The State of Speech in HCI: Trends, Themes and Challenges</td>
               <td>Revisão sistemática</td>
               <td><a href="https://arxiv.org/pdf/1810.06828.pdf">arXiv 1810.06828</a></td>
             </tr>
-            <tr>
+            <tr id="ref-visa">
               <td><strong>Visa (2026)</strong><br/>Visa Agentic Ready — Programa Global para Ecossistema de Pagamentos</td>
               <td>Programa/Infraestrutura</td>
               <td><a href="https://forbes.com.br/forbes-tech/2026/04/">Forbes Brasil</a></td>
             </tr>
-            <tr>
+            <tr id="ref-lgpd">
               <td><strong>Brasil (2018)</strong><br/>Lei Geral de Proteção de Dados (LGPD)</td>
               <td>Legislação</td>
               <td>Lei nº 13.709/2018</td>
