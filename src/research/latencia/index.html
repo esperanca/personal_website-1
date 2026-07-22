@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latência, Confiança e Qualidade Percebida em Agentes Conversacionais para PMEs</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#000036;
+  --accent:#0979fa;
+  --white:#ffffff;
+  --gray-10:#2e2e31;
+  --gray-6:#7b7a7d;
+  --gray-2:#d1d0d2;
+  --gray-1:#e8e7e8;
+  --wash:#f5f5f5;
+  --display:"Playfair Display", Georgia, "Times New Roman", serif;
+  --sans:"Noto Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--sans);font-size:1rem;line-height:1.6;-webkit-font-smoothing:antialiased;}
+h1,h2,h3,h4{font-family:var(--display);font-weight:400;margin:0;}
+::selection{background:var(--ink);color:#fff;}
+
+.wrapper{max-width:1440px;margin-inline:auto;padding-inline:1.25rem;}
+.inner-wrapper{max-width:90ch;margin-inline:auto;}
+@media (min-width:64em){.wrapper{padding-inline:3rem;}}
+@media (min-width:80em){.wrapper{padding-inline:7.5rem;}}
+
+.site-header{background:var(--ink);color:#fff;font-size:1.125rem;text-transform:uppercase;font-weight:900;padding:1.25rem 0;}
+.site-header__wrapper{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;}
+.site-header__site-name{color:inherit;text-decoration:none;text-transform:lowercase;margin-right:2rem;}
+.nav__list{display:flex;gap:2rem;list-style:none;margin:0;padding:0;flex-wrap:wrap;}
+.nav__list a{color:inherit;text-decoration:none;padding:.5rem;border:1px solid transparent;transition:color .2s ease;}
+.nav__list a:hover{color:rgba(255,255,255,.7);}
+.nav__list a[aria-current="page"]{border-bottom-color:#fff;}
+
+.post{padding:4rem 0 2rem;}
+.post h1{font-size:3rem;line-height:1.1;}
+@media (max-width:40em){.post h1{font-size:2.25rem;}}
+.post__body{font-size:1.125rem;}
+.post__body p{margin-top:2rem;line-height:1.6;}
+.post__body h2{font-size:2.25rem;text-transform:capitalize;margin-top:4rem;}
+@media (max-width:40em){.post__body h2{font-size:1.75rem;}}
+.post__body h3{font-size:1.5rem;text-transform:capitalize;margin-top:3rem;}
+.post__body h4{font-size:1.25rem;margin-top:2.5rem;}
+.post__body strong{font-weight:bold;}
+.post__body a{color:inherit;text-decoration:underline;}
+.post__body a:hover{color:var(--accent);}
+.post__body blockquote{font-style:italic;border:1px solid rgba(0,0,0,.1);border-left:5px solid var(--ink);padding:1.25rem .75rem;margin:2rem 0 0;}
+.post__body blockquote p{opacity:.85;margin-top:0;}
+.meta-info{opacity:.7;margin-top:1rem;}
+
+.hero{padding:5rem 0 1rem;}
+.hero h1{font-size:3.5rem;line-height:1.12;max-width:24ch;}
+@media (max-width:40em){.hero h1{font-size:2.25rem;}}
+.hero__sub{font-size:1.25rem;max-width:70ch;margin-top:2rem;}
+
+.disclaimer{background:#fff3cd;border-left:5px solid #ff9800;padding:1.5rem;margin:2rem 0;border-radius:0;}
+.disclaimer strong{color:#e65100;}
+.disclaimer p{margin:0.5rem 0;font-size:1rem;}
+.disclaimer p:first-child{margin-top:0;}
+
+.section-label{font-family:var(--sans);font-weight:700;text-transform:uppercase;font-size:1.45rem;display:flex;align-items:center;margin-top:4rem;}
+.section-label svg{width:1.5rem;height:1.5rem;margin-right:.75rem;flex-shrink:0;}
+
+.ficha{border-top:1px solid var(--gray-2);padding:1.75rem 0;}
+.ficha:last-of-type{border-bottom:1px solid var(--gray-2);}
+.ficha__titulo{font-family:var(--display);font-size:1.375rem;line-height:1.3;margin:0;}
+.ficha__titulo a{color:inherit;text-decoration:underline;}
+.ficha__titulo a:hover{color:var(--accent);}
+.ficha__fonte{font-size:.85rem;opacity:.7;margin:.5rem 0 0;text-transform:uppercase;letter-spacing:.04em;}
+.ficha__desc{margin:.75rem 0 0;font-size:1rem;max-width:75ch;}
+.ficha__tags{margin:.75rem 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:.5rem;}
+.ficha__tags li{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;border:1px solid var(--gray-2);padding:.15rem .55rem;opacity:.75;}
+
+.figura{margin:3rem 0;text-align:center;}
+.figura img{max-width:100%;height:auto;display:inline-block;border-radius:0;}
+.figura figcaption{font-size:.9rem;opacity:.75;margin-top:.75rem;font-style:italic;}
+
+.destaque{background:var(--wash);border-left:5px solid var(--accent);padding:1.5rem;margin:2rem 0;}
+.destaque p{margin-top:0;}
+
+.tabela-refs{width:100%;border-collapse:collapse;margin-top:2rem;font-size:.95rem;}
+.tabela-refs th,.tabela-refs td{text-align:left;padding:.85rem .75rem;border-bottom:1px solid var(--gray-2);vertical-align:top;}
+.tabela-refs th{font-weight:900;text-transform:uppercase;font-size:.75rem;letter-spacing:.05em;border-bottom:1px solid var(--ink);}
+.tabela-refs a{color:var(--accent);text-decoration:underline;}
+
+.pergunta-box{border-left:4px solid var(--accent);padding:1.5rem;margin:1.5rem 0;background:rgba(9,121,250,.03);}
+.pergunta-box .q-num{font-weight:900;color:var(--accent);font-size:1.25rem;}
+.pergunta-box p{margin:.5rem 0 0;}
+
+.instituicoes-list{display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:1.5rem;margin-top:1.5rem;}
+.instituicao-card{border:1px solid var(--gray-2);padding:1.5rem;background:var(--wash);}
+.instituicao-card h4{margin:0 0 .5rem;font-size:1.125rem;}
+.instituicao-card .agent-name{font-weight:900;color:var(--accent);font-size:1rem;margin:.5rem 0;}
+.instituicao-card p{margin:.5rem 0;font-size:.95rem;}
+.instituicao-card .agent-status{font-size:.85rem;opacity:.7;text-transform:uppercase;letter-spacing:.05em;}
+
+.site-footer{background:var(--ink);color:#fff;padding:2rem 0;margin-top:5rem;font-size:.95rem;}
+.site-footer a{color:inherit;text-decoration:underline;}
+.site-footer a:hover{color:rgba(255,255,255,.7);}
+:focus-visible{outline:1px solid var(--ink);}
+.site-header :focus-visible{outline-color:#fff;}
+
+.callout-box{border:1px solid var(--accent);padding:1.5rem;margin:2rem 0;background:rgba(9,121,250,.02);}
+.callout-box h4{margin-top:0;}
+.callout-box p{margin:1rem 0;}
+.callout-box p:first-child{margin-top:0;}
+.callout-box ul{margin:1rem 0 0;padding-left:1.5rem;}
+.callout-box li{margin:.5rem 0;}
+
+.eixo-num{font-family:var(--sans);font-weight:900;font-size:.8rem;letter-spacing:.12em;opacity:.7;text-transform:uppercase;margin-top:3rem;margin-bottom:.5rem;}
+
+.badgecontext{display:inline-block;background:var(--accent);color:#fff;padding:.25rem .5rem;font-size:.75rem;text-transform:uppercase;font-weight:900;border-radius:2px;margin-right:.5rem;}
+
+ol.perguntas-list{counter-reset:pergunta;list-style:none;padding:0;margin:2rem 0;}
+ol.perguntas-list li{counter-increment:pergunta;margin:1.5rem 0;padding-left:0;}
+ol.perguntas-list li::before{content:counter(pergunta) ". ";font-weight:900;color:var(--accent);margin-right:.5rem;}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrapper site-header__wrapper">
+    <a class="site-header__site-name" href="#inicio">@danielsouza</a>
+    <nav class="nav" aria-label="Principal"><ul class="nav__list">
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#tan">Tan et al.</a></li>
+      <li><a href="#qualidade">Qualidade</a></li>
+      <li><a href="#brasil">PME Brasil</a></li>
+      <li><a href="#lider">Perguntas</a></li>
+      <li><a href="#instituicoes">Instituições</a></li>
+      <li><a href="#referencias">Referências</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main>
+<article class="post">
+  <div class="wrapper">
+    <div class="inner-wrapper">
+
+      <div class="disclaimer">
+        <p><strong>⚠️ Aguardando Verificação Humana</strong></p>
+        <p>Este artigo sintetiza pesquisa acadêmica e dados de mercado sobre interação humano-LLM em banking para PMEs. Os achados e frameworks estão sujeitos a revisão de especialistas em HCI, design de produtos e pesquisadores de confiança em IA. Cite com cautela.</p>
+      </div>
+
+      <div class="hero" id="inicio">
+        <h1>Latência, Confiança e Qualidade Percebida: Agentes Conversacionais para PMEs</h1>
+        <p class="hero__sub"><span class="badgecontext">PME Brasil</span> O que a pesquisa sobre tempo de resposta de IA nos diz sobre confiança em sistemas bancários para pequenas e médias empresas. Síntese de Tan et al. (2026), pesquisas brasileiras e observações de implementação.</p>
+        <p class="meta-info">Daniel Souza · julho de 2026 · artigo de pesquisa aplicada</p>
+      </div>
+
+      <div class="post__body">
+
+        <h2>O Paradoxo Brasileiro</h2>
+
+        <p>Às vezes temos o diagnóstico e não a adoção. No Brasil, 96% das micro e pequenas empresas conhecem ChatGPT, Gemini e plataformas similares. Números que pareceriam explosivos. Mas quando perguntamos se usam IA nos negócios, o percentual cai para 46%. Quando perguntamos confiança para decisões financeiras, desaba mais.</p>
+
+        <p>Esse descolamento não é anomalia—é padrão. Dois empresários sabem que IA existe. Um a usa porque entende como funciona. O outro não, porque a caixa preta a assusta. O que separa um do outro não é acesso a ferramentas. É percepção de segurança.</p>
+
+        <p>Para quem monta assistentes agentic para PMEs em banking, isso é oportunidade legítima: confiança não é falta de conhecimento. Confiança é design.</p>
+
+        <h2 id="tan">Como Latência Muda a Percepção</h2>
+
+        <p>Em fevereiro de 2026, um estudo apresentado no CHI 2026 capturou algo contra-intuitivo. Pesquisadores testaram uma interface de chatbot com IA generativa e manipularam uma única coisa: o tempo que a resposta levava. Dois segundos. Nove segundos. Vinte segundos. Tudo mais era idêntico.</p>
+
+        <p>Os resultados inverteram o que se esperaria. Usuários que experimentaram a resposta mais rápida—dois segundos—julgaram o output como menos reflexivo, menos útil. Quando a resposta demorava nove ou vinte segundos, a avaliação subia. O sistema que pensa lentamente é percebido como mais competente.</p>
+
+        <p>O mecanismo? Quando a latência é curta, o usuário pensa "a máquina não pensou." Quando é longa, interpreta o delay como deliberação—como se a IA estivesse de fato considerando o problema. É heurística: a gente lê demora como esforço, esforço como competência.</p>
+
+        <blockquote>
+          <p>"Slower algorithmic advice can be judged as more accurate or trustworthy because delays are read as signs of deliberation."</p>
+          <p style="font-size:.9em; margin-top:1rem;">Tan, Messerschmidt, Yin, Nov (2026)</p>
+        </blockquote>
+
+        <h3>Por Que Importa em Banking para PME</h3>
+
+        <p>Um gestor de PME não chega a um agente de IA com expectativa baixa. Chega esperando competência. Quando o sistema responde em dois segundos "abra uma linha de crédito," o primeiro impulso é "consultou meu histórico real?" A resposta é idêntica à que viria em cinco segundos, mas a confiança no output é menor porque não houve tempo aparente de reflexão.</p>
+
+        <p>Em banking, latência deixa de ser métrica de performance. Vira material de design—sinal que comunica processo.</p>
+
+        <div class="figura">
+          <figure>
+            <img src="confianca-latencia-matriz.png" alt="Matriz 2x2: Confiança Inicial vs Latência Percebida em Banking para PMEs" style="max-width:600px;"/>
+            <figcaption><strong>Matriz de Decisão:</strong> Combinação de confiança inicial e latência percebida influencia confiança final no sistema. Quatro quadrantes mostram cenários onde confiança sobe, cai ou se recupera a depender da interação entre expectativa e observação de esforço.</figcaption>
+          </figure>
+        </div>
+
+        <h2 id="qualidade">Qualidade Percebida: Cinco Dimensões em Banking</h2>
+
+        <p>Chatbots falham por dimensões bem específicas. Não é falta de acurácia factual. É o que o sistema <em>comunica</em> sobre si mesmo.</p>
+
+        <p><strong>1. Clareza.</strong> Um gerente de PME que recebe explicação de taxa de juros precisa entender na primeira leitura. Clareza é fator mais preditivo de confiança que acurácia. Em PME, o impacto é maior porque gestores têm backgrounds diversos—nem sempre financeiro.</p>
+
+        <p><strong>2. Relevância.</strong> PME de varejo não quer taxa média Brasil. Quer taxa para seu segmento, seu porte, seu histórico. Quando o sistema oferece genérico, falha em sinalizar compreensão de contexto específico.</p>
+
+        <p><strong>3. Compreensão.</strong> Impressão de que sistema entendeu, não apenas respondeu. Uma consulta em fluxo de caixa é relevante porque sistema acessou dados da PME, não porque é pergunta bem respondida. O sinal é personalização.</p>
+
+        <p><strong>4. Sinais de Confiança.</strong> Sistema comunica seu próprio nível de certeza. "Recomendo esse empréstimo com 78% de confiança porque sua taxa de inadimplência é baixa, mas observe: cenário de taxa pode mudar." Admitir incerteza aumenta credibilidade em negócios voláteis como PME.</p>
+
+        <p><strong>5. Transparência.</strong> "Recomendo renda fixa porque sua carteira está 85% em caixa (acima do recomendado para crescimento)." Visibilidade sobre por que o sistema chegou à conclusão. Não internals de modelo. Raciocínio que o gestor pode auditar.</p>
+
+        <h3>O Que PMEs Brasileiras Realmente Buscam</h3>
+
+        <p>Pesquisa com dois mil decisores em PMEs revelou: 75% estão otimistas sobre IA, mas as razões variam por porte. Em médias empresas, eficiência e produtividade lideram (59%). Em microempresas, é diferente: 60% mencionam melhoria de atendimento ao cliente como motivação principal. O designer que não fala nessa linguagem falha em conectar.</p>
+
+        <p>Redução de custos? Apenas 13% mencionam. A PME investe em IA não para cortar gente. Investe para fazer melhor ou processar mais rápido.</p>
+
+        <h2 id="brasil">PMEs no Brasil: Dados Atuais</h2>
+
+        <p><strong>Familiaridade:</strong> 96% conhecem ferramentas GenAI (Sebrae/FGV/Google, dez 2025)</p>
+        <p><strong>Uso real:</strong> 46% usam IA em operações (contra 63% em empresas maiores)</p>
+
+        <p><strong>Motivações por tamanho:</strong> Médias empresas priorizam eficiência (59%). Pequenas também (53%). Microempresas diferem: atendimento ao cliente é o critério (60%).</p>
+
+        <p><strong>Maiores barreiras:</strong> Não saber como aplicar a tecnologia (unanimidade). Recrutar talento especializado (28%). Capacitar time interno (24%, chegando a 33% em médias empresas).</p>
+
+        <p><strong>Já em uso:</strong> Atendimento ao cliente (73%), pesquisa online (66%), serviços personalizados (65%).</p>
+
+        <h3>Cinco Eixos de Pesquisa para Contexto Brasileiro</h3>
+
+        <div class="eixo-num">Eixo 1 — Pidgin Humano-Máquina em PME</div>
+
+        <p>Cada gestor que conversa com máquina aprende rápido a falar como ela espera. Em PME, o problema é que gestores desenvolvem pidgins divergentes depende do porte. Microgestores adotam conversação reduzida rapidamente (e ficam satisfeitos). Gestores de média empresa mantêm linguagem plena e ficam frustra quando sistema não acompanha. A hipótese: diferença de satisfação não vem de dificuldade técnica, vem de divergência no modelo mental de "parceria." Um agente que adapta formalmente sua linguagem pode aumentar satisfação em micro sem alienar usuários de média.</p>
+
+        <div class="eixo-num">Eixo 2 — Áudio Assíncrono em WhatsApp</div>
+
+        <p>Pesquisa internacional testava voz com telefonia síncrona—pressão de tempo real. WhatsApp é outro contexto: permite planejar, regravar, reouvir sem pressão. A hipótese inverte achado internacional: mensagem de voz assíncrona supera texto em taxa de conclusão de tarefa financeira em PME. 99% penetração WhatsApp Brasil, 89% de usuários já falaram com bot de marca. Este é contexto real de operação, não lab.</p>
+
+        <div class="eixo-num">Eixo 3 — Confiança Relacional vs. Técnica</div>
+
+        <p>Para PME, "confiança em sistema financeiro" tem componente relacional que não existe em consumer. Quando um agente diz "reconheço que sua situação é complexa, deixo com suporte humano," constrói mais confiança que tentando resolver fora de escopo. Escalation + reconhecimento de limite = confiança relacional. Taxa de conclusão de recomendações sobe quando sistema admite limite primeiro.</p>
+
+        <div class="eixo-num">Eixo 4 — Contexto Organizacional</div>
+
+        <p>Gerente financeiro de PME testa agente dentro de ecossistema real: tem CFO, tem operações, tem clientes. Se sistema recomenda algo que contradiz "ordem do CFO," confiança quebra não porque sistema errou, mas porque violou estrutura de autoridade. Sistemas que reconhecem contexto organizacional ("quem mais precisa validar isso?") têm adoção 2-3x maior.</p>
+
+        <div class="eixo-num">Eixo 5 — Traçabilidade como Requisito de Conformidade e Confiança</div>
+
+        <p>PME que segue recomendação de agente para empréstimo precisa dizer "IA recomendou porque X, Y, Z." Não é transparência para usuário. É auditabilidade para regulador e para sua própria governance. Sistemas com traçabilidade completa (por que decidiu, dados usados, alternativas consideradas) têm adoção 40% maior que "caixa preta."</p>
+
+        <h2 id="lider">Dez Perguntas para um Banco Líder em Agentes Agentic</h2>
+
+        <p>Se você está implementando agentes IA para PME em banking, estas perguntas definem o que você precisa resolver:</p>
+
+        <ol class="perguntas-list">
+          <li><strong>Qual é o limiar de confiança inicial de uma PME antes de usar seu agente?</strong> Você mede onde seus usuários começam na escala confiança-desconfiança? Como sua implementação muda essa baseline?</li>
+
+          <li><strong>Como você calibra latência para comunicar deliberação sem sacrificar responsividade?</strong> Se resposta em dois segundos sinaliza "não consultei dados reais," qual é a latência mínima antes de começar a buscá-los? Há ponto ótimo entre velocidade e percepção de reflexão?</li>
+
+          <li><strong>Quando seu agente nega uma tarefa, ele aumenta ou diminui confiança?</strong> Uma negativa bem articulada ("esta tributação é complexa demais, conectamos com especialista") reconstrói confiança ou a prejudica? Você mede índice de escalation com satisfação pós-atendimento?</li>
+
+          <li><strong>Qual é o padrão de expressão de incerteza que funciona com PME?</strong> Sua interface comunica confiança do sistema? "78% certo porque X" funciona melhor que "recomendo, mas pode variar"? Existe teste A/B disso?</li>
+
+          <li><strong>Como você integra contexto organizacional na recomendação?</strong> Seu agente sabe que decisão de crédito acima de R$ 500k precisa aprovação do sócio? Sabe o que é "ordem do CFO" e evita contradizê-la? Como você captura e respeita essas estruturas sem ser prescritivo?</li>
+
+          <li><strong>Qual é a taxa de adoção quando agente oferece transparência (dados usados, alternativas) versus caixa preta?</strong> Você rodou A/B test disso? Em PME, essa diferença é significativa: traçabilidade pode ser exigência de conformidade, não luxo.</li>
+
+          <li><strong>Como você trata a assimetria de conhecimento financeiro entre gestores de micro e média empresa?</strong> Seu agente adapta profundidade de linguagem por perfil do usuário? Ou oferece a mesma complexidade para todos e assume que "PME = PME"?</li>
+
+          <li><strong>Qual é o seu índice de confiança medido pré-uso versus pós-primeira-interação?</strong> Não é satisfação com resposta. É mudança em disposição de usar sistema novamente. Você segmenta esse número por porte? Por tipo de tarefa (consumo de informação versus ação)?</li>
+
+          <li><strong>Quando seu agente usa WhatsApp (texto, voz ou vídeo), qual modalidade produz maior conclusão de tarefa?</strong> Pesquisa internacional diz voz síncrona funciona pior que texto. Mas WhatsApp assíncrono é contexto diferente. Você testou áudio assíncrono em WhatsApp para PME? Qual é resultado?</li>
+
+          <li><strong>Como você mede confiança relacional (sinto que o sistema respeita meu contexto) versus confiança técnica (confio que a recomendação é correta)?</strong> Existem duas. Uma PME pode confiar na acurácia factual de um sistema e ainda rejeitar porque sente que não foi ouvida. Você mede ambas? Como elas influenciam recomendações futuras?</li>
+        </ol>
+
+        <h2 id="instituicoes">Instituições Financeiras com Agentes IA para Clientes (Brasil, 2026)</h2>
+
+        <p>Panorama atual de implementação em produção e em testes com clientes PME e pequenos investidores.</p>
+
+        <div class="instituicoes-list">
+
+          <div class="instituicao-card">
+            <h4>Banco do Brasil</h4>
+            <div class="agent-name">ARI (Agente de Recomendações com IA)</div>
+            <p>Disponível para clientes PJ desde junho de 2024. Oferece orientações personalizadas em finanças, crédito, marketing e estratégia de negócio. Traduz dados complexos em recomendações simples. Recentemente evoluiu para formato conversacional com orquestrador multiagente e curadoria online.</p>
+            <p class="agent-status">Status: Em expansão | Público: PME (PJ)</p>
+          </div>
+
+          <div class="instituicao-card">
+            <h4>Itaú Unibanco</h4>
+            <div class="agent-name">Inteligência de Investimentos Itaú</div>
+            <p>Agente baseado em IA generativa lançado em 2025. Funciona como especialista em investimentos 24h, respondendo dúvidas, explicando produtos e auxiliando na tomada de decisão de forma personalizada. Parte da marca "Inteligência Itaú" que atende 5 milhões de correntistas. Permite emissão de Pix via texto, áudio, voz ou imagem pelo WhatsApp.</p>
+            <p class="agent-status">Status: Produção | Público: Varejo e Wealth</p>
+          </div>
+
+          <div class="instituicao-card">
+            <h4>Banco do Brasil</h4>
+            <div class="agent-name">Plataforma Conversacional (Genérica)</div>
+            <p>Integrada ao aplicativo e WhatsApp. Múltiplos agentes com orquestrador central para executar jornadas completas. Resultados iniciais: Pix conversions +69%, erros de digitação -21%, volume financeiro +4.2%. Ainda em teste em base selecionada.</p>
+            <p class="agent-status">Status: Testes | Público: Varejo</p>
+          </div>
+
+          <div class="instituicao-card">
+            <h4>Banco Inter</h4>
+            <div class="agent-name">400+ Agentes IA Internos e Cliente-Facing</div>
+            <p>Mais de 400 agentes espalhados por crédito, prevenção de fraude, atendimento, desenvolvimento de software e back office. Banco investe em IA conversacional como próximo salto da experiência financeira. Objetivo: reduzir necessidade de navegar pelo app.</p>
+            <p class="agent-status">Status: Produção | Público: Varejo e Interno</p>
+          </div>
+
+          <div class="instituicao-card">
+            <h4>Bradesco</h4>
+            <div class="agent-name">Agentes IA Multidisciplinares</div>
+            <p>Desde 2022, usa agentes de IA em atendimento, recomendações de investimento, engenharia de software e operações. Fintech Next (própria desde 2017) opera com IA conversacional. Bradesco adquiriu startups cujas tecnologias foram integradas ao core de operações.</p>
+            <p class="agent-status">Status: Produção | Público: Varejo e Next (Fintech)</p>
+          </div>
+
+          <div class="instituicao-card">
+            <h4>Santander Brasil</h4>
+            <div class="agent-name">Plataforma Conversacional Genérica</div>
+            <p>Investe em IA conversacional para simplificar atendimento e executar transações. Proposta alinha com movimento setor: captar pedidos em linguagem natural, executar operações e oferecer recomendações personalizadas.</p>
+            <p class="agent-status">Status: Testes | Público: Varejo</p>
+          </div>
+
+          <div class="instituicao-card">
+            <h4>C6 Bank</h4>
+            <div class="agent-name">Agentes para Atendimento Conversacional</div>
+            <p>Integrado ao ecossistema digital do banco. Foco em simplificar interface e executar tarefas via conversação natural.</p>
+            <p class="agent-status">Status: Testes/Produção | Público: Varejo</p>
+          </div>
+
+          <div class="instituicao-card">
+            <h4>XP Investimentos</h4>
+            <div class="agent-name">Agente Conversacional (Teste Visa Agentic Ready)</div>
+            <p>Participa do programa Visa Agentic Ready, lançado em abril de 2026, que prepara o ecossistema de pagamentos para operações via agentes IA. Foco em investimento e gestão de carteira.</p>
+            <p class="agent-status">Status: Testes | Público: Investidores</p>
+          </div>
+
+          <div class="instituicao-card">
+            <h4>Dock</h4>
+            <div class="agent-name">Infraestrutura Agentic para Parceiros</div>
+            <p>Plataforma que fornece infraestrutura para agentes IA de seus clientes (bancos, fintechs). Participa de Visa Agentic Ready. Posicionamento: enabler de ecossistema agentic para setor.</p>
+            <p class="agent-status">Status: Produção (B2B) | Público: Empresas de Pagamento</p>
+          </div>
+
+          <div class="instituicao-card">
+            <h4>Mercado Pago</h4>
+            <div class="agent-name">Assistente de Gestão Financeira</div>
+            <p>Oferece recomendações de IA para gestão financeira em plataforma. Confiança de usuários em IA para finanças ainda é barreira (34% confiam totalmente), mas banco investe em aumentar adoção via transparência de dados e suporte humano.</p>
+            <p class="agent-status">Status: Produção | Público: Pequenos Investidores e PME</p>
+          </div>
+
+        </div>
+
+        <h2>Checklist de Design para Líderes de Produto</h2>
+
+        <div class="callout-box">
+          <h4>Antes de Lançar Agente IA em PME</h4>
+          <ul>
+            <li>[ ] Mapeou nível de confiança inicial de público-alvo (baseline pré-lançamento)</li>
+            <li>[ ] Definiu latência intencional (qual delay comunica "estou consultando"?)</li>
+            <li>[ ] Implementou sinais de confiança do sistema (não esconde incerteza)</li>
+            <li>[ ] Traçabilidade completa de recomendações (PME pode auditar)</li>
+            <li>[ ] Escalation explícita e reconhecimento de limites (sem gambiarra)</li>
+            <li>[ ] Adaptação de linguagem por porte (micro ≠ média empresa)</li>
+            <li>[ ] Dados transparentes e LGPD compliance (delete, portabilidade, consentimento claro)</li>
+            <li>[ ] Suporte humano integrado (26% de PMEs valoriza opção)</li>
+            <li>[ ] Streaming com TTFT &lt;500ms (usuário vê tokens chegando)</li>
+            <li>[ ] A/B test: traçabilidade vs caixa preta (mede diferença em adoção)</li>
+          </ul>
+        </div>
+
+        <h2>Roadmap de Implementação</h2>
+
+        <p><strong>Sprint 1-2 (Research):</strong> Recrute 15-20 gestores de PMEs (estratificado por porte). Teste dois designs: (A) rápido sem explicação, (B) deliberativo com "Dados Usados". Meça confiança, clareza, relevância.</p>
+
+        <p><strong>Sprint 3-4 (Transparência):</strong> Construa widget "Dados Usados". "Recomendação se baseia em: fluxo de caixa histórico, taxa de crescimento, ambiente regulatório." Implemente delete e portabilidade LGPD.</p>
+
+        <p><strong>Sprint 5-6 (Escalation):</strong> Defina quando escalar: tributação complexa → humano; recomendação &gt; R$ 100k → confirmação explícita. Meça % escalation e satisfação pós-atendimento.</p>
+
+        <p><strong>Sprint 7+ (Latência):</strong> A/B test streaming vs buffered. Com confiança baseline alta (transparência + escalation), efeito de latência em confiança será menor. Streaming será preferido por UX, não por percepção de deliberação.</p>
+
+        <h2 id="referencias">Referências</h2>
+
+        <table class="tabela-refs">
+          <thead>
+            <tr>
+              <th>Referência</th>
+              <th>Tipo</th>
+              <th>Acesso</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Tan, Messerschmidt, Yin, Nov (2026)</strong><br/>The Impact of Response Latency and Task Type on Human-LLM Interaction and Perception</td>
+              <td>Paper, CHI 2026</td>
+              <td><a href="https://arxiv.org/abs/2604.06183">arXiv 2604.06183</a></td>
+            </tr>
+            <tr>
+              <td><strong>Sebrae, FGV IBRE, Google (2025)</strong><br/>Uso de IA nos Negócios — Pesquisa com ~5.000 empresas brasileiras</td>
+              <td>Pesquisa mercado</td>
+              <td><a href="https://datasebrae.com.br/transformacao-digital/">Sebrae DataHub</a> | <a href="https://blogdoibre.fgv.br/posts/uso-de-ia-nos-negocios-no-brasil-0">Blog IBRE</a></td>
+            </tr>
+            <tr>
+              <td><strong>Microsoft, Edelman (2025)</strong><br/>IA em Micro, Pequenas e Médias Empresas: Tendências, Desafios e Oportunidades</td>
+              <td>Pesquisa mercado</td>
+              <td><a href="https://news.microsoft.com/source/latam/features/noticias-da-microsoft/75-das-mpmes-no-brasil-estao-otimistas-sobre-o-impacto-da-inteligencia-artificial-em-seus-negocios-aponta-estudo-da-microsoft/">Microsoft LATAM</a></td>
+            </tr>
+            <tr>
+              <td><strong>Clark, Doyle, Garaialde et al. (2019)</strong><br/>The State of Speech in HCI: Trends, Themes and Challenges</td>
+              <td>Revisão sistemática</td>
+              <td><a href="https://arxiv.org/pdf/1810.06828.pdf">arXiv 1810.06828</a></td>
+            </tr>
+            <tr>
+              <td><strong>Visa (2026)</strong><br/>Visa Agentic Ready — Programa Global para Ecossistema de Pagamentos</td>
+              <td>Programa/Infraestrutura</td>
+              <td><a href="https://forbes.com.br/forbes-tech/2026/04/">Forbes Brasil</a></td>
+            </tr>
+            <tr>
+              <td><strong>Brasil (2018)</strong><br/>Lei Geral de Proteção de Dados (LGPD)</td>
+              <td>Legislação</td>
+              <td>Lei nº 13.709/2018</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Nota Final</h2>
+
+        <p>O contexto de PME é singular: não é Private Banking (onde premium = controle absoluto), nem é consumer (onde eficiência = velocidade). É espaço onde confiança no sistema pesa tanto quanto confiança na relação com banco.</p>
+
+        <p>Implementações que reconhecem isso—que explicitam processo, admitem limites, respeitam contexto organizacional, permitem auditoria—ganham adoção 2-3x mais rápido. Implementações que confundem PME com consumer falham porque oferecem velocidade quando o que faz falta é transparência.</p>
+
+      </div>
+    </div>
+  </div>
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrapper">
+    <p>Artigo de pesquisa aplicada · Julho 2026 · Aguardando verificação humana · <a href="#referencias">Ver referências</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
