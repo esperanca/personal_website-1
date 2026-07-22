@@ -129,6 +129,7 @@ ol.perguntas-list li::before{content:counter(pergunta) ". ";font-weight:900;colo
       <li><a href="#inicio">Início</a></li>
       <li><a href="#tan">Tan et al.</a></li>
       <li><a href="#qualidade">Qualidade</a></li>
+      <li><a href="#metodos">Métodos</a></li>
       <li><a href="#brasil">PME Brasil</a></li>
       <li><a href="#lider">Perguntas</a></li>
       <li><a href="#instituicoes">Instituições</a></li>
@@ -209,6 +210,78 @@ ol.perguntas-list li::before{content:counter(pergunta) ". ";font-weight:900;colo
 
         <p>Redução de custos? Apenas 13% mencionam. A PME investe em IA não para cortar gente. Investe para fazer melhor ou processar mais rápido.</p>
 
+        <h2 id="metodos">Critérios de Experiência e Métodos de Medição</h2>
+
+        <p>"Satisfação geral" não funciona. Gestores de PME ficam satisfeitos com atendimento porque o suporte respondeu, não porque confiaram no sistema. O que importa é separar: qual dimensão falhou? Clareza? Raciocínio? Respeito à estrutura da empresa? Para cada dimensão, existe método que você pode aplicar agora.</p>
+
+        <h3>Seis Critérios de Experiência</h3>
+
+        <p><strong>1. Confiabilidade Percebida.</strong> O gestor acredita que próxima recomendação será tão boa quanto essa. Medição: "Eu recomendaria usar esse agente pra decisão financeira crítica?" (escala 1-7). Depois: quantas vezes voltou ao sistema em 30 dias? Reuso = confiabilidade.</p>
+
+        <p><strong>2. Clareza de Raciocínio.</strong> Três dias depois, você pergunta: "Por que o agente recomendou crédito pra você?" Se responde "porque meu fluxo tá bom e crescimento em 12 meses ultrapassou X," então clareza funcionou. Se responde "não lembro," falhou. Medição: Teste de recall sem reler interface. Taxa de acerto ≥ 70% = clareza.</p>
+
+        <p><strong>3. Adaptabilidade.</strong> Microgestores conversam em tópicos. Gestores de média falam em estruturas. Sistema que ignora isso falha com ambos. Medição prática: A/B test com 10 micro e 10 médias. Grupo A vê "adaptar por porte." Grupo B vê uniforme. Qual conclui tarefa primeiro? Qual reusa?</p>
+
+        <p><strong>4. Transparência de Confiança.</strong> "Recomendo crédito (78% certo porque: histórico limpo, crescimento estável, 1 ponto de risco: taxa sobe em junho)." vs. Simplesmente "Recomendo crédito." Qual recebe ação? Medição: teste as duas, compare adesão. Expectativa: com confiança explícita sobe 25-40%.</p>
+
+        <p><strong>5. Escalation Natural.</strong> Tributação é complexa. Sistema poderia fingir que resolve mas não resolve. Melhor: "Isso é tema de contador especializado. Conecto você com alguém da rede de confiança?" Se PME sai satisfeita mesmo não tendo "resolvido," confiança subiu. Medição: satisfação + reuso após escalation. Deve estar acima de satisfação com resposta genérica.</p>
+
+        <p><strong>6. Conformidade Percebida.</strong> PME não acredita em regulação invisível. Acredita em controle. "Meus dados estão onde?" "Quem pode ver?" "Como deleto?" Medição: antes de usar ("Este sistema cuida de dados como eu gosto?") e após primeiro pagamento via agente ("Meus dados saíram de controle?" Espera: resposta "não" de 85%+).</p>
+
+        <h3>Métodos que Funcionam com PME (e onde aplicá-los)</h3>
+
+        <table class="tabela-refs">
+          <thead>
+            <tr>
+              <th>Método</th>
+              <th>O Que Revela</th>
+              <th>Como Fazer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Pergunta Direta 1-7</strong></td>
+              <td>Se PME recomendaria agente para decisão crítica (confiabilidade)</td>
+              <td>Quinta tela após primeira interação. Semana 1, semana 4, semana 12. Ver crescimento.</td>
+            </tr>
+            <tr>
+              <td><strong>Recall 3 Dias Depois</strong></td>
+              <td>Consegue explicar por que recebeu aquela recomendação?</td>
+              <td>WhatsApp follow-up assíncrono: "Por que agente recomendou crédito pra você?" Não deixa reler resposta anterior.</td>
+            </tr>
+            <tr>
+              <td><strong>A/B Crisp (Uma Semana)</strong></td>
+              <td>Transparência de dados vs. caixa preta: qual completa tarefa?</td>
+              <td>10 PME em grupo A veem "Baseado em: X, Y, Z". 10 em grupo B veem só recomendação. Contar % que segue.</td>
+            </tr>
+            <tr>
+              <td><strong>NPS Semanal + Por Quê</strong></td>
+              <td>Vai recomendar pra outra PME? Se não, por quê?</td>
+              <td>Chat rápido toda segunda. Agrupa temas (clareza, speed, confiança). Padrão emerge em 3 semanas.</td>
+            </tr>
+            <tr>
+              <td><strong>Teste de Cenário (CFO Veto)</strong></td>
+              <td>Sistema respeita estrutura organizacional?</td>
+              <td>Role-play: "CFO da sua empresa não concorda com essa recomendação de crédito. O que agente faz?" Deve recuar, não insistir.</td>
+            </tr>
+            <tr>
+              <td><strong>Três Interfaces, Mesma Tarefa</strong></td>
+              <td>Texto vs. áudio síncrono vs. WhatsApp assíncrono: qual fecha tarefa?</td>
+              <td>20 PME; 6-7 por modo. Tempo até conclusão + "Faria novamente por este canal?" Modo vence se &gt;60% repete.</td>
+            </tr>
+            <tr>
+              <td><strong>Gravação Think-Aloud (Qualitativo)</strong></td>
+              <td>Onde sente friction real? Qual ponto pediu ajuda humana?</td>
+              <td>5-8 sessões 30min. Gestor fala enquanto usa. Analisa depois: onde parou? Onde reclamou? Onde celebrou?</td>
+            </tr>
+            <tr>
+              <td><strong>Controle de Dados (Percepção)</strong></td>
+              <td>PME sente que dados estão seguros?</td>
+              <td>Antes: "Confia que sistema cuida bem?" Após primeiro pagamento: "Seus dados ficaram visíveis pra você?" Quer 85% "não" na segunda.</td>
+            </tr>
+          </tbody>
+        </table>
+
         <h2 id="brasil">PMEs no Brasil: Dados Atuais</h2>
 
         <p><strong>Familiaridade:</strong> 96% conhecem ferramentas GenAI (Sebrae/FGV/Google, dez 2025)</p>
@@ -220,27 +293,47 @@ ol.perguntas-list li::before{content:counter(pergunta) ". ";font-weight:900;colo
 
         <p><strong>Já em uso:</strong> Atendimento ao cliente (73%), pesquisa online (66%), serviços personalizados (65%).</p>
 
-        <h3>Cinco Eixos de Pesquisa para Contexto Brasileiro</h3>
+        <h3>Cinco Eixos de Pesquisa para Contexto Brasileiro (com Hipóteses Testáveis)</h3>
 
         <div class="eixo-num">Eixo 1 — Pidgin Humano-Máquina em PME</div>
 
-        <p>Cada gestor que conversa com máquina aprende rápido a falar como ela espera. Em PME, o problema é que gestores desenvolvem pidgins divergentes depende do porte. Microgestores adotam conversação reduzida rapidamente (e ficam satisfeitos). Gestores de média empresa mantêm linguagem plena e ficam frustra quando sistema não acompanha. A hipótese: diferença de satisfação não vem de dificuldade técnica, vem de divergência no modelo mental de "parceria." Um agente que adapta formalmente sua linguagem pode aumentar satisfação em micro sem alienar usuários de média.</p>
+        <p>Cada gestor que conversa com máquina aprende rápido a falar como ela espera. Em PME, o problema é que gestores desenvolvem pidgins divergentes depende do porte. Microgestores adotam conversação reduzida rapidamente (e ficam satisfeitos). Gestores de média empresa mantêm linguagem plena e ficam frustra quando sistema não acompanha.</p>
+
+        <div class="destaque">
+          <p><strong>Hipótese H1:</strong> Diferença de satisfação entre micro e médias não vem de dificuldade técnica, mas de divergência no modelo mental de "parceria." Um agente que adapta formalmente sua linguagem e profundidade por porte pode aumentar satisfação em micro de 42% para 70% sem alienar usuários de média (baseline 65%).</p>
+        </div>
 
         <div class="eixo-num">Eixo 2 — Áudio Assíncrono em WhatsApp</div>
 
-        <p>Pesquisa internacional testava voz com telefonia síncrona—pressão de tempo real. WhatsApp é outro contexto: permite planejar, regravar, reouvir sem pressão. A hipótese inverte achado internacional: mensagem de voz assíncrona supera texto em taxa de conclusão de tarefa financeira em PME. 99% penetração WhatsApp Brasil, 89% de usuários já falaram com bot de marca. Este é contexto real de operação, não lab.</p>
+        <p>Pesquisa internacional testava voz com telefonia síncrona—pressão de tempo real. WhatsApp é outro contexto: permite planejar, regravar, reouvir sem pressão. Contexto real de operação, não lab. 99% penetração WhatsApp Brasil, 89% de usuários já falaram com bot de marca.</p>
+
+        <div class="destaque">
+          <p><strong>Hipótese H2:</strong> Mensagem de voz assíncrona em WhatsApp supera texto em taxa de conclusão de tarefa financeira em PME (meta: 55% conclusão em voz vs. 40% em texto). Expectativa: usuários PM idosos adotam 30% mais rápido com áudio que com texto.</p>
+        </div>
 
         <div class="eixo-num">Eixo 3 — Confiança Relacional vs. Técnica</div>
 
-        <p>Para PME, "confiança em sistema financeiro" tem componente relacional que não existe em consumer. Quando um agente diz "reconheço que sua situação é complexa, deixo com suporte humano," constrói mais confiança que tentando resolver fora de escopo. Escalation + reconhecimento de limite = confiança relacional. Taxa de conclusão de recomendações sobe quando sistema admite limite primeiro.</p>
+        <p>Para PME, "confiança em sistema financeiro" tem componente relacional que não existe em consumer. Quando um agente diz "reconheço que sua situação é complexa, deixo com suporte humano," constrói mais confiança que tentando resolver fora de escopo. Escalation + reconhecimento de limite = confiança relacional.</p>
+
+        <div class="destaque">
+          <p><strong>Hipótese H3:</strong> Taxa de conclusão de recomendações sobe 35% quando sistema admite limite primeiro (vs. tentar resolver). PMEs com escalation explícita têm NPS 8.5 pontos maior que PMEs sem. Confiança relacional (sinto que sistema me ouviu) prediz reuso 2x mais que confiança técnica (confio no cálculo).</p>
+        </div>
 
         <div class="eixo-num">Eixo 4 — Contexto Organizacional</div>
 
-        <p>Gerente financeiro de PME testa agente dentro de ecossistema real: tem CFO, tem operações, tem clientes. Se sistema recomenda algo que contradiz "ordem do CFO," confiança quebra não porque sistema errou, mas porque violou estrutura de autoridade. Sistemas que reconhecem contexto organizacional ("quem mais precisa validar isso?") têm adoção 2-3x maior.</p>
+        <p>Gerente financeiro de PME testa agente dentro de ecossistema real: tem CFO, tem operações, tem clientes. Se sistema recomenda algo que contradiz "ordem do CFO," confiança quebra não porque sistema errou, mas porque violou estrutura de autoridade.</p>
+
+        <div class="destaque">
+          <p><strong>Hipótese H4:</strong> Sistemas que reconhecem contexto organizacional ("quem mais precisa validar isso?") têm adoção 2-3x maior. PMEs que implementam checklist "CFO aprova? Sócio concorda?" antes de executar têm rejeição de recomendações 22% menor e satisfação 45% maior.</p>
+        </div>
 
         <div class="eixo-num">Eixo 5 — Traçabilidade como Requisito de Conformidade e Confiança</div>
 
-        <p>PME que segue recomendação de agente para empréstimo precisa dizer "IA recomendou porque X, Y, Z." Não é transparência para usuário. É auditabilidade para regulador e para sua própria governance. Sistemas com traçabilidade completa (por que decidiu, dados usados, alternativas consideradas) têm adoção 40% maior que "caixa preta."</p>
+        <p>PME que segue recomendação de agente para empréstimo precisa dizer "IA recomendou porque X, Y, Z" para auditoria, regulador e sua própria governance. Não é transparência para usuário. É auditabilidade para compliance.</p>
+
+        <div class="destaque">
+          <p><strong>Hipótese H5:</strong> Sistemas com traçabilidade completa (por que decidiu, dados usados, alternativas consideradas) têm adoção 40% maior que "caixa preta." Número conservador: teste com 20 PMEs (A: traçável; B: sem explicação) deve confirmar diferença ≥ 30% em taxa de ação recomendada.</p>
+        </div>
 
         <h2 id="lider">Dez Perguntas para um Banco Líder em Agentes Agentic</h2>
 
