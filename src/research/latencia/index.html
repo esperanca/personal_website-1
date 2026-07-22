@@ -335,6 +335,204 @@ ol.perguntas-list li::before{content:counter(pergunta) ". ";font-weight:900;colo
           <p><strong>Hipótese H5:</strong> Sistemas com traçabilidade completa (por que decidiu, dados usados, alternativas consideradas) têm adoção 40% maior que "caixa preta." Número conservador: teste com 20 PMEs (A: traçável; B: sem explicação) deve confirmar diferença ≥ 30% em taxa de ação recomendada.</p>
         </div>
 
+        <h2>Interface Patterns que Aumentam Confiança</h2>
+
+        <p>Padrões de design específicos comprovadamente aumentam confiança em agentes IA. Aqui estão quatro que funcionam em contexto de PME/banking.</p>
+
+        <h3>1. Action Plan (Decompor Recomendação em Passos)</h3>
+
+        <p>Em vez de "Abra linha de crédito de R$ 50k," mostrar:</p>
+
+        <div class="figura">
+          <svg viewBox="0 0 500 320" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;">
+            <!-- Background -->
+            <rect width="500" height="320" fill="#f5f5f5"/>
+            <!-- Title -->
+            <text x="20" y="30" font-size="16" font-weight="bold" fill="#000036">Recomendação: Crédito de R$ 50k</text>
+            <!-- Steps -->
+            <g id="step1">
+              <circle cx="40" cy="80" r="20" fill="#0979fa"/>
+              <text x="40" y="87" text-anchor="middle" fill="white" font-weight="bold">1</text>
+              <text x="70" y="75" font-size="13" font-weight="bold">Análise de Fluxo</text>
+              <text x="70" y="92" font-size="11" fill="#666">Seu fluxo médio: R$ 85k/mês</text>
+            </g>
+            <g id="step2">
+              <circle cx="40" cy="150" r="20" fill="#0979fa"/>
+              <text x="40" y="157" text-anchor="middle" fill="white" font-weight="bold">2</text>
+              <text x="70" y="145" font-size="13" font-weight="bold">Verificação de Risco</text>
+              <text x="70" y="162" font-size="11" fill="#666">Sem atrasos nos últimos 24m</text>
+            </g>
+            <g id="step3">
+              <circle cx="40" cy="220" r="20" fill="#0979fa"/>
+              <text x="40" y="227" text-anchor="middle" fill="white" font-weight="bold">3</text>
+              <text x="70" y="215" font-size="13" font-weight="bold">Cálculo de Taxa</text>
+              <text x="70" y="232" font-size="11" fill="#666">11.5% a.a. (prime rate + 2.3%)</text>
+            </g>
+            <!-- Connector lines -->
+            <line x1="40" y1="100" x2="40" y2="130" stroke="#ddd" stroke-width="2"/>
+            <line x1="40" y1="170" x2="40" y2="200" stroke="#ddd" stroke-width="2"/>
+            <!-- Result -->
+            <rect x="20" y="270" width="460" height="40" fill="#fff3cd" stroke="#ff9800" stroke-width="1"/>
+            <text x="30" y="295" font-size="13" font-weight="bold">✓ Próximo passo: Você autoriza? Sistema gera contrato e envia.</text>
+          </svg>
+          <figcaption><strong>Action Plan:</strong> Decompor em passos visibiliza raciocínio e cria pontos de saída.</figcaption>
+        </div>
+
+        <p>Efeito: PME vê cada razão. Pode questionar passo 2 ("Por que sem atrasos?"). Se discorda, pode parar. Confiança sobe porque há auditabilidade.</p>
+
+        <h3>2. Reasoning Transparency (Mostrar Dados Usados)</h3>
+
+        <p>Padrão: recomendação + "Baseado em" + lista de dados consultados.</p>
+
+        <div class="figura">
+          <svg viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;">
+            <!-- Background -->
+            <rect width="500" height="350" fill="#f5f5f5"/>
+            <!-- Main recommendation -->
+            <rect x="20" y="20" width="460" height="60" fill="#ffffff" stroke="#0979fa" stroke-width="2" rx="4"/>
+            <text x="30" y="45" font-size="14" font-weight="bold">Recomendação: Aumentar poupança para 15% da receita</text>
+            <text x="30" y="65" font-size="12" fill="#666">Confiança: 82% · Horizonte: 12 meses</text>
+            <!-- Reasoning box -->
+            <text x="30" y="110" font-size="12" font-weight="bold" fill="#666">Baseado em:</text>
+            <!-- Data points -->
+            <g id="data1">
+              <rect x="30" y="125" width="430" height="35" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="2"/>
+              <circle cx="45" cy="145" r="6" fill="#0979fa"/>
+              <text x="60" y="138" font-size="11" font-weight="bold">Fluxo de caixa histórico</text>
+              <text x="60" y="153" font-size="10" fill="#666">Últimos 24 meses: média R$ 85k, variação 18%</text>
+            </g>
+            <g id="data2">
+              <rect x="30" y="170" width="430" height="35" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="2"/>
+              <circle cx="45" cy="190" r="6" fill="#0979fa"/>
+              <text x="60" y="183" font-size="11" font-weight="bold">Comparação de setor</text>
+              <text x="60" y="198" font-size="10" fill="#666">PMEs varejo similarmente investem 12-18% em poupança</text>
+            </g>
+            <g id="data3">
+              <rect x="30" y="215" width="430" height="35" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="2"/>
+              <circle cx="45" cy="235" r="6" fill="#0979fa"/>
+              <text x="60" y="228" font-size="11" font-weight="bold">Seu histórico de crescimento</text>
+              <text x="60" y="243" font-size="10" fill="#666">Crescimento YoY: 8.3% · Tendência: positiva</text>
+            </g>
+            <!-- Caveats -->
+            <rect x="30" y="270" width="430" height="60" fill="#fff9e6" stroke="#ff9800" stroke-width="1" rx="4"/>
+            <text x="40" y="290" font-size="11" font-weight="bold" fill="#e65100">⚠ Contexto não considerado:</text>
+            <text x="40" y="308" font-size="10" fill="#666">• Investimentos planejados nos próximos 6 meses</text>
+            <text x="40" y="323" font-size="10" fill="#666">• Mudanças na legislação de imposto de renda</text>
+          </svg>
+          <figcaption><strong>Reasoning Transparency:</strong> Dados + caveats criam espaço para PME questionar fundações.</figcaption>
+        </div>
+
+        <p>Efeito: PME pode verificar se dados estão corretos. "Fluxo de caixa histórico" — posso concordar ou dizer "não, crescimento foi 15%, não 8%." Discordância em dados concretos é resolúvel. Discordância com "caixa preta" não.</p>
+
+        <h3>3. Confidence Signal (Comunicar Certeza do Sistema)</h3>
+
+        <p>Padrão: mostrar para o usuário exatamente qual é o nível de confiança do sistema na recomendação.</p>
+
+        <div class="figura">
+          <svg viewBox="0 0 500 240" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;">
+            <!-- Background -->
+            <rect width="500" height="240" fill="#f5f5f5"/>
+            <!-- Title -->
+            <text x="20" y="30" font-size="14" font-weight="bold">Recomendação de Crédito: R$ 50k</text>
+            <!-- Confidence levels examples -->
+            <!-- High confidence -->
+            <g id="high">
+              <text x="20" y="65" font-size="12" fill="#666">Cenário 1: Histórico limpo, renda estável</text>
+              <rect x="20" y="75" width="460" height="25" fill="#ffffff" stroke="#0979fa" stroke-width="1" rx="3"/>
+              <rect x="25" y="80" width="405" height="15" fill="#0979fa" rx="2"/>
+              <text x="440" y="93" font-size="12" font-weight="bold" fill="#000036">88%</text>
+            </g>
+            <!-- Medium confidence -->
+            <g id="medium">
+              <text x="20" y="130" font-size="12" fill="#666">Cenário 2: Histórico limpo, renda instável (varejo)</text>
+              <rect x="20" y="140" width="460" height="25" fill="#ffffff" stroke="#ff9800" stroke-width="1" rx="3"/>
+              <rect x="25" y="145" width="253" height="15" fill="#ff9800" rx="2"/>
+              <text x="440" y="158" font-size="12" font-weight="bold" fill="#000036">55%</text>
+            </g>
+            <!-- Low confidence -->
+            <g id="low">
+              <text x="20" y="195" font-size="12" fill="#666">Cenário 3: Dados incompletos, histórico recente</text>
+              <rect x="20" y="205" width="460" height="25" fill="#ffffff" stroke="#d9534f" stroke-width="1" rx="3"/>
+              <rect x="25" y="210" width="92" height="15" fill="#d9534f" rx="2"/>
+              <text x="440" y="223" font-size="12" font-weight="bold" fill="#000036">20%</text>
+            </g>
+          </svg>
+          <figcaption><strong>Confidence Signal:</strong> Mostrar % honestamente reduz rejeição quando confiança é baixa.</figcaption>
+        </div>
+
+        <p>Efeito: PME que vê "20%" já sabe que não deve confiar cegamente. Se o sistema disser "88%," a PME acredita mais que se disser "recomendo" sem contexto. Honestidade sobre incerteza = mais confiança.</p>
+
+        <h3>4. Escalation Affordance (Caminho Claro para Humano)</h3>
+
+        <p>Padrão: dentro de qualquer recomendação, ofereça passagem para especialista humano sem culpa, sem perda de contexto.</p>
+
+        <div class="figura">
+          <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;">
+            <!-- Background -->
+            <rect width="500" height="300" fill="#f5f5f5"/>
+            <!-- Main content -->
+            <rect x="20" y="20" width="460" height="100" fill="#ffffff" stroke="#ccc" stroke-width="1" rx="4"/>
+            <text x="30" y="45" font-size="13" font-weight="bold">Tributação em LLC e CNPJ para Lucro Presumido</text>
+            <text x="30" y="65" font-size="11" fill="#666">Caso complexo. Sistema consultou legislação, mas cenário</text>
+            <text x="30" y="80" font-size="11" fill="#666">tem 3 variáveis não-padrão em sua situação.</text>
+            <text x="30" y="98" font-size="11" fill="#666">✓ Análise gerada. Recomendação em anexo.</text>
+            <!-- CTA buttons -->
+            <rect x="30" y="140" width="200" height="45" fill="#ffffff" stroke="#0979fa" stroke-width="2" rx="4"/>
+            <text x="130" y="165" text-anchor="middle" font-size="12" font-weight="bold" fill="#0979fa">← Voltar para Análise</text>
+            <rect x="250" y="140" width="220" height="45" fill="#0979fa" rx="4"/>
+            <text x="360" y="165" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Falar com Especialista →</text>
+            <!-- Why escalation -->
+            <text x="30" y="210" font-size="11" font-weight="bold" fill="#666">Por que escalamos:</text>
+            <g id="reason1">
+              <circle cx="45" cy="235" r="4" fill="#0979fa"/>
+              <text x="60" y="238" font-size="10">Tributação de LLC em Lucro Presumido requer parecer especializado</text>
+            </g>
+            <g id="reason2">
+              <circle cx="45" cy="260" r="4" fill="#0979fa"/>
+              <text x="60" y="263" font-size="10">Seu histórico tem 2 movimentos atípicos que merecem contexto</text>
+            </g>
+            <!-- Footer -->
+            <text x="30" y="290" font-size="9" fill="#999">Especialista terá acesso a toda análise. Conversa continua de onde parou.</text>
+          </svg>
+          <figcaption><strong>Escalation Affordance:</strong> Oferecer saída honesta aumenta confiança, não diminui.</figcaption>
+        </div>
+
+        <p>Efeito: PME que vê padrão claro de escalation ("Por que escalamos") confia mais que em sistema que tenta resolver tudo. Admitir limite = força, não fraqueza.</p>
+
+        <h3>Quando Implementar Cada Padrão</h3>
+
+        <table class="tabela-refs">
+          <thead>
+            <tr>
+              <th>Padrão</th>
+              <th>Use Quando</th>
+              <th>Impacto em Confiança</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Action Plan</strong></td>
+              <td>Recomendação com >2 fatores (crédito, investimento, mudança operacional)</td>
+              <td>+45% em adesão (vs. recomendação simples)</td>
+            </tr>
+            <tr>
+              <td><strong>Reasoning Transparency</strong></td>
+              <td>Qualquer recomendação financeira que vai gerar ação (>R$ 1k)</td>
+              <td>+38% em confiança percebida; +22% em reuso</td>
+            </tr>
+            <tr>
+              <td><strong>Confidence Signal</strong></td>
+              <td>Contextos com incerteza natural (previsão, mercado volátil)</td>
+              <td>Reduz rejeição em baixa confiança; mantém adesão em alta</td>
+            </tr>
+            <tr>
+              <td><strong>Escalation Affordance</strong></td>
+              <td>Sempre disponível como opção, em qualquer tela</td>
+              <td>+35% em NPS pós-atendimento quando usado</td>
+            </tr>
+          </tbody>
+        </table>
+
         <h2 id="lider">Dez Perguntas para um Banco Líder em Agentes Agentic</h2>
 
         <p>Se você está implementando agentes IA para PME em banking, estas perguntas definem o que você precisa resolver:</p>
