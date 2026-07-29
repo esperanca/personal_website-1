@@ -134,3 +134,7 @@ O que a interface mostra é a conversa. O que não é transparente às vezes é 
 - Notas
 - Links e recursos
 - Índice remissivo
+
+## Notas e links {#notas-e-links}
+
+- [Memória semântica, episódica e procedural no financiamento imobiliário](/cases/livro/tipos-de-memoria/) — conceito de apoio sobre os três tipos de memória usados para desenhar continuidade entre canais.
