@@ -4,7 +4,7 @@ title: "Desenhando Confiança"
 subtitle: "Design, IA e confiança em interfaces generativas e agentes"
 collection: Livro
 status: revisado
-date: 2026-07-12T22:45:00-03:00
+date: 2026-07-28T22:45:00-03:00
 contact: "danieliscoding@gmail.com"
 preface: "@danielsouza"
 permalink: /cases/livro/

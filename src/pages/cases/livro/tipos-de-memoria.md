@@ -60,41 +60,6 @@ Por exemplo:
 | Preferência de contato | WhatsApp | Declaração do usuário | 12/07 | Até alteração |
 | Saldo do FGTS | R$ 72.000 | Consulta autorizada | 16/07 | 30 dias |
 
-### Contexto do domínio
-
-Responde à pergunta:
-
-> O que essas informações significam dentro de um financiamento imobiliário?
-
-Exemplos:
-
-- renda fixa e renda variável possuem critérios de comprovação diferentes;
-- o FGTS pode compor os recursos da aquisição quando as condições forem atendidas;
-- o valor financiado depende do valor reconhecido do imóvel e dos recursos destinados à entrada.
-
-O domínio fornece significado aos dados do usuário. "João possui FGTS" é um fato sobre ele. "O FGTS pode ser usado na aquisição se determinados critérios forem atendidos" é conhecimento do domínio.
-
-### Contexto do caso
-
-Responde à pergunta:
-
-> O que sabemos sobre esta solicitação específica?
-
-Exemplos:
-
-- João solicita R$ 470.000 para adquirir um apartamento usado;
-- R$ 18.500 de renda fixa já foram comprovados;
-- a documentação das comissões foi recebida, mas ainda precisa ser validada.
-
-No caso, é importante distinguir quatro tipos de informação:
-
-- **Declarada:** informada pelo usuário;
-- **Observada:** encontrada em documentos ou consultas;
-- **Validada:** formalmente aceita no processo;
-- **Derivada:** calculada ou concluída com base em outras informações.
-
-Assim, o envio de um comprovante não significa que seu conteúdo já tenha sido validado.
-
 ### Como a memória semântica aparece para o usuário
 
 1. **Dados reconhecidos:** "Seus dados cadastrais e sua renda fixa de R$ 18.500 já estão preenchidos."
@@ -123,49 +88,6 @@ Exemplos:
 
 Um episódio não deve ser automaticamente transformado em uma característica permanente. O fato de João ter abandonado uma simulação anterior não permite concluir, por si só, que ele costuma abandonar processos.
 
-### Significado dos eventos no domínio
-
-Responde à pergunta:
-
-> Qual é o significado de cada acontecimento dentro do financiamento?
-
-Exemplos:
-
-- o envio de um contracheque representa o recebimento de uma evidência de renda;
-- a solicitação de um novo documento representa a abertura de uma pendência;
-- a aceitação do documento representa a resolução dessa pendência.
-
-O domínio determina quais episódios precisam ser preservados por motivos operacionais, legais ou de auditoria, como consentimentos, decisões, solicitações, aprovações, recusas e exceções.
-
-### Linha do tempo do caso
-
-Responde à pergunta:
-
-> O que aconteceu nesta proposta?
-
-Exemplo:
-
-| Data | Acontecimento |
-|---|---|
-| 12/07 | João iniciou a simulação para um imóvel de R$ 650.000 |
-| 13/07 | Alterou a entrada para R$ 180.000, incluindo o FGTS |
-| 14/07 | Formalizou a proposta e declarou renda de R$ 20.000 |
-| 15/07 | Enviou três contracheques |
-| 15/07 | Mariana validou renda fixa de R$ 18.500 |
-| 15/07 | Foi identificada uma diferença de R$ 1.500 |
-| 15/07 | Foi solicitada a comprovação das comissões |
-| 16/07 | João enviou os documentos complementares |
-| 17/07 | A proposta passou para processamento humano |
-
-Cada episódio relevante deve registrar:
-
-- o que aconteceu;
-- quando aconteceu;
-- quem realizou a ação;
-- qual era o estado anterior;
-- qual foi o resultado;
-- quais evidências estavam envolvidas.
-
 ### A passagem para o processamento humano
 
 A transferência deve aparecer como um episódio explícito:
@@ -187,78 +109,6 @@ Para o usuário, a memória episódica significa não precisar reconstruir o cam
 A memória procedural contém o conhecimento sobre como conduzir o financiamento: métodos, sequências, critérios operacionais, responsabilidades e formas de tratar exceções.
 
 Ela não descreve quem é João nem o que aconteceu com ele. Ela determina como o processo deve prosseguir.
-
-### Procedimentos de atendimento
-
-Responde à pergunta:
-
-> Como a instituição deve conduzir a relação com o usuário?
-
-Exemplos:
-
-- como solicitar dados e documentos de maneira clara;
-- como comunicar uma pendência e o prazo esperado;
-- como transferir o processo sem exigir que o usuário repita informações.
-
-Na passagem para o processamento humano, o procedimento pode determinar:
-
-1. registrar o motivo da transferência;
-2. consolidar o estado atual da proposta;
-3. incluir documentos, decisões e pendências;
-4. identificar o novo responsável;
-5. comunicar ao cliente o próximo passo.
-
-### Procedimentos do domínio
-
-Responde à pergunta:
-
-> Como cada etapa de um financiamento deve ser executada?
-
-Exemplos:
-
-- como validar renda fixa e variável;
-- como analisar o uso do FGTS;
-- como tratar divergências documentais e exceções.
-
-Um procedimento para análise de renda variável pode determinar:
-
-1. identificar o período coberto pelos documentos;
-2. verificar a recorrência das comissões;
-3. desconsiderar valores eventuais não elegíveis;
-4. calcular a média conforme a política vigente;
-5. registrar o valor aceito e sua justificativa.
-
-### Procedimento aplicável ao caso
-
-Responde à pergunta:
-
-> Considerando esta proposta, o que deve ser feito agora?
-
-No caso de João:
-
-- conferir os documentos das comissões;
-- calcular a parcela da renda variável que pode ser considerada;
-- recalcular a capacidade de pagamento;
-- registrar o resultado e comunicar o próximo passo.
-
-O procedimento também prevê os possíveis caminhos:
-
-- se as comissões forem aceitas, atualizar a renda e continuar;
-- se forem parcialmente aceitas, registrar o valor considerado e recalcular;
-- se não forem aceitas, avaliar aumento da entrada, redução do financiamento ou composição de renda;
-- se os documentos forem insuficientes, abrir uma pendência específica.
-
-### Regras, procedimentos e decisões
-
-Esses três elementos não são equivalentes:
-
-| Elemento | Exemplo |
-|---|---|
-| Regra | A renda variável precisa demonstrar recorrência |
-| Procedimento | Analisar o período exigido e calcular a média elegível |
-| Decisão | R$ 1.200 das comissões mensais de João foram aceitos como renda |
-
-A regra estabelece uma condição. O procedimento define como realizar a análise. A decisão registra o resultado da aplicação ao caso.
 
 ### Como a memória procedural aparece para o usuário
 
@@ -305,3 +155,11 @@ Em termos práticos:
 - a memória procedural evita **ficar sem saber como avançar**.
 
 Uma experiência contínua acontece quando o financiamento pode atravessar canais, sistemas e pessoas sem perder fatos, histórico ou método.
+
+## Bibliografia
+
+1. Tulving, E. (1972). Episodic and semantic memory. Em E. Tulving & W. Donaldson (Eds.), *Organization of Memory*. Academic Press.
+2. Tulving, E. (1985). How many memory systems are there? *American Psychologist*, 40(4), 385–398.
+3. Squire, L. R. (2004). Memory systems of the brain: A brief history and current perspective. *Neurobiology of Learning and Memory*, 82(3), 171–177.
+4. Cohen, N. J. & Squire, L. R. (1980). Preserved learning and retention of pattern-analyzing skill in amnesia: Dissociation of knowing how and knowing that. *Science*, 210(4466), 207–210.
+5. Norman, D. A. (1988). *The Design of Everyday Things*. Basic Books.
