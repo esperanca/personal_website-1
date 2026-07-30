@@ -138,3 +138,4 @@ O que a interface mostra é a conversa. O que não é transparente às vezes é 
 ## Notas e links {#notas-e-links}
 
 - [Memória semântica, episódica e procedural no financiamento imobiliário](/cases/livro/tipos-de-memoria/) — conceito de apoio sobre os três tipos de memória usados para desenhar continuidade entre canais.
+- [5 Princípios de HCI Fundamentados em Pesquisa](/cases/livro/principios-hci-memoria/) — memória de trabalho, affordances, carga cognitiva, heurísticas de usabilidade e cognição distribuída, com referências originais e brasileiras.

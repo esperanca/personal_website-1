@@ -37,6 +37,8 @@ João começa a proposta online, envia seus documentos e, devido à divergência
 
 ## 1. Memória semântica: o que sabemos
 
+A distinção entre memória semântica e episódica vem da psicologia cognitiva<sup>[1](#ref-1)</sup>: a primeira armazena fatos e conceitos gerais, a segunda armazena eventos vividos em um tempo e lugar específicos<sup>[2](#ref-2)</sup>.
+
 A memória semântica reúne fatos consolidados. No financiamento imobiliário, ela pode ser organizada em três contextos: modelo do usuário, domínio e caso.
 
 ### Modelo do usuário
@@ -70,7 +72,7 @@ Para o usuário, a memória semântica significa não precisar fornecer repetida
 
 ## 2. Memória episódica: o que aconteceu
 
-A memória episódica registra acontecimentos específicos: o que ocorreu, quando, em qual contexto, com quais participantes e com qual resultado.
+A memória episódica registra acontecimentos específicos: o que ocorreu, quando, em qual contexto, com quais participantes e com qual resultado<sup>[2](#ref-2)</sup>.
 
 Enquanto a memória semântica diz que a renda validada de João é R$ 18.500, a memória episódica registra que Mariana validou esse valor em 15/07 com base nos três últimos contracheques.
 
@@ -106,7 +108,7 @@ Para o usuário, a memória episódica significa não precisar reconstruir o cam
 
 ## 3. Memória procedural: como avançar
 
-A memória procedural contém o conhecimento sobre como conduzir o financiamento: métodos, sequências, critérios operacionais, responsabilidades e formas de tratar exceções.
+A memória procedural contém o conhecimento sobre como conduzir o financiamento: métodos, sequências, critérios operacionais, responsabilidades e formas de tratar exceções. Neurologicamente, é um sistema distinto da memória semântica e episódica<sup>[3](#ref-3)</sup>, associado ao "saber como" em vez do "saber que"<sup>[4](#ref-4)</sup>.
 
 Ela não descreve quem é João nem o que aconteceu com ele. Ela determina como o processo deve prosseguir.
 
@@ -154,12 +156,14 @@ Em termos práticos:
 - a memória episódica evita **recontar a história**;
 - a memória procedural evita **ficar sem saber como avançar**.
 
-Uma experiência contínua acontece quando o financiamento pode atravessar canais, sistemas e pessoas sem perder fatos, histórico ou método.
+Uma experiência contínua acontece quando o financiamento pode atravessar canais, sistemas e pessoas sem perder fatos, histórico ou método<sup>[5](#ref-5)</sup>.
 
 ## Bibliografia
 
-1. Tulving, E. (1972). Episodic and semantic memory. Em E. Tulving & W. Donaldson (Eds.), *Organization of Memory*. Academic Press.
-2. Tulving, E. (1985). How many memory systems are there? *American Psychologist*, 40(4), 385–398.
-3. Squire, L. R. (2004). Memory systems of the brain: A brief history and current perspective. *Neurobiology of Learning and Memory*, 82(3), 171–177.
-4. Cohen, N. J. & Squire, L. R. (1980). Preserved learning and retention of pattern-analyzing skill in amnesia: Dissociation of knowing how and knowing that. *Science*, 210(4466), 207–210.
-5. Norman, D. A. (1988). *The Design of Everyday Things*. Basic Books.
+<ol class="refs-list">
+<li id="ref-1">Tulving, E. (1972). Episodic and semantic memory. Em E. Tulving &amp; W. Donaldson (Eds.), <em>Organization of Memory</em>. Academic Press.</li>
+<li id="ref-2">Tulving, E. (1985). How many memory systems are there? <em>American Psychologist</em>, 40(4), 385–398.</li>
+<li id="ref-3">Squire, L. R. (2004). Memory systems of the brain: A brief history and current perspective. <em>Neurobiology of Learning and Memory</em>, 82(3), 171–177.</li>
+<li id="ref-4">Cohen, N. J. &amp; Squire, L. R. (1980). Preserved learning and retention of pattern-analyzing skill in amnesia: Dissociation of knowing how and knowing that. <em>Science</em>, 210(4466), 207–210.</li>
+<li id="ref-5">Norman, D. A. (1988). <em>The Design of Everyday Things</em>. Basic Books.</li>
+</ol>
