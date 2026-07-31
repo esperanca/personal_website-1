@@ -17,7 +17,7 @@ Não é um trabalho criativo. Não vai ganhar uma estrela Michelin. Mas ele ente
 
 Liderança em design tem muito disso. 
 
-A lista infinita de tarefas repetitivas. Documentação. Acordos. Orçamentos. Dar follow-up nas conversas. Consertar o link quebrado no documento de onboarding. Reuniões de 2h. Conciliar a planilha de orçamento. Garantir que o repositório de pesquisa não fique desatualizado.
+Documentação. Acordos. Orçamentos. Consertar o link quebrado no documento de onboarding.Garantir que o repositório de pesquisa não fique desatualizado.
 
 O LinkeDisney premia o espetacular. Mas na maior parte dos dias, liderança é limpar a bancada para que os outros possam cozinhar. Sem reclamar.
 
