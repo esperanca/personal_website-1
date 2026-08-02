@@ -2,11 +2,11 @@
 layout: layouts/page.njk
 title: Sobre
 permalink: /sobre/index.html
-socialImage: "/images/daniel_souza_photo.jpg"
+socialImage: "/images/daniel-photo-profile-color.jpg"
 ---
 Executivos e líderes de design me contratam quando precisam escalar suas equipes de design e pesquisa. Ou quando uma iniciativa de alto risco exige um líder de design com atuação prática, visão de negócios e capacidade de direcionar e integrar diversas disciplinas. 
 
-![Foto de Daniel Souza - um homem pardo, de barba média, usando óculos.](/images/daniel_souza_photo_profile_color.jpg "Foto de Daniel Souza ")
+![Foto de Daniel Souza - um homem pardo, de barba média, usando óculos.](/images/daniel-photo-profile-color.jpg "Foto de Daniel Souza ")
 
 Liderei equipes de design de produto, conteúdo e serviços na Babylon Health, Farfetch, British Telecom e na Doctoralia. 
 
