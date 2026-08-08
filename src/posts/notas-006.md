@@ -4,6 +4,7 @@ title: "Notas #006 - Reuniões e contexto"
 metaTitle: Reuniões e contexto
 metaDesc: "sobre facilitação, liderança e o desenho de conversas produtivas"
 date: 2026-08-08T08:00:00.000Z
+draft: true
 tags:
   - liderança
   - facilitação
@@ -15,7 +16,7 @@ O problema da escassez de atenção não é pequeno. Nossa capacidade de produzi
 
 Mesmo quando não existe planejamento ou estrutura prévia, uma reunião usa uma estrutura e coreografia. Uma reunião é uma experiência em que as conversas dão mais certo quando existe uma estrutura compartilhada. Um exemplo simples é uma agenda, com objetivos da reunião. Além disso, formato, sequência, participantes, perguntas e rituais influenciam diretamente o tipo de pensamento e decisão que aparecem em uma sala de reunião, seja ela presencial ou online.
 
-Já ouvi muitas pessoas reclamarem de reuniões que não deram certo. Uma das perguntas frequentes é: "Por que algumas pessoas entram em reuniões e dão opiniões sem contexto?". Existem vários motivos. Entrar em uma reunião sem contexto suficiente não é necessariamente uma falha individual. Gosto de pensar que uma pergunta melhor é:
+Já ouvi muitas pessoas reclamarem de reuniões que não deram certo. Uma das perguntas frequentes é: "Por que algumas pessoas são requeridas a dar opiniões sem contexto?". Existem vários motivos. Entrar em uma reunião sem contexto suficiente não é necessariamente uma falha individual. Gosto de pensar que uma pergunta melhor é:
 
 > "Existe um ambiente em que opinar rapidamente é mais fácil do que construir entendimento?"
 
