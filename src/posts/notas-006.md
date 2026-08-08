@@ -10,11 +10,12 @@ tags:
   - reuniões
   - design de serviço
 ---
-Nossa capacidade de produzir informação cresceu muito mais rápido do que nossa capacidade de absorvê-la. O problema da escassez de atenção não é pequeno. É uma característica estrutural do trabalho nos dias de hoje, particularmente visível em organizações muito complexas. O mecanismo que usamos para tentar simplificar as coisas, buscar consenso ou fazer uma decisão é uma reunião. Em uma empresa com diversas disciplinas, diretorias e unidades de negócio é de se esperar um número considerável de reuniões. No Brasil, o problema parece menos com o excesso de reunião e mais com a condução dela: quase um em cada quatro profissionais diz que as reuniões da própria empresa não começam nem terminam no horário combinado.<sup id="ref-3">[[3]](#nota-3)</sup>
+Nossa capacidade de produzir informação cresceu muito mais rápido do que nossa capacidade de absorvê-la. O problema da escassez de atenção é uma característica estrutural do trabalho nos dias de hoje, particularmente visível em organizações muito complexas. E um mecanismo comum para tentar simplificar as coisas, buscar consenso ou tomar uma decisão é uma reunião de alinhamento. Em uma empresa com diversas disciplinas, diretorias e unidades de negócio é de se esperar um número considerável de reuniões. No Brasil, o problema parece menos com o número de reuniões e mais com a condução delas: um em cada quatro profissionais acha que as reuniões da própria empresa não começam nem terminam no horário combinado.<sup id="ref-1">[[1]](#1)</sup>
 
 Mesmo quando não existe planejamento ou estrutura prévia, uma reunião usa uma estrutura e coreografia. Uma reunião é uma experiência em que as conversas dão mais certo quando existe uma estrutura compartilhada. Um exemplo simples é uma agenda, com objetivos da reunião. Além disso, formato, sequência, participantes, perguntas e rituais influenciam diretamente o tipo de pensamento e decisão que aparecem em uma sala de reunião, seja ela presencial ou online. Coreografia é um pouco menos controlável, mas existe um roteiro implícito de movimentos e papéis que qualquer reunião segue, mesmo sem ninguém desenhar isso conscientemente.
+Envolve quem fala primeiro, quem está para escutar, quem tem que informar uma decisão, quem tem que avaliar ou opinar. A coreografia é o padrão de comportamento que se repete e organiza a interação, mesmo que ninguém tenha planejado os passos.
 
-Isso envolve quem fala primeiro, quem está para escutar, quem tem que informar uma decisão, quem tem que avaliar. Quando o assunto é muito complexo, o "vamos alinhar depois" encerra o assunto ou vira um plano de trabalho. A coreografia aqui é o padrão de comportamento que se repete e organiza a interação, mesmo que ninguém tenha planejado os passos. Cada empresa e cada time tem suas regras não escritas, que se refletem nessa coreografia. Edgar Schein descreve o termo pressupostos básicos para essas regras, e elas são importantes para que uma reunião seja considerada boa ou ruim.<sup id="ref-1">[[1]](#nota-1)</sup>
+Um exemplo: quando o assunto é muito complexo e a decisão é difícil, o "vamos alinhar depois" encerra o assunto ou vira um plano de trabalho.  Cada empresa e cada time tem suas regras não escritas, que se refletem nessa coreografia. Edgar Schein descreve o termo pressupostos básicos para essas regras, e elas são importantes para que uma reunião seja considerada boa ou ruim.<sup id="ref-2">[[2]](#2)</sup>
 
 Muitas das vezes as decisões resultantes de uma reunião não são consideradas suficientes ou boas. Principalmente quando não existem evidências quantitativas, pude observar um padrão: pessoas são chamadas a opinar sobre problemas complexos sem ter o contexto necessário e informações. Entrar em uma reunião sem contexto suficiente é algo comum, principalmente em posições de liderança.  Já fui muitas vezes questionado sobre o motivo de isso acontecer. Gosto de pensar que uma pergunta melhor é:
 
@@ -22,7 +23,7 @@ Muitas das vezes as decisões resultantes de uma reunião não são consideradas
 
 Para responder essa pergunta, temos que pensar que a responsabilidade no desenho de uma conversa produtiva em uma reunião não é só de quem puxou a conversa, mas da liderança. 
 
-Facilitação é a ferramenta para nos aproximar com qualidade de decisões melhores, e que isso não acontece só na reunião.<sup id="ref-2">[[2]](#nota-2)</sup> Líderes tem um papel fundamental para habilitar um grupo a sair de uma sala com mais conhecimento e decisões melhores. 
+Facilitação é a ferramenta para nos aproximar com qualidade de decisões melhores, e que isso não acontece só na reunião.<sup id="ref-3">[[3]](#3)</sup> Líderes tem um papel fundamental para habilitar um grupo a sair de uma sala com mais conhecimento e decisões melhores. 
 
 **Facilitar não significa ser neutro. Significa cuidar da qualidade do pensamento coletivo.**
 
@@ -52,15 +53,15 @@ Na minha experiência existe uma relação direta entre boa documentação, trab
 
 Além do livro do Daniel Stillman, recomendo o clássico **Humble Inquiry**, de Edgar Schein. Edgar fala sobre a cultura das organizações e apresenta o conceito de humble inquiry, que é basicamente curiosidade genuína aplicada. Sua contribuição trouxe o conceito de segurança psicológica para dentro das organizações, e inspirou o trabalho de Amy Edmondson no artigo que deu origem ao livro A Organização Sem Medo.
 
-*Esse post não representa a opinião do meu empregador atual. É uma reflexão pessoal da minha experiência profissional e de pesquisas sobre colaboração, co-criação e design de serviço.*
+*Esse post não representa a opinião do meu empregador. É uma reflexão pessoal da minha experiência profissional e de pesquisas sobre colaboração, co-criação e design de serviço.*
 
 **Notas:**
 
-<a id="nota-1"></a>**1.** Schein descreve a cultura organizacional em três camadas: artefatos visíveis (o que se vê: escritório, rituais, forma de vestir), valores declarados (o que a empresa diz que valoriza) e pressupostos básicos, a camada invisível, tida como certa, que raramente é questionada ou verbalizada. [↩](#ref-1)
+<a id="1"></a>**1.** Pesquisa sobre Colaboração e Produtividade 2024, Capterra Brasil, realizada em janeiro de 2024 com 501 profissionais em regime remoto ou híbrido. O estudo não usa o termo "improdutiva", mas os dados apontam um problema de condução: 23% discordam que as reuniões da própria empresa começam e terminam no horário previsto, e 41% apontam a duração do encontro como o principal motivo de perda de foco, à frente da quantidade de assuntos abordados (37%) e de alguém falando demais (35%). Ainda assim, 77% dizem ter a quantidade certa de reuniões e apenas 9% reclamam de excesso, o que sugere que o incômodo brasileiro está mais na forma como a reunião é conduzida do que no volume de encontros na agenda. [↩](#ref-1)
 
-<a id="nota-2"></a>**2.** Daniel Stillman, autor de _Good Talk: How to Design Conversations That Matter_, separa a facilitação que a maioria conhece, em que o facilitador é neutro, que só administra a pauta, da facilitação como parte do "sistema operacional da conversa": um conjunto de decisões sobre formato, sequência e perguntas para guiar o grupo a tomar melhores decisões. [↩](#ref-2)
+<a id="2"></a>**2.** Schein descreve a cultura organizacional em três camadas: artefatos visíveis (o que se vê: escritório, rituais, forma de vestir), valores declarados (o que a empresa diz que valoriza) e pressupostos básicos, a camada invisível, tida como certa, que raramente é questionada ou verbalizada. [↩](#ref-2)
 
-<a id="nota-3"></a>**3.** Pesquisa sobre Colaboração e Produtividade 2024, Capterra Brasil, realizada em janeiro de 2024 com 501 profissionais em regime remoto ou híbrido. O estudo não usa o termo "improdutiva", mas os dados apontam um problema de condução: 23% discordam que as reuniões da própria empresa começam e terminam no horário previsto, e 41% apontam a duração do encontro como o principal motivo de perda de foco, à frente da quantidade de assuntos abordados (37%) e de alguém falando demais (35%). Ainda assim, 77% dizem ter a quantidade certa de reuniões e apenas 9% reclamam de excesso, o que sugere que o incômodo brasileiro está mais na forma como a reunião é conduzida do que no volume de encontros na agenda. [↩](#ref-3)
+<a id="3"></a>**3.** Daniel Stillman, autor de _Good Talk: How to Design Conversations That Matter_, separa a facilitação que a maioria conhece, em que o facilitador é neutro, que só administra a pauta, da facilitação como parte do "sistema operacional da conversa": um conjunto de decisões sobre formato, sequência e perguntas para guiar o grupo a tomar melhores decisões. [↩](#ref-3)
 
 
 **Referências:**
