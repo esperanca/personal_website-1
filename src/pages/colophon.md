@@ -27,7 +27,7 @@ Para escrever, IA Writer e Obsidian.
 Para publicar, netlify. 
 
 
-A última atualização aconteceu em: {{post.data}}
+A última atualização aconteceu em: {{ buildDate | livroDate }}
 
 Códigos deste website são criados com a assistência de inteligência artificial (Claude).
 
