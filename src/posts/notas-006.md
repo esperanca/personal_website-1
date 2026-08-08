@@ -4,6 +4,7 @@ title: "Notas #006 - Reuniões e contexto"
 metaTitle: Reuniões, contexto e memória organizacional
 metaDesc: sobre facilitação, liderança e o desenho de conversas produtivas
 date: 2026-08-08T08:00:00.000Z
+draft: true
 tags:
   - liderança
   - facilitação
