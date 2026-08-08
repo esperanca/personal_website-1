@@ -54,7 +54,7 @@ Mas esse é um papo para outro post.
 Para saber mais, recomendo dois livros:
 
 1. **Good Talk**, de Daniel Stillman. Fala sobre facilitação e desenho de conversas e tem bastante utilidade se você precisa de ferramentas para aplicar em reuniões, workshops e conversas difíceis
-2. **Humble Inquiry**, de Edgar Schein. Fala sobre a cultura das organizações e apresenta o conceito de humble inquiry, que é basicamente curiosidade genuína aplicada. Sua contribuição à evolução do conceito de segurança psicológica no contexto das organizações inspirou o trabalho de Amy Edmondson no artigo que deu origem ao livro A Organização Sem Medo.
+2. **Humble Inquiry**, de Edgar Schein. Fala sobre a cultura das organizações e apresenta o conceito de humble inquiry, que é basicamente curiosidade genuína aplicada. Sua contribuição traz o conceito de segurança psicológica para dentro das organizações, o que inspirou o trabalho de Amy Edmondson no artigo que deu origem ao livro A Organização Sem Medo.
 
 Esse post não representa a opinião do meu empregador atual. É uma reflexão pessoal da minha experiência profissional em empresas de tecnologia no Brasil e no exterior e da minhas pesquisas em colaboração e design de serviço.
 
