@@ -13,7 +13,7 @@ tags:
 ---
 Herbert Simon foi um pesquisador e economista vencedor do Prêmio Nobel de Economia, conhecido por seus estudos sobre tomada de decisão e organizações. Uma de suas frases mais conhecidas é:
 
-“A wealth of information creates a poverty of attention and a need to allocate that attention efficiently.”
+> “A wealth of information creates a poverty of attention and a need to allocate that attention efficiently.”
 
 Em outras palavras, produzimos e distribuímos mais informação do que conseguimos absorver. A escassez de atenção não é apenas uma dificuldade individual. No trabalho, ela é ampliada pelo volume de informação e pela distribuição do contexto entre pessoas, documentos e sistemas.
 
