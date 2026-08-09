@@ -37,7 +37,7 @@ E penso na minha responsabilidade como líder. Isso ficou mais claro para mim de
 
 **Facilitar não significa ser neutro. Significa cuidar da qualidade do pensamento coletivo.**
 
-Um líder não precisa saber mais, falar primeiro, oferecer a melhor resposta ou conhecer o problema com a mesma profundidade de quem trabalhou nele durante semanas. Muitas vezes, sua melhor contribuição é organizar a conversa, tornar as premissas explícitas e fazer perguntas que ajudem o grupo a chegar a uma decisão.
+Um líder não precisa saber mais, falar primeiro, oferecer a melhor resposta ou conhecer o problema com a mesma profundidade de quem trabalhou nele durante semanas. Às vezes, o que ele tem a oferecer é organizar a conversa, tornar as premissas explícitas e fazer perguntas que ajudem o grupo a chegar a uma decisão.
 
 Há uma diferença importante entre afirmar:
 
@@ -47,13 +47,13 @@ e perguntar:
 
 > “Que evidências levaram vocês a essa solução? Quais alternativas foram descartadas?”
 
-A segunda pergunta reconhece uma assimetria legítima: quem trabalhou no problema tem mais contexto, enquanto quem tem autoridade para decidir nem sempre dispõe das mesmas informações. O papel da liderança não é substituir o conhecimento do grupo, mas ajudá-lo a explicitar premissas e avaliar alternativas.
+A segunda pergunta reconhece uma assimetria legítima: quem trabalhou no problema tem mais contexto, enquanto quem tem autoridade para decidir nem sempre dispõe das mesmas informações.
 
 Admitir que não temos todo o contexto é parte essencial desse processo. Antes de decidir, é preciso garantir que as pessoas compartilhem as informações necessárias. Quanto mais difícil for reverter uma decisão, maior deve ser esse cuidado.
 
-Na minha experiência, boa documentação e trabalho assíncrono levam a reuniões melhores. As pessoas sentem que seu tempo foi bem utilizado, e as decisões passam a fazer parte da memória da organização. Isso é particularmente relevante em empresas matriciais, nas quais gestores precisam coordenar diferentes especialistas, enquanto contribuidores individuais dependem de períodos de concentração. Mas esse é um papo para outro post.
+Na minha experiência, boa documentação e trabalho assíncrono levam a reuniões melhores. As pessoas sentem que seu tempo foi bem utilizado, e as decisões passam a fazer parte da memória da organização. Isso é mais relevante em empresas com estruturas matriciais, em que os gestores precisam coordenar especialistas diferentes, enquanto contribuidores individuais dependem de períodos de concentração. Mas esse é um papo para outro post.
 
-_Este post não representa a opinião do meu empregador. É uma reflexão pessoal baseada na minha experiência profissional e em pesquisas sobre colaboração, cocriação e design de serviços._
+_Este post não representa a opinião do meu empregador. É uma reflexão pessoal baseada na minha experiência profissional e em pesquisas sobre colaboração e design de serviços._
 
 
 **Notas:**
