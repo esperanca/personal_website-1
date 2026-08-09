@@ -27,9 +27,9 @@ Cada empresa e cada time têm suas regras não escritas, que também se refletem
 
 Já aconteceu comigo de entrar em uma reunião esperando uma decisão e sair com o clássico “vamos alinhar depois”. Posso apostar que isso já aconteceu com você também. Provavelmente, a estrutura, a coreografia ou algum pressuposto básico não funcionou como deveria.
 
-Nessas situações, observo um padrão. Pessoas são chamadas a opinar sem ter o contexto necessário. E essa opinião pode ser interpretada como direcionamento e orientar o resto da conversa.
+Nessas situações, observo um padrão. Alguém é pressionado a opinar sem ter todo o contexto, e essa opinião acaba direcionando o resto da conversa.
 
-Sempre que percebo que minha opinião pode ser confundida com direção, e que não tenho informação ou contexto completo, me pergunto:
+Quando percebo que fui eu, me pergunto:
 
 > “Como essa conversa poderia ter sido melhor para o grupo? A maneira como eu conduzi favoreceu opiniões rápidas ou a construção de entendimento?”
 
