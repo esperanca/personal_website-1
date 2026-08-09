@@ -4,57 +4,59 @@ title: "Notas #006 - Reuniões e contexto"
 metaTitle: Reuniões, contexto e memória organizacional
 metaDesc: sobre facilitação, liderança e o desenho de conversas produtivas
 date: 2026-08-08T08:00:00.000Z
-draft: true
+draft: false
 tags:
   - liderança
   - facilitação
   - reuniões
   - design de serviço
 ---
-Nossa capacidade de produzir informação cresceu muito mais rápido do que nossa capacidade de absorvê-la. O problema da escassez de atenção é uma característica estrutural do trabalho nos dias de hoje, particularmente visível em organizações muito complexas. E um mecanismo comum para tentar simplificar as coisas, buscar consenso ou tomar uma decisão é uma reunião de alinhamento. Em uma empresa com diversas disciplinas, diretorias e unidades de negócio é de se esperar um número considerável de reuniões. No Brasil, o problema parece menos com o número de reuniões e mais com a condução delas: um em cada quatro profissionais acha que as reuniões da própria empresa não começam nem terminam no horário combinado.<sup id="ref-1">[[1]](#1)</sup>
+Herbert Simon foi um pesquisador e economista vencedor do Prêmio Nobel de Economia, conhecido por seus estudos sobre tomada de decisão e organizações. Uma de suas frases mais conhecidas é:
 
-Mesmo quando não existe planejamento ou estrutura prévia, uma reunião usa uma estrutura e coreografia. Uma reunião é uma experiência em que as conversas dão mais certo quando existe uma estrutura compartilhada. Um exemplo simples é uma agenda, com objetivos da reunião. Além disso, formato, sequência, participantes, perguntas e rituais influenciam diretamente o tipo de pensamento e decisão que aparecem em uma sala de reunião, seja ela presencial ou online. Coreografia é um pouco menos controlável, mas existe um roteiro implícito de movimentos e papéis que qualquer reunião segue, mesmo sem ninguém desenhar isso conscientemente.
-Envolve quem fala primeiro, quem está para escutar, quem tem que informar uma decisão, quem tem que avaliar ou opinar. A coreografia é o padrão de comportamento que se repete e organiza a interação, mesmo que ninguém tenha planejado os passos.
+“A wealth of information creates a poverty of attention and a need to allocate that attention efficiently.”
 
-Um exemplo: quando o assunto é muito complexo e a decisão é difícil, o "vamos alinhar depois" encerra o assunto ou vira um plano de trabalho.  Cada empresa e cada time tem suas regras não escritas, que se refletem nessa coreografia. Edgar Schein descreve o termo pressupostos básicos para essas regras, e elas são importantes para que uma reunião seja considerada boa ou ruim.<sup id="ref-2">[[2]](#2)</sup>
+Em outras palavras, produzimos e distribuímos mais informação do que conseguimos absorver. A escassez de atenção não é apenas uma dificuldade individual. No trabalho, ela é ampliada pelo volume de informação e pela distribuição do contexto entre pessoas, documentos e sistemas.
 
-Muitas das vezes as decisões resultantes de uma reunião não são consideradas suficientes ou boas. Principalmente quando não existem evidências quantitativas, pude observar um padrão: pessoas são chamadas a opinar sobre problemas complexos sem ter o contexto necessário e informações. Entrar em uma reunião sem contexto suficiente é algo comum, principalmente em posições de liderança.  Já fui muitas vezes questionado sobre o motivo de isso acontecer. Gosto de pensar que uma pergunta melhor é:
+Nas grandes empresas, uma resposta comum à falta de contexto ou à necessidade de tomar uma decisão é marcar uma reunião.
 
-> "Nossa forma de trabalhar e ambiente favorecem opinar rapidamente ou construir entendimento ?"
+Uma pesquisa feita com profissionais brasileiros mostra que a condução das reuniões incomoda mais do que a quantidade. Um em cada quatro entrevistados considera que as reuniões da própria empresa não começam nem terminam no horário combinado.<sup id="ref-1">[[1]](#1)</sup>
 
-Para responder essa pergunta, temos que pensar que a responsabilidade no desenho de uma conversa produtiva em uma reunião não é só de quem puxou a conversa, mas da liderança. 
+Toda reunião tem uma estrutura e uma coreografia, mesmo quando ninguém as planeja. A estrutura inclui objetivos, agenda, sequência e participantes. A coreografia define como as pessoas ocupam seus papéis: quem fala, quem escuta, quem avalia e quem decide. Juntas, elas influenciam o pensamento e as decisões do grupo.
 
-Facilitação é a ferramenta para nos aproximar com qualidade de decisões melhores, e que isso não acontece só na reunião.<sup id="ref-3">[[3]](#3)</sup> Líderes tem um papel fundamental para habilitar um grupo a sair de uma sala com mais conhecimento e decisões melhores. 
+Cada empresa e cada time têm suas regras não escritas, que também se refletem nessa coreografia. Edgar Schein usa o termo “pressupostos básicos” para descrever crenças e entendimentos compartilhados que orientam o comportamento de um grupo.<sup id="ref-2">[[2]](#2)</sup>
+
+Você provavelmente já entrou em uma reunião esperando uma decisão e saiu com o clássico “vamos alinhar depois”. A estrutura ou a coreografia não favoreceram o resultado esperado.
+
+Nessas situações, observo um padrão: pessoas são chamadas a opinar sem ter o contexto necessário. Quando a opinião vem de alguém em uma posição formal de liderança, pode ser interpretada como direcionamento e orientar o restante da reunião. Muitas vezes, de todo o trabalho que vem depois.
+
+Já aconteceu comigo algumas vezes. Sempre que percebo que minha opinião não ajudou, me pergunto:
+
+> “Como essa conversa poderia ter sido melhor para o grupo? A maneira como a conduzi favoreceu opiniões rápidas ou a construção de entendimento?”
+
+E penso na minha responsabilidade como líder. Isso ficou mais claro para mim depois de um curso com Daniel Stillman, um designer de conversas americano. Com ele, aprendi que a facilitação melhora a qualidade do processo que leva às decisões. E que esse trabalho não acontece apenas durante a reunião.<sup id="ref-3">[[3]](#3)</sup>
 
 **Facilitar não significa ser neutro. Significa cuidar da qualidade do pensamento coletivo.**
 
-A maneira como conversamos determina a forma como colaboramos. Liderança cria a capacidade de criar as condições para que determinadas conversas aconteçam de forma fluída e habilitem decisões melhores.
+Um líder não precisa saber mais, falar primeiro, oferecer a melhor resposta ou conhecer o problema com a mesma profundidade de quem trabalhou nele durante semanas. Muitas vezes, sua melhor contribuição é organizar a conversa, tornar as premissas explícitas e fazer perguntas que ajudem o grupo a chegar a uma decisão.
 
-Um líder não precisa necessariamente saber mais, falar primeiro ou oferecer a melhor resposta. Mas algumas vezes é a única pessoa que pode trazer mais clareza, tornando as premissas explícitas em uma agenda.
+Há uma diferença importante entre afirmar:
 
-Quando o foco está em definir o problema, proteger o contexto e fazer perguntas melhores, criam-se as condições ideais que possibilitam um grupo a chegar num consenso ou em uma decisão melhor com mais qualidade.
+> “Não acredito que essa seja a solução correta.”
 
-Isso é particularmente relevante em empresas com especialistas de diversas disciplinas trabalhando em problemas complexos ou caóticos.
+e perguntar:
 
-A liderança não precisa ter a mesma profundidade de contexto de quem trabalhou semanas em um problema, mas ter condições de fazer perguntas melhores. E perguntas podem mover uma conversa sem que você precise dizer às pessoas o que pensar.
+> “Que evidências levaram vocês a essa solução? Quais alternativas foram descartadas?”
 
-Há uma diferença enorme entre:
+A segunda pergunta reconhece uma assimetria legítima: quem trabalhou no problema tem mais contexto, enquanto quem tem autoridade para decidir nem sempre dispõe das mesmas informações. O papel da liderança não é substituir o conhecimento do grupo, mas ajudá-lo a explicitar premissas e avaliar alternativas.
 
-> "Não acredito que essa seja a solução correta."
+Admitir que não temos todo o contexto é parte essencial desse processo. Antes de decidir, é preciso garantir que as pessoas compartilhem as informações necessárias. Quanto mais difícil for reverter uma decisão, maior deve ser esse cuidado.
 
-e:
+Na minha experiência, boa documentação e trabalho assíncrono levam a reuniões melhores. As pessoas sentem que seu tempo foi bem utilizado, e as decisões passam a fazer parte da memória da organização. Isso é particularmente relevante em empresas matriciais, nas quais gestores precisam coordenar diferentes especialistas, enquanto contribuidores individuais dependem de períodos de concentração.
 
-> "Que evidências levaram vocês a essa solução? Quais alternativas foram descartadas?"
+O desafio é coordenar sem fragmentar o tempo necessário para fazer o trabalho. Mas esse é um papo para outro post.
 
-Esse tipo de pergunta reconhece uma assimetria legítima: quem trabalhou no problema aprendeu muitas coisas antes de entrar em uma sala em que é necessária uma decisão importante. E quem decide muitas vezes pode ter contexto para opinar, mas nem sempre o suficiente para informar a melhor decisão.
+_Este post não representa a opinião do meu empregador. É uma reflexão pessoal baseada na minha experiência profissional e em pesquisas sobre colaboração, cocriação e design de serviços._
 
-Admitir que não temos todo contexto é parte essencial do trabalho. É cuidar para que todas pessoas tenham contexto compartilhado antes de uma decisão importante, principalmente se ela for irreversível.
-
-Na minha experiência existe uma relação direta entre boa documentação, trabalho assíncrono e reuniões com decisões robustas. Já observei que quando isso acontece todo mundo sente que sua contribuição e seu tempo está sendo bem utilizado. E que você está contribuindo para o progresso nos objetivos e na qualidade da memória organizacional. Mas esse é um papo para outro post.
-
-Além do livro do Daniel Stillman, recomendo o clássico **Humble Inquiry**, de Edgar Schein. Edgar fala sobre a cultura das organizações e apresenta o conceito de humble inquiry, que é basicamente curiosidade genuína aplicada. Sua contribuição trouxe o conceito de segurança psicológica para dentro das organizações, e inspirou o trabalho de Amy Edmondson no artigo que deu origem ao livro A Organização Sem Medo.
-
-*Esse post não representa a opinião do meu empregador. É uma reflexão pessoal da minha experiência profissional e de pesquisas sobre colaboração, co-criação e design de serviço.*
 
 **Notas:**
 

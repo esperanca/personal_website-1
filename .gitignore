@@ -21,3 +21,6 @@ src/_includes/assets/*
 .claude/
 .agents/
 skills-lock.json
+
+# Obsidian
+.obsidian/
