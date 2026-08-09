@@ -45,7 +45,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary('md', markdownLibrary);
 
   eleventyConfig.addFilter('postDate', (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_FULL);
+    return DateTime.fromJSDate(dateObj)
+      .setZone('America/Sao_Paulo')
+      .setLocale('pt-BR')
+      .toFormat("d 'de' MMMM 'de' yyyy, HH:mm");
   });
 
   eleventyConfig.addFilter('livroDate', (dateObj) => {
