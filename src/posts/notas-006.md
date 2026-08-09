@@ -3,7 +3,7 @@ layout: layouts/post.njk
 title: "Notas #006 - Reuniões e contexto"
 metaTitle: Reuniões, contexto e memória organizacional
 metaDesc: sobre facilitação, liderança e o desenho de conversas produtivas
-date: 2026-08-09T01:22:42.000Z
+date: 2026-08-09T02:20:53.000Z
 draft: false
 tags:
   - liderança
@@ -11,13 +11,13 @@ tags:
   - reuniões
   - design de serviço
 ---
-Herbert Simon foi um pesquisador e economista vencedor do Prêmio Nobel de Economia, conhecido por seus estudos sobre tomada de decisão e organizações. Uma de suas frases mais conhecidas é:
+Conheci essa frase do Herbert Simon em 2010, lendo o _Ambient Findability_, do Peter Morville, um dos livros que quase todo arquiteto de informação lê em algum momento. Simon, economista vencedor do Nobel, escreveu:
 
 > “A wealth of information creates a poverty of attention and a need to allocate that attention efficiently.”
 
 Produzimos e distribuímos mais informação do que conseguimos absorver. A escassez de atenção não é apenas uma dificuldade individual. No trabalho, ela é ampliada pelo volume de informação e pela distribuição do contexto entre pessoas, documentos e sistemas.
 
-Nas grandes empresas, uma resposta comum à falta de contexto ou à necessidade de tomar uma decisão é marcar uma reunião.
+Em empresas, uma resposta comum à falta de contexto ou à necessidade de tomar uma decisão é marcar uma reunião.
 
 Uma pesquisa feita com profissionais brasileiros mostra que a condução das reuniões incomoda mais do que a quantidade. Um em cada quatro entrevistados considera que as reuniões da própria empresa não começam nem terminam no horário combinado.<sup id="ref-1">[[1]](#1)</sup>
 
@@ -25,7 +25,7 @@ Toda reunião tem uma estrutura e uma coreografia, mesmo quando isso não foi pl
 
 Cada empresa e cada time têm suas regras não escritas, que também se refletem nessa coreografia. Edgar Schein usa o termo “pressupostos básicos” para descrever crenças e entendimentos compartilhados que orientam o comportamento de um grupo.<sup id="ref-2">[[2]](#2)</sup>
 
-Você provavelmente já entrou em uma reunião esperando uma decisão e saiu com o clássico “vamos alinhar depois”. A estrutura, a coreografia ou algum pressuposto básico não funcionou como deveria.
+Já aconteceu comigo de entrar em uma reunião esperando uma decisão e sair com o clássico “vamos alinhar depois”. Posso apostar que isso já aconteceu com você também. Provavelmente, a estrutura, a coreografia ou algum pressuposto básico não funcionou como deveria.
 
 Nessas situações, observo um padrão. Pessoas são chamadas a opinar sem ter o contexto necessário. E essa opinião pode ser interpretada como direcionamento e orientar o resto da conversa.
 
@@ -68,6 +68,8 @@ _Este post não representa a opinião do meu empregador. É uma reflexão pessoa
 **Referências:**
 
 EDMONDSON, Amy C. _A organização sem medo: criando segurança psicológica no ambiente de trabalho para aprendizado, inovação e crescimento_. Rio de Janeiro: Alta Books, 2020.
+
+MORVILLE, Peter. _Ambient findability: what we find changes who we become_. Sebastopol: O'Reilly Media, 2005.
 
 SCHEIN, Edgar H. _Humble inquiry: the gentle art of asking instead of telling_. 2. ed. Oakland: Berrett-Koehler Publishers, 2021.
 
