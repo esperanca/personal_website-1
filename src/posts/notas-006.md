@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-title: "Notas #006 - Reuniões e contexto"
+title: "Notas #006 - Reuniões e escassez de atenção"
 metaTitle: Reuniões, contexto e memória organizacional
 metaDesc: sobre facilitação, liderança e o desenho de conversas produtivas
 date: 2026-08-09T02:20:53.000Z
@@ -17,9 +17,9 @@ Conheci essa frase do Herbert Simon em 2010, lendo o _Ambient Findability_, do P
 
 Produzimos e distribuímos mais informação do que conseguimos absorver. A escassez de atenção não é apenas uma dificuldade individual. No trabalho, ela é ampliada pelo volume de informação e pela distribuição do contexto entre pessoas, documentos e sistemas.
 
-Em empresas, uma resposta comum à falta de contexto ou à necessidade de tomar uma decisão é marcar uma reunião.
+A escassez de atenção cobra um preço nas empresas: ninguém tem o contexto completo. Para juntar as peças e decidir rapidamente, é comum marcar uma reunião. 
 
-Uma pesquisa feita com profissionais brasileiros mostra que a condução das reuniões incomoda mais do que a quantidade. Um em cada quatro entrevistados considera que as reuniões da própria empresa não começam nem terminam no horário combinado.<sup id="ref-1">[[1]](#1)</sup>
+Uma pesquisa feita com 501 profissionais brasileiros mostrou que apenas 9% acham que tem muitas reuniões. A condução das reuniões incomoda mais do que a quantidade. Um em quatro entrevistados considera que as reuniões da própria empresa não começam nem terminam no horário combinado.<sup id="ref-1">[[1]](#1)</sup>
 
 Toda reunião tem uma estrutura e uma coreografia, mesmo quando isso não foi planejado. A estrutura inclui objetivos, agenda, sequência e participantes. A coreografia define como as pessoas ocupam seus papéis: quem fala, quem escuta, quem avalia e quem decide.
 
@@ -33,11 +33,11 @@ Quando percebo que fui eu, me pergunto:
 
 > “Como essa conversa poderia ter sido melhor para o grupo? A maneira como eu conduzi favoreceu opiniões rápidas ou a construção de entendimento?”
 
-E penso na minha responsabilidade como líder. Um curso com Daniel Stillman, designer de conversas americano, me ajudou a enxergar isso. Facilitação melhora o processo inteiro que leva a uma decisão, não só a reunião em si.<sup id="ref-3">[[3]](#3)</sup>
+E penso na minha responsabilidade como líder. Fiz um treinamento na época da pandemia com Daniel Stillman, designer de conversas americano. Em um momento difícil para o meu time, ele me ensinou um outro significado para facilitação. E que a oportunidade é melhorar o processo inteiro que leva a uma decisão, não só a reunião em si.<sup id="ref-3">[[3]](#3)</sup>
 
 **Facilitar não significa ser neutro. Significa cuidar da qualidade do pensamento coletivo.**
 
-Um líder não precisa saber mais, falar primeiro, oferecer a melhor resposta ou conhecer o problema com a mesma profundidade de quem trabalhou nele durante semanas. Às vezes, o que ele tem a oferecer é organizar a conversa, tornar as premissas explícitas e fazer perguntas que ajudem o grupo a chegar a uma decisão.
+Um líder não precisa saber mais, falar primeiro, oferecer a melhor resposta ou conhecer o problema com a mesma profundidade de quem trabalhou nele durante semanas. Às vezes, só ele pode oferecer uma forma de organizar a conversa, tornar as premissas explícitas e fazer perguntas que ajudam o grupo a chegar a uma decisão.
 
 Há uma diferença importante entre afirmar:
 
@@ -47,11 +47,11 @@ e perguntar:
 
 > “Que evidências levaram vocês a essa solução? Quais alternativas foram descartadas?”
 
-A segunda pergunta reconhece uma assimetria legítima. Quem trabalhou no problema tem mais contexto, enquanto quem tem autoridade para decidir nem sempre dispõe das mesmas informações.
+A segunda pergunta reconhece uma assimetria legítima. Quem trabalhou no problema tem mais contexto, e quem tem autoridade para decidir nem sempre dispõe das mesmas informações.
 
-Admitir que não temos todo o contexto é parte essencial desse processo. Antes de decidir, é preciso garantir que as pessoas compartilhem as informações necessárias. Quanto mais difícil for reverter uma decisão, maior deve ser esse cuidado.
+Admitir que não temos todo o contexto é parte essencial desse processo. Antes de decidir, é preciso garantir que todos compartilhem das informações necessárias. Quanto mais difícil for reverter uma decisão, maior deve ser esse cuidado.
 
-Na minha experiência, boa documentação e trabalho assíncrono levam a reuniões melhores. As pessoas sentem que seu tempo foi bem utilizado, e as decisões passam a fazer parte da memória da organização. Isso é mais relevante em empresas com estruturas matriciais, em que os gestores precisam coordenar especialistas diferentes, enquanto contribuidores individuais dependem de períodos de concentração. Mas esse é um papo para outro post.
+Na minha experiência, escrever ajuda muito. Uma boa documentação e trabalho assíncrono levam a reuniões melhores. O teste de que a reunião foi boa vem depois. Se a decisão pode ser compreendida por quem não estava na sala, e não precisa ser reconstruída na reunião seguinte, a conversa passou a fazer parte da memória da organização.
 
 _Este post não representa a opinião do meu empregador. É uma reflexão pessoal baseada na minha experiência profissional e em pesquisas sobre colaboração e design de serviços._
 
