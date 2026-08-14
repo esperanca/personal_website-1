@@ -134,6 +134,28 @@
       font-style: italic;
       margin: 0.5rem auto 0 auto;
     }
+
+    table {
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+      margin-top: $space-lg;
+      font-size: 0.85em;
+    }
+
+    th,
+    td {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      padding: $space-xs $space-sm;
+      text-align: left;
+      vertical-align: top;
+      word-wrap: break-word;
+    }
+
+    th {
+      font-weight: 700;
+      background: rgba(0, 0, 0, 0.03);
+    }
   }
 
   &__footer {

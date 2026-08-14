@@ -25,7 +25,7 @@ Quem especifica um agente talvez precise saber se uma operação de crédito ser
 
 Imagine um cenário em que um cliente quer oferecer um imóvel como garantia para obter crédito. Precisamos responder a isso independentemente da arquitetura. O agente pode ser generalista, a interface pode ser uma só. A arquitetura pode mudar durante o projeto. Novos modelos vão surgir a cada mês (as vezes, na mesma semana). 
 
-Mas o comportamento esperado precisa continuar especificável e verificável. [^1]
+Mas o comportamento esperado precisa continuar especificável e verificável. <sup id="ref-1">[[1]](#1)</sup>
 
 Especificar software não é desafio novo. Há pelo menos três décadas a engenharia de software procura maneiras de transformar expectativas sobre um sistema em especificações capazes de orientar sua construção. Agentes tornam esse problema mais interessante.
 
@@ -53,13 +53,16 @@ Mas sistemas são mais do que funções.
 
 ## Depois, especificávamos situações
 
-No início dos anos 2000, Dan North começou a formular o que viria a chamar de Behavior-Driven Development.[^2] A mudança nasceu, em parte, da percepção de que a linguagem de testes frequentemente atrapalhava a conversa sobre aquilo que realmente importava: o comportamento esperado do sistema. North descreve o movimento como uma passagem deliberada de pensar em _tests_ para pensar em comportamento.
+No início dos anos 2000, Dan North começou a formular o que viria a chamar de Behavior-Driven Development.<sup id="ref-2">[[2]](#2)</sup> A mudança nasceu, em parte, da percepção de que a linguagem de testes frequentemente atrapalhava a conversa sobre aquilo que realmente importava: o comportamento esperado do sistema. North descreve o movimento como uma passagem deliberada de pensar em _tests_ para pensar em comportamento.
 
-A história costuma creditar o BDD a North, e ele mesmo insiste que não foi uma obra só sua. Chris Matts, autor do livro IT Risk Manager, teve uma contribuição significativa. Com uma carreira em trading e gestão de risco em bancos de investimento, foi ele quem relacionou o que North descreveu como uma atividade de análise. BDD deixou de ser uma técnica de teste unitário e passou a ser também uma técnica de levantamento de requisitos e critérios de aceite. O template Given–When–Then nasceu por volta de 2004.[^3]
+A história costuma creditar o BDD a North, e ele mesmo insiste que não foi uma obra só sua. Chris Matts, autor do livro IT Risk Manager, teve uma contribuição significativa. Com uma carreira em trading e gestão de risco em bancos de investimento, foi ele quem relacionou o que North descreveu como uma atividade de análise. BDD deixou de ser uma técnica de teste unitário e passou a ser também uma técnica de levantamento de requisitos e critérios de aceite. O template Given–When–Then nasceu por volta de 2004.<sup id="ref-3">[[3]](#3)</sup>
 
-Matts levou a ideia adiante em duas direções que interessam a este texto. A primeira é o Feature Injection,[^4] depois rebatizado de Value Mapping: em vez de acumular um backlog e priorizá-lo contra objetivos, parte-se do valor de negócio e caminha-se do resultado para a entrada, identificando ao final os exemplos que descrevem o escopo. A segunda é _Real Options_,[^5] uma transposição do raciocínio de risco financeiro para decisões de projeto: opções têm valor, opções expiram, não se compromete cedo sem saber exatamente o motivo, e o valor de uma opção cresce junto com a incerteza.
+Matts levou a ideia adiante em duas direções que interessam a este texto. A primeira é o Feature Injection,<sup id="ref-4">[[4]](#4)</sup> depois rebatizado de Value Mapping: em vez de acumular um backlog e priorizá-lo contra objetivos, parte-se do valor de negócio e caminha-se do resultado para a entrada, identificando ao final os exemplos que descrevem o escopo. A segunda é _Real Options_,<sup id="ref-5">[[5]](#5)</sup> uma transposição do raciocínio de risco financeiro para decisões de projeto: opções têm valor, opções expiram, não se compromete cedo sem saber exatamente o motivo, e o valor de uma opção cresce junto com a incerteza.
 
-![Daniel Souza e Chris Matts.](/images/daniel-souza-chris-matts.jpeg "Com Chris Matts, no Lloyds Banking Group, em 2017")
+<figure>
+  <img src="/images/daniel-souza-chris-matts.jpeg" alt="Daniel Souza e Chris Matts sorrindo em uma selfie de escritório." />
+  <figcaption>Com Chris Matts, no Lloyds Banking Group, em 2017.</figcaption>
+</figure>
 
 Tive a honra de trabalhar com Chris no Lloyds Banking Group em 2017. O que aprendi com ele foi menos o sobre template e mais sobre sua insistência de que especificar é uma atividade de gestão de risco. Um cenário bem escrito existe para descobrir cedo aquilo que ainda não sabemos e para adiar as decisões que ainda não precisam ser tomadas. Boa parte do que proponho adiante, limites de autonomia, escalonamento e evidência, é gestão de risco escrita como comportamento.
 
@@ -67,7 +70,7 @@ Tive a honra de trabalhar com Chris no Lloyds Banking Group em 2017. O que apren
 
 Given → When → Then
 
-Martin Fowler descreve Given–When–Then[^6] como uma forma de especificar o comportamento de um sistema por exemplos. O _given_ estabelece o estado anterior, o _when_ identifica o evento ou ação, o _then_ descreve o resultado esperado. No nosso cenário de crédito com garantia:
+Martin Fowler descreve Given–When–Then<sup id="ref-6">[[6]](#6)</sup> como uma forma de especificar o comportamento de um sistema por exemplos. O _given_ estabelece o estado anterior, o _when_ identifica o evento ou ação, o _then_ descreve o resultado esperado. No nosso cenário de crédito com garantia:
 
 ```
 Given que o imóvel foi formalmente avaliado em R$ 1 milhão
@@ -104,7 +107,7 @@ E pode fazer tudo isso em linguagem natural. Nesse sistema, testar apenas:
 
 ## Behavior-Driven Agent Development
 
-É a partir dessa mudança que proponho o Behavior-Driven Agent Development, ou BDAD.[^7] BDAD parte de uma pergunta simples:
+É a partir dessa mudança que proponho o Behavior-Driven Agent Development, ou BDAD.<sup id="ref-7">[[7]](#7)</sup> BDAD parte de uma pergunta simples:
 
 > Como queremos que o agente se comporte nesta situação?
 
@@ -138,7 +141,7 @@ Seria possível escrever centenas de regras tentando antecipar cada frase. Esse 
 
 > O agente não deve tratar uma estimativa informal como avaliação formal da garantia.
 
-Esse é um invariante[^8] comportamental. Milhares de conversas diferentes cabem dentro dele. A especificação deixa de tentar antecipar cada caminho possível e passa a definir as fronteiras dentro das quais diferentes caminhos são aceitáveis.
+Esse é um invariante<sup id="ref-8">[[8]](#8)</sup> comportamental. Milhares de conversas diferentes cabem dentro dele. A especificação deixa de tentar antecipar cada caminho possível e passa a definir as fronteiras dentro das quais diferentes caminhos são aceitáveis.
 
 ## O comportamento é maior que a resposta
 
@@ -203,9 +206,9 @@ Esses comportamentos devem sobreviver a uma mudança de arquitetura. Talvez aman
 
 ## Como isso começa a aparecer nas ferramentas
 
-BDAD é uma tese que estou desenvolvendo para o meu livro, que fala sobre confiança em agentes. Mas já encontrei conceitos similares em novas ferramentas que apontam nessa direção. Parlant é um exemplo interessante. Na plataforma, o agente é modelado como a entidade conversacional coerente,[^9] “aquele com quem você fala”, enquanto seu comportamento pode ser composto por _guidelines_, _journeys_, _tools_ e outros elementos. A própria documentação contrasta essa abordagem com arquiteturas em que diferentes agentes funcionam como nós especializados de uma tarefa. 
+BDAD é uma tese que estou desenvolvendo para o meu livro, que fala sobre confiança em agentes. Mas já encontrei conceitos similares em novas ferramentas que apontam nessa direção. Parlant é um exemplo interessante. Na plataforma, o agente é modelado como a entidade conversacional coerente,<sup id="ref-9">[[9]](#9)</sup> “aquele com quem você fala”, enquanto seu comportamento pode ser composto por _guidelines_, _journeys_, _tools_ e outros elementos. A própria documentação contrasta essa abordagem com arquiteturas em que diferentes agentes funcionam como nós especializados de uma tarefa. 
 
-A Parlant se propõe a tornar o comportamento de agentes mais controlável à medida que o sistema cresce. Em vez de aplicar apenas filtros à resposta final, distribui limites e pontos de controle ao longo da interação. Abstrações como _limits_, _guidelines_[^10] e _journeys_[^11] permitem descrever o que o agente pode fazer, em quais condições e por quais etapas deve passar. A empresa chama esse conjunto de mecanismos de _Conversational Harness_.
+A Parlant se propõe a tornar o comportamento de agentes mais controlável à medida que o sistema cresce. Em vez de aplicar apenas filtros à resposta final, distribui limites e pontos de controle ao longo da interação. Abstrações como _limits_, _guidelines_<sup id="ref-10">[[10]](#10)</sup> e _journeys_<sup id="ref-11">[[11]](#11)</sup> permitem descrever o que o agente pode fazer, em quais condições e por quais etapas deve passar. A empresa chama esse conjunto de mecanismos de _Conversational Harness_.
 
 ## Trinta anos depois...
 
@@ -240,27 +243,26 @@ Ainda não tenho respostas para muitas coisas. Mas tenho esperança de que algu�
 
 ---
 
-## Notas
+**Notas:**
 
-[^1]: verificabilidade é a capacidade de o usuário conferir se uma resposta está correta antes de agir com base nela — rastreando a afirmação até uma fonte, documento ou registro identificável. É um conceito em desenvolvimento.
+<a id="1"></a>**1.** verificabilidade é a capacidade de o usuário conferir se uma resposta está correta antes de agir com base nela — rastreando a afirmação até uma fonte, documento ou registro identificável. É um conceito em desenvolvimento. [↩](#ref-1)
 
-[^2]: Dan North (hoje Daniel Terhorst-North), [“Introducing BDD”](https://dannorth.net/blog/introducing-bdd/). O JBehave é de 2003; o artigo em _Better Software_ saiu em 2006.
+<a id="2"></a>**2.** Dan North (hoje Daniel Terhorst-North), [“Introducing BDD”](https://dannorth.net/blog/introducing-bdd/). O JBehave é de 2003; o artigo em _Better Software_ saiu em 2006. [↩](#ref-2)
 
-[^3]: Matts descreve a autoria compartilhada do Given–When–Then em [The IT Risk Manager](http://theitriskmanager.wordpress.com/about/).
+<a id="3"></a>**3.** Matts descreve a autoria compartilhada do Given–When–Then em [The IT Risk Manager](http://theitriskmanager.wordpress.com/about/). [↩](#ref-3)
 
-[^4]: Chris Matts e Gojko Adzic, “Feature Injection: three steps to success” (InfoQ). Matts passou a chamar a prática de Value Mapping.
+<a id="4"></a>**4.** Chris Matts e Gojko Adzic, “Feature Injection: three steps to success” (InfoQ). Matts passou a chamar a prática de Value Mapping. [↩](#ref-4)
 
-[^5]: As três regras de Real Options, na formulação dele: opções têm valor, opções expiram, nunca se compromete cedo sem saber por quê. A quarta, menos citada, é que o valor da opção aumenta com a incerteza. Ver [a entrevista de Shane Hastie para o InfoQ](https://www.infoq.com/podcasts/chris-matts-bdd-risk-management).
+<a id="5"></a>**5.** As três regras de Real Options, na formulação dele: opções têm valor, opções expiram, nunca se compromete cedo sem saber por quê. A quarta, menos citada, é que o valor da opção aumenta com a incerteza. Ver [a entrevista de Shane Hastie para o InfoQ](https://www.infoq.com/podcasts/chris-matts-bdd-risk-management). [↩](#ref-5)
 
-[^6]: Martin Fowler, [“Given When Then”](https://martinfowler.com/bliki/GivenWhenThen.html) (2013).
+<a id="6"></a>**6.** Martin Fowler, [“Given When Then”](https://martinfowler.com/bliki/GivenWhenThen.html) (2013). [↩](#ref-6)
 
-[^7]: Originalmente era BDDA: BDD para agentes. Achei os dois acrônimos ruins, mas a sonoridade do primeiro é um pouco melhor.
+<a id="7"></a>**7.** Originalmente era BDDA: BDD para agentes. Achei os dois acrônimos ruins, mas a sonoridade do primeiro é um pouco melhor. [↩](#ref-7)
 
-[^8]: Invariante é uma propriedade que permanece verdadeira em todos os estados alcançáveis de um sistema. Aqui me refiro a invariante de classe, referenciando o conceito de Bertrand Meyer, que restringe todas as operações de um objeto, e não o de invariante de laço.
+<a id="8"></a>**8.** Invariante é uma propriedade que permanece verdadeira em todos os estados alcançáveis de um sistema. Aqui me refiro a invariante de classe, referenciando o conceito de Bertrand Meyer, que restringe todas as operações de um objeto, e não o de invariante de laço. [↩](#ref-8)
 
-[^9]: Parlant, [documentação de _agents_](https://www.parlant.io/docs/concepts/entities/agents/).
+<a id="9"></a>**9.** Parlant, [documentação de _agents_](https://www.parlant.io/docs/concepts/entities/agents/). [↩](#ref-9)
 
-[^10]: Parlant, documentação de _guidelines_: regras comportamentais como pares condição–ação, avaliadas a cada turno da conversa.
+<a id="10"></a>**10.** Parlant, documentação de _guidelines_: regras comportamentais como pares condição–ação, avaliadas a cada turno da conversa. [↩](#ref-10)
 
-[^11]: Parlant, documentação de _journeys_: procedimentos multi-turno com estados e transições, que o agente pode pular, revisitar ou antecipar conforme o contexto.
-
+<a id="11"></a>**11.** Parlant, documentação de _journeys_: procedimentos multi-turno com estados e transições, que o agente pode pular, revisitar ou antecipar conforme o contexto. [↩](#ref-11)
