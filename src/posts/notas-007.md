@@ -13,7 +13,7 @@ tags:
   - agenticux
   - bdd
 ---
-Status: *Aguardando peer-review e revisão humana.
+Status: *Aguardando peer-review e revisão humana.*
 
 Uma das conversas técnicas mais intrigantes nos times de tecnologia é a disputa sobre qual será a arquitetura dominante dos sistemas agênticos. Uma das apostas é em sistemas multiagentes, com vários agentes especializados, cada um responsável por uma tarefa ou domínio. A outra é no super agente generalista, capaz de acessar diferentes ferramentas, conhecimentos e capacidades conforme a situação exigir.
 
@@ -23,7 +23,7 @@ Quem especifica um agente talvez precise saber se uma operação de crédito ser
 
 > Como queremos que o agente se comporte em uma situação?
 
-Imagine um cenário em que um cliente quer oferecer um imóvel como garantia para obter crédito. Precisamos responder a isso independentemente da arquitetura. O agente pode ser generalista, a interface pode ser uma só. A arquitetura pode mudar durante o projeto. Novos modelos vão surgir a cada mês (as vezes, na mesma semana). 
+Imagine um cenário em que um cliente quer oferecer um imóvel como garantia para obter crédito. Precisamos responder a isso independentemente da arquitetura. O agente pode ser generalista, a interface pode ser uma só. A arquitetura pode mudar durante o projeto. Novos modelos vão surgir a cada mês (às vezes, na mesma semana). 
 
 Mas o comportamento esperado precisa continuar especificável e verificável. <sup id="ref-1">[[1]](#1)</sup>
 
@@ -55,7 +55,7 @@ Mas sistemas são mais do que funções.
 
 No início dos anos 2000, Dan North começou a formular o que viria a chamar de Behavior-Driven Development.<sup id="ref-2">[[2]](#2)</sup> A mudança nasceu, em parte, da percepção de que a linguagem de testes frequentemente atrapalhava a conversa sobre aquilo que realmente importava: o comportamento esperado do sistema. North descreve o movimento como uma passagem deliberada de pensar em _tests_ para pensar em comportamento.
 
-A história costuma creditar o BDD a North, e ele mesmo insiste que não foi uma obra só sua. Chris Matts, autor do livro IT Risk Manager, teve uma contribuição significativa. Com uma carreira em trading e gestão de risco em bancos de investimento, foi ele quem relacionou o que North descreveu como uma atividade de análise. BDD deixou de ser uma técnica de teste unitário e passou a ser também uma técnica de levantamento de requisitos e critérios de aceite. O template Given–When–Then nasceu por volta de 2004.<sup id="ref-3">[[3]](#3)</sup>
+A história costuma creditar o BDD a North, e ele mesmo insiste que não foi uma obra só sua. Chris Matts teve uma contribuição significativa. Com uma carreira em trading e gestão de risco em bancos de investimento, foi ele quem, no fim de 2004, ao ouvir North descrever seu vocabulário baseado em comportamento, observou que aquilo era análise. BDD deixou de ser uma técnica de teste unitário e passou a ser também uma técnica de levantamento de requisitos e critérios de aceite. O template Given–When–Then nasceu desse período.<sup id="ref-3">[[3]](#3)</sup>
 
 Matts levou a ideia adiante em duas direções que interessam a este texto. A primeira é o Feature Injection,<sup id="ref-4">[[4]](#4)</sup> depois rebatizado de Value Mapping: em vez de acumular um backlog e priorizá-lo contra objetivos, parte-se do valor de negócio e caminha-se do resultado para a entrada, identificando ao final os exemplos que descrevem o escopo. A segunda é _Real Options_,<sup id="ref-5">[[5]](#5)</sup> uma transposição do raciocínio de risco financeiro para decisões de projeto: opções têm valor, opções expiram, não se compromete cedo sem saber exatamente o motivo, e o valor de uma opção cresce junto com a incerteza.
 
@@ -64,13 +64,13 @@ Matts levou a ideia adiante em duas direções que interessam a este texto. A pr
   <figcaption>Com Chris Matts, no Lloyds Banking Group, em 2017.</figcaption>
 </figure>
 
-Tive a honra de trabalhar com Chris no Lloyds Banking Group em 2017. O que aprendi com ele foi menos o sobre template e mais sobre sua insistência de que especificar é uma atividade de gestão de risco. Um cenário bem escrito existe para descobrir cedo aquilo que ainda não sabemos e para adiar as decisões que ainda não precisam ser tomadas. Boa parte do que proponho adiante, limites de autonomia, escalonamento e evidência, é gestão de risco escrita como comportamento.
+Tive a honra de trabalhar com Chris no Lloyds Banking Group em 2017. O que aprendi com ele foi menos sobre o template e mais sobre sua insistência de que especificar é uma atividade de gestão de risco. Um cenário bem escrito existe para descobrir cedo aquilo que ainda não sabemos e para adiar as decisões que ainda não precisam ser tomadas. Boa parte do que proponho adiante, limites de autonomia, escalonamento e evidência, é gestão de risco escrita como comportamento.
 
 [fazer o diagrama]
 
 Given → When → Then
 
-Martin Fowler descreve Given–When–Then<sup id="ref-6">[[6]](#6)</sup> como uma forma de especificar o comportamento de um sistema por exemplos. O _given_ estabelece o estado anterior, o _when_ identifica o evento ou ação, o _then_ descreve o resultado esperado. No nosso cenário de crédito com garantia:
+Martin Fowler descreve Given–When–Then<sup id="ref-6">[[6]](#6)</sup> como um estilo de representar testes ou, na formulação de seus defensores, de especificar o comportamento de um sistema por exemplos. O _given_ estabelece o estado anterior, o _when_ identifica o evento ou ação, o _then_ descreve o resultado esperado. No nosso cenário de crédito com garantia:
 
 ```
 Given que o imóvel foi formalmente avaliado em R$ 1 milhão
@@ -105,9 +105,9 @@ E pode fazer tudo isso em linguagem natural. Nesse sistema, testar apenas:
 
 é claramente insuficiente. Mesmo o Given–When–Then captura só uma parte do problema, porque agora queremos especificar não apenas onde o sistema deve chegar, mas como ele deve se comportar enquanto tenta chegar até lá.
 
-## Behavior-Driven Agent Development
+## Behavior-Driven Agent Design
 
-É a partir dessa mudança que proponho o Behavior-Driven Agent Development, ou BDAD.<sup id="ref-7">[[7]](#7)</sup> BDAD parte de uma pergunta simples:
+É a partir dessa mudança que proponho o Behavior-Driven Agent Design, ou BDAD.<sup id="ref-7">[[7]](#7)</sup> BDAD parte de uma pergunta simples:
 
 > Como queremos que o agente se comporte nesta situação?
 
@@ -206,11 +206,11 @@ Esses comportamentos devem sobreviver a uma mudança de arquitetura. Talvez aman
 
 ## Como isso começa a aparecer nas ferramentas
 
-BDAD é uma tese que estou desenvolvendo para o meu livro, que fala sobre confiança em agentes. Mas já encontrei conceitos similares em novas ferramentas que apontam nessa direção. Parlant é um exemplo interessante. Na plataforma, o agente é modelado como a entidade conversacional coerente,<sup id="ref-9">[[9]](#9)</sup> “aquele com quem você fala”, enquanto seu comportamento pode ser composto por _guidelines_, _journeys_, _tools_ e outros elementos. A própria documentação contrasta essa abordagem com arquiteturas em que diferentes agentes funcionam como nós especializados de uma tarefa. 
+BDAD é uma tese que estou desenvolvendo para o meu livro, que fala sobre confiança em agentes. Mas já encontrei conceitos similares em novas ferramentas que apontam nessa direção. Parlant é um exemplo interessante. No framework, o agente é modelado como a entidade conversacional coerente,<sup id="ref-9">[[9]](#9)</sup> “aquele com quem você fala”, enquanto seu comportamento pode ser composto por _guidelines_, _journeys_, _tools_ e outros elementos. A própria documentação contrasta essa abordagem com arquiteturas em que diferentes agentes funcionam como nós especializados de uma tarefa. 
 
-A Parlant se propõe a tornar o comportamento de agentes mais controlável à medida que o sistema cresce. Em vez de aplicar apenas filtros à resposta final, distribui limites e pontos de controle ao longo da interação. Abstrações como _limits_, _guidelines_<sup id="ref-10">[[10]](#10)</sup> e _journeys_<sup id="ref-11">[[11]](#11)</sup> permitem descrever o que o agente pode fazer, em quais condições e por quais etapas deve passar. A empresa chama esse conjunto de mecanismos de _Conversational Harness_.
+O Parlant se propõe a tornar o comportamento de agentes mais controlável à medida que o sistema cresce. Em vez de aplicar apenas filtros à resposta final, distribui limites e pontos de controle ao longo da interação. Abstrações como _guidelines_<sup id="ref-10">[[10]](#10)</sup>, _journeys_<sup id="ref-11">[[11]](#11)</sup> e _canned responses_ permitem descrever o que o agente pode fazer, em quais condições e por quais etapas deve passar. O próprio projeto se define como um _Conversational Harness_ e é mantido pela Emcie sob licença Apache 2.0.
 
-## Trinta anos depois...
+## Vinte e cinco anos depois...
 
 Podemos olhar para essa evolução como uma mudança gradual naquilo que escolhemos especificar.
 
@@ -222,7 +222,7 @@ Essa especificação tem que ter uma característica importante. Ela precisa ser
 
 Se conseguirmos responder à pergunta “como o modelo deve se comportar neste cenário” com precisão, podemos transformar a resposta em políticas, interfaces, permissões, _evals_ e evidências, seja qual for a tecnologia usada para implementá-la.
 
-Talvez seja essa a continuidade mais interessante desses últimos trinta anos. Começamos tentando provar que o código fazia o que esperávamos. Depois aprendemos a descrever o comportamento do software. Agora construímos sistemas aos quais damos alguma liberdade para decidir como agir. Quanto maior essa liberdade, mais importante fica especificar fronteiras.
+Talvez seja essa a continuidade mais interessante desses últimos vinte e cinco anos. Começamos tentando provar que o código fazia o que esperávamos. Depois aprendemos a descrever o comportamento do software. Agora construímos sistemas aos quais damos alguma liberdade para decidir como agir. Quanto maior essa liberdade, mais importante fica especificar fronteiras.
 
 ---
 
@@ -236,7 +236,7 @@ Ainda não tenho respostas para muitas coisas. Mas tenho esperança de que algu�
 
 **E quando o agente age sem que ninguém tenha falado com ele?** Toda a formulação deste texto pressupõe uma conversa. Agentes proativos, que agem a partir de eventos e não de mensagens, provavelmente exigem uma outra maneira de descrever limites e fronteiras. [LangGraph?]
 
-**E o SDD?** No SDD, o sistema que roda no fim é determinístico. O LLM escreve o código. Escopo, ferramentas disponíveis, limites de autorização, condições de escalonamento obrigatório.. Existe uma intersecção e uma diferença que ainda não consigo articular (sou apenas um designer nerd)
+**E o SDD?** No SDD, o sistema que roda no fim é determinístico. O LLM escreve o código. Escopo, ferramentas disponíveis, limites de autorização, condições de escalonamento obrigatório. Existe uma intersecção e uma diferença que ainda não consigo articular (sou apenas um designer nerd)
 
 **A especificação comportamental serve como evidência regulatória?** Se o comportamento é a unidade de design, ela talvez seja o artefato mais próximo daquilo que um regulador pediria para ver. É como se estivéssemos planejando a arquitetura de informação para rastreabilidade.
 
@@ -247,22 +247,22 @@ Ainda não tenho respostas para muitas coisas. Mas tenho esperança de que algu�
 
 <a id="1"></a>**1.** verificabilidade é a capacidade de o usuário conferir se uma resposta está correta antes de agir com base nela — rastreando a afirmação até uma fonte, documento ou registro identificável. É um conceito em desenvolvimento. [↩](#ref-1)
 
-<a id="2"></a>**2.** Dan North (hoje Daniel Terhorst-North), [“Introducing BDD”](https://dannorth.net/blog/introducing-bdd/). O JBehave é de 2003; o artigo em _Better Software_ saiu em 2006. [↩](#ref-2)
+<a id="2"></a>**2.** Dan North (hoje Daniel Terhorst-North), [“Introducing BDD”](https://dannorth.net/blog/introducing-bdd/). North começou a escrever o JBehave no fim de 2003; o artigo em _Better Software_ saiu em março de 2006. [↩](#ref-2)
 
-<a id="3"></a>**3.** Matts descreve a autoria compartilhada do Given–When–Then em [The IT Risk Manager](http://theitriskmanager.wordpress.com/about/). [↩](#ref-3)
+<a id="3"></a>**3.** Matts descreve a autoria compartilhada do Given–When–Then em seu blog, [The IT Risk Manager](https://theitriskmanager.com/about/). Com Olav Maassen e Chris Geary, é autor de *Commitment: A Novel About Managing Project Risk* (2013), uma graphic novel sobre Real Options. [↩](#ref-3)
 
 <a id="4"></a>**4.** Chris Matts e Gojko Adzic, “Feature Injection: three steps to success” (InfoQ). Matts passou a chamar a prática de Value Mapping. [↩](#ref-4)
 
 <a id="5"></a>**5.** As três regras de Real Options, na formulação dele: opções têm valor, opções expiram, nunca se compromete cedo sem saber por quê. A quarta, menos citada, é que o valor da opção aumenta com a incerteza. Ver [a entrevista de Shane Hastie para o InfoQ](https://www.infoq.com/podcasts/chris-matts-bdd-risk-management). [↩](#ref-5)
 
-<a id="6"></a>**6.** Martin Fowler, [“Given When Then”](https://martinfowler.com/bliki/GivenWhenThen.html) (2013). [↩](#ref-6)
+<a id="6"></a>**6.** Martin Fowler, [“Given When Then”](https://martinfowler.com/bliki/GivenWhenThen.html) (21 de agosto de 2013). Nos comentários de revisão do verbete, North creditou a Ivan Moore boa parte da inspiração do formato. [↩](#ref-6)
 
 <a id="7"></a>**7.** Originalmente era BDDA: BDD para agentes. Achei os dois acrônimos ruins, mas a sonoridade do primeiro é um pouco melhor. [↩](#ref-7)
 
 <a id="8"></a>**8.** Invariante é uma propriedade que permanece verdadeira em todos os estados alcançáveis de um sistema. Aqui me refiro a invariante de classe, referenciando o conceito de Bertrand Meyer, que restringe todas as operações de um objeto, e não o de invariante de laço. [↩](#ref-8)
 
-<a id="9"></a>**9.** Parlant, [documentação de _agents_](https://www.parlant.io/docs/concepts/entities/agents/). [↩](#ref-9)
+<a id="9"></a>**9.** Parlant, [documentação de _agents_](https://www.parlant.io/docs/concepts/entities/agents/). A página contrasta a abordagem com frameworks baseados em grafo, nos quais o agente é um nó de tarefa especializado, e remete a [pesquisa sobre falhas de sistemas multiagentes](https://arxiv.org/abs/2503.13657). [↩](#ref-9)
 
-<a id="10"></a>**10.** Parlant, documentação de _guidelines_: regras comportamentais como pares condição–ação, avaliadas a cada turno da conversa. [↩](#ref-10)
+<a id="10"></a>**10.** Parlant, documentação de _guidelines_: regras comportamentais como pares condição–ação. O motor não avalia todas a cada turno; carrega apenas as que casam com o momento da conversa. Na versão 3.x, uma _observation_ dispara quando uma condição é atendida, e uma _guideline_ é uma observation com uma ação anexada. [↩](#ref-10)
 
 <a id="11"></a>**11.** Parlant, documentação de _journeys_: procedimentos multi-turno com estados e transições, que o agente pode pular, revisitar ou antecipar conforme o contexto. [↩](#ref-11)
