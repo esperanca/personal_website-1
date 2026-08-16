@@ -1,21 +1,6 @@
 @use 'variables' as *;
 
-@font-face {
-  font-family: 'Noto Sans';
-  src: local('Noto Sans'), url('/fonts/notosans-regular-webfont.woff2') format('woff2'),
-    url('/fonts/notosans-regular-webfont.woff') format('woff');
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Noto Sans';
-  src: local('Noto Sans Black'),
-    url('/fonts/notosans-black-webfont.woff2') format('woff2'),
-    url('/fonts/notosans-black-webfont.woff') format('woff');
-  font-style: normal;
-  font-weight: 900;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700;900&display=swap');
 
 @font-face {
   font-family: 'Playfair Display';
@@ -37,7 +22,7 @@
 
 body {
   line-height: 1.6rem;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Inter Tight', sans-serif;
 }
 
 h1,
