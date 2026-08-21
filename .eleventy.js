@@ -5,11 +5,12 @@ const fs = require('fs');
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 const markdownFootnoteSidenotes = require('./src/plugins/markdown-footnote-sidenotes');
+const markdownHeadingCustomId = require('./src/plugins/markdown-heading-custom-id');
 const {DateTime} = require('luxon');
 
 const markdownLibrary = markdownIt({
   html: true,
-}).use(markdownFootnoteSidenotes).use(markdownItAnchor, {
+}).use(markdownFootnoteSidenotes).use(markdownHeadingCustomId).use(markdownItAnchor, {
   permalink: true,
   permalinkClass: 'tdbc-anchor',
   permalinkSymbol: `

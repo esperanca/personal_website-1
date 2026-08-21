@@ -1,0 +1,139 @@
+// Estilos de corpo de texto longo (post, page). Compartilhado via @extend
+// para evitar duplicar blockquote/code/table/links entre .post__body e
+// .page__content.
+%prose {
+  word-wrap: break-word;
+  font-size: $text-lg;
+
+  & > * + * {
+    margin-top: $space-sm;
+  }
+
+  p {
+    margin-top: $space-lg;
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-transform: capitalize;
+  }
+
+  h1 + p,
+  h2 + p,
+  h3 + p {
+    margin-top: $space-sm;
+  }
+
+  * + h1,
+  * + h2,
+  * + h3 {
+    margin-top: $space-xxl;
+  }
+
+  h2 + h3 {
+    margin-top: $space-lg;
+  }
+
+  h2 {
+    font-size: $text-4xl;
+  }
+
+  h3 {
+    font-size: $text-2xl;
+  }
+
+  a:not([class]) {
+    color: inherit;
+    display: inline-block;
+    text-decoration: underline;
+  }
+
+  a:not([class]):hover {
+    color: $accent;
+  }
+
+  strong {
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+
+  code {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-left: 0.01ch;
+    margin-right: 0.01ch;
+  }
+
+  pre > code {
+    margin-right: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  blockquote {
+    margin-top: $space-lg;
+    margin-left: 0;
+    font-style: italic;
+    border: 1px solid $border-subtle;
+    border-left: 5px solid $color-blockquote-border;
+    padding-left: $space-sm;
+    padding-top: $space-md;
+    padding-bottom: $space-md;
+
+    p {
+      opacity: 0.85;
+      margin-top: 0;
+    }
+  }
+
+  ol:not([class]),
+  ul:not([class]) {
+    margin-left: 1rem;
+
+    li + li {
+      margin-top: 1rem;
+    }
+  }
+
+  figure img,
+  pre > code,
+  .video-player {
+    box-shadow: $shadow-md;
+  }
+
+  figure img {
+    position: relative;
+    z-index: $z-base;
+  }
+
+  figcaption {
+    font-size: 0.8em;
+    font-style: italic;
+    margin: 0.5rem auto 0 auto;
+  }
+
+  table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-top: $space-lg;
+    font-size: 0.85em;
+  }
+
+  th,
+  td {
+    border: 1px solid $border-subtle;
+    padding: $space-xs $space-sm;
+    text-align: left;
+    vertical-align: top;
+    word-wrap: break-word;
+  }
+
+  th {
+    font-weight: 700;
+    background: $bg-subtle;
+  }
+}

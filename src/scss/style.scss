@@ -2,6 +2,8 @@
 @import 'utilities/visually-hidden';
 @import 'utilities/wrapper';
 @import 'utilities/variables';
+@import 'utilities/prose';
+@import 'utilities/forms';
 
 *,
 *::before,
@@ -116,3 +118,4 @@ footer {
 @import 'components/archive';
 @import 'components/page';
 @import 'components/livro';
+@import 'components/style-guide';

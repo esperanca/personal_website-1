@@ -1,0 +1,48 @@
+// Campos e botão de formulário compartilhados entre .contact e .newsletter.
+%form-label {
+  margin-top: $space-md;
+  text-align-last: left;
+  align-self: start;
+  font-weight: 900;
+}
+
+%form-input {
+  background: $form-element-bg;
+  border: 1px solid $form-element-border;
+  z-index: $z-elevated;
+  width: 100%;
+  transition: all $transition-base;
+  padding: 1rem;
+  font-size: $text-lg;
+
+  &:focus {
+    border: 1px solid $form-element-border-focus;
+    outline: none;
+    box-shadow: 0 0 0 2px $gray-10 inset;
+  }
+}
+
+%btn-primary {
+  background-color: $btn-primary-bg;
+  color: $btn-primary-label;
+  margin-top: $space-md;
+  outline: none;
+  box-shadow: none;
+  border-radius: $radius-lg;
+  border-width: 0;
+  max-width: $space-xxl * 2.5;
+  width: 100%;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  font-size: $text-2xl;
+  padding: $space-xs;
+  transition: all $transition-base;
+
+  &:focus {
+    box-shadow: 0 0 0 5px $gray-6;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

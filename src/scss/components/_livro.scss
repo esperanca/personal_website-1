@@ -4,10 +4,13 @@
 // ──────────────────────────────────────────────────────
 
 .livro-page {
-  --ink: #000036;
-  --accent: #0979fa;
-  --gray-2: #d1d0d2;
-  --wash: #f5f5f5;
+  // Custom properties (não SCSS vars) porque este componente é isolado de
+  // propósito das classes .post/.page globais — mas os valores vêm dos
+  // mesmos tokens em _variables.scss, para não divergir da paleta.
+  --ink: #{$black};
+  --accent: #{$accent};
+  --gray-2: #{$gray-2};
+  --wash: #{$bg-wash};
   --display: 'Playfair Display', Georgia, 'Times New Roman', serif;
   --sans: 'Noto Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
@@ -131,7 +134,7 @@
 
   blockquote {
     font-style: italic;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid $border-subtle;
     border-left: 5px solid var(--ink);
     padding: 1.25rem 0.75rem;
     margin-top: 2rem;

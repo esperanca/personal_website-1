@@ -1,0 +1,164 @@
+// Página /guia-de-estilo/ — vitrine dos tokens e componentes do design
+// system. Escopado em .style-guide para não vazar para o resto do site.
+.style-guide {
+  &__intro {
+    max-width: 65ch;
+  }
+
+  &__section {
+    margin-top: $space-xxl;
+    padding-top: $space-xl;
+    border-top: 1px solid $border-subtle;
+  }
+
+  // Dobra a classe para vencer a especificidade de ".page__content h2"
+  // (de %prose), que aplicaria text-transform: capitalize e outro tamanho.
+  &__section-title.style-guide__section-title {
+    font-family: 'Noto Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: $text-sm;
+    font-weight: 900;
+    color: $gray-6;
+  }
+
+  &__section-desc {
+    max-width: 65ch;
+    margin-top: $space-xs;
+  }
+
+  // ── Cor ──────────────────────────────────────────────
+  &__swatches {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+    gap: $space-md;
+    margin-top: $space-lg;
+  }
+
+  &__swatch-color {
+    display: block;
+    height: 4.5rem;
+    border-radius: $radius-md;
+    border: 1px solid $border-subtle;
+  }
+
+  &__swatch-label {
+    display: block;
+    margin-top: $space-xs;
+    font-size: $text-sm;
+    font-weight: 700;
+  }
+
+  &__swatch-value {
+    display: block;
+    font-size: $text-xs;
+    color: $gray-6;
+    font-family: monospace;
+  }
+
+  // ── Espaçamento ──────────────────────────────────────
+  &__scale-row {
+    display: flex;
+    align-items: center;
+    gap: $space-md;
+    margin-top: $space-sm;
+  }
+
+  &__scale-label {
+    font-size: $text-sm;
+    font-family: monospace;
+    width: 11rem;
+    flex-shrink: 0;
+  }
+
+  &__scale-bar {
+    background: $black;
+    height: 0.75rem;
+    border-radius: $radius-sm;
+  }
+
+  // ── Tipografia ───────────────────────────────────────
+  &__type-sample {
+    margin-top: $space-lg;
+  }
+
+  &__type-meta {
+    font-size: $text-xs;
+    font-family: monospace;
+    color: $gray-6;
+    margin-top: $space-xxs;
+  }
+
+  // ── Exemplos reais ───────────────────────────────────
+  &__example {
+    margin-top: $space-lg;
+    border: 1px solid $border-subtle;
+    border-radius: $radius-md;
+    overflow: hidden;
+  }
+
+  &__example-source {
+    background: $bg-wash;
+    padding: $space-xs $space-md;
+    font-size: $text-xs;
+    color: $gray-6;
+    border-bottom: 1px solid $border-subtle;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  &__example-body {
+    padding: $space-lg;
+
+    // Reaproveita as regras de %prose já usadas em post/page, mas sem o
+    // espaçamento extra de topo do primeiro filho.
+    & > *:first-child {
+      margin-top: 0 !important;
+    }
+  }
+
+  // ── Blocos escuros (header/footer) ──────────────────
+  &__dark-block {
+    background: $black;
+    color: $white;
+    padding: $space-lg;
+    border-radius: $radius-md;
+    margin-top: $space-lg;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  &__button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-md;
+    align-items: center;
+    margin-top: $space-lg;
+  }
+
+  &__toc {
+    margin-top: $space-lg;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: $space-sm 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: $space-sm $space-lg;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
+}

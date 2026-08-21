@@ -4,7 +4,6 @@ title: "Notas #007 - Design e agentes"
 metaTitle: Como descrever o comportamento de agentes
 metaDesc: sobre facilitação, liderança e o desenho de conversas produtivas
 date: 2026-08-13T22:20:53.000Z
-draft: true
 tags:
   - agentic
   - design

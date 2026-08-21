@@ -49,6 +49,30 @@ $btn-primary-bg: $black;
 $btn-primary-hover: $gray-10;
 $btn-primary-label: $white;
 
+// Superfícies e bordas "sutis" usadas em prosa (blockquote, table, code)
+$border-subtle: rgba(0, 0, 0, 0.1);
+$bg-subtle: rgba(0, 0, 0, 0.03);
+$bg-wash: #f5f5f5;
+
+// Radius
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 20px;
+$radius-full: 999px;
+
+// Shadow
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+// Transition
+$transition-fast: 0.2s ease;
+$transition-base: 0.3s ease;
+
+// Z-index
+$z-behind: -1;
+$z-base: 1;
+$z-elevated: 2;
+
 $phone-width: 64em;
 $tablet-width: 64em;
 $desktop-width: 80em;

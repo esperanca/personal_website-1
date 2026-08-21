@@ -35,7 +35,7 @@
       svg {
         height: 100%;
         width: 100%;
-        transition: opacity 0.2s ease;
+        transition: opacity $transition-fast;
       }
 
       svg:hover {
@@ -60,7 +60,7 @@
   a {
     color: inherit;
     text-decoration: underline;
-    transition: color 0.2s ease;
+    transition: color $transition-fast;
   }
 
   a:focus {

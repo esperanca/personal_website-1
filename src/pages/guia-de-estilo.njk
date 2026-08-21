@@ -1,0 +1,280 @@
+---
+layout: layouts/page.njk
+title: Guia de Estilo
+permalink: /guia-de-estilo/
+---
+<div class="style-guide">
+
+<p class="style-guide__intro">Referência viva dos tokens e componentes usados no site. Os exemplos abaixo usam CSS real do site (mesmo <code>&lt;style&gt;</code> compilado desta página) e, sempre que possível, conteúdo de verdade extraído dos posts publicados — não texto fictício de placeholder.</p>
+
+<nav class="style-guide__toc" aria-label="Seções deste guia">
+  <ul>
+    <li><a href="#cor">Cor</a></li>
+    <li><a href="#tipografia">Tipografia</a></li>
+    <li><a href="#espacamento">Espaçamento</a></li>
+    <li><a href="#radius-sombra-transicao">Radius, sombra e transição</a></li>
+    <li><a href="#blockquote">Blockquote</a></li>
+    <li><a href="#lista">Lista</a></li>
+    <li><a href="#tabela">Tabela</a></li>
+    <li><a href="#codigo">Código</a></li>
+    <li><a href="#figura">Figura e legenda</a></li>
+    <li><a href="#formulario">Formulário</a></li>
+    <li><a href="#botao">Botão</a></li>
+    <li><a href="#header-footer">Header e footer</a></li>
+  </ul>
+</nav>
+
+<section class="style-guide__section" id="cor">
+  <h2 class="style-guide__section-title">Cor</h2>
+  <p class="style-guide__section-desc">Definidas em <code>src/scss/utilities/_variables.scss</code>. Toda cor nova no site deve vir daqui — ver <code>docs/design-system.md</code>.</p>
+
+  <div class="style-guide__swatches">
+    <div>
+      <span class="style-guide__swatch-color" style="background:#000036"></span>
+      <span class="style-guide__swatch-label">$black</span>
+      <span class="style-guide__swatch-value">#000036</span>
+    </div>
+    <div>
+      <span class="style-guide__swatch-color" style="background:#ffffff"></span>
+      <span class="style-guide__swatch-label">$white</span>
+      <span class="style-guide__swatch-value">#ffffff</span>
+    </div>
+    <div>
+      <span class="style-guide__swatch-color" style="background:rgb(9, 121, 250)"></span>
+      <span class="style-guide__swatch-label">$accent</span>
+      <span class="style-guide__swatch-value">rgb(9, 121, 250)</span>
+    </div>
+    <div>
+      <span class="style-guide__swatch-color" style="background:#2e2e31"></span>
+      <span class="style-guide__swatch-label">$gray-10</span>
+      <span class="style-guide__swatch-value">#2e2e31</span>
+    </div>
+    <div>
+      <span class="style-guide__swatch-color" style="background:#7b7a7d"></span>
+      <span class="style-guide__swatch-label">$gray-6</span>
+      <span class="style-guide__swatch-value">#7b7a7d</span>
+    </div>
+    <div>
+      <span class="style-guide__swatch-color" style="background:#a5a5a6"></span>
+      <span class="style-guide__swatch-label">$gray-4</span>
+      <span class="style-guide__swatch-value">#a5a5a6</span>
+    </div>
+    <div>
+      <span class="style-guide__swatch-color" style="background:#bbbbbc"></span>
+      <span class="style-guide__swatch-label">$gray-3</span>
+      <span class="style-guide__swatch-value">#bbbbbc</span>
+    </div>
+    <div>
+      <span class="style-guide__swatch-color" style="background:#d1d0d2"></span>
+      <span class="style-guide__swatch-label">$gray-2</span>
+      <span class="style-guide__swatch-value">#d1d0d2</span>
+    </div>
+    <div>
+      <span class="style-guide__swatch-color" style="background:#e8e7e8"></span>
+      <span class="style-guide__swatch-label">$gray-1</span>
+      <span class="style-guide__swatch-value">#e8e7e8</span>
+    </div>
+  </div>
+
+  <p class="style-guide__section-desc" style="margin-top: 1.25rem;">Tokens semânticos apontam para essas cores base: <code>$color-header-bg</code>/<code>$color-footer-bg</code> = <code>$black</code>, <code>$color-link-hover</code> = <code>$accent</code>, <code>$border-subtle</code> = <code>rgba(0,0,0,.1)</code>, <code>$bg-wash</code> = <code>#f5f5f5</code>.</p>
+</section>
+
+<section class="style-guide__section" id="tipografia">
+  <h2 class="style-guide__section-title">Tipografia</h2>
+  <p class="style-guide__section-desc">Escala em <code>$text-xs</code>–<code>$text-6xl</code>. Os títulos abaixo são os títulos reais de posts publicados, renderizados com o CSS de verdade — inclusive o <code>text-transform: capitalize</code> que <code>%prose</code> aplica a h2/h3 dentro de post e page.</p>
+
+  <div class="style-guide__type-sample">
+    <h1>Notas #007 - Design e agentes</h1>
+    <p class="style-guide__type-meta">h1 · $text-4xl · 2.25rem / 36px · Playfair Display</p>
+  </div>
+
+  <div class="style-guide__type-sample">
+    <h2>Antes, especificávamos o código</h2>
+    <p class="style-guide__type-meta">h2 dentro de %prose · $text-4xl · 2.25rem / 36px — note o capitalize automático</p>
+  </div>
+
+  <div class="style-guide__type-sample">
+    <h3>Behavior-Driven Agent Development</h3>
+    <p class="style-guide__type-meta">h3 dentro de %prose · $text-2xl · 1.5rem / 24px</p>
+  </div>
+
+  <div class="style-guide__type-sample">
+    <p style="font-size: 1.125rem;">Conheci essa frase do Herbert Simon em 2010, lendo o <em>Ambient Findability</em>, do Peter Morville, um dos livros que quase todo arquiteto de informação lê em algum momento.</p>
+    <p class="style-guide__type-meta">parágrafo · $text-lg · 1.125rem / 18px — abertura de "Notas #006"</p>
+  </div>
+</section>
+
+<section class="style-guide__section" id="espacamento">
+  <h2 class="style-guide__section-title">Espaçamento</h2>
+  <p class="style-guide__section-desc">Escala em <code>$space-unit</code> (1rem). Cada passo é um múltiplo fixo, não um valor arbitrário.</p>
+
+  <div class="style-guide__scale-row">
+    <span class="style-guide__scale-label">$space-xxs · 4px</span>
+    <span class="style-guide__scale-bar" style="width: 4px;"></span>
+  </div>
+  <div class="style-guide__scale-row">
+    <span class="style-guide__scale-label">$space-xs · 8px</span>
+    <span class="style-guide__scale-bar" style="width: 8px;"></span>
+  </div>
+  <div class="style-guide__scale-row">
+    <span class="style-guide__scale-label">$space-sm · 12px</span>
+    <span class="style-guide__scale-bar" style="width: 12px;"></span>
+  </div>
+  <div class="style-guide__scale-row">
+    <span class="style-guide__scale-label">$space-md · 20px</span>
+    <span class="style-guide__scale-bar" style="width: 20px;"></span>
+  </div>
+  <div class="style-guide__scale-row">
+    <span class="style-guide__scale-label">$space-lg · 32px</span>
+    <span class="style-guide__scale-bar" style="width: 32px;"></span>
+  </div>
+  <div class="style-guide__scale-row">
+    <span class="style-guide__scale-label">$space-xl · 52px</span>
+    <span class="style-guide__scale-bar" style="width: 52px;"></span>
+  </div>
+  <div class="style-guide__scale-row">
+    <span class="style-guide__scale-label">$space-xxl · 84px</span>
+    <span class="style-guide__scale-bar" style="width: 84px;"></span>
+  </div>
+</section>
+
+<section class="style-guide__section" id="radius-sombra-transicao">
+  <h2 class="style-guide__section-title">Radius, sombra e transição</h2>
+
+  <table>
+    <thead>
+      <tr><th>Token</th><th>Valor</th><th>Uso</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>$radius-sm</code></td><td>4px</td><td>elementos pequenos</td></tr>
+      <tr><td><code>$radius-md</code></td><td>8px</td><td>cards, exemplos deste guia</td></tr>
+      <tr><td><code>$radius-lg</code></td><td>20px</td><td>botão primário (pill)</td></tr>
+      <tr><td><code>$radius-full</code></td><td>999px</td><td>elementos totalmente arredondados</td></tr>
+      <tr><td><code>$shadow-md</code></td><td>0 10px 30px rgba(0,0,0,.15)</td><td>imagens e blocos de código em posts</td></tr>
+      <tr><td><code>$transition-fast</code></td><td>0.2s ease</td><td>hover de links no header/footer</td></tr>
+      <tr><td><code>$transition-base</code></td><td>0.3s ease</td><td>inputs, botão primário</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="style-guide__section" id="blockquote">
+  <h2 class="style-guide__section-title">Blockquote</h2>
+  <p class="style-guide__section-desc">Estilo compartilhado via <code>%prose</code> (<code>_prose.scss</code>), usado por <code>.post__body</code> e <code>.page__content</code>.</p>
+
+  <div class="style-guide__example">
+    <p class="style-guide__example-source">Extraído de <a href="/posts/notas-007/">Notas #007 — Design e agentes</a></p>
+    <div class="style-guide__example-body">
+      <blockquote>
+        <p>Como queremos que o agente se comporte em uma situação?</p>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="style-guide__section" id="lista">
+  <h2 class="style-guide__section-title">Lista</h2>
+
+  <div class="style-guide__example">
+    <p class="style-guide__example-source">Extraído de Notas #007 — Design e agentes</p>
+    <div class="style-guide__example-body">
+      <p>“Deve valer mais ou menos um milhão” não significa que o imóvel foi avaliado em R$ 1 milhão, e o agente precisa perceber isso. O agente pode precisar de:</p>
+      <ul>
+        <li>consultar a política de crédito;</li>
+        <li>descobrir se aquele tipo de imóvel é elegível como garantia;</li>
+        <li>solicitar documentos;</li>
+        <li>consultar sistemas externos;</li>
+        <li>identificar uma inconsistência;</li>
+        <li>reconhecer que não possui informação suficiente;</li>
+        <li>interromper a conversa e encaminhar o caso para uma pessoa.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="style-guide__section" id="tabela">
+  <h2 class="style-guide__section-title">Tabela</h2>
+
+  <div class="style-guide__example">
+    <p class="style-guide__example-source">Extraído de Notas #007 — Design e agentes</p>
+    <div class="style-guide__example-body">
+      <table>
+        <thead>
+          <tr><th>O cliente diz</th><th>Natureza</th><th>O agente deve</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>“Meu apartamento vale uns R$ 1 milhão”</td><td>estimativa do proprietário</td><td>simular, marcando como estimativa</td></tr>
+          <tr><td>“O corretor acha que vale R$ 1 milhão”</td><td>estimativa de terceiro</td><td>simular, marcando como estimativa</td></tr>
+          <tr><td>“Tenho um laudo de ontem: R$ 1 milhão”</td><td>avaliação formal, não verificada</td><td>simular, solicitar o documento antes de prosseguir</td></tr>
+          <tr><td>“O banco avaliou em R$ 1 milhão em 2023”</td><td>avaliação formal, vencida</td><td>simular, sinalizar necessidade de reavaliação</td></tr>
+          <tr><td>“Anunciei por R$ 1 milhão”</td><td>preço pedido</td><td>simular, marcando que preço de anúncio não é avaliação</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="style-guide__section" id="codigo">
+  <h2 class="style-guide__section-title">Código</h2>
+
+  <div class="style-guide__example">
+    <p class="style-guide__example-source">Extraído de Notas #007 — Design e agentes</p>
+    <div class="style-guide__example-body">
+      <p>A função é testável:</p>
+      <pre><code>calculateCreditLimit(propertyValue: 1000000) → 600000</code></pre>
+    </div>
+  </div>
+</section>
+
+<section class="style-guide__section" id="figura">
+  <h2 class="style-guide__section-title">Figura e legenda</h2>
+
+  <div class="style-guide__example">
+    <p class="style-guide__example-source">Extraído de Notas #007 — Design e agentes</p>
+    <div class="style-guide__example-body">
+      <figure>
+        <img src="/images/daniel-souza-chris-matts.jpeg" alt="Daniel Souza e Chris Matts sorrindo em uma selfie de escritório." />
+        <figcaption>Com Chris Matts, no Lloyds Banking Group, em 2017.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="style-guide__section" id="formulario">
+  <h2 class="style-guide__section-title">Formulário</h2>
+  <p class="style-guide__section-desc">Campos compartilhados via <code>%form-label</code>/<code>%form-input</code> (<code>_forms.scss</code>), usados em <code>.contact</code> e <code>.newsletter</code>. Cópia idêntica à do formulário real em <a href="/contato/">/contato/</a> — sem <code>action</code>, não envia nada.</p>
+
+  <form class="contact__form" style="max-width: 30rem;">
+    <label class="contact__label">Nome completo:</label>
+    <input type="text" class="contact__input" disabled/>
+
+    <label class="contact__label">e-mail:</label>
+    <input type="email" class="contact__input" disabled/>
+
+    <label class="contact__label">Sua mensagem:</label>
+    <textarea class="contact__input" rows="4" disabled></textarea>
+
+    <button type="button" class="contact__button" disabled>Enviar</button>
+  </form>
+</section>
+
+<section class="style-guide__section" id="botao">
+  <h2 class="style-guide__section-title">Botão</h2>
+  <p class="style-guide__section-desc"><code>%btn-primary</code>: fundo <code>$black</code>, pill de <code>$radius-lg</code>, hover com <code>opacity: .8</code>.</p>
+
+  <div class="style-guide__button-row">
+    <button type="button" class="contact__button" style="margin-top: 0;">Enviar</button>
+  </div>
+
+  <p class="style-guide__section-desc" style="margin-top: 1.25rem;">Nota: o link "Assine agora" da newsletter na home hoje <strong>não</strong> usa esse botão — o markup em <code>newsletter.njk</code> não aplica a classe <code>.newsletter__button</code>, então o CSS de <code>%btn-primary</code> existe mas fica sem efeito ali. Ver <code>docs/design-system.md</code>.</p>
+</section>
+
+<section class="style-guide__section" id="header-footer">
+  <h2 class="style-guide__section-title">Header e footer</h2>
+  <p class="style-guide__section-desc">Fundo <code>$black</code>/texto <code>$white</code>, com hover em <code>transparentize($color, .3)</code>.</p>
+
+  <div class="style-guide__dark-block">
+    <strong>@danielsouza</strong> · <a href="/sobre/">Sobre</a> · <a href="/archive/">Blog</a> · <a href="/contato/">Contato</a>
+  </div>
+</section>
+
+</div>
