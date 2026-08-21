@@ -78,11 +78,8 @@
     margin-top: $space-lg;
     margin-left: 0;
     font-style: italic;
-    border: 1px solid $border-subtle;
-    border-left: 5px solid $color-blockquote-border;
-    padding-left: $space-sm;
-    padding-top: $space-md;
-    padding-bottom: $space-md;
+    border-left: 3px solid $color-blockquote-border;
+    padding-left: $space-md;
 
     p {
       opacity: 0.85;
