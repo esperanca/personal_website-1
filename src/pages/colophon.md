@@ -26,6 +26,8 @@ Para o design e desenvolvimento, Figma, VSCode e Claude
 Para escrever, IA Writer e Obsidian.
 Para publicar, netlify. 
 
+Os tokens de cor, tipografia, espaçamento e os componentes reutilizados no site estão documentados no [guia de estilo](/guia-de-estilo/).
+
 
 A última atualização aconteceu em: {{ buildDate | livroDate }}
 

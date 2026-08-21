@@ -5,7 +5,7 @@ permalink: /guia-de-estilo/
 ---
 <div class="style-guide">
 
-<p class="style-guide__intro">Referência viva dos tokens e componentes usados no site. Os exemplos abaixo usam CSS real do site (mesmo <code>&lt;style&gt;</code> compilado desta página) e, sempre que possível, conteúdo de verdade extraído dos posts publicados — não texto fictício de placeholder.</p>
+<p class="style-guide__intro">Referência viva dos tokens e componentes usados no site. Os exemplos abaixo usam CSS real do site (mesmo <code>&lt;style&gt;</code> compilado desta página). Os exemplos de texto corrido (tipografia, blockquote, lista) usam "No meio do caminho", de Carlos Drummond de Andrade — <em>Alguma Poesia</em>, 1930 — em vez de lorem ipsum. Tabela, código, figura e formulário continuam usando conteúdo real extraído de posts publicados.</p>
 
 <nav class="style-guide__toc" aria-label="Seções deste guia">
   <ul>
@@ -81,26 +81,26 @@ permalink: /guia-de-estilo/
 
 <section class="style-guide__section" id="tipografia">
   <h2 class="style-guide__section-title">Tipografia</h2>
-  <p class="style-guide__section-desc">Escala em <code>$text-xs</code>–<code>$text-6xl</code>. Os títulos abaixo são os títulos reais de posts publicados, renderizados com o CSS de verdade — inclusive o <code>text-transform: capitalize</code> que <code>%prose</code> aplica a h2/h3 dentro de post e page.</p>
+  <p class="style-guide__section-desc">Escala em <code>$text-xs</code>–<code>$text-6xl</code>, renderizada com o CSS de verdade. Texto: "No meio do caminho", Carlos Drummond de Andrade (1928).</p>
 
   <div class="style-guide__type-sample">
-    <h1>Notas #007 - Design e agentes</h1>
+    <h1>No meio do caminho</h1>
     <p class="style-guide__type-meta">h1 · $text-4xl · 2.25rem / 36px · Playfair Display</p>
   </div>
 
   <div class="style-guide__type-sample">
-    <h2>Antes, especificávamos o código</h2>
-    <p class="style-guide__type-meta">h2 dentro de %prose · $text-4xl · 2.25rem / 36px — note o capitalize automático</p>
+    <h2>Tinha uma pedra no meio do caminho</h2>
+    <p class="style-guide__type-meta">h2 dentro de %prose · $text-4xl · 2.25rem / 36px</p>
   </div>
 
   <div class="style-guide__type-sample">
-    <h3>Behavior-Driven Agent Development</h3>
+    <h3>No meio do caminho tinha uma pedra</h3>
     <p class="style-guide__type-meta">h3 dentro de %prose · $text-2xl · 1.5rem / 24px</p>
   </div>
 
   <div class="style-guide__type-sample">
-    <p style="font-size: 1.125rem;">Conheci essa frase do Herbert Simon em 2010, lendo o <em>Ambient Findability</em>, do Peter Morville, um dos livros que quase todo arquiteto de informação lê em algum momento.</p>
-    <p class="style-guide__type-meta">parágrafo · $text-lg · 1.125rem / 18px — abertura de "Notas #006"</p>
+    <p style="font-size: 1.125rem;">Nunca me esquecerei desse acontecimento na vida de minhas retinas tão fatigadas. Nunca me esquecerei que no meio do caminho tinha uma pedra, tinha uma pedra no meio do caminho, no meio do caminho tinha uma pedra.</p>
+    <p class="style-guide__type-meta">parágrafo · $text-lg · 1.125rem / 18px</p>
   </div>
 </section>
 
@@ -162,10 +162,13 @@ permalink: /guia-de-estilo/
   <p class="style-guide__section-desc">Estilo compartilhado via <code>%prose</code> (<code>_prose.scss</code>), usado por <code>.post__body</code> e <code>.page__content</code>.</p>
 
   <div class="style-guide__example">
-    <p class="style-guide__example-source">Extraído de <a href="/posts/notas-007/">Notas #007 — Design e agentes</a></p>
+    <p class="style-guide__example-source">Carlos Drummond de Andrade, "No meio do caminho" — <em>Alguma Poesia</em> (1930)</p>
     <div class="style-guide__example-body">
       <blockquote>
-        <p>Como queremos que o agente se comporte em uma situação?</p>
+        <p>No meio do caminho tinha uma pedra<br>
+        tinha uma pedra no meio do caminho<br>
+        tinha uma pedra<br>
+        no meio do caminho tinha uma pedra.</p>
       </blockquote>
     </div>
   </div>
@@ -175,17 +178,20 @@ permalink: /guia-de-estilo/
   <h2 class="style-guide__section-title">Lista</h2>
 
   <div class="style-guide__example">
-    <p class="style-guide__example-source">Extraído de Notas #007 — Design e agentes</p>
+    <p class="style-guide__example-source">Carlos Drummond de Andrade, "No meio do caminho" — os dois versos do poema, um por item</p>
     <div class="style-guide__example-body">
-      <p>“Deve valer mais ou menos um milhão” não significa que o imóvel foi avaliado em R$ 1 milhão, e o agente precisa perceber isso. O agente pode precisar de:</p>
+      <p>O poema completo, verso a verso:</p>
       <ul>
-        <li>consultar a política de crédito;</li>
-        <li>descobrir se aquele tipo de imóvel é elegível como garantia;</li>
-        <li>solicitar documentos;</li>
-        <li>consultar sistemas externos;</li>
-        <li>identificar uma inconsistência;</li>
-        <li>reconhecer que não possui informação suficiente;</li>
-        <li>interromper a conversa e encaminhar o caso para uma pessoa.</li>
+        <li>No meio do caminho tinha uma pedra</li>
+        <li>tinha uma pedra no meio do caminho</li>
+        <li>tinha uma pedra</li>
+        <li>no meio do caminho tinha uma pedra.</li>
+        <li>Nunca me esquecerei desse acontecimento</li>
+        <li>na vida de minhas retinas tão fatigadas.</li>
+        <li>Nunca me esquecerei que no meio do caminho</li>
+        <li>tinha uma pedra</li>
+        <li>tinha uma pedra no meio do caminho</li>
+        <li>no meio do caminho tinha uma pedra.</li>
       </ul>
     </div>
   </div>
