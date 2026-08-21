@@ -76,11 +76,5 @@
         transform: scale(0.7);
       }
     }
-
-    blockquote {
-      // Valor histórico distinto de $gray-3 (#bbbbbc) — mantido como está
-      // para não alterar o visual; considerar unificar com $gray-3 depois.
-      border-left: 3px solid #c4c4c4;
-    }
   }
 }

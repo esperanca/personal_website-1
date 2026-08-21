@@ -134,9 +134,8 @@
 
   blockquote {
     font-style: italic;
-    border: 1px solid $border-subtle;
-    border-left: 5px solid var(--ink);
-    padding: 1.25rem 0.75rem;
+    border-left: 3px solid var(--ink);
+    padding-left: 1.25rem;
     margin-top: 2rem;
 
     p {
