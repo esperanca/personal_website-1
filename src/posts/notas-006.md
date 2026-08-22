@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-title: "Notas #006 - Reuniões e escassez de atenção"
+title: "Notas #006 - Escassez de atenção"
 metaTitle: Reuniões, contexto e memória organizacional
 metaDesc: sobre facilitação, liderança e o desenho de conversas produtivas
 date: 2026-08-09T02:20:53.000Z
