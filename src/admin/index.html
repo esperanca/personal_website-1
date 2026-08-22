@@ -5,90 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Content Manager</title>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      /* Reaproveita as fontes e cores do site na interface do CMS
-         (fora do preview, que já usa /css/style.css via registerPreviewStyle). */
-      @font-face {
-        font-family: 'Noto Sans';
-        src: url('/fonts/notosans-regular-webfont.woff2') format('woff2');
-        font-weight: 400;
-      }
-      @font-face {
-        font-family: 'Noto Sans';
-        src: url('/fonts/notosans-black-webfont.woff2') format('woff2');
-        font-weight: 900;
+      /* Design tokens da interface do CMS. Mesma paleta do site
+         (src/scss/utilities/_variables.scss), com uma variante do azul de
+         destaque escurecida (--admin-accent-text) só pra uso como texto:
+         o #0979fa original do site dá ~4.1:1 de contraste em branco, abaixo
+         do mínimo de 4.5:1 do WCAG AA para texto normal. */
+      :root {
+        --admin-ink: #000036;
+        --admin-surface-muted: #e8e7e8;
+        --admin-border: #7b7a7d;
+        --admin-border-focus: #2e2e31;
+        --admin-accent: #0979fa;
+        --admin-accent-text: #0a63cc;
+        --admin-radius: 20px;
+        --admin-radius-sm: 8px;
+        --admin-font: 'Inter Tight', sans-serif;
       }
 
+      /* Tipografia: própria da interface do CMS (não é a fonte do site;
+         o preview usa a mesma família pra manter a experiência coesa). */
       body,
       input,
       textarea,
       select,
       button,
       [class] {
-        font-family: 'Noto Sans', sans-serif !important;
+        font-family: var(--admin-font) !important;
       }
 
       [class*='ListCardTitle'],
       [class*='SidebarHeading'] {
-        font-weight: 600 !important;
+        font-weight: 500 !important;
       }
 
-      /* cor de destaque do site nos estados ativos/seleção */
+      /* Cor de destaque nos estados ativos/seleção */
       .header-link-active,
       .sidebar-active,
       [class*='ListCardLink']:hover [class*='ListCardTitle'] {
-        color: #0979fa !important;
+        color: var(--admin-accent-text) !important;
       }
       .sidebar-active {
-        background: rgba(9, 121, 250, 0.08) !important;
+        background: rgba(10, 99, 204, 0.08) !important;
       }
 
-      /* todo botão de ação usa o único esquema de botão do site:
-         fundo preto, texto branco, cantos bem arredondados, hover com opacidade */
+      /* Botões: todo botão de ação usa o esquema de botão do site (fundo
+         preto, texto branco, cantos bem arredondados, hover com opacidade).
+         "Excluir entrada" é o inverso, pra se diferenciar sem sair da paleta. */
       [class*='-gray-gray'],
       [class*='ToolbarButton'],
-      [class*='publishedButton'] {
-        background-color: #000036 !important;
-        color: #fff !important;
-        border-radius: 20px !important;
-        font-weight: 700 !important;
+      [class*='publishedButton'],
+      [class*='DeleteButton'] {
+        border-radius: var(--admin-radius) !important;
+        font-weight: 600 !important;
         transition: opacity 0.2s ease !important;
       }
       [class*='-gray-gray']:hover,
       [class*='ToolbarButton']:hover,
-      [class*='publishedButton']:hover {
-        opacity: 0.8 !important;
-      }
-
-      /* botão de apagar: inverso do botão primário (fundo branco, texto
-         e borda pretos) pra se diferenciar sem sair do esquema do site */
-      [class*='DeleteButton'] {
-        background-color: #fff !important;
-        color: #000036 !important;
-        border: 1px solid #000036 !important;
-        border-radius: 20px !important;
-        font-weight: 700 !important;
-        transition: opacity 0.2s ease !important;
-      }
+      [class*='publishedButton']:hover,
       [class*='DeleteButton']:hover {
         opacity: 0.8 !important;
       }
+      [class*='-gray-gray'],
+      [class*='ToolbarButton'],
+      [class*='publishedButton'] {
+        background-color: var(--admin-ink) !important;
+        color: #fff !important;
+      }
+      [class*='DeleteButton'] {
+        background-color: #fff !important;
+        color: var(--admin-ink) !important;
+        border: 1px solid var(--admin-ink) !important;
+      }
 
-      /* rótulos e campos de formulário */
+      /* Campos de formulário: rótulo, borda e estado de foco */
       [class*='FieldLabel'] {
-        background: #e8e7e8 !important;
-        color: #000036 !important;
-        border-radius: 8px 8px 0 0 !important;
+        background: var(--admin-surface-muted) !important;
+        color: var(--admin-ink) !important;
+        border-radius: var(--admin-radius-sm) var(--admin-radius-sm) 0 0 !important;
       }
       input[class^='css-'],
       textarea[class^='css-'] {
-        border-radius: 0 8px 8px 8px !important;
-        border-color: #d1d0d2 !important;
+        border-radius: 0 var(--admin-radius-sm) var(--admin-radius-sm) var(--admin-radius-sm) !important;
+        border-color: var(--admin-border) !important;
       }
       input[class^='css-']:focus,
       textarea[class^='css-']:focus {
-        border-color: #2e2e31 !important;
-        box-shadow: 0 0 0 2px #2e2e31 inset !important;
+        border-color: var(--admin-border-focus) !important;
+        box-shadow: 0 0 0 2px var(--admin-border-focus) inset !important;
       }
     </style>
   </head>
@@ -131,10 +141,13 @@
         },
       });
 
+      CMS.registerPreviewStyle(
+        "https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap"
+      );
       CMS.registerPreviewStyle("/css/style.css");
       CMS.registerPreviewStyle(
-        "body { max-width: 90ch; margin: 0 auto; padding: 2rem; font-family: 'Noto Sans', sans-serif; } " +
-          "h1, h2, h3, h4, h5, h6 { font-family: 'Noto Sans', sans-serif; } " +
+        "body { max-width: 90ch; margin: 0 auto; padding: 2rem; font-family: 'Inter Tight', sans-serif; } " +
+          "h1, h2, h3, h4, h5, h6 { font-family: 'Inter Tight', sans-serif; } " +
           "img, picture { max-width: 100%; height: auto; }",
         {raw: true}
       );
