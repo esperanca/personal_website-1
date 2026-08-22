@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-title: "Notas #004 - Sobre Carmy"
+title: "Notas #004 - Carmy e a bancada "
 metaTitle: A bancada está limpa
 metaDesc: "sobre manter a bancada limpa "
 date: 2026-01-01T22:04:43.390Z
