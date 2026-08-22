@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-title: "Notas #003: AI, OOUX e Conceitos"
+title: "Notas #003 - AI, OOUX e Conceitos"
 metaTitle: O design antes do design de produto
 metaDesc: Para navegar com calmaria na complexidade, e ser o melhor parceiro dos
   times de tecnologia, é preciso entender que nem tudo que descreve e especifica
