@@ -1,7 +1,8 @@
 ---
 layout: layouts/post.njk
-title: "Notas: AI, OOUX e Conceitos"
+title: "Notas 003: AI, OOUX e Conceitos"
 date: 2025-03-01T22:04:43.390Z
+draft: false
 tags:
   - danbrown
   - arquitetura de informação
