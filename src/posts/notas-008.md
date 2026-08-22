@@ -2,7 +2,7 @@
 layout: layouts/post.njk
 title: "Notas #008 - Muitas vezes funciona"
 metaTitle: Uma epopeia burocrática que deu certo
-metaDesc: "sobre renovar a carteira de motorista e o design de serviço público no Brasil"
+metaDesc: sobre renovar a carteira de motorista e o design de serviço público no Brasil
 date: 2026-08-22T14:00:00.000Z
 draft: true
 tags:
@@ -47,8 +47,6 @@ O que mudou neste processo, desde a última renovação:
 4) A coleta da biometria e o exame médico acontecem no mesmo saguão
 5) O próprio médico te informa os próximos passos depois do exame e você sai de lá com a estimativa de que sua carteira digital vai estar disponível em até 24 horas.
 
-Sou um chato profissional: sou literalmente pago para dar opiniões e desenhar serviços e experiências. Obviamente, tenho dezenas de sugestões de melhoria para o serviço como um todo, que envolvem a parte digital e física.
-
 Mas é legal perceber como o sistema como um todo melhorou significativamente no Brasil. Instalar um app e receber a carteira quando cheguei no escritório foi um momento de encanto.
 
 Muitas coisas estruturais, de vários órgãos do governo, tiveram que mudar para isso acontecer:
@@ -62,8 +60,10 @@ Muitas coisas estruturais, de vários órgãos do governo, tiveram que mudar par
 
 É bem provável que o serviço não foi desenhado de forma holística, ponta a ponta, por um time multi-disciplinar. Imagino que não deve ter ninguém de produto ou um designer de serviço que está constantemente pesquisando com usuários.
 
-Mas do lado de fora, fiquei feliz em perceber que mesmo de forma quase orgânica, com o nosso jeitinho, o servidor público brasileiro consegue com sua ginga criar, reaproveitar e usar uma infraestrutura de serviço digital que tem melhorado bastante nos últimos anos, e isso se reflete nas coisas simples.
+Mas do lado de fora, fiquei feliz em perceber que mesmo de forma quase orgânica, na gambiarra, com o nosso jeitinho, os servidores dessas instituições conseguem criar, reaproveitar e usar uma infraestrutura de serviço digital que tem melhorado bastante nos últimos anos. E isso se reflete positivamente nas coisas simples que o cidadão precisa fazer.
 
-Tem potencial de ser mágico. Me faz pensar que o governo (seja ele de SP ou do BR) precisa levar mais a sério a ideia de que conexão, continuidade e consistência entre serviços pode reduzir custos e melhorar a qualidade exponencialmente. E contratar designers não para grandes intervenções ou tecnologias disruptivas, mas para ligar os pontos.
+E tem potencial de ser mágico. Me faz pensar que o governo (seja ele de SP ou do BR) precisa levar mais a sério a ideia de que conexão, continuidade e consistência entre serviços pode reduzir custos e melhorar a qualidade exponencialmente. E contratar designers para pensar em ligar os pontos, conectar a tecnologia as pessoas. 
 
-Para comparação, [renovar a carteira na Inglaterra](https://www.gov.uk/renew-driving-licence) é um pouco mais barato, mas demora mais, e se observarmos a experiência como um todo (entre canais), pode ser que fazer isso no Brasil é objetivamente melhor. Mas os gringos explicam de uma maneira incrível, algo que podemos aprender com eles.
+Para comparação, [renovar a carteira](https://www.gov.uk/renew-driving-licence) na Inglaterra é um pouco mais barato, mas é mais demorado, e se observarmos friamente como um todo talvez a gente diga que fazer isso no Brasil é objetivamente melhor. 
+
+Temos muito a aprender com eles
