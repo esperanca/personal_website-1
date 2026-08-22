@@ -9,6 +9,47 @@
   <body>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
     <script>
+      var PostPreview = createClass({
+        render: function () {
+          var entry = this.props.entry;
+          return h(
+            "div",
+            {className: "page"},
+            h(
+              "div",
+              {className: "page__header-wrapper"},
+              h("div", {className: "page__inner-wrapper"}, h("h1", null, "Blog"))
+            ),
+            h(
+              "div",
+              {className: "inner-wrapper"},
+              h(
+                "header",
+                null,
+                h("h2", null, entry.getIn(["data", "title"]))
+              ),
+              h(
+                "article",
+                null,
+                h(
+                  "div",
+                  {className: "page__content"},
+                  this.props.widgetFor("body")
+                )
+              )
+            )
+          );
+        },
+      });
+
+      CMS.registerPreviewStyle("/css/style.css");
+      CMS.registerPreviewStyle(
+        "body { max-width: 90ch; margin: 0 auto; padding: 2rem; } img, picture { max-width: 100%; height: auto; }",
+        {raw: true}
+      );
+      CMS.registerPreviewTemplate("blog", PostPreview);
+    </script>
+    <script>
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", (user) => {
           if (!user) {

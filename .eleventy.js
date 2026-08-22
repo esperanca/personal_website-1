@@ -76,6 +76,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/js');
   eleventyConfig.addPassthroughCopy('src/admin');
   eleventyConfig.addPassthroughCopy('src/robots.txt');
+  eleventyConfig.addPassthroughCopy({'src/_includes/css/style.css': 'css/style.css'});
 
   const now = new Date();
 
