@@ -57,9 +57,13 @@
 
       /* Botões: todo botão de ação usa o esquema de botão do site (fundo
          preto, texto branco, cantos bem arredondados, hover com opacidade).
-         "Excluir entrada" é o inverso, pra se diferenciar sem sair da paleta. */
+         "Excluir entrada" é o inverso, pra se diferenciar sem sair da paleta.
+         [class*='ToolbarButton'] não entra aqui de propósito: a classe real
+         dos botões de formatação do editor Markdown (Negrito, Itálico...) é
+         "StyledToolbarButton", que contém essa mesma substring — por isso
+         eles ficavam com o esquema errado (fundo preto/ícone branco) antes;
+         têm estilo próprio logo abaixo. */
       [class*='-gray-gray'],
-      [class*='ToolbarButton'],
       [class*='publishedButton'],
       [class*='DeleteButton'] {
         border-radius: var(--admin-radius) !important;
@@ -67,13 +71,11 @@
         transition: opacity 0.2s ease !important;
       }
       [class*='-gray-gray']:hover,
-      [class*='ToolbarButton']:hover,
       [class*='publishedButton']:hover,
       [class*='DeleteButton']:hover {
         opacity: 0.8 !important;
       }
       [class*='-gray-gray'],
-      [class*='ToolbarButton'],
       [class*='publishedButton'] {
         background-color: var(--admin-ink) !important;
         color: #fff !important;
@@ -82,6 +84,17 @@
         background-color: #fff !important;
         color: var(--admin-ink) !important;
         border: 1px solid var(--admin-ink) !important;
+      }
+
+      /* Botões de formatação do editor Markdown (Negrito, Itálico, link,
+         títulos, listas...): fundo branco, símbolo no azul-marinho do site. */
+      [class*='StyledToolbarButton'] {
+        background-color: #fff !important;
+        color: var(--admin-ink) !important;
+        border-radius: var(--admin-radius-sm) !important;
+      }
+      [class*='StyledToolbarButton']:hover {
+        background-color: var(--admin-surface-muted) !important;
       }
 
       /* Campos de formulário: rótulo, borda e estado de foco */
