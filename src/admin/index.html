@@ -5,10 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Content Manager</title>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <style>
+      /* Reaproveita as fontes e cores do site na interface do CMS
+         (fora do preview, que já usa /css/style.css via registerPreviewStyle). */
+      @font-face {
+        font-family: 'Noto Sans';
+        src: url('/fonts/notosans-regular-webfont.woff2') format('woff2');
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: 'Noto Sans';
+        src: url('/fonts/notosans-black-webfont.woff2') format('woff2');
+        font-weight: 900;
+      }
+
+      body,
+      input,
+      textarea,
+      select,
+      button,
+      [class] {
+        font-family: 'Noto Sans', sans-serif !important;
+      }
+
+      [class*='ListCardTitle'],
+      [class*='SidebarHeading'] {
+        font-weight: 900 !important;
+      }
+
+      /* cor de destaque do site nos estados ativos/seleção */
+      .header-link-active,
+      .sidebar-active,
+      [class*='ListCardLink']:hover [class*='ListCardTitle'] {
+        color: #0979fa !important;
+      }
+      .sidebar-active {
+        background: rgba(9, 121, 250, 0.08) !important;
+      }
+
+      /* todo botão de ação usa o único esquema de botão do site:
+         fundo preto, texto branco, cantos bem arredondados, hover com opacidade */
+      [class*='-gray-gray'],
+      [class*='ToolbarButton'],
+      [class*='publishedButton'],
+      [class*='DeleteButton'] {
+        background-color: #000036 !important;
+        color: #fff !important;
+        border-radius: 20px !important;
+        font-weight: 700 !important;
+        transition: opacity 0.2s ease !important;
+      }
+      [class*='-gray-gray']:hover,
+      [class*='ToolbarButton']:hover,
+      [class*='publishedButton']:hover,
+      [class*='DeleteButton']:hover {
+        opacity: 0.8 !important;
+      }
+
+      /* rótulos e campos de formulário */
+      [class*='FieldLabel'] {
+        background: #e8e7e8 !important;
+        color: #000036 !important;
+        border-radius: 8px 8px 0 0 !important;
+      }
+      input[class^='css-'],
+      textarea[class^='css-'] {
+        border-radius: 0 8px 8px 8px !important;
+        border-color: #d1d0d2 !important;
+      }
+      input[class^='css-']:focus,
+      textarea[class^='css-']:focus {
+        border-color: #2e2e31 !important;
+        box-shadow: 0 0 0 2px #2e2e31 inset !important;
+      }
+    </style>
   </head>
   <body>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script src="https://unpkg.com/decap-cms-locales@^3.0.0/dist/decap-cms-locales.js"></script>
     <script>
+      CMS.registerLocale('pt', DecapCmsLocales.pt);
+
       var PostPreview = createClass({
         render: function () {
           var entry = this.props.entry;
