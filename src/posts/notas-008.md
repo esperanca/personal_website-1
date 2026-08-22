@@ -1,7 +1,7 @@
 ---
 layout: layouts/post.njk
 title: "Notas #008 - Muitas vezes funciona"
-metaTitle: Uma epopeia burocrática que deu certo
+metaTitle: "Uma epopeia burocrática que deu certo: renovar a carteira de motorista"
 metaDesc: sobre renovar a carteira de motorista e o design de serviço público no Brasil
 date: 2026-08-22T14:00:00.000Z
 draft: true
@@ -62,8 +62,9 @@ Muitas coisas estruturais, de vários órgãos do governo, tiveram que mudar par
 
 Mas do lado de fora, fiquei feliz em perceber que mesmo de forma quase orgânica, na gambiarra, com o nosso jeitinho, os servidores dessas instituições conseguem criar, reaproveitar e usar uma infraestrutura de serviço digital que tem melhorado bastante nos últimos anos. E isso se reflete positivamente nas coisas simples que o cidadão precisa fazer.
 
-E tem potencial de ser mágico. Me faz pensar que o governo (seja ele de SP ou do BR) precisa levar mais a sério a ideia de que conexão, continuidade e consistência entre serviços pode reduzir custos e melhorar a qualidade exponencialmente. E contratar designers para pensar em ligar os pontos, conectar a tecnologia as pessoas. 
+Me faz pensar que o governo (seja ele de SP ou do BR) precisa levar mais a sério a ideia de que conexão, continuidade e consistência entre serviços pode reduzir custos e melhorar a qualidade exponencialmente. E contratar designers para pensar em ligar os pontos, conectar a tecnologia as pessoas. 
 
-Para comparação, [renovar a carteira](https://www.gov.uk/renew-driving-licence) na Inglaterra é um pouco mais barato, mas é mais demorado, e se observarmos friamente como um todo talvez a gente diga que fazer isso no Brasil é objetivamente melhor. 
+Para referência, [renovar a carteira](https://www.gov.uk/renew-driving-licence) na Inglaterra é um pouco mais barato, mais demorado, e se observarmos friamente como um todo talvez a gente diga que fazer isso no Brasil é objetivamente melhor. A nossa hospitalidade e empatia são elementos que fazem a cultura de serviços no país terem um impacto significativo na experiência.  
 
-Temos muito a aprender com eles
+Mas temos muito que aprender com eles na forma como mostrar a informação para o cidadão e entender como as coisas funcionam antes de acessar os serviços. Mas isso é papo para o próximo post. 
+
