@@ -103,22 +103,43 @@
     </style>
   </head>
   <body>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-    <script src="https://unpkg.com/decap-cms-locales@^3.0.0/dist/decap-cms-locales.js"></script>
+    <!-- A tradução pt-BR vem do "locale: pt" em config.yml, suportado
+         nativamente pelo bundle decap-cms. O pacote decap-cms-locales (que
+         usávamos antes via CDN para CMS.registerLocale) foi removido: seu
+         dist/decap-cms-locales.js publicado no unpkg é um bundle UMD
+         quebrado — retorna um objeto vazio em vez das traduções — o que
+         fazia CMS.registerLocale('pt', DecapCmsLocales.pt) lançar
+         "Cannot read properties of undefined (reading 'pt')" e interromper
+         o resto do script, inclusive registerPreviewTemplate logo abaixo
+         (por isso o preview caía no template padrão, sem a fonte/CSS
+         customizados). -->
+    <script src="https://unpkg.com/decap-cms@3.15.1/dist/decap-cms.js"></script>
     <script>
-      CMS.registerLocale('pt', DecapCmsLocales.pt);
+      // O preview usa o mesmo CSS do site (/css/style.css: Noto Sans no
+      // corpo, Playfair Display nos títulos, cores reais). Ajustes:
+      // - padding fixo (em vez de só margin: auto) pra sempre respirar das
+      //   bordas do painel, mesmo quando ele fica estreito (ex: dividido a
+      //   50% da tela) e o max-width deixa de ter efeito;
+      // - títulos pela metade do tamanho real do site — no site ocupam a
+      //   largura de uma página inteira, no preview (coluna estreita)
+      //   ficavam desproporcionais.
+      var PREVIEW_CSS =
+        "body { max-width: 90ch; margin: 0 auto; padding: 1.5rem; box-sizing: border-box; } " +
+        "img, picture { max-width: 100%; height: auto; } " +
+        ".inner-wrapper header h2 { font-size: 0.9375rem !important; } " +
+        ".page__content h1 { font-size: 1.125rem !important; } " +
+        ".page__content h2 { font-size: 1.125rem !important; } " +
+        ".page__content h3 { font-size: 0.75rem !important; } " +
+        ".page__content h4 { font-size: 0.5625rem !important; }";
 
       var PostPreview = createClass({
         render: function () {
           var entry = this.props.entry;
           return h(
             "div",
-            {className: "page"},
-            h(
-              "div",
-              {className: "page__header-wrapper"},
-              h("div", {className: "page__inner-wrapper"}, h("h1", null, "Blog"))
-            ),
+            null,
+            h("link", {rel: "stylesheet", href: "/css/style.css"}),
+            h("style", null, PREVIEW_CSS),
             h(
               "div",
               {className: "inner-wrapper"},
@@ -141,16 +162,6 @@
         },
       });
 
-      CMS.registerPreviewStyle(
-        "https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap"
-      );
-      CMS.registerPreviewStyle("/css/style.css");
-      CMS.registerPreviewStyle(
-        "body { max-width: 90ch; margin: 0 auto; padding: 2rem; font-family: 'Inter Tight', sans-serif !important; } " +
-          "h1, h2, h3, h4, h5, h6 { font-family: 'Inter Tight', sans-serif !important; } " +
-          "img, picture { max-width: 100%; height: auto; }",
-        {raw: true}
-      );
       CMS.registerPreviewTemplate("blog", PostPreview);
     </script>
     <script>
