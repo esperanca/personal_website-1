@@ -13,11 +13,6 @@ tags:
 ---
 Minha carteira de motorista venceu em 2021. Renovei da última vez em 2016. Na ocasião, morava em Brasília e estava me preparando para morar na Inglaterra. Achei importante levar uma carteira válida para evitar fadiga com a burocracia gringa.
 
-<figure>
-  <img src="/images/daniel-souza-cnh-2016.jpg" alt="Foto da carteira de motorista antiga de Daniel e da evidência do serviço." />
-  <figcaption>Foto da papelada e do Daniel, de 2016.</figcaption>
-</figure>
-
 Lembro bem da experiência detestável lá em Brasília:
 
 1) Ir no Detran do DF e pedir a transferência do prontuário de Belo Horizonte (minha primeira carteira era de Minas)
@@ -36,6 +31,12 @@ Com a volta para o Brasil no ano passado, ter a carteira válida se tornou neces
 Em novembro finalizei esse processo da nova carteira de identidade, mas a tarefa ficou parada até julho deste ano.
 
 Leili me lembrou de novo, e finalmente marquei uma nova visita ao Poupatempo. Dessa vez fui na Sé, o único lugar que tinha agendamento disponível em agosto. Demorou cerca de um mês, mas ontem estive lá e finalizei a epopeia.
+
+<figure>
+  <img src="/images/daniel-souza-cnh-2016.jpg" alt="Foto da carteira de motorista antiga de Daniel e da evidência do serviço." />
+  <figcaption>Foto da papelada e do Daniel, de 2016.</figcaption>
+</figure>
+
 
 No início, reclamei da demora. Marquei às 11h30, e só fui atendido às 12h15. Depois da longa espera, o primeiro atendimento fluiu e em exatos 96 minutos minha nova carteira de motorista estava disponível.
 
