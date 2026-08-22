@@ -4,7 +4,7 @@ title: "Notas #008 - Muitas vezes funciona"
 metaTitle: "Uma epopeia burocrática que deu certo: renovar a carteira de motorista"
 metaDesc: sobre renovar a carteira de motorista e o design de serviço público no Brasil
 date: 2026-08-22T14:00:00.000Z
-draft: true
+draft: false
 tags:
   - design de serviço
   - burocracia
