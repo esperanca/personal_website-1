@@ -1,9 +1,10 @@
 ---
 layout: layouts/post.njk
-title: "Notas #004"
+title: "Notas #004 - Sobre Carmy"
 metaTitle: A bancada está limpa
 metaDesc: "sobre manter a bancada limpa "
 date: 2026-01-01T22:04:43.390Z
+draft: false
 tags:
   - itau
   - designops
