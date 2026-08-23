@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-title: "Notas #008 - Renovando a carteira"
+title: "Notas #008 - Renovando"
 metaTitle: "Uma epopeia: renovar a carteira de motorista vencida"
 metaDesc: sobre renovar a carteira de motorista e o design de serviço público no Brasil
 date: 2026-08-22T14:00:00.000Z
@@ -11,22 +11,22 @@ tags:
   - gov.br
   - brasil
 ---
-A ultima vez que renovei minha carteira de motorista foi em 2016. Na ocasião, morava em Brasília e estava me preparando para morar na Inglaterra. Achei importante levar uma carteira válida para evitar fadiga com a burocracia gringa.
+## Aquele passeio no Detran
 
-Lembro bem da experiência detestável lá em Brasília:
+Me habilitei pela primeira vez em 98. Desde o primeiro momento sempre tive uma birra com Detran, e da ultima vez que renovei minha carteira de motorista,  em 2016, minha birra só aumentou. Na ocasião, morava em Brasília e estava me preparando para morar na Inglaterra. Achei importante levar uma carteira válida para evitar fadiga com a burocracia gringa. Lembro bem da experiência detestável lá no Detran de Brasília:
 
 1. Ir no Detran do DF e pedir a transferência do prontuário de Belo Horizonte (minha primeira carteira era de Minas)
-2. Esperar uns dias para o prontuário chegar via sistema
-3. Voltar no Detran, pedir a renovação agora no DF, coletar a biometria
-4. Pegar a guia e ir para a fila: pagar a taxa na agência do BRB
-5. Abrir o celular e agendar uma clínica para exame médico
-6. Fazer o exame e esperar alguns dias para receber a carteira pelo correio.
+2. Esperar algumas horas para o prontuário chegar via sistema
+3. Voltar no balcão, e pedir a renovação agora no DF.  Ir para fila para coletar a biometria
+4. Pegar a guia e ir para outra fila: pagar a taxa na agência do BRB
+5. Abrir o celular e agendar uma clínica para exame médico, em outro lugar 
+6. Fazer o exame na clínica e esperar alguns dias para receber a carteira pelo correio.
 
-O processo todo deve ter demorado uns 15 dias.
+O processo todo deve ter demorado uns 20 dias.
 
-Fiquei com isso na memória por muito tempo, e depois fiz questão de esquecer. Lá fora, usei a carteira de motorista internacional até 2021 quando parei de dirigir, a carteira venceu e eu não renovei. A carteira  de motorista junto da identidade na minha carteira era um lembrete da epopeia burocrática que eu estava evitando. Mas toda vez que viajávamos Leili me lembrava disso.
+Fiquei com esse momento ruim na memória por muito tempo. Lá fora, usei a carteira de motorista internacional até 2021 quando parei de dirigir. A carteira venceu e eu não renovei. A carteira  de motorista ficava no mesmo plastico da identidade. Era um lembrete da epopeia burocrática que eu estava evitando, que me assombrava toda vez que saia com minha carteira de documentos. E toda vez que viajávamos de férias Leili me lembrava disso.
 
-Com a nossa volta para o Brasil no ano passado, ter minha carteira de volta se tornou necessário. Procrastinei por meses. Para minha situação, em que o prontuário era de outro estado, só podia ser feito presencialmente. Em outubro do ano passado marquei minha primeira visita no Poupatempo. Cheguei lá com o agendamento, para descobrir que para fazer isso deveria antes tirar uma nova carteira de identidade: a CIN (Carteira de Identidade Nacional). Obviamente isso não estava explicado em lugar nenhum.
+Com a nossa volta para o Brasil no ano passado, ter minha carteira de volta se tornou necessário. Procrastinei por meses. Para minha situação, em que o prontuário era de outro estado, só podia ser feito presencialmente. Em outubro do ano passado, marquei minha primeira visita no Poupatempo. Cheguei lá com o agendamento, só para descobrir que para fazer isso deveria antes tirar uma nova carteira de identidade: a CIN (Carteira de Identidade Nacional). Obviamente isso não estava explicado em lugar nenhum.
 
 Em novembro finalizei esse processo da nova carteira de identidade, mas a tarefa ficou parada até julho deste ano.
 
@@ -37,7 +37,7 @@ Leili me lembrou de novo, e finalmente marquei uma nova visita ao Poupatempo. De
   <figcaption>Foto da papelada e do Daniel, de 2016.</figcaption>
 </figure>
 
-No início, reclamei da demora. Marquei às 11h30, e só fui atendido às 12h15. Depois da longa espera, o primeiro atendimento fluiu e em exatos 96 minutos minha nova carteira de motorista estava disponível no formato digital.
+Cheguei lá e ja no início, reclamei da demora. Marquei às 11h30, e só fui atendido às 12h15. Depois da longa espera, o primeiro atendimento fluiu e em exatos 96 minutos minha nova carteira de motorista estava disponível no formato digital.
 
 O que mudou neste processo, desde a última renovação:
 
