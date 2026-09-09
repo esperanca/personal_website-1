@@ -19,6 +19,10 @@ Gente reclamando da qualidade dos textos, documentos, apresentações e até men
 
 Uma pessoa próxima inclusive relatou, contrariada, ter recebido slop de alguém muito próximo a ela. E contou que a sensação é que, quando algo feito por IA é enviado sem passar por revisão, isso diminui o valor da informação. E às vezes ela começa a questionar até a importância da relação.
 
+<figure>
+  <img src="/images/meat-proxy.png" alt="Definição de 'Meat Proxy': uma pessoa que encaminha texto, código ou outro conteúdo gerado por IA sem ler, entender ou validar. A pessoa age apenas como intermediária entre o sistema de IA e o destinatário pretendido." />
+</figure>
+
 Recentemente li um texto sobre isso da Sophie Alpert. Ela cansou de receber documentos imensos, mas vazios. E resolveu escrever um documento de boas práticas e compartilhar com o time dela.
 
 Curiosamente, o texto não viralizou. Mas aqui vai minha tradução livre para o português:
