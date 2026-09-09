@@ -1,0 +1,50 @@
+---
+layout: layouts/post.njk
+title: "Notas #009 - Slop"
+metaTitle: "Slop: quando a IA escreve por você"
+metaDesc: sobre receber textos vazios, escritos por IA sem revisão, e o que isso custa a uma relação
+date: 2026-09-09T15:00:00.000Z
+draft: false
+tags:
+  - ia
+  - escrita
+  - confiança
+  - slop
+---
+Você presta atenção na forma como as pessoas escrevem?
+
+Nos dias de hoje uma questão tem aparecido com frequência em conversas com amigos e colegas de trabalho.
+
+Gente reclamando da qualidade dos textos, documentos, apresentações e até mensagens de WhatsApp recebidas de outras pessoas. O termo usado é slop, que numa tradução livre poderia ser "conteúdo gerado por IA que tem pouca substância".
+
+Uma pessoa próxima inclusive relatou, contrariada, ter recebido slop de alguém muito próximo a ela. E contou que a sensação é que, quando algo feito por IA é enviado sem passar por revisão, isso diminui o valor da informação. E às vezes ela começa a questionar até a importância da relação.
+
+Recentemente li um texto sobre isso da Sophie Alpert. Ela cansou de receber documentos imensos, mas vazios. E resolveu escrever um documento de boas práticas e compartilhar com o time dela.
+
+Curiosamente, o texto não viralizou. Mas aqui vai minha tradução livre para o português:
+
+1. Você é responsável por cada ideia e cada frase
+
+Você é responsável por tudo que escreve. Antes de compartilhar, tenha certeza de que o texto representa de verdade o que você pensa. Parecer correto não é estar correto.
+
+2. Escrever é pensar
+
+Quanto mais tempo você dedica ao processo de escrita, mais aprende sobre o tema. Se pula essa etapa, você geralmente sai do outro lado com compreensão menor. A página em branco é uma ferramenta de pensamento, não é apenas um "entregável".
+
+3. Invista mais tempo escrevendo do que o leitor vai gastar lendo
+
+Se você gera um documento longo a partir de um prompt curto e depois pede ao leitor que leia tudo aquilo, está desperdiçando tempo de quem confia em você. Qualquer pessoa pode pedir ao ChatGPT para fazer a mesma coisa. (Aliás, é provável que ela vai usar IA para fazer um resumo, e isso provavelmente vai enfraquecer a ideia.)
+
+4. Mais longo não é melhor
+
+IA torna fácil gerar páginas inteiras. Preenche os vazios com frases que não dizem nada. Se está transformando um prompt em um documento extenso, considere só compartilhar o prompt mesmo.
+
+É bem difícil imaginar regras para este mundo que muda tão rápido. Mas gostei destes princípios. Tenho a impressão de que essa é a versão moderna do "e-mail etiquette".
+
+A escrita para mim é uma ponte. E também um ato de confiança assimétrico. Quando você escreve para alguém, não sabe como pode ser interpretado. Aliás, você nem sabe se vai ser lido. Mas escrever é ter o cuidado de entregar clareza, estrutura. E de abrir um espaço para conversa.
+
+Será que no futuro um texto escrito "organicamente" vai ter mais valor?
+
+Veremos.
+
+ps: faz parte do meu trabalho desenhar experiências com IA, mas essa é uma opinião pessoal e não tem nenhuma relação com o meu trabalho ou com meu empregador atual.
