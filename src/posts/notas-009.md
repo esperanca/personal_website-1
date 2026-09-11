@@ -27,19 +27,19 @@ Recentemente li um texto sobre isso da Sophie Alpert. Ela cansou de receber docu
 
 Curiosamente, o texto não viralizou. Mas aqui vai minha tradução livre para o português:
 
-1. Você é responsável por cada ideia e cada frase
+## Você é responsável por cada ideia e cada frase
 
 Você é responsável por tudo que escreve. Antes de compartilhar, tenha certeza de que o texto representa de verdade o que você pensa. Parecer correto não é estar correto.
 
-2. Escrever é pensar
+## Escrever é pensar
 
 Quanto mais tempo você dedica ao processo de escrita, mais aprende sobre o tema. Se pula essa etapa, você geralmente sai do outro lado com compreensão menor. A página em branco é uma ferramenta de pensamento, não é apenas um "entregável".
 
-3. Invista mais tempo escrevendo do que o leitor vai gastar lendo
+## Invista mais tempo escrevendo do que o leitor vai gastar lendo
 
 Se você gera um documento longo a partir de um prompt curto e depois pede ao leitor que leia tudo aquilo, está desperdiçando tempo de quem confia em você. Qualquer pessoa pode pedir ao ChatGPT para fazer a mesma coisa. (Aliás, é provável que ela vai usar IA para fazer um resumo, e isso provavelmente vai enfraquecer a ideia.)
 
-4. Mais longo não é melhor
+## Mais longo não é melhor
 
 IA torna fácil gerar páginas inteiras. Preenche os vazios com frases que não dizem nada. Se está transformando um prompt em um documento extenso, considere só compartilhar o prompt mesmo.
 
