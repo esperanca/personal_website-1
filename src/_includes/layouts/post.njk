@@ -1,5 +1,48 @@
 {% extends 'layouts/page.njk' %}
 
+{% block head %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ title }}",
+  "description": "{{ metaDesc }}",
+  "datePublished": "{{ date | w3DateFilter }}",
+  "author": {
+    "@type": "Person",
+    "name": "Daniel Souza"
+  },
+  "url": "https://danielsouza.com{{ page.url }}"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://danielsouza.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://danielsouza.com/archive/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ title }}",
+      "item": "https://danielsouza.com{{ page.url }}"
+    }
+  ]
+}
+</script>
+{% endblock %}
+
 {% block content %}
   <main id="main-content" tabindex="-1" class="page" >
     <div class="page__header-wrapper">

@@ -2,6 +2,7 @@
 layout: layouts/page.njk
 title: Work
 permalink: /work/index.html
+metaDesc: 'Portfólio e case studies de projetos de design, UX e arquitetura de informação de Daniel Souza.'
 ---
 Currently migrating case studies content from my previous website. \
 \

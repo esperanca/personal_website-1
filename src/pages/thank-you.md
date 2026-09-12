@@ -1,6 +1,7 @@
 ---
 title: 'Obrigado'
 permalink: '/thank-you/index.html'
+metaDesc: 'Obrigado! Mensagem recebida. Daniel Souza responderá seu e-mail em breve.'
 ---
 
 Obrigado!
