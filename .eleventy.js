@@ -79,6 +79,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/desafio-filosofia-educacao.html');
   eleventyConfig.addPassthroughCopy('src/estudo/filosofia');
   eleventyConfig.addPassthroughCopy({'src/_includes/css/style.css': 'css/style.css'});
+  eleventyConfig.addPassthroughCopy({'src/rootfiles/_redirects': '_redirects'});
+  eleventyConfig.addPassthroughCopy({'src/rootfiles/_headers': '_headers'});
 
   const now = new Date();
 
