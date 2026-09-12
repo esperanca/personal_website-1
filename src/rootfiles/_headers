@@ -17,9 +17,6 @@
 /guia-de-estilo/*
   X-Robots-Tag: noindex, nofollow, noarchive
 
-/pages/*
-  X-Robots-Tag: noindex, nofollow, noarchive
-
 /research/*
   X-Robots-Tag: noindex, nofollow, noarchive
 
@@ -27,9 +24,6 @@
   X-Robots-Tag: noindex, nofollow, noarchive
 
 /thank-you/*
-  X-Robots-Tag: noindex, nofollow, noarchive
-
-/work/*
   X-Robots-Tag: noindex, nofollow, noarchive
 
 /404.html
