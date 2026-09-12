@@ -1,7 +1,7 @@
 ---
 layout: home
 metaTitle: Daniel Souza -  Arquiteto de Informação e Pesquisador de UX
-metaDesc: Equilibrando criatividade e pragmatismo, ajudo equipes multidisciplinares a criar serviços e experiências excelentes.
+metaDesc: Equilibrando criatividade e pragmatismo, ajudo equipes multidisciplinares a criar serviços e experiências excelentes. Daniel Souza - Arquiteto de Informação.
 introImage: images/intro-image.png
 ---
 

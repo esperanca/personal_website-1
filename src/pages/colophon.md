@@ -2,7 +2,7 @@
 layout: layouts/page.njk
 title: Créditos
 permalink: /colophon/index.html
-metaDesc: 'Créditos e tecnologias usadas para criar danielsouza.com. Design, desenvolvimento e ferramentas.'
+metaDesc: 'Transparência sobre o site: tecnologias, pessoas que ajudaram e processo criativo. Veja o guia de estilo e detalhes técnicos.'
 socialImage: ""
 ---
 
