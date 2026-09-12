@@ -15,7 +15,7 @@ Você presta atenção na forma como as pessoas escrevem?
 
 Uma questão tem aparecido com frequência em conversas com amigos e colegas de trabalho.
 
-Gente reclamando da qualidade dos textos, documentos, apresentações e até mensagens de WhatsApp. O termo usado é _slop_[^1]: numa tradução livre, "conteúdo gerado por IA com pouca substância".
+Gente reclamando da qualidade dos textos, documentos, apresentações e até mensagens de WhatsApp. O termo usado é _slop_: numa tradução livre, "conteúdo gerado por IA com pouca substância".
 
 Uma pessoa próxima relatou, contrariada, ter recebido _slop_ de alguém muito próximo a ela. E contou que, quando algo feito por IA chega sem revisão, sente que a informação perde valor. Às vezes, isso a faz questionar até a importância da relação.
 
@@ -54,5 +54,3 @@ Será que no futuro um texto escrito "organicamente" vai ter mais valor?
 Veremos.
 
 ps: essa é uma opinião pessoal e não tem nenhuma relação com o meu trabalho ou com meu empregador atual.
-
-[^1]: SHAIB, Chantal; CHAKRABARTY, Tuhin; GARCIA-OLANO, Diego; WALLACE, Byron C. _Measuring AI “Slop” in Text_. arXiv:2509.19163v2, 24 jan. 2026. Disponível em: <https://doi.org/10.48550/arXiv.2509.19163>.
