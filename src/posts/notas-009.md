@@ -13,17 +13,17 @@ tags:
 ---
 Você presta atenção na forma como as pessoas escrevem?
 
-Nos dias de hoje uma questão tem aparecido com frequência em conversas com amigos e colegas de trabalho.
+Uma questão tem aparecido com frequência em conversas com amigos e colegas de trabalho.
 
-Gente reclamando da qualidade dos textos, documentos, apresentações e até mensagens de WhatsApp recebidas de outras pessoas. O termo usado é slop, que numa tradução livre poderia ser "conteúdo gerado por IA que tem pouca substância".
+Gente reclamando da qualidade dos textos, documentos, apresentações e até mensagens de WhatsApp. O termo usado é _slop_[^1]: numa tradução livre, "conteúdo gerado por IA com pouca substância".
 
-Uma pessoa próxima inclusive relatou, contrariada, ter recebido slop de alguém muito próximo a ela. E contou que a sensação é que, quando algo feito por IA é enviado sem passar por revisão, isso diminui o valor da informação. E às vezes ela começa a questionar até a importância da relação.
+Uma pessoa próxima relatou, contrariada, ter recebido _slop_ de alguém muito próximo a ela. E contou que, quando algo feito por IA chega sem revisão, sente que a informação perde valor. Às vezes, isso a faz questionar até a importância da relação.
 
 <figure>
   <img src="/images/meat-proxy.png" alt="Definição de 'Meat Proxy': uma pessoa que encaminha texto, código ou outro conteúdo gerado por IA sem ler, entender ou validar. A pessoa age apenas como intermediária entre o sistema de IA e o destinatário pretendido." />
 </figure>
 
-Recentemente li um texto sobre isso da Sophie Alpert. Ela cansou de receber documentos imensos, mas vazios. E resolveu escrever um documento de boas práticas e compartilhar com o time dela.
+Recentemente li um texto da Sophie Alpert sobre isso. Ela cansou de receber documentos imensos, mas vazios. E escreveu um guia de boas práticas para o time dela.
 
 Curiosamente, o texto não viralizou. Mas aqui vai minha tradução livre para o português:
 
@@ -33,7 +33,7 @@ Você é responsável por tudo que escreve. Antes de compartilhar, tenha certeza
 
 ## Escrever é pensar
 
-Quanto mais tempo você dedica ao processo de escrita, mais aprende sobre o tema. Se pula essa etapa, você geralmente sai do outro lado com compreensão menor. A página em branco é uma ferramenta de pensamento, não é apenas um "entregável".
+Quanto mais tempo você dedica à escrita, mais aprende sobre o tema. Se pula essa etapa, sai do outro lado entendendo menos. A página em branco é uma ferramenta de pensamento, não apenas um "entregável".
 
 ## Invista mais tempo escrevendo do que o leitor vai gastar lendo
 
@@ -43,6 +43,8 @@ Se você gera um documento longo a partir de um prompt curto e depois pede ao le
 
 IA torna fácil gerar páginas inteiras. Preenche os vazios com frases que não dizem nada. Se está transformando um prompt em um documento extenso, considere só compartilhar o prompt mesmo.
 
+---
+
 É bem difícil imaginar regras para este mundo que muda tão rápido. Mas gostei destes princípios. Tenho a impressão de que essa é a versão moderna do "e-mail etiquette".
 
 A escrita para mim é uma ponte. E também um ato de confiança assimétrico. Quando você escreve para alguém, não sabe como pode ser interpretado. Aliás, você nem sabe se vai ser lido. Mas escrever é ter o cuidado de entregar clareza, estrutura. E de abrir um espaço para conversa.
@@ -51,4 +53,6 @@ Será que no futuro um texto escrito "organicamente" vai ter mais valor?
 
 Veremos.
 
-ps: faz parte do meu trabalho desenhar experiências com IA, mas essa é uma opinião pessoal e não tem nenhuma relação com o meu trabalho ou com meu empregador atual.
+ps: essa é uma opinião pessoal e não tem nenhuma relação com o meu trabalho ou com meu empregador atual.
+
+[^1]: SHAIB, Chantal; CHAKRABARTY, Tuhin; GARCIA-OLANO, Diego; WALLACE, Byron C. _Measuring AI “Slop” in Text_. arXiv:2509.19163v2, 24 jan. 2026. Disponível em: <https://doi.org/10.48550/arXiv.2509.19163>.
