@@ -1,2 +1,39 @@
+# Conteúdo auxiliar: não indexar em mecanismos de busca.
+/admin/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+/cursos/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+/desafio-filosofia-educacao/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+/desafio-filosofia-educacao.html
+  X-Robots-Tag: noindex, nofollow, noarchive
+
 /estudo/*
   X-Robots-Tag: noindex, nofollow, noarchive
+
+/guia-de-estilo/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+/pages/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+/research/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+/success/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+/thank-you/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+/work/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+/404.html
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+/feed.xml
+  X-Robots-Tag: noindex, noarchive

@@ -2,17 +2,17 @@
   "items": [
     {
       "text": "sobre",
-      "url": "/sobre",
+      "url": "/sobre/",
       "external": false
     },
     {
       "text": "blog",
-      "url": "/archive",
+      "url": "/archive/",
       "external": false
     },
     {
       "text": "contato",
-      "url": "/contato",
+      "url": "/contato/",
       "external": false
     }
   ]
