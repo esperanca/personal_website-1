@@ -6,7 +6,7 @@ collection: "Capítulo"
 version: ""
 date: 2026-09-15T22:42:17-03:00
 contact: "danieliscoding@gmail.com"
-preface: "15 de setembro de 2026 · 22:42 · @danielsouza"
+preface: "@danielsouza"
 permalink: /cases/livro/transparencia-da-operacao/
 eleventyExcludeFromCollections: false
 ---
