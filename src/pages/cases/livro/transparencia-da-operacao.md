@@ -4,9 +4,9 @@ title: "Transparência"
 subtitle: "Os seis objetos que tornam legível o que está acontecendo"
 collection: "Capítulo"
 version: ""
-date: 2026-09-16
+date: 2026-09-15T21:00:00-03:00
 contact: "danieliscoding@gmail.com"
-preface: "@danielsouza"
+preface: "15 de setembro de 2026 · 21:00 · @danielsouza"
 permalink: /cases/livro/transparencia-da-operacao/
 eleventyExcludeFromCollections: false
 ---
