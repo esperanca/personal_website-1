@@ -33,7 +33,7 @@ Em novembro finalizei esse processo da nova carteira de identidade, mas a tarefa
 Leili me lembrou de novo, e finalmente marquei uma nova visita ao Poupatempo. Dessa vez fui na Sé, o único lugar que tinha agendamento disponível em agosto. Demorou cerca de um mês, mas esta semana estive lá e finalizei a epopeia.
 
 <figure>
-  <img src="/images/daniel-souza-cnh-2016.jpg" alt="Foto da carteira de motorista antiga de Daniel e da evidência do serviço." />
+  <img src="/images/daniel-souza-cnh-2016.jpg" alt="Foto da carteira de motorista antiga de Daniel e da evidência do serviço." loading="lazy" />
   <figcaption>Foto da papelada e do Daniel, de 2016.</figcaption>
 </figure>
 

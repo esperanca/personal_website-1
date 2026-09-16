@@ -11,15 +11,26 @@
   {% set pageDesc = metaDesc %}
 {% endif %}
 
+{% set socialImagePath = socialImage %}
+{% if not socialImagePath %}
+  {% set socialImagePath = '/images/social-share.jpg' %}
+{% endif %}
+{% if socialImagePath.indexOf('http') !== 0 %}
+  {% set socialImageUrl = site.url + socialImagePath %}
+{% else %}
+  {% set socialImageUrl = socialImagePath %}
+{% endif %}
+
 <title>{{ pageTitle }}</title>
 <meta name="google-site-verification" content="jkCqjD_qbLVJtqPPo3xaLrtO5L-lKv7bGH05VQ9-zeI" />
 <link rel="canonical" href="{{ currentUrl }}" />
 
 <meta property="og:site_name" content="{{ siteTitle }}" />
 <meta property="og:title" content="{{ pageTitle }}" />
-<meta property="og:type" content="website" />
+<meta property="og:type" content="{% if layout == 'layouts/post.njk' %}article{% else %}website{% endif %}" />
 <meta property="og:url" content="{{ currentUrl }}" />
 
+<meta name="twitter:card" content="summary_large_image" />
 {% if site.authorHandle %}
   <meta name="twitter:creator" content="@{{ site.authorHandle | replace('@', '') }}" />
 {% endif %}
@@ -30,12 +41,10 @@
   <meta property="og:description" content="{{ metaDesc }}" />
 {% endif %}
 
-{% if socialImage %}  
-  <meta property="og:image" content="{{ socialImage }}" />
-  <meta name="twitter:image" content="{{ socialImage }}" />
-  <meta property="og:image:alt" content="Page image for {{ site.name }}" />
-  <meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
-{% endif %}
+<meta property="og:image" content="{{ socialImageUrl }}" />
+<meta name="twitter:image" content="{{ socialImageUrl }}" />
+<meta property="og:image:alt" content="Page image for {{ site.name }}" />
+<meta name="twitter:image:alt" content="Page image for {{ site.name }}" />
 
 {% if site.paymentPointer %}
   <meta name="monetization" content="{{ site.paymentPointer }}" />

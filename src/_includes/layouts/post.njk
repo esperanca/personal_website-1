@@ -1,60 +1,38 @@
 {% extends 'layouts/page.njk' %}
 
 {% block head %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "{{ title }}",
-  "description": "{{ metaDesc }}",
-  "datePublished": "{{ date | w3DateFilter }}",
-  "author": {
-    "@type": "Person",
-    "name": "Daniel Souza"
-  },
-  "url": "https://danielsouza.com{{ page.url }}"
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  <script type="application/ld+json">
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://danielsouza.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Blog",
-      "item": "https://danielsouza.com/archive/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "{{ title }}",
-      "item": "https://danielsouza.com{{ page.url }}"
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": {{ title | dump | safe }},
+      "description": {{ metaDesc | dump | safe }},
+      "image": "{{ site.url }}{{ socialImage or '/images/social-share.jpg' }}",
+      "datePublished": "{{ date | w3DateFilter }}",
+      "author": {
+        "@type": "Person",
+        "name": {{ site.authorName | dump | safe }}
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": {{ site.authorName | dump | safe }}
+      }
     }
-  ]
-}
-</script>
+  </script>
 {% endblock %}
 
 {% block content %}
   <main id="main-content" tabindex="-1" class="page" >
     <div class="page__header-wrapper">
       <div class="page__inner-wrapper">
-        <h1>Blog</h1>
+        <p class="page__kicker"><a href="/archive">Blog</a></p>
       </div>
     </div>
 
     <div>
       <div class="inner-wrapper">
         <header>
-          <h2>{{title}}</h2>
+          <h1>{{title}}</h1>
 
           <p class="meta-info">
             {% if date %}
@@ -75,7 +53,7 @@
               <ul class="nav__list">
                 {% for item in tags %}
                   <li class="nav__item">
-                    <a href="/tags/{{ item }}/">{{ item }}</a>
+                    <a href="/tags/{{ item }}">{{ item }}</a>
                   </li>
                 {% endfor %}
               </ul>
@@ -86,5 +64,3 @@
     </div>
   </main>
 {% endblock %}
-
-{{ content | safe }}

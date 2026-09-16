@@ -76,7 +76,7 @@ What the interface shows is the conversation. What's sometimes not transparent i
 
 [^1]: It is the ability to think through design. The designer puts a hypothesis into the world (a sketch, a prototype, a journey) and uses that provisional form to learn, discuss, decide, and transform one's own understanding of the problem.
 
-[^2]: Wicked problems are complex, ambiguous, and socially situated problems that have no definitive formulation or final solution. Each attempt to solve them changes one's own understanding of the problem. The term was coined by **Horst W. J. Rittel** and **Melvin M. Webber** in the article **"Dilemmas in a General Theory of Planning"** (2025).
+[^2]: Wicked problems are complex, ambiguous, and socially situated problems that have no definitive formulation or final solution. Each attempt to solve them changes one's own understanding of the problem. The term was coined by **Horst W. J. Rittel** and **Melvin M. Webber** in the article **"Dilemmas in a General Theory of Planning"** (1973).
 
 [^3]: A vibe coder is someone who uses AI to transform an idea or goal into software, guiding the process through prompts, adjustments, tests, and feedback, without necessarily controlling every technical detail of the code produced.
 

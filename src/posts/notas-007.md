@@ -59,7 +59,7 @@ A história costuma creditar o BDD a North, e ele mesmo insiste que não foi uma
 Matts levou a ideia adiante em duas direções que interessam a este texto. A primeira é o Feature Injection,<sup id="ref-4">[[4]](#4)</sup> depois rebatizado de Value Mapping: em vez de acumular um backlog e priorizá-lo contra objetivos, parte-se do valor de negócio e caminha-se do resultado para a entrada, identificando ao final os exemplos que descrevem o escopo. A segunda é _Real Options_,<sup id="ref-5">[[5]](#5)</sup> uma transposição do raciocínio de risco financeiro para decisões de projeto: opções têm valor, opções expiram, não se compromete cedo sem saber exatamente o motivo, e o valor de uma opção cresce junto com a incerteza.
 
 <figure>
-  <img src="/images/daniel-souza-chris-matts.jpeg" alt="Daniel Souza e Chris Matts sorrindo em uma selfie de escritório." />
+  <img src="/images/daniel-souza-chris-matts.jpeg" alt="Daniel Souza e Chris Matts sorrindo em uma selfie de escritório." loading="lazy" />
   <figcaption>Com Chris Matts, no Lloyds Banking Group, em 2017.</figcaption>
 </figure>
 
