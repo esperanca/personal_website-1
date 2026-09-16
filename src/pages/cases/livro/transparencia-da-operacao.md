@@ -1,7 +1,7 @@
 ---
 layout: livro
 title: "Transparência"
-subtitle: "Os 6 objetos que tornam legível o que está acontecendo"
+subtitle: "Os seis objetos que tornam legível o que está acontecendo"
 collection: "Capítulo"
 version: ""
 date: 2026-09-16
