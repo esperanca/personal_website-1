@@ -3,19 +3,19 @@ layout: livro
 title: "Transparência"
 subtitle: "Os 6 objetos que tornam legível o que está acontecendo"
 collection: "Capítulo"
-version: "v1-base"
+version: ""
 date: 2026-09-16
 contact: "danieliscoding@gmail.com"
 preface: "@danielsouza"
-permalink: /cases/livro/transparencia-v1-base/
-eleventyExcludeFromCollections: true
+permalink: /cases/livro/transparencia-da-operacao/
+eleventyExcludeFromCollections: false
 ---
 
 Transparência é o grau em que a interface torna legível o que está acontecendo. Que sistema é este? O que pode fazer? Que informações usa? Quem mantém o controle?
 
 O foco aqui é transparência da operação: o que o sistema mostra enquanto interpreta, recomenda e age. Não é sobre abrir completamente o modelo. É sobre o que fica visível no momento da interação.
 
-Transparência não é um absoluto. Existem formas diferentes de transparencia e mostrar informação não é suficiente. Uma interface pode publicar dados técnicos, logs e percentuais e continuar opaca para quem precisa decidir algo. 
+Transparência não é um absoluto. Existem formas diferentes de transparência[^1] e mostrar informação não é suficiente. Uma interface pode publicar dados técnicos, logs e percentuais e continuar opaca para quem precisa decidir algo.
 
 Transparência é uma relação entre **acesso**, **contexto** e **poder de ação**. Exige quatro perguntas:
 
@@ -65,7 +65,7 @@ A identidade revela três aspectos:
 3. **Relação com você**  
    Está ajudando a decidir, participando ou agindo em seu nome?
 
-Um nome ou visual não basta. A mesma IA pode responder em um momento e preparar uma ação no seguinte. A pergunta útil é: 
+Um nome ou visual não basta. A mesma IA pode responder em um momento e preparar uma ação no seguinte. A pergunta útil é:
 
 > Que sistema é este, o que pode fazer e quem está no controle?
 
@@ -175,6 +175,12 @@ Os seis objetos que mapeamos aqui — identidade, capacidade e limites, contexto
 Sem transparência da operação, não há como explicar. Sem explicação, não há como verificar. Sem verificação, não há como compreender de verdade.
 
 Cada critério que vem depois depende deste que você acabou de ler. Os próximos capítulos constroem sobre essa base.
+
+---
+
+## Referências
+
+[^1]: Kathleen Creel distingue transparência do algoritmo, de sua implementação em código e de sua execução concreta. Jenna Burrell descreve opacidades produzidas por segredo deliberado, falta de conhecimento técnico e pela própria escala e complexidade dos sistemas de aprendizado de máquina.
 
 ---
 
