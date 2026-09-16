@@ -47,6 +47,5 @@ permalink: /cases/livro/
 
 ## Notas e links complementares
 
-- [Transparência](/cases/livro/transparencia-da-operacao/) — os 6 objetos que tornam legível o que está acontecendo em sistemas generativos e agênticos.
 - [Memória semântica, episódica e procedural no financiamento imobiliário](/cases/livro/tipos-de-memoria/) — conceito de apoio sobre os três tipos de memória usados para desenhar continuidade entre canais.
 - [5 Princípios de HCI Fundamentados em Pesquisa](/cases/livro/principios-hci-memoria/) — memória de trabalho, affordances, carga cognitiva, heurísticas de usabilidade e cognição distribuída, com referências originais e brasileiras.
