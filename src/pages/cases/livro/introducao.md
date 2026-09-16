@@ -7,6 +7,7 @@ version: ""
 date: 2026-09-16
 contact: "danieliscoding@gmail.com"
 preface: "@danielsouza"
+image: "/images/social-share.jpg"
 permalink: /cases/livro/introducao/
 eleventyExcludeFromCollections: false
 ---

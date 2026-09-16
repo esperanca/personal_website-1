@@ -7,6 +7,7 @@ version: ""
 date: 2026-09-15T22:42:17-03:00
 contact: "danieliscoding@gmail.com"
 preface: "@danielsouza"
+image: "/images/social-share.jpg"
 permalink: /cases/livro/transparencia-da-operacao/
 eleventyExcludeFromCollections: false
 ---
