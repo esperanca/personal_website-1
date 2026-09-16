@@ -4,14 +4,14 @@ title: "Transparência"
 subtitle: "Os seis objetos que tornam legível o que está acontecendo"
 collection: "Capítulo"
 version: ""
-date: 2026-09-15T21:00:00-03:00
+date: 2026-09-15T22:42:17-03:00
 contact: "danieliscoding@gmail.com"
-preface: "15 de setembro de 2026 · 21:00 · @danielsouza"
+preface: "15 de setembro de 2026 · 22:42 · @danielsouza"
 permalink: /cases/livro/transparencia-da-operacao/
 eleventyExcludeFromCollections: false
 ---
 
-Transparência é o grau em que a interface torna legível o que está acontecendo. Que sistema é este? O que pode fazer? Que informações usa? Quem mantém o controle?
+Transparência é o grau em que a interface torna legível o que está acontecendo.
 
 O foco aqui é transparência da operação: o que o sistema mostra enquanto interpreta, recomenda e age. Não é sobre abrir completamente o modelo. É sobre o que fica visível no momento da interação.
 
