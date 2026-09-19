@@ -123,3 +123,29 @@ Não precisa de equipamento sofisticado. Não precisa de métricas técnicas. Vo
 Quando você sabe o que procurar, a regra fica visível. E agora que você sabe o que Grice mapeou, pode usá-lo como ferramenta: tanto para entender por que uma conversa falhou quanto para melhorar conversas que ainda estão sendo desenha.
 
 A skill [**GRIQ-5 Conversation Eval**](https://github.com/esperanca/my-skills/blob/main/GRIQ5_SKILL.md) formaliza exatamente isso. Ela te ensina a avaliar Relação e Qualidade em conversas reais de forma estruturada, o suficiente para que você possa fazer avaliações confiáveis e compará-las com avaliações automáticas. Porque quando humanos e máquinas falam a mesma linguagem — a linguagem de Grice — eles finalmente conseguem colaborar pra melhorar conversas que funcionam.
+
+---
+
+## Notas para Exploração Futura
+
+Este artigo levanta várias questões que merecem desenvolvimento em futuros trabalhos:
+
+### Calibração Humana e Usabilidade
+- Por que Relação e Qualidade são mais naturais de julgar do que Quantidade e Maneira?
+- Como o processo de calibração (humano ajustando métricas automáticas) muda quando se usa conceitos pragmáticos vs. técnicos?
+- Qual é o esforço cognitivo real para uma pessoa avaliar "Essa resposta é relevante?" vs. "Essa resposta tem estrutura clara?"
+
+### Divisão de Trabalho: Humano-Máquina
+- Máquinas dominam métricas técnicas (Quantidade, Maneira, Transparência) porque são escaláveis.
+- Humanos dominam julgamento pragmático (Relação, Qualidade) porque requerem contextualização.
+- Como isso muda em sistemas reais onde humanos precisam calibrar avaliação automática?
+
+### Terminologia Pragmática
+- "Relação" é intuitivo, ou seria melhor "Relevância"?
+- "Qualidade" é claro, ou "Verificabilidade/Confiabilidade" é mais preciso?
+- Como a escolha de termos afeta a usabilidade do processo de calibração?
+
+### Próximas Dimensões de Grice
+- Quantidade e Maneira precisam de calibração empírica similar?
+- Benevolência (ética) e Transparência (governança) entram em que fase do processo?
+- Como integrar essas dimensões sem sobrecarregar o avaliador humano?
