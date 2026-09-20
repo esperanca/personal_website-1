@@ -6,11 +6,12 @@ const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 const markdownFootnoteSidenotes = require('./src/plugins/markdown-footnote-sidenotes');
 const markdownHeadingCustomId = require('./src/plugins/markdown-heading-custom-id');
+const markdownFigureWrapper = require('./src/plugins/markdown-figure-wrapper');
 const {DateTime} = require('luxon');
 
 const markdownLibrary = markdownIt({
   html: true,
-}).use(markdownFootnoteSidenotes).use(markdownHeadingCustomId).use(markdownItAnchor, {
+}).use(markdownFootnoteSidenotes).use(markdownHeadingCustomId).use(markdownFigureWrapper).use(markdownItAnchor, {
   permalink: true,
   permalinkClass: 'tdbc-anchor',
   permalinkSymbol: `

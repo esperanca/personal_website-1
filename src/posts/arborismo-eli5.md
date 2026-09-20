@@ -5,6 +5,7 @@ metaTitle: "O que é arborismo? (explicado para uma criança)"
 metaDesc: "Conceito de arborismo em educação e conhecimento. Por que Silvio Gallo critica a metáfora da árvore."
 date: 2026-09-18T23:00:00.000Z
 draft: true
+permalink: false
 tags:
   - educação
   - filosofia
