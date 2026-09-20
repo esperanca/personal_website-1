@@ -3,6 +3,7 @@ layout: layouts/post.njk
 title: "Notas #009 - Slop"
 metaTitle: "Slop: quando a IA escreve por você"
 metaDesc: sobre receber textos vazios, escritos por IA sem revisão, e o que isso custa a uma relação
+socialImage: "/images/social-share-1200x630-a.jpg"
 date: 2026-09-09T15:00:00.000Z
 draft: false
 tags:

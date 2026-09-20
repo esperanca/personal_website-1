@@ -4,6 +4,9 @@ title: Sobre
 permalink: /sobre/index.html
 metaDesc: 'Executivos e líderes de design me contratam para escalar equipes de design e pesquisa ou liderar iniciativas de alto risco.'
 socialImage: "/images/daniel-photo-profile-color.jpg"
+socialImageWidth: 1600
+socialImageHeight: 1600
+socialImageAlt: "Foto de Daniel Souza - um homem pardo, de barba média, usando óculos."
 ---
 Executivos e líderes de design me contratam quando precisam escalar suas equipes de design e pesquisa. Ou quando uma iniciativa de alto risco exige um líder de design com atuação prática, visão de negócios e capacidade de direcionar e integrar diversas disciplinas. 
 

@@ -3,6 +3,9 @@ layout: layouts/page.njk
 title: DNA Design System
 permalink: /about/cases/babylon.html
 socialImage: "/images/dna-babylon.png"
+socialImageWidth: 1344
+socialImageHeight: 756
+socialImageAlt: "Latest iteration of DNA"
 ---
 ![Latest iteration of DNA](/images/dna-babylon.png "A Latest iteration of DNA")
 
