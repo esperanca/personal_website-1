@@ -4,7 +4,7 @@ title: "As Múltiplas Dimensões do Aprender"
 metaTitle: "Silvio Gallo - As Múltiplas Dimensões do Aprender (2012)"
 metaDesc: "Artigo completo de Silvio Gallo sobre aprendizagem, signos e heterogeneidade em Deleuze. Apresentado no Congresso de Educação Básica: Aprendizagem e Currículo, 2, Florianópolis, 2012."
 date: 2026-09-18T23:15:00.000Z
-draft: false
+draft: true
 tags:
   - deleuze
   - educação
