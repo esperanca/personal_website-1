@@ -2,6 +2,8 @@
 title: "When Data Is Clean: Semantic Failures and Grice's Maxims in Agent Evaluation"
 description: "How to evaluate agent responses after your tool layer guarantees data integrity. A framework for catching semantic failures through Grice's conversational maxims, deterministic checks, and calibrated human judgment."
 date: 2026-09-21
+draft: true
+permalink: false
 tags: ["evaluation", "agents", "ai-quality", "grice", "design"]
 status: "[awaiting human review]"
 lang: "en"

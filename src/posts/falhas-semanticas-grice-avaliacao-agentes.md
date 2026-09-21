@@ -2,6 +2,8 @@
 title: "Falhas Semânticas e as Máximas de Grice em Avaliação de Agentes"
 description: "Como avaliar respostas de agentes após sua camada de ferramentas garantir integridade de dados. Um framework para capturar falhas semânticas através das máximas conversacionais de Grice, verificações determinísticas e calibração humana."
 date: 2026-09-21
+draft: true
+permalink: false
 tags: ["evaluation", "agents", "ai-quality", "grice", "design", "verificabilidade"]
 status: "[aguardando revisão humana]"
 lang: "pt-BR"
