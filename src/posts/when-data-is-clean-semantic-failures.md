@@ -6,7 +6,7 @@ wordcount: "~12,000"
 status: "experimental proposal draft"
 ---
 
-**Daniel** | Head of Design & AI, Itaú Empresas | danieliscoding@gmail.com
+**Daniel Vieira Souza**
 
 ## Abstract {#abstract}
 
