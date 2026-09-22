@@ -6,8 +6,6 @@ wordcount: "~12,000"
 status: "experimental proposal draft"
 ---
 
-# Detecting Comprehension Failures Beyond LLM Judges: An Experimental Three-Track Evaluation Framework for Agent Responses
-
 **Daniel** | Head of Design & AI, Itaú Empresas | danieliscoding@gmail.com
 
 ## Abstract {#abstract}
