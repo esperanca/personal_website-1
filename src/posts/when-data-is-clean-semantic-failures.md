@@ -6,6 +6,7 @@ version: "0.1.3"
 wordcount: "~12,000"
 status: "experimental proposal draft"
 draft: true
+language: "en"
 ---
 
 **Daniel Vieira Souza**
@@ -16,15 +17,15 @@ LLM-based judges are increasingly used to evaluate agent responses, but they are
 
 ## Table of Contents {#table-of-contents}
 
-1. [Introduction: Comprehension Failure as an Evaluation Problem](#introduction)
-2. [Related Work and Evidence Base](#related-work)
-3. [Failure Taxonomy](#failure-taxonomy)
-4. [Three-Track Evaluation Framework](#three-track-framework)
-5. [Experimental Design: Annotation and Disagreement Methodology](#annotation-methodology)
-6. [Implementation Considerations](#implementation-considerations)
-7. [Limitations](#limitations)
-8. [Future Work](#future-work)
-9. [References](#references)
+1. [Introduction: Comprehension Failure as an Evaluation Problem](#1-introduction-comprehension-failure-as-an-evaluation-problem)
+2. [Related Work and Evidence Base](#2-related-work-and-evidence-base)
+3. [Failure Taxonomy](#3-failure-taxonomy)
+4. [Three-Track Evaluation Framework](#4-three-track-evaluation-framework)
+5. [Experimental Design: Annotation and Disagreement Methodology](#5-experimental-design-annotation-and-disagreement-methodology)
+6. [Implementation Considerations](#6-implementation-considerations)
+7. [Limitations](#7-limitations)
+8. [Future Work](#8-future-work)
+9. [References](#9-references)
 
 ---
 

@@ -7,11 +7,12 @@ const markdownItAnchor = require('markdown-it-anchor');
 const markdownFootnoteSidenotes = require('./src/plugins/markdown-footnote-sidenotes');
 const markdownHeadingCustomId = require('./src/plugins/markdown-heading-custom-id');
 const markdownFigureWrapper = require('./src/plugins/markdown-figure-wrapper');
+const markdownMermaid = require('./src/plugins/markdown-mermaid');
 const {DateTime} = require('luxon');
 
 const markdownLibrary = markdownIt({
   html: true,
-}).use(markdownFootnoteSidenotes).use(markdownHeadingCustomId).use(markdownFigureWrapper).use(markdownItAnchor, {
+}).use(markdownMermaid).use(markdownFootnoteSidenotes).use(markdownHeadingCustomId).use(markdownFigureWrapper).use(markdownItAnchor, {
   permalink: true,
   permalinkClass: 'tdbc-anchor',
   permalinkSymbol: `
@@ -79,6 +80,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/robots.txt');
   eleventyConfig.addPassthroughCopy('src/desafio-filosofia-educacao.html');
   eleventyConfig.addPassthroughCopy('src/estudo/filosofia');
+  eleventyConfig.addPassthroughCopy('src/posts/revision-logs');
   eleventyConfig.addPassthroughCopy({'src/_includes/css/style.css': 'css/style.css'});
   eleventyConfig.addPassthroughCopy({'src/rootfiles/_redirects': '_redirects'});
   eleventyConfig.addPassthroughCopy({'src/rootfiles/_headers': '_headers'});
