@@ -443,8 +443,6 @@ For each response R:
 
 ### Pilot Phase (Phase 1): Feasibility Study Without Generalization Claims
 
-**Timeline:** 2–3 weeks
-
 **Goal:** Test feasibility, refine the annotation protocol, and look for initial evidence that Tier 3 disagreement exposes comprehension risks missed by expert review or automated evaluation.
 
 **Generalization boundary:** Phase 1 is a pilot. It should not make claims about the prevalence of comprehension failures in the Brazilian population, in the bank's full customer base, or across all agent responses. Its purpose is to validate the study design: whether the tasks are understandable, whether the rater tiers produce interpretable disagreement patterns, whether the annotation schema captures useful signals, and whether the observed variance justifies a larger study.
@@ -481,8 +479,6 @@ For each response R:
 **Cost:** To be estimated during recruitment. Phase 1 should record actual cost per completed annotation, dropout rate, and rater time-on-task rather than treating early estimates as stable.
 
 ### Scale Phase (Phase 2): Larger Experimental Dataset for Judge Training
-
-**Timeline:** 6–8 weeks
 
 **Goal:** Build an initial training dataset for a comprehension-risk classifier or calibrated LLM judge. The 500–1,000 annotation target should be treated as an operational planning range, not a universal sample-size rule. The final number should be determined by Phase 1 variance, inter-rater agreement, class balance, recruitment feasibility, and held-out validation performance.
 
