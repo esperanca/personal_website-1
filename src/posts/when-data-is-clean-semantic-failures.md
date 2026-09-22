@@ -876,6 +876,6 @@ Fifth, future work should define clearer cost models. False positives create rev
 
 | Version | Date | Summary | Reviewed by | Full log |
 |---|---:|---|---|---|
-| 0.1.3 | 2026-09-22 | Replaced the ASCII System Flow with a compact Mermaid diagram using Inter as the diagram typeface. | Daniel Vieira Souza | [Revision log v0.1.3](./revision-logs/when-data-is-clean-semantic-failures-v0.1.3-log.md) |
-| 0.1.2 | 2026-09-22 | Added Shankar et al. (2024) as supporting evidence for human-aligned evaluator calibration; updated references. | Daniel Vieira Souza | [Revision log v0.1.2](./revision-logs/when-data-is-clean-semantic-failures-v0.1.2-log.md) |
+| 0.1.3 | 2026-09-22 | Replaced the ASCII System Flow with a compact Mermaid diagram using Inter as the diagram typeface. | Daniel Vieira Souza | — |
+| 0.1.2 | 2026-09-22 | Added Shankar et al. (2024) as supporting evidence for human-aligned evaluator calibration; updated references. | Daniel Vieira Souza | — |
 
