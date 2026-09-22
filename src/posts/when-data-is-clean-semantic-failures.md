@@ -756,16 +756,6 @@ The review threshold is a design choice. A lower threshold increases recall and 
 - Precision, recall, F1, and false-negative rate for Tier 3 comprehension-risk cases
 - Decision: Proceed to Phase 4 only if the proposed condition improves meaningfully over plausible baselines
 
-### Phase 4: Production Integration (Weeks 15+)
-
-**What:** Deploy judge to flag risky responses. Measure signal quality and cost.
-
-**Output:**
-- False positive rate in production
-- Coverage: % of comprehension failures caught
-- Support ticket reduction (if any)
-- Cost per evaluation (to compare against baseline)
-
 ### What to Measure
 
 | Phase | Metric | Purpose |
@@ -773,9 +763,6 @@ The review threshold is a design choice. A lower threshold increases recall and 
 | 1 | Feasibility + pilot Tier 3 disagreement patterns | Does the protocol produce interpretable signal without making generalization claims? |
 | 2 | Inter-rater agreement (Tier 3) | Are low-literacy raters consistent? |
 | 3 | Comparative recall/F1 against B0/B1/B2 baselines | Does the proposed judge improve over plausible alternatives? |
-| 4 | Cost per eval + false positive rate + support tickets | Is this worth it operationally? |
-
-**Cost savings is an open question.** Measure it in Phase 4, don't assume it.
 
 ---
 
