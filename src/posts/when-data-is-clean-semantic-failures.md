@@ -4,6 +4,7 @@ date: 2026-09-22
 timestamp: "12:00 UTC"
 wordcount: "~12,000"
 status: "experimental proposal draft"
+draft: true
 ---
 
 **Daniel Vieira Souza**
