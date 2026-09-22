@@ -33,7 +33,7 @@ Organizations building agentic AI systems increasingly invest in robust validati
 
 This is not only a data-truth problem. It is a pragmatic failure: a gap between what the agent *says* and what users *understand*.
 
-Modern LLM-based judges can detect many semantic issues, but they have an important limitation: pragmatic competence in language models appears **evaluation-design-dependent**, not stable across task formats [1]. Results can vary depending on whether models are tested through direct probability measurement, explicit metalinguistic prompts, or task-specific pragmatic judgments. The same model can appear competent under one evaluation design and fragile under another, which makes "pragmatic competence" a construct that must be measured carefully rather than assumed [1].
+Modern LLM-based judges can detect many semantic issues, but they have an important limitation: pragmatic competence in language models appears **evaluation-design-dependent**, not stable across task formats <sup><a href="#ref-1">[1]</a></sup>. Results can vary depending on whether models are tested through direct probability measurement, explicit metalinguistic prompts, or task-specific pragmatic judgments. The same model can appear competent under one evaluation design and fragile under another, which makes "pragmatic competence" a construct that must be measured carefully rather than assumed <sup><a href="#ref-1">[1]</a></sup>.
 
 This article proposes an experimental three-track evaluation framework for detecting comprehension failures in agent responses. The framework combines deterministic telemetry, stratified human judgment, and a comprehension-focused judge trained or calibrated against human disagreement patterns. Its central claim is simple: technical correctness, factual accuracy, and user comprehension are related but distinct constructs. A reliable evaluation system must measure them separately, and the proposed experiment is designed to test whether these constructs diverge in practice.
 
@@ -71,7 +71,7 @@ The initial hypotheses are:
 
 ### 2.1 Pragmatics and conversational maxims {#pragmatics-maxims}
 
-Paul Grice's four conversational maxims—Quantity, Quality, Relation, Manner—have been studied in NLP for decades [3]. Recent work connects them directly to the problems modern AI systems face, including whether a system gives enough information, too much information, or the wrong kind of information for the user's task [3][4]. The Quantity maxim is especially relevant in high-stakes domains such as financial services, where both under-explanation and over-explanation can impair user understanding.
+Paul Grice's four conversational maxims—Quantity, Quality, Relation, Manner—have been studied in NLP for decades <sup><a href="#ref-3">[3]</a></sup>. Recent work connects them directly to the problems modern AI systems face, including whether a system gives enough information, too much information, or the wrong kind of information for the user's task <sup><a href="#ref-3">[3]</a></sup><sup><a href="#ref-4">[4]</a></sup>. The Quantity maxim is especially relevant in high-stakes domains such as financial services, where both under-explanation and over-explanation can impair user understanding.
 
 But Grice's maxims alone are abstract. The question is: **How do you operationalize them to catch real comprehension failures in the deployment context?**
 
@@ -79,9 +79,9 @@ But Grice's maxims alone are abstract. The question is: **How do you operational
 
 ### 2.2 LLM judges and comprehension failures {#llm-judges}
 
-Empirical work on conversational maxims for human-AI interaction suggests that models internally prioritize some conversational principles over others, including safety-oriented principles such as **Benevolence** [2]. This does not mean that safety is the problem. It means that a judge optimized around some conversational dimensions may be less reliable on others—such as **Relevance** (communicating clearly) or **Relation** (answering the user's actual question)—unless those dimensions are explicitly represented in the evaluation design [2].
+Empirical work on conversational maxims for human-AI interaction suggests that models internally prioritize some conversational principles over others, including safety-oriented principles such as **Benevolence** <sup><a href="#ref-2">[2]</a></sup>. This does not mean that safety is the problem. It means that a judge optimized around some conversational dimensions may be less reliable on others—such as **Relevance** (communicating clearly) or **Relation** (answering the user's actual question)—unless those dimensions are explicitly represented in the evaluation design <sup><a href="#ref-2">[2]</a></sup>.
 
-The mechanism is not that safety evaluation is wrong; it is that comprehension is a different construct. A response can satisfy safety constraints and still violate the **Relation** maxim (are you answering the right question for this user?) or the **Manner** maxim (can this specific user parse the answer?). If those dimensions are not separately measured, the judge may approve a response that is harmless but still difficult to use [2].
+The mechanism is not that safety evaluation is wrong; it is that comprehension is a different construct. A response can satisfy safety constraints and still violate the **Relation** maxim (are you answering the right question for this user?) or the **Manner** maxim (can this specific user parse the answer?). If those dimensions are not separately measured, the judge may approve a response that is harmless but still difficult to use <sup><a href="#ref-2">[2]</a></sup>.
 
 A general-purpose judge may be optimized or evaluated for safety and helpfulness without being explicitly calibrated for comprehension.
 
@@ -91,11 +91,11 @@ Most evidence of this hierarchy comes from English-language model evaluation. Wh
 
 ### 2.3 Functional literacy, domain jargon, and cognitive load {#literacy-jargon}
 
-The Brazilian deployment context makes the problem concrete. In Brazil, 29% of people aged 15 to 64 are functionally illiterate—unable to reliably extract or synthesize information from written text, even with formal schooling completion [5]. Another large share operates at an elementary literacy level; public reporting of the INAF 2024 results places this group around 36% of the 15–64 population [5]. Formal schooling does not guarantee functional literacy: INAF also reports that a meaningful share of people who reached or completed *Ensino Médio* can still be characterized as functionally illiterate [5].
+The Brazilian deployment context makes the problem concrete. In Brazil, 29% of people aged 15 to 64 are functionally illiterate—unable to reliably extract or synthesize information from written text, even with formal schooling completion <sup><a href="#ref-5">[5]</a></sup>. Another large share operates at an elementary literacy level; public reporting of the INAF 2024 results places this group around 36% of the 15–64 population <sup><a href="#ref-5">[5]</a></sup>. Formal schooling does not guarantee functional literacy: INAF also reports that a meaningful share of people who reached or completed *Ensino Médio* can still be characterized as functionally illiterate <sup><a href="#ref-5">[5]</a></sup>.
 
 The target user population is not uniformly high-literacy professionals. It includes micro-entrepreneurs, small business owners, and administrative staff whose formal education does not match their actual reading capacity.
 
-Add financial domain jargon—*conciliação, inadimplência, faturamento, provisão*—to a response directed at this audience, and something worse than difficulty can occur: the same informational structure that helps an expert may hinder a novice. Cognitive load theory and the Expertise Reversal Effect suggest that instructional or explanatory formats interact with the user's prior knowledge [6]. When domain knowledge is absent but domain terminology is dense, the user cannot reliably infer meaning from context. They cannot rely on prior knowledge to fill gaps. They stop reading.
+Add financial domain jargon—*conciliação, inadimplência, faturamento, provisão*—to a response directed at this audience, and something worse than difficulty can occur: the same informational structure that helps an expert may hinder a novice. Cognitive load theory and the Expertise Reversal Effect suggest that instructional or explanatory formats interact with the user's prior knowledge <sup><a href="#ref-6">[6]</a></sup>. When domain knowledge is absent but domain terminology is dense, the user cannot reliably infer meaning from context. They cannot rely on prior knowledge to fill gaps. They stop reading.
 
 A standard LLM judge does not experience this audience-specific friction. Unless the evaluation task is grounded in judgments from the relevant user population, the judge may fail to recognize comprehension risk in responses that are technically fluent but too domain-heavy for the intended reader.
 
@@ -103,15 +103,15 @@ A standard LLM judge does not experience this audience-specific friction. Unless
 
 ### 2.4 Annotator disagreement as an evaluation signal {#disagreement-signal}
 
-Research on annotation quality and crowdsourced labels has established a key insight: **disagreement among annotators is not noise. It is signal** [7]. When diverse raters disagree on whether a response is clear, their disagreement reflects genuine *semantic ambiguity* in the response itself—or, crucially, legitimate *comprehension gaps* for specific audiences [7].
+Research on annotation quality and crowdsourced labels has established a key insight: **disagreement among annotators is not noise. It is signal** <sup><a href="#ref-7">[7]</a></sup>. When diverse raters disagree on whether a response is clear, their disagreement reflects genuine *semantic ambiguity* in the response itself—or, crucially, legitimate *comprehension gaps* for specific audiences <sup><a href="#ref-7">[7]</a></sup>.
 
-Building on CrowdTruth, this framework treats disagreement across rater groups as a diagnostic signal [7][8]. Raters with different forms of expertise may disagree for meaningful reasons: a linguist may parse a syntactic construction that a general reader finds opaque; a data scientist may accept financial jargon that a micro-entrepreneur cannot use. Their disagreement helps locate where comprehension breaks for a specific audience.
+Building on CrowdTruth, this framework treats disagreement across rater groups as a diagnostic signal <sup><a href="#ref-7">[7]</a></sup><sup><a href="#ref-8">[8]</a></sup>. Raters with different forms of expertise may disagree for meaningful reasons: a linguist may parse a syntactic construction that a general reader finds opaque; a data scientist may accept financial jargon that a micro-entrepreneur cannot use. Their disagreement helps locate where comprehension breaks for a specific audience.
 
-The framework reframes the traditional evaluation paradigm: instead of seeking only rater agreement as a sign of quality, we measure **disagreement from target-population, non-domain-expert raters as a signal of comprehension risk** [7][8].
+The framework reframes the traditional evaluation paradigm: instead of seeking only rater agreement as a sign of quality, we measure **disagreement from target-population, non-domain-expert raters as a signal of comprehension risk** <sup><a href="#ref-7">[7]</a></sup><sup><a href="#ref-8">[8]</a></sup>.
 
 This leads to a practical implementation: maintain three rater tiers—data scientists (domain expertise), linguists or language designers (language craft), and target users sampled through the Tier 3A/3B/3C strata. In this framework, target-reader judgments determine the ground truth **for the specific construct of comprehension risk**. Experts remain authoritative for factual accuracy, data correctness, and domain reasoning; target users are authoritative for whether the response is understandable to them.
 
-The proposed next step is to train or calibrate a judge to predict this specific signal: *"Will a target user struggle to understand or use this response?"* as a binary classification task. Annotated disagreement patterns provide the training signal. When the judge learns to predict target-reader comprehension risk rather than expert consensus alone, it becomes better aligned with the comprehension construct this framework cares about [7][8].
+The proposed next step is to train or calibrate a judge to predict this specific signal: *"Will a target user struggle to understand or use this response?"* as a binary classification task. Annotated disagreement patterns provide the training signal. When the judge learns to predict target-reader comprehension risk rather than expert consensus alone, it becomes better aligned with the comprehension construct this framework cares about <sup><a href="#ref-7">[7]</a></sup><sup><a href="#ref-8">[8]</a></sup>.
 
 Operationally, this becomes a calibration task: collect an initial planning range of 500–1,000 annotated responses with expert and target-reader verdicts, label disagreement patterns, and train either a supervised classifier or an LLM-based judge against that signal. The 500–1,000 range is a practical starting point, not a universal sample-size rule. The judge shifts from "Is this response technically correct?" to "Will the intended user population understand and use this response?"
 
@@ -127,11 +127,11 @@ The five core problems the team identified can be mapped to Grice's conversation
 
 | # | Problem | Grice Maxim Violated | Telemetry Coverage | Human Judgment Coverage | Traditional LLM Judge | Solution |
 |---|---------|----------------------|-------------------|----------------------|----------------------------------|---------|
-| **1** | Self-Contradicting Output [9] | MANNER (clarity), QUALITY (truth) | ✅ YES, when values are traceable — lineage comparison can detect parameter divergence | ✅ YES — user may notice "$10k vs $15k" | ⚠️ PARTIAL — text-only judges may catch surface contradictions but cannot verify source lineage | Deterministic check: validate consistency across payload sources |
-| **2** | Ghost Answer / Execution Hallucination [10] | QUALITY (be truthful), RELATION (answer the real question: "did this execute?") | ✅ YES, when tool/action traces are complete — execution lineage requires confirmation | ✅ YES — but only if user can verify externally | ⚠️ LIMITED — text alone cannot distinguish "claimed" from "executed" | Deterministic check: every execution claim must have a correlated trace event |
+| **1** | Self-Contradicting Output <sup><a href="#ref-9">[9]</a></sup> | MANNER (clarity), QUALITY (truth) | ✅ YES, when values are traceable — lineage comparison can detect parameter divergence | ✅ YES — user may notice "$10k vs $15k" | ⚠️ PARTIAL — text-only judges may catch surface contradictions but cannot verify source lineage | Deterministic check: validate consistency across payload sources |
+| **2** | Ghost Answer / Execution Hallucination <sup><a href="#ref-10">[10]</a></sup> | QUALITY (be truthful), RELATION (answer the real question: "did this execute?") | ✅ YES, when tool/action traces are complete — execution lineage requires confirmation | ✅ YES — but only if user can verify externally | ⚠️ LIMITED — text alone cannot distinguish "claimed" from "executed" | Deterministic check: every execution claim must have a correlated trace event |
 | **3** | Context-Dependent Failures | RELATION (are you answering *for this user's context*?), QUANTITY (provide info relevant to *this user's role*) | ⚠️ PARTIAL — telemetry can capture context (RBAC, tenant, role), but only if test environments vary those contexts | ✅ YES — different users may catch different failures | ⚠️ PARTIAL — a judge without user-context metadata cannot know whether the answer fits this user's permissions or role | Requires multi-user testing; static golden datasets are insufficient on their own |
-| **4** | Multi-Turn Context Decay [11][13] | RELATION (still addressing current question?), MANNER (presenting stale data as current is confusing) | ✅ YES, for system-state errors — session tracking and cache-lineage monitoring can detect stale reuse | ✅ YES — user may recognize repetition or outdated data | ⚠️ PARTIAL — may miss if summaries are subtly reworded or if temporal scope is implicit | Deterministic check: validate cache invalidation and temporal scope across turn boundaries |
-| **5** | False Positive Eval Alert [12][14] | QUALITY (the judge's claim of error is false), RELATION (judge evaluating the right thing?) | ❌ NO — telemetry validates execution, not semantic correctness of eval logic | ✅ YES — expert + target-reader disagreement can reveal when the judge is wrong | ⚠️ PARTIAL — LLM judges can be useful, but need human grounding for this construct | Requires recalibration: train or calibrate the judge to predict target-reader disagreement, not expert consensus alone |
+| **4** | Multi-Turn Context Decay <sup><a href="#ref-11">[11]</a></sup><sup><a href="#ref-13">[13]</a></sup> | RELATION (still addressing current question?), MANNER (presenting stale data as current is confusing) | ✅ YES, for system-state errors — session tracking and cache-lineage monitoring can detect stale reuse | ✅ YES — user may recognize repetition or outdated data | ⚠️ PARTIAL — may miss if summaries are subtly reworded or if temporal scope is implicit | Deterministic check: validate cache invalidation and temporal scope across turn boundaries |
+| **5** | False Positive Eval Alert <sup><a href="#ref-12">[12]</a></sup><sup><a href="#ref-14">[14]</a></sup> | QUALITY (the judge's claim of error is false), RELATION (judge evaluating the right thing?) | ❌ NO — telemetry validates execution, not semantic correctness of eval logic | ✅ YES — expert + target-reader disagreement can reveal when the judge is wrong | ⚠️ PARTIAL — LLM judges can be useful, but need human grounding for this construct | Requires recalibration: train or calibrate the judge to predict target-reader disagreement, not expert consensus alone |
 
 ### Residual Comprehension Failures
 
@@ -141,7 +141,7 @@ After telemetry addresses operational failures and human judgment exposes compre
 |---|---|---|---|---|
 | **Intent Misalignment** | User: "Top clients this year" → Agent ranks by revenue, while the business decision requires profit margin | Execution is valid (SQL runs, API returns 200) | Text appears coherent and data-backed | Expert may approve the metric unless the business definition of "top" was specified |
 | **Semantic Grounding** | Agent retrieves the correct document passage but applies it incorrectly | Trace proves retrieval, not interpretation | Text is fluent and grammatical | Expert review may miss the specific interpretation unless that clause was annotated |
-| **Pragmatic Ambiguity** [1] | Agent takes literal interpretation, user meant figurative/contextual | Response is technically accurate | Reads fluently | No financial background to catch nuance |
+| **Pragmatic Ambiguity** <sup><a href="#ref-1">[1]</a></sup> | Agent takes literal interpretation, user meant figurative/contextual | Response is technically accurate | Reads fluently | No financial background to catch nuance |
 | **Domain Reasoning Error** | Agent uses correct source data but applies the wrong business rule or formula | Telemetry validates the data path, not the reasoning rule | Number looks reasonable | Requires domain-rule validation, not just data validation |
 
 ---
@@ -160,7 +160,7 @@ After telemetry addresses operational failures and human judgment exposes compre
 
 ### Track 2: Human Judgment (Multi-Tier Raters)
 **Addresses:** Problems 3, 5, and residual comprehension failures  
-**Mechanism:** Disagreement-as-signal with rater diversity [7][8]
+**Mechanism:** Disagreement-as-signal with rater diversity <sup><a href="#ref-7">[7]</a></sup><sup><a href="#ref-8">[8]</a></sup>
 - **Tier 1 (Data Scientists):** Domain expertise, identifies domain reasoning errors
 - **Tier 2 (Language Designers/Linguists):** Pragmatic clarity, identifies Manner/Relation violations
 - **Tier 3 (General Users, Elementary Literacy):** Actual comprehension, identifies what breaks for the target audience
@@ -256,7 +256,7 @@ This comparison also clarifies the role of each track. Track 1 is a baseline for
 
 **Scope:** Experimental annotation workflow to test whether disagreement patterns reveal comprehension failures missed by telemetry, experts, and generic LLM-based judges. Addresses problems 3, 5, and residual comprehension failures.
 
-**Key Insight:** Tier 3 raters provide ground truth for **target-user comprehension**, not for factual accuracy or domain correctness. Expert disagreement reveals where domain expertise and user understanding diverge [7][8].
+**Key Insight:** Tier 3 raters provide ground truth for **target-user comprehension**, not for factual accuracy or domain correctness. Expert disagreement reveals where domain expertise and user understanding diverge <sup><a href="#ref-7">[7]</a></sup><sup><a href="#ref-8">[8]</a></sup>.
 
 ### Rater Tiers and Roles
 
@@ -279,7 +279,7 @@ This comparison also clarifies the role of each track. Track 1 is a baseline for
 **Screening Protocol:**
 
 1. **Literacy Pre-Test (5 min):**
-   - Short functional-literacy screening task inspired by INAF-style items [5]
+   - Short functional-literacy screening task inspired by INAF-style items <sup><a href="#ref-5">[5]</a></sup>
    - Example: Read a paragraph about "atraso de pagamento" (payment delay) and answer 3 questions
    - Target: Raters who fall into the study's operational comprehension bands for Tier 3A, 3B, or 3C
    - Important: Do not claim equivalence to the official INAF scale unless a validated INAF instrument is used
@@ -522,7 +522,7 @@ This section translates the framework into operational mechanisms. The implement
 
 ### Check 1.1: Payload Consistency (Problem 1)
 
-**Problem:** Agent generates contradictory data in the same response (e.g., $10k in a table, $15k in a summary). Self-contradictory hallucinations are a documented failure mode in LLM-generated text [9]. In agentic systems, this failure can also arise when different parts of a response are assembled from different traces, timestamps, filters, or parameter resolutions.
+**Problem:** Agent generates contradictory data in the same response (e.g., $10k in a table, $15k in a summary). Self-contradictory hallucinations are a documented failure mode in LLM-generated text <sup><a href="#ref-9">[9]</a></sup>. In agentic systems, this failure can also arise when different parts of a response are assembled from different traces, timestamps, filters, or parameter resolutions.
 
 **Check Logic:**
 ```
@@ -544,7 +544,7 @@ For each response R:
 
 ### Check 1.2: Execution Lineage Validation (Problem 2)
 
-**Problem:** Agent claims it executed an action without an actual API call, SQL execution, or tool confirmation. This is a form of tool hallucination—when LLMs confidently report tool invocations that never occurred [10]. Recent work suggests that reasoning enhancements can amplify tool hallucination in some settings [10].
+**Problem:** Agent claims it executed an action without an actual API call, SQL execution, or tool confirmation. This is a form of tool hallucination—when LLMs confidently report tool invocations that never occurred <sup><a href="#ref-10">[10]</a></sup>. Recent work suggests that reasoning enhancements can amplify tool hallucination in some settings <sup><a href="#ref-10">[10]</a></sup>.
 
 **Check Logic:**
 ```
@@ -573,7 +573,7 @@ For each claim C in response (e.g., "I updated the database"):
 
 ### Check 1.3: Cache Invalidation Tracking (Problem 4)
 
-**Problem:** Multi-turn conversation where the agent reuses stale cached data from turn 1 after turn 4 changes the scope. Multi-turn failures can arise from both model-level context-use limitations and system-level state-management errors. "Lost in the Middle" supports the former—models may fail to use relevant information depending on where it appears in long context [11]. Temporal-consistency work shows that models can also lose or alter temporal scope across turns [13]. Stale cache reuse is the system-level version: the state changes, but the data lineage does not.
+**Problem:** Multi-turn conversation where the agent reuses stale cached data from turn 1 after turn 4 changes the scope. Multi-turn failures can arise from both model-level context-use limitations and system-level state-management errors. "Lost in the Middle" supports the former—models may fail to use relevant information depending on where it appears in long context <sup><a href="#ref-11">[11]</a></sup>. Temporal-consistency work shows that models can also lose or alter temporal scope across turns <sup><a href="#ref-13">[13]</a></sup>. Stale cache reuse is the system-level version: the state changes, but the data lineage does not.
 
 **Check Logic:**
 ```
@@ -645,7 +645,7 @@ Suggested measurement targets:
 
 **Scope:** Train or calibrate a model to estimate whether target-user raters are likely to struggle with a response, instead of asking only whether the response is technically correct.
 
-**Scientific Grounding:** CrowdTruth work by Aroyo & Welty [7] and Dumitrache et al. [8] establishes disagreement as a meaningful signal in crowdsourced ground truth. This section applies that idea as a methodological proposal: train or calibrate a judge to predict target-user comprehension risk rather than expert consensus alone.
+**Scientific Grounding:** CrowdTruth work by Aroyo & Welty <sup><a href="#ref-7">[7]</a></sup> and Dumitrache et al. <sup><a href="#ref-8">[8]</a></sup> establishes disagreement as a meaningful signal in crowdsourced ground truth. This section applies that idea as a methodological proposal: train or calibrate a judge to predict target-user comprehension risk rather than expert consensus alone.
 
 ### Task Definition
 
@@ -800,33 +800,33 @@ Fifth, future work should define clearer cost models. False positives create rev
 
 ## 9. References {#references}
 
-[1] Cho, Y.-E. (2026). "Evaluating Pragmatic Reasoning in Large Language Models: Evidence from Scalar Diversity." In *Proceedings of the 2nd Joint Workshop on Computational Approaches to Discourse, Context and Document-Level Inferences and Computational Models of Reference, Anaphora and Coreference (CODI-CRAC 2026)*, 120–129. Association for Computational Linguistics. doi: 10.18653/v1/2026.codi-1.17.
+<a id="ref-1">[1]</a> Cho, Y.-E. (2026). "Evaluating Pragmatic Reasoning in Large Language Models: Evidence from Scalar Diversity." In *Proceedings of the 2nd Joint Workshop on Computational Approaches to Discourse, Context and Document-Level Inferences and Computational Models of Reference, Anaphora and Coreference (CODI-CRAC 2026)*, 120–129. Association for Computational Linguistics. doi: 10.18653/v1/2026.codi-1.17.
 
-[2] Miehling, E., Nagireddy, M., Sattigeri, P., Daly, E. M., Padhi, I., Remy, S. L., Riemer, M., Dognin, P., & Das, P. (2024). "Language Models in Dialogue: Conversational Maxims for Human-AI Interactions." In *Findings of the Association for Computational Linguistics: EMNLP 2024*, 14420–14437. Association for Computational Linguistics. doi: 10.18653/v1/2024.findings-emnlp.843.
+<a id="ref-2">[2]</a> Miehling, E., Nagireddy, M., Sattigeri, P., Daly, E. M., Padhi, I., Remy, S. L., Riemer, M., Dognin, P., & Das, P. (2024). "Language Models in Dialogue: Conversational Maxims for Human-AI Interactions." In *Findings of the Association for Computational Linguistics: EMNLP 2024*, 14420–14437. Association for Computational Linguistics. doi: 10.18653/v1/2024.findings-emnlp.843.
 
-[3] Krause, L., & Vossen, P. T. J. M. (2024). "The Gricean Maxims in NLP — A Survey." In *Proceedings of the 17th International Natural Language Generation Conference (INLG 2024)*, 470–485. Association for Computational Linguistics.
+<a id="ref-3">[3]</a> Krause, L., & Vossen, P. T. J. M. (2024). "The Gricean Maxims in NLP — A Survey." In *Proceedings of the 17th International Natural Language Generation Conference (INLG 2024)*, 470–485. Association for Computational Linguistics.
 
-[4] Khayrallah, H., & Sedoc, J. (2021). "Measuring the 'I don’t know' Problem through the Lens of Gricean Quantity." In *Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies*, 5659–5670. Association for Computational Linguistics. doi: 10.18653/v1/2021.naacl-main.450.
+<a id="ref-4">[4]</a> Khayrallah, H., & Sedoc, J. (2021). "Measuring the 'I don’t know' Problem through the Lens of Gricean Quantity." In *Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies*, 5659–5670. Association for Computational Linguistics. doi: 10.18653/v1/2021.naacl-main.450.
 
-[5] Ação Educativa & INAF. (2024). *Indicador de Alfabetismo Funcional no Brasil 2024*. Ação Educativa / Indicador de Alfabetismo Funcional (INAF). Retrieved from https://alfabetismofuncional.org.br/.
+<a id="ref-5">[5]</a> Ação Educativa & INAF. (2024). *Indicador de Alfabetismo Funcional no Brasil 2024*. Ação Educativa / Indicador de Alfabetismo Funcional (INAF). Retrieved from https://alfabetismofuncional.org.br/.
 
-[6] Kalyuga, S., Ayres, P., Chandler, P., & Sweller, J. (2003). "The Expertise Reversal Effect." *Educational Psychologist*, 38(1), 23–31. doi: 10.1207/S15326985EP3801_4.
+<a id="ref-6">[6]</a> Kalyuga, S., Ayres, P., Chandler, P., & Sweller, J. (2003). "The Expertise Reversal Effect." *Educational Psychologist*, 38(1), 23–31. doi: 10.1207/S15326985EP3801_4.
 
-[7] Aroyo, L., & Welty, C. (2015). "Truth Is a Lie: Crowd Truth and the Seven Myths of Human Annotation." *AI Magazine*, 36(1), 15–24. doi: 10.1609/aimag.v36i1.2564.
+<a id="ref-7">[7]</a> Aroyo, L., & Welty, C. (2015). "Truth Is a Lie: Crowd Truth and the Seven Myths of Human Annotation." *AI Magazine*, 36(1), 15–24. doi: 10.1609/aimag.v36i1.2564.
 
-[8] Dumitrache, A., Inel, O., Timmermans, B., Ortiz, C., Sips, R.-J., Aroyo, L., & Welty, C. (2021). "Empirical Methodology for Crowdsourcing Ground Truth." *Semantic Web*, 12(3), 403–421. doi: 10.3233/SW-200415.
+<a id="ref-8">[8]</a> Dumitrache, A., Inel, O., Timmermans, B., Ortiz, C., Sips, R.-J., Aroyo, L., & Welty, C. (2021). "Empirical Methodology for Crowdsourcing Ground Truth." *Semantic Web*, 12(3), 403–421. doi: 10.3233/SW-200415.
 
-[9] Mündler, N., He, J., Jenko, S., & Vechev, M. (2024). "Self-Contradictory Hallucinations of Large Language Models: Evaluation, Detection and Mitigation." In *International Conference on Learning Representations (ICLR 2024)*.
+<a id="ref-9">[9]</a> Mündler, N., He, J., Jenko, S., & Vechev, M. (2024). "Self-Contradictory Hallucinations of Large Language Models: Evaluation, Detection and Mitigation." In *International Conference on Learning Representations (ICLR 2024)*.
 
-[10] Yin, C., Sha, Z., Cui, S., Meng, C., & Li, Z. (2026). "The Reasoning Trap: How Enhancing LLM Reasoning Amplifies Tool Hallucination." In *Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)*, 8310–8328. Association for Computational Linguistics. doi: 10.18653/v1/2026.acl-long.376.
+<a id="ref-10">[10]</a> Yin, C., Sha, Z., Cui, S., Meng, C., & Li, Z. (2026). "The Reasoning Trap: How Enhancing LLM Reasoning Amplifies Tool Hallucination." In *Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)*, 8310–8328. Association for Computational Linguistics. doi: 10.18653/v1/2026.acl-long.376.
 
-[11] Liu, N. F., Lin, K., Hewitt, J., Paranjape, A., Bevilacqua, M., Petroni, F., & Liang, P. (2024). "Lost in the Middle: How Language Models Use Long Contexts." *Transactions of the Association for Computational Linguistics*, 12, 157–173. doi: 10.1162/tacl_a_00638.
+<a id="ref-11">[11]</a> Liu, N. F., Lin, K., Hewitt, J., Paranjape, A., Bevilacqua, M., Petroni, F., & Liang, P. (2024). "Lost in the Middle: How Language Models Use Long Contexts." *Transactions of the Association for Computational Linguistics*, 12, 157–173. doi: 10.1162/tacl_a_00638.
 
-[12] Zheng, L., Chiang, W.-L., Sheng, Y., Zhuang, S., Wu, Z., Zhuang, Y., Lin, Z., Li, Z., Li, D., Xing, E. P., Zhang, H., Gonzalez, J. E., & Stoica, I. (2023). "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena." In *Advances in Neural Information Processing Systems 36 (NeurIPS 2023), Datasets and Benchmarks Track*.
+<a id="ref-12">[12]</a> Zheng, L., Chiang, W.-L., Sheng, Y., Zhuang, S., Wu, Z., Zhuang, Y., Lin, Z., Li, Z., Li, D., Xing, E. P., Zhang, H., Gonzalez, J. E., & Stoica, I. (2023). "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena." In *Advances in Neural Information Processing Systems 36 (NeurIPS 2023), Datasets and Benchmarks Track*.
 
-[13] Atri, Y. K., Johnson, S. L., Liu, K., Mitchell, M., & Hartvigsen, T. (2026). "Evaluating Temporal Consistency in Multi-Turn Language Models." In *Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)*. Association for Computational Linguistics.
+<a id="ref-13">[13]</a> Atri, Y. K., Johnson, S. L., Liu, K., Mitchell, M., & Hartvigsen, T. (2026). "Evaluating Temporal Consistency in Multi-Turn Language Models." In *Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)*. Association for Computational Linguistics.
 
-[14] Krumdick, M., Lovering, C., Reddy, V., Ebner, S., & Tanner, C. (2025). "No Free Labels: Limitations of LLM-as-a-Judge Without Human Grounding." arXiv:2503.05061.
+<a id="ref-14">[14]</a> Krumdick, M., Lovering, C., Reddy, V., Ebner, S., & Tanner, C. (2025). "No Free Labels: Limitations of LLM-as-a-Judge Without Human Grounding." arXiv:2503.05061.
 
 ---
 
