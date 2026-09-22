@@ -308,7 +308,7 @@ The INAF data motivates the relevance of this design, but the study should not c
 - Focus on micro-entrepreneurs, small business owners, administrative staff, and other profiles that resemble the intended user base
 
 **Tier 1/2 Recruitment:**
-- Tier 1: Hire financial domain experts (data scientists, domain engineers from Itaú)
+- Tier 1: Hire financial domain experts (data scientists, domain engineers)
 - Tier 2: Hire UX writers, content designers, or linguists familiar with financial communications
 
 ### Annotation Workflow and Schema
