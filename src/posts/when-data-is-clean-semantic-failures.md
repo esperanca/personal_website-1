@@ -2,6 +2,7 @@
 title: "Detecting Comprehension Failures Beyond LLM Judges: An Experimental Three-Track Evaluation Framework for Agent Responses"
 date: 2026-09-22
 timestamp: "12:00 UTC"
+version: "0.1.3"
 wordcount: "~12,000"
 status: "experimental proposal draft"
 draft: true
@@ -126,7 +127,7 @@ The five core problems the team identified can be mapped to Grice's conversation
 ### Problem Mapping Table
 
 | # | Problem | Grice Maxim Violated | Telemetry Coverage | Human Judgment Coverage | Traditional LLM Judge | Solution |
-|---|---------|----------------------|-------------------|----------------------|----------------------------------|---------|
+|---|---------|----------------------|-------------------|----------------------|----------------------------------|---------| 
 | **1** | Self-Contradicting Output <sup><a href="#ref-9">[9]</a></sup> | MANNER (clarity), QUALITY (truth) | ✅ YES, when values are traceable — lineage comparison can detect parameter divergence | ✅ YES — user may notice "$10k vs $15k" | ⚠️ PARTIAL — text-only judges may catch surface contradictions but cannot verify source lineage | Deterministic check: validate consistency across payload sources |
 | **2** | Ghost Answer / Execution Hallucination <sup><a href="#ref-10">[10]</a></sup> | QUALITY (be truthful), RELATION (answer the real question: "did this execute?") | ✅ YES, when tool/action traces are complete — execution lineage requires confirmation | ✅ YES — but only if user can verify externally | ⚠️ LIMITED — text alone cannot distinguish "claimed" from "executed" | Deterministic check: every execution claim must have a correlated trace event |
 | **3** | Context-Dependent Failures | RELATION (are you answering *for this user's context*?), QUANTITY (provide info relevant to *this user's role*) | ⚠️ PARTIAL — telemetry can capture context (RBAC, tenant, role), but only if test environments vary those contexts | ✅ YES — different users may catch different failures | ⚠️ PARTIAL — a judge without user-context metadata cannot know whether the answer fits this user's permissions or role | Requires multi-user testing; static golden datasets are insufficient on their own |
@@ -210,44 +211,65 @@ This comparison also clarifies the role of each track. Track 1 is a baseline for
 
 ### System Flow
 
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                         THREE-TRACK EVALUATION SYSTEM                              │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                             │
-│  AGENT EXECUTION                                                            │
-│  ├─ Fetch data (API calls)                                                  │
-│  ├─ Transform (SQL, calculations)                                           │
-│  └─ Generate response (LLM text)                                            │
-│                                                                             │
-│  ↓                                                                           │
-│                                                                             │
-│  TRACK 1: DETERMINISTIC TELEMETRY CHECKS                                    │
-│  ├─ [Problem 1] Self-Contradicting Output       → Payload consistency      │
-│  ├─ [Problem 2] Ghost Answer / Hallucination    → Execution lineage        │
-│  └─ [Problem 4] Multi-Turn Context Decay        → Cache invalidation       │
-│                                                                             │
-│  ↓                                                                           │
-│  (All technical checks pass? → Continue to next track)                      │
-│                                                                             │
-│  TRACK 2: HUMAN JUDGMENT (Multi-Tier Raters)                                │
-│  ├─ [Problem 3] Context-Dependent Failures      → Multi-user testing       │
-│  ├─ [Problem 5] False Positive Eval Alert       → Tier 1/2/3 disagreement  │
-│  └─ [Residual] Comprehension Errors             → Tier 3 comprehension label│
-│                                                                             │
-│  ↓                                                                           │
-│  (Annotation patterns collected → Train or calibrate comprehension-focused judge)                    │
-│                                                                             │
-│  TRACK 3: COMPREHENSION-FOCUSED JUDGE (Comprehension-Focused)                       │
-│  ├─ Input: Response + Context                                               │
-│  ├─ Task: "Will a general reader disagree?"                                │
-│  ├─ Output: Comprehension risk (0–1)                                       │
-│  └─ Action: Flag for human review if risk > threshold                      │
-│                                                                             │
-│  ↓                                                                           │
-│  DEPLOYMENT                                                                 │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘
+```mermaid
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "fontFamily": "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+    "primaryColor": "#F8FAFC",
+    "primaryTextColor": "#0F172A",
+    "primaryBorderColor": "#CBD5E1",
+    "lineColor": "#475569",
+    "clusterBkg": "#FFFFFF",
+    "clusterBorder": "#CBD5E1",
+    "edgeLabelBackground": "#FFFFFF"
+  },
+  "flowchart": {
+    "curve": "basis",
+    "htmlLabels": true,
+    "nodeSpacing": 44,
+    "rankSpacing": 56
+  }
+}}%%
+
+flowchart LR
+    Q["User query"] --> A["Agent<br/><span>LLM + tools</span>"]
+    A --> R["Agent response<br/><span>with execution traces</span>"]
+
+    R --> T1["Track 1<br/><strong>Deterministic telemetry</strong><br/><span>Execution validation</span>"]
+    R --> T2["Track 2<br/><strong>Stratified human judgment</strong><br/><span>Understanding evaluation</span>"]
+    R --> T3["Track 3<br/><strong>Comprehension-focused judge</strong><br/><span>Scaled evaluation</span>"]
+
+    T1 --> G["Aggregation<br/><span>Combine signals from all tracks</span>"]
+    T2 --> G
+    T3 --> G
+
+    G --> D{"Ready for<br/>deployment?"}
+
+    D -- "Yes" --> P["Deploy<br/><span>Monitor in production</span>"]
+    D -- "No" --> H["Human review<br/><span>Revise response, rubric, prompt, or tools</span>"]
+
+    P --> M["Production monitoring<br/><span>Repeated questions, complaints, support signals</span>"]
+    M --> T2
+    H --> A
+
+    classDef source fill:#F8FAFC,stroke:#94A3B8,stroke-width:1px,color:#0F172A;
+    classDef telemetry fill:#EFF6FF,stroke:#60A5FA,stroke-width:1.2px,color:#0F172A;
+    classDef human fill:#ECFDF5,stroke:#34D399,stroke-width:1.2px,color:#0F172A;
+    classDef judge fill:#F5F3FF,stroke:#A78BFA,stroke-width:1.2px,color:#0F172A;
+    classDef decision fill:#FFF7ED,stroke:#FB923C,stroke-width:1.4px,color:#0F172A;
+    classDef deploy fill:#F0FDF4,stroke:#22C55E,stroke-width:1.4px,color:#0F172A;
+    classDef review fill:#FEF2F2,stroke:#F87171,stroke-width:1.4px,color:#0F172A;
+    classDef monitor fill:#F8FAFC,stroke:#64748B,stroke-width:1.2px,color:#0F172A;
+
+    class Q,A,R source;
+    class T1 telemetry;
+    class T2 human;
+    class T3 judge;
+    class G,D decision;
+    class P deploy;
+    class H review;
+    class M monitor;
 ```
 
 ---
@@ -261,7 +283,7 @@ This comparison also clarifies the role of each track. Track 1 is a baseline for
 ### Rater Tiers and Roles
 
 | Tier | Profile | Expertise | Role in Eval | Pilot sample |
-|------|---------|-----------|--------------|------------|
+|------|---------|-----------|--------------|-------------|
 | **Tier 1** | Data Scientist / Domain Expert | High domain knowledge (financial systems, SQL, data semantics) | Validate accuracy of facts, domain reasoning, and whether the data answer is correct | 5–8 raters |
 | **Tier 2** | Content Designer, Linguist, Writer | NLP, communication design, pragmatics | Evaluate clarity, ambiguity, structure, and whether the response follows Grice's maxims | 5–8 raters |
 | **Tier 3A** | Target user: lower functional-literacy band + low financial-domain familiarity | Practical comprehension risk | Evaluate whether the response can be understood without background knowledge | 10–15 raters |
@@ -645,7 +667,7 @@ Suggested measurement targets:
 
 **Scope:** Train or calibrate a model to estimate whether target-user raters are likely to struggle with a response, instead of asking only whether the response is technically correct.
 
-**Scientific Grounding:** CrowdTruth work by Aroyo & Welty <sup><a href="#ref-7">[7]</a></sup> and Dumitrache et al. <sup><a href="#ref-8">[8]</a></sup> establishes disagreement as a meaningful signal in crowdsourced ground truth. This section applies that idea as a methodological proposal: train or calibrate a judge to predict target-user comprehension risk rather than expert consensus alone.
+**Scientific Grounding:** CrowdTruth work by Aroyo & Welty <sup><a href="#ref-7">[7]</a></sup> and Dumitrache et al. <sup><a href="#ref-8">[8]</a></sup> establishes disagreement as a meaningful signal in crowdsourced ground truth. This section applies that idea as a methodological proposal: train or calibrate a judge to predict target-user comprehension risk rather than expert consensus alone. Recent work on LLM-assisted evaluation also shows that evaluator alignment with human preferences requires explicit validation over time, reinforcing the need to measure and recalibrate human-grounded evaluation workflows <sup><a href="#ref-15">[15]</a></sup>.
 
 ### Task Definition
 
@@ -698,7 +720,7 @@ The main methodological requirement is not a specific Python implementation, but
 After training, evaluate on held-out test set (50–100 responses):
 
 | Metric | Definition | Target | Why It Matters |
-|--------|-----------|--------|----------------|
+|--------|-----------|--------|--------|
 | **Precision (label=1)** | Of responses judge flagged as "risky", what % truly had Tier 3 disagree? | >0.70 | Fewer false positives = fewer unnecessary escalations |
 | **Recall (label=1)** | Of responses where Tier 3 actually disagreed, what % did judge catch? | >0.80 | Fewer false negatives = catch comprehension failures before production |
 | **F1 (label=1)** | Harmonic mean of precision & recall | >0.75 | Balanced metric combining both error types |
@@ -806,7 +828,7 @@ Fifth, future work should define clearer cost models. False positives create rev
 
 <a id="ref-3">[3]</a> Krause, L., & Vossen, P. T. J. M. (2024). "The Gricean Maxims in NLP — A Survey." In *Proceedings of the 17th International Natural Language Generation Conference (INLG 2024)*, 470–485. Association for Computational Linguistics.
 
-<a id="ref-4">[4]</a> Khayrallah, H., & Sedoc, J. (2021). "Measuring the 'I don’t know' Problem through the Lens of Gricean Quantity." In *Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies*, 5659–5670. Association for Computational Linguistics. doi: 10.18653/v1/2021.naacl-main.450.
+<a id="ref-4">[4]</a> Khayrallah, H., & Sedoc, J. (2021). "Measuring the 'I don't know' Problem through the Lens of Gricean Quantity." In *Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies*, 5659–5670. Association for Computational Linguistics. doi: 10.18653/v1/2021.naacl-main.450.
 
 <a id="ref-5">[5]</a> Ação Educativa & INAF. (2024). *Indicador de Alfabetismo Funcional no Brasil 2024*. Ação Educativa / Indicador de Alfabetismo Funcional (INAF). Retrieved from https://alfabetismofuncional.org.br/.
 
@@ -828,6 +850,8 @@ Fifth, future work should define clearer cost models. False positives create rev
 
 <a id="ref-14">[14]</a> Krumdick, M., Lovering, C., Reddy, V., Ebner, S., & Tanner, C. (2025). "No Free Labels: Limitations of LLM-as-a-Judge Without Human Grounding." arXiv:2503.05061.
 
+<a id="ref-15">[15]</a> Shankar, S., Zamfirescu-Pereira, J. D., Hartmann, B., Parameswaran, A. G., & Arawjo, I. (2024). "Who Validates the Validators? Aligning LLM-Assisted Evaluation of LLM Outputs with Human Preferences." In *Proceedings of the 37th Annual ACM Symposium on User Interface Software and Technology (UIST '24)*. doi: 10.1145/3654777.3676450.
+
 ---
 
 ## Appendix: Critical Questions for Implementation {#appendix-critical-questions}
@@ -845,3 +869,13 @@ Fifth, future work should define clearer cost models. False positives create rev
 ---
 
 *This framework is designed for UX and content designers working with evaluation engineers and LLM specialists. It assumes familiarity with annotation workflows, LangFuse evals, and agentic AI architecture. Questions or feedback: danieliscoding@gmail.com*
+
+---
+
+## Revision History
+
+| Version | Date | Summary | Reviewed by | Full log |
+|---|---:|---|---|---|
+| 0.1.3 | 2026-09-22 | Replaced the ASCII System Flow with a compact Mermaid diagram using Inter as the diagram typeface. | Daniel Vieira Souza | [Revision log v0.1.3](./revision-logs/when-data-is-clean-semantic-failures-v0.1.3-log.md) |
+| 0.1.2 | 2026-09-22 | Added Shankar et al. (2024) as supporting evidence for human-aligned evaluator calibration; updated references. | Daniel Vieira Souza | [Revision log v0.1.2](./revision-logs/when-data-is-clean-semantic-failures-v0.1.2-log.md) |
+
