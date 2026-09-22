@@ -263,7 +263,7 @@ This comparison also clarifies the role of each track. Track 1 is a baseline for
 | Tier | Profile | Expertise | Role in Eval | Pilot sample |
 |------|---------|-----------|--------------|------------|
 | **Tier 1** | Data Scientist / Domain Expert | High domain knowledge (financial systems, SQL, data semantics) | Validate accuracy of facts, domain reasoning, and whether the data answer is correct | 5–8 raters |
-| **Tier 2** | Language Designer / Linguist | NLP, communication design, pragmatics | Evaluate clarity, ambiguity, structure, and whether the response follows Grice's maxims | 5–8 raters |
+| **Tier 2** | Content Designer, Linguist, Writer | NLP, communication design, pragmatics | Evaluate clarity, ambiguity, structure, and whether the response follows Grice's maxims | 5–8 raters |
 | **Tier 3A** | Target user: lower functional-literacy band + low financial-domain familiarity | Practical comprehension risk | Evaluate whether the response can be understood without background knowledge | 10–15 raters |
 | **Tier 3B** | Target user: elementary/intermediate functional-literacy band + low financial-domain familiarity | Comparison within target population | Identify whether comprehension failures persist beyond the lowest-literacy group | 10–15 raters |
 | **Tier 3C** | Small-business or administrative user with moderate practical financial familiarity | Practical domain exposure, non-specialist | Test whether operational familiarity reduces comprehension failures | 10–15 raters |
