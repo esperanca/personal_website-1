@@ -11,7 +11,7 @@ tags:
   - grice
   - verification
   - agentic
-draft: false
+draft: true
 status: "published"
 ---
 
