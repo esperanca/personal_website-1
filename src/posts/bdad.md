@@ -3,7 +3,7 @@ layout: layouts/post.njk
 title: "BDAD — Comportamento como Artefato de Especificação"
 metaTitle: "BDAD: especificação comportamental de agentes"
 metaDesc: "Por que o comportamento esperado deveria ser o principal artefato de especificação de agentes, independente da implementação"
-date: 2026-09-23T10:00:00.000Z
+date: 2026-09-23
 tags:
   - design
   - agents

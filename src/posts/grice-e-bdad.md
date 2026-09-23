@@ -3,7 +3,7 @@ layout: layouts/post.njk
 title: "Grice e BDAD — Três Camadas de Responsabilidade"
 metaTitle: "Como Grice, BDAD e Verificabilidade se relacionam"
 metaDesc: "Análise comparativa: especificação comportamental, linguagem responsável e observabilidade em sistemas agênticos"
-date: 2026-09-23T10:15:00.000Z
+date: 2026-09-23
 tags:
   - design
   - agents
