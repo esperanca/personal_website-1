@@ -11,7 +11,7 @@ tags:
   - specification
   - agentic
   - verification
-draft: false
+lang: "pt-BR"
 status: "published"
 ---
 
@@ -241,5 +241,5 @@ BDAD oferece uma forma de fazer essa distinção explícita, verificável e dura
 ---
 
 **Veja também:**
-- [Análise comparativa: BDAD vs. Grice vs. Verificabilidade](/posts/bdad-comparison/)
+- [Grice e BDAD — Três camadas de responsabilidade](/posts/grice-e-bdad/)
 - [Notas #007 - Design e agentes](/posts/notas-007/)
