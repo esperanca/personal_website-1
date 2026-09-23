@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Passar para uma pessoa · Catálogo agêntico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/estilo.css">
+</head>
+<body>
+<header class="site-header"><div class="wrapper">
+<a class="brand" href="../index.html">catálogo agêntico</a>
+<ul class="nav"><li><a href="../necessidades/index.html">Necessidades</a></li><li><a href="../padroes/index.html" aria-current="page">Padrões</a></li><li><a href="../fundamentos/index.html">Fundamentos</a></li><li><a href="../componentes/index.html">Componentes</a></li><li><a href="../guia-de-conteudo.html">Conteúdo</a></li><li><a href="../fontes/index.html">Fontes</a></li></ul>
+</div></header>
+<div class="proto"><div class="wrapper"><div class="inner"><span>Protótipo · versão 1 · 23/09/2026 · curadoria em construção</span></div></div></div>
+<main><div class="wrapper"><div class="inner">
+<nav class="crumbs" aria-label="Você está em"><a href="../index.html">Início</a><span>›</span><a href="../padroes/index.html">Padrões</a><span>›</span><a href="../necessidades/09-chegar-a-uma-pessoa.html">Quero chegar a uma pessoa</a></nav>
+<h1>Passar para uma pessoa</h1>
+<div class="tags"><span class="tag">Ficha</span><a class="tag tag--soft" href="../necessidades/09-chegar-a-uma-pessoa.html">Quero chegar a uma pessoa</a><span class="tag tag--soft">Momento: a qualquer momento</span><span class="tag tag--soft">Papel principal: todos</span><span class="tag tag--solid">revisada</span></div>
+<p class="lede">Quando o agente não dá conta, leve a conversa até alguém que dê, com o contexto junto, sem a pessoa repetir nada e sem dúvida sobre com quem está falando.</p>
+<nav class="toc" aria-label="Nesta página"><a href="#problema">Problema</a><a href="#quando-usar-quando-evitar">Quando usar, quando evitar</a><a href="#autonomia-e-atores">Autonomia e atores</a><a href="#variacoes">Variações</a><a href="#estados">Estados</a><a href="#anatomia">Anatomia</a><a href="#conteudo">Conteúdo</a><a href="#anti-padroes">Anti-padrões</a><a href="#notas-por-dominio">Notas por domínio</a><a href="#risco-da-omissao">Risco da omissão</a><a href="#como-medir">Como medir</a><a href="#relacionados">Relacionados</a><a href="#referencias">Referências</a></nav>
+<div class="content">
+<h2 id="problema">Problema</h2>
+<p>A Papelaria Central contesta a divergência entre boleto e nota. O agente não tem autoridade para negociar. Se insiste, chuta; se só diz "não posso ajudar", abandona a pessoa. <span class="nc">nota da curadoria</span></p>
+<p>Como passar de IA para uma pessoa sem fazer ninguém repetir o contexto nem se perguntar com quem está falando? (<a href="https://www.aiuxplayground.com/pattern/human-handoff/">AI UX Playground, Human Handoff</a>)</p>
+<h2 id="quando-usar-quando-evitar">Quando usar, quando evitar</h2>
+<p><strong>Use quando</strong> a confiança cai, a regra não permite seguir, houve falha repetida, a pessoa demonstra frustração ou pede. Dispare por sinal claro, não por acaso (<a href="https://www.aiuxplayground.com/pattern/human-handoff/">AI UX Playground</a>).</p>
+<p><strong>Evite quando</strong> não existe fila humana, a tarefa é determinística ou tentar de novo resolve mais rápido (<a href="https://www.aiuxplayground.com/pattern/human-handoff/">AI UX Playground</a>).</p>
+<p>A diferença para <a href="plano-com-aprovacao.html">Plano com aprovação</a>: lá a pessoa aprova uma ação; aqui o agente sai de cena (<a href="https://www.aiuxplayground.com/pattern/human-handoff/">AI UX Playground</a>, FAQ).</p>
+<h2 id="autonomia-e-atores">Autonomia e atores</h2>
+<p>Aparece em qualquer papel. O que muda é que entra um terceiro ator, que os papéis de Feng não descrevem. Ver <a href="../fundamentos/papeis-e-atores.html">Papéis e atores</a>.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Ator</th>
+<th>O que faz no padrão</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cliente</td>
+<td>Pede, espera, decide se aceita a passagem</td>
+</tr>
+<tr>
+<td>Agente</td>
+<td>Percebe que não dá conta, oferece, empacota o contexto</td>
+</tr>
+<tr>
+<td>Atendente ou gerente</td>
+<td>Recebe o contexto, assume, resolve, devolve ou encerra</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="variacoes">Variações</h2>
+<ul>
+<li><strong>Pedir esclarecimento</strong> e <strong>oferecer opções</strong> antes de passar (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco, Escalation Pathway</a>). Ver <a href="perguntar-em-vez-de-chutar.html">Perguntar em vez de chutar</a>.</li>
+<li><strong>Pedir intervenção humana</strong> em casos de alto risco (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>).</li>
+<li><strong>Na hora</strong> ou <strong>para depois</strong> (chamado). <span class="nc">nota da curadoria</span></li>
+<li><strong>Volta para o agente</strong> depois que a pessoa resolve (<a href="https://www.aiuxplayground.com/pattern/human-handoff/">AI UX Playground</a>, "Return").</li>
+</ul>
+<h2 id="estados">Estados</h2>
+<p>Usa Aguardando decisão do ciclo da tarefa e os estados do <a href="../fundamentos/ciclos-de-vida.html">ciclo da conversa</a>, baseados nos seis do AI UX Playground (Automated, Stalled, Offering, Queuing, Handed off, Resolved) (<a href="https://www.aiuxplayground.com/pattern/human-handoff/">AI UX Playground</a>). Textos: <em>nota da curadoria</em>.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Estado</th>
+<th>O que mostra</th>
+<th>Texto de exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oferecendo</td>
+<td>Por que o agente não segue, quem pode ajudar, quanto demora</td>
+<td>"Negociar com a Papelaria Central não é algo que eu possa fazer. Seu gerente pode. Quer que eu passe o caso para ele?"</td>
+</tr>
+<tr>
+<td>Na fila de atendimento</td>
+<td>Prazo honesto, o que foi enviado</td>
+<td>"Passei o caso com a conversa e os dois documentos. O gerente responde até amanhã, 12h."</td>
+</tr>
+<tr>
+<td>Com uma pessoa</td>
+<td>Quem entrou, de onde, que viu o histórico</td>
+<td>"Carla, gerente da sua conta, entrou na conversa."</td>
+</tr>
+<tr>
+<td>Resolvido pela pessoa</td>
+<td>O que foi decidido, se o agente volta</td>
+<td>"A Carla combinou pagar R$ 890,00. Quer que eu agende?"</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="anatomia">Anatomia</h2>
+<p>Gatilho, contexto anexado, oferta antes de forçar, sinal visível da troca, expectativa honesta de espera e decisão sobre a volta (<a href="https://www.aiuxplayground.com/pattern/human-handoff/">AI UX Playground</a>: trigger, context, offer, signal, queue, return).</p>
+<div class="mock"><div class="mock__head">Exemplo de tela · caso fictício, nota da curadoria</div><div class="mock__body">
+<p><strong>Assistente de pagamentos · IA</strong><br />
+Passei o caso para a Carla com a nossa conversa, o boleto e a nota fiscal. Você não precisa explicar de novo.</p>
+<p><em>Carla Mendes, gerente da sua conta, entrou na conversa · 10h42</em></p>
+<p><strong>Carla Mendes · Gerente</strong><br />
+Oi! Vi a diferença de R$ 90,00 entre o boleto e a nota da Papelaria Central. Vou falar com eles e te retorno até as 15h.</p>
+</div></div>
+<h2 id="conteudo">Conteúdo</h2>
+<p><span class="nc">nota da curadoria</span></p>
+<div class="rules">
+<div class="rule">
+<div class="rule__t">Diga por que o agente não segue</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Desculpe, não consegui entender. Vou te transferir.</div><div class="good"><span class="lbl">Prefira</span>Negociar com fornecedor não é algo que eu possa fazer. Seu gerente pode.</div></div>
+</div>
+<div class="rule">
+<div class="rule__t">Prazo que existe</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Em breve</div><div class="good"><span class="lbl">Prefira</span>Até amanhã, 12h</div></div>
+</div>
+<div class="rule">
+<div class="rule__t">Diga o que foi junto</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Transferindo…</div><div class="good"><span class="lbl">Prefira</span>Passei a conversa, o boleto e a nota.</div></div>
+</div>
+</div>
+
+<p>Marque cada fala com nome e papel. Yocco dá um exemplo de oferta: "This transaction seems unusual, and I'm not confident about how to proceed. Would you like me to flag this for a human agent to review?" (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>)</p>
+<h2 id="anti-padroes">Anti-padrões</h2>
+<ul>
+<li><strong>Fila do zero</strong>, <strong>troca silenciosa</strong>, <strong>passar tarde demais</strong>, <strong>passar tudo</strong> (<a href="https://www.aiuxplayground.com/pattern/human-handoff/">AI UX Playground</a>).</li>
+<li><strong>Escalada para lugar nenhum</strong> (<a href="https://www.aiuxdesign.guide/patterns/escalation-pathways">AI UX Design Guide, Escalation Pathways</a>).</li>
+<li><strong>Passagem abrupta</strong>, sem aviso nem contexto (<a href="https://www.aiuxdesign.guide/patterns/graceful-handoff">AI UX Design Guide, Graceful Handoff</a>, "cliff-edge handoff").</li>
+</ul>
+<h2 id="notas-por-dominio">Notas por domínio</h2>
+<p><strong>Financeiro.</strong> O gerente tem horário e carteira; confirme disponibilidade antes de prometer. O pacote de contexto leva só o necessário: sigilo bancário vale entre áreas. Canais regulados podem exigir protocolo. <span class="nc">nota da curadoria</span></p>
+<h2 id="risco-da-omissao">Risco da omissão</h2>
+<p>Sem caminho para uma pessoa, o agente acaba dando um palpite confiante e catastrófico (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>).</p>
+<h2 id="como-medir">Como medir</h2>
+<ul>
+<li>Frequência de escalada entre 5% e 15%; resolução depois da escalada acima de 90% (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>).</li>
+<li>Quantas vezes o atendente pergunta algo que já estava na conversa. <span class="nc">nota da curadoria</span></li>
+</ul>
+<h2 id="relacionados">Relacionados</h2>
+<ul>
+<li><a href="identificar-o-agente.html">Identificar o agente</a></li>
+<li><a href="perguntar-em-vez-de-chutar.html">Perguntar em vez de chutar</a></li>
+<li><a href="desfazer.html">Desfazer</a>: compensações que dependem de alguém de fora.</li>
+</ul>
+<h2 id="referencias">Referências</h2>
+<h3 id="exemplo-encontrado-em">Exemplo encontrado em</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Produto</th>
+<th>Como aparece</th>
+<th>Citado por</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Intercom</td>
+<td>A IA passa para um atendente com o histórico</td>
+<td><a href="https://www.aiuxplayground.com/pattern/human-handoff/">AI UX Playground · Human Handoff</a></td>
+</tr>
+<tr>
+<td>Zendesk</td>
+<td>Passagem do bot para o atendente mantendo o chamado</td>
+<td><a href="https://www.aiuxplayground.com/pattern/human-handoff/">AI UX Playground · Human Handoff</a></td>
+</tr>
+<tr>
+<td>Drift</td>
+<td>Roteamento de conversas qualificadas para vendas</td>
+<td><a href="https://www.aiuxplayground.com/pattern/human-handoff/">AI UX Playground · Human Handoff</a></td>
+</tr>
+<tr>
+<td>LivePerson</td>
+<td>Escalada por nível de confiança</td>
+<td><a href="https://www.aiuxplayground.com/pattern/human-handoff/">AI UX Playground · Human Handoff</a></td>
+</tr>
+<tr>
+<td>Tesla Autopilot</td>
+<td>Retomada do controle pelo motorista</td>
+<td><a href="https://www.aiuxdesign.guide/patterns/graceful-handoff">AI UX Design Guide · Graceful Handoff</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="documentado-em">Documentado em</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Biblioteca</th>
+<th>Categoria original</th>
+<th>Nome original</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI UX Playground</td>
+<td>Agents</td>
+<td>Human Handoff</td>
+<td><a href="https://www.aiuxplayground.com/pattern/human-handoff/">link</a></td>
+</tr>
+<tr>
+<td>Yocco (Smashing)</td>
+<td>Post-action · Safety and Recovery</td>
+<td>Escalation Pathway</td>
+<td><a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">link</a></td>
+</tr>
+<tr>
+<td>AI UX Design Guide</td>
+<td>Human-AI Collaboration</td>
+<td>Escalation Pathways; Graceful Handoff</td>
+<td><a href="https://www.aiuxdesign.guide/patterns/escalation-pathways">link</a> · <a href="https://www.aiuxdesign.guide/patterns/graceful-handoff">link</a></td>
+</tr>
+<tr>
+<td>HAX (Microsoft)</td>
+<td>When wrong</td>
+<td>G10 · Scope services when in doubt</td>
+<td><a href="https://www.microsoft.com/en-us/haxtoolkit/library/">link</a></td>
+</tr>
+<tr>
+<td>Agentic Design</td>
+<td>UI/UX Patterns</td>
+<td>AQE; ACX</td>
+<td><a href="https://agentic-design.ai/patterns/ui-ux-patterns">lista</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>O Shape of AI não documenta este padrão. Acessado em 23/09/2026. Produtos citados pelas bibliotecas, ainda não conferidos por nós.</p>
+</div>
+<nav class="pn" aria-label="Navegação sequencial"><a class="prev" href="../padroes/sugestao-proativa.html"><small>← Anterior</small><span>Sugestão proativa</span></a><a class="next" href="../padroes/nivel-de-autonomia.html"><small>Próximo →</small><span>Nível de autonomia</span></a></nav>
+</div></div></main>
+<footer class="site-footer"><div class="wrapper"><div class="inner">
+<p><strong>Catálogo de padrões agênticos</strong> · curadoria para designers e content designers</p>
+<p><a href="../como-usar.html">Como usar</a> · <a href="../metodo-de-curadoria.html">Método de curadoria</a> · <a href="../glossario.html">Glossário</a> · <a href="../agenda-de-pesquisa.html">Agenda de pesquisa</a> · <a href="../log.html">Log</a></p>
+<p>Conteúdo de terceiros citado com link para a fonte. Casos de exemplo e pessoas citadas são fictícios.</p>
+</div></div></footer>
+</body>
+</html>

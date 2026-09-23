@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plano com aprovação · Catálogo agêntico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/estilo.css">
+</head>
+<body>
+<header class="site-header"><div class="wrapper">
+<a class="brand" href="../index.html">catálogo agêntico</a>
+<ul class="nav"><li><a href="../necessidades/index.html">Necessidades</a></li><li><a href="../padroes/index.html" aria-current="page">Padrões</a></li><li><a href="../fundamentos/index.html">Fundamentos</a></li><li><a href="../componentes/index.html">Componentes</a></li><li><a href="../guia-de-conteudo.html">Conteúdo</a></li><li><a href="../fontes/index.html">Fontes</a></li></ul>
+</div></header>
+<div class="proto"><div class="wrapper"><div class="inner"><span>Protótipo · versão 1 · 23/09/2026 · curadoria em construção</span></div></div></div>
+<main><div class="wrapper"><div class="inner">
+<nav class="crumbs" aria-label="Você está em"><a href="../index.html">Início</a><span>›</span><a href="../padroes/index.html">Padrões</a><span>›</span><a href="../necessidades/04-decidir-antes.html">Quero decidir antes que aconteça</a></nav>
+<h1>Plano com aprovação</h1>
+<div class="tags"><span class="tag">Ficha</span><a class="tag tag--soft" href="../necessidades/04-decidir-antes.html">Quero decidir antes que aconteça</a><span class="tag tag--soft">Momento: antes da ação</span><span class="tag tag--soft">Papel principal: aprovadora</span><span class="tag tag--solid">revisada</span></div>
+<p class="lede">Mostre o que o agente vai fazer, com impacto e escopo, e espere a pessoa aprovar, ajustar ou recusar antes de qualquer ação difícil de desfazer.</p>
+<nav class="toc" aria-label="Nesta página"><a href="#problema">Problema</a><a href="#quando-usar-quando-evitar">Quando usar, quando evitar</a><a href="#autonomia-e-atores">Autonomia e atores</a><a href="#variacoes">Variações</a><a href="#estados">Estados</a><a href="#anatomia">Anatomia</a><a href="#conteudo">Conteúdo</a><a href="#anti-padroes">Anti-padrões</a><a href="#notas-por-dominio">Notas por domínio</a><a href="#risco-da-omissao">Risco da omissão</a><a href="#por-que-funciona">Por que funciona</a><a href="#como-medir">Como medir</a><a href="#relacionados">Relacionados</a><a href="#referencias">Referências</a></nav>
+<div class="content">
+<h2 id="problema">Problema</h2>
+<p>O agente entendeu o pedido de um jeito e está prestes a agir. Se entendeu errado, a pessoa só descobre depois que o dinheiro saiu, a mensagem foi enviada ou o registro foi apagado.</p>
+<p>Como manter a utilidade da autonomia sem que a pessoa seja surpreendida por uma ação que não pode desfazer? (pergunta adaptada de <a href="https://aiuxplayground.com/pattern/human-in-the-loop">AI UX Playground, Human in the loop</a>)</p>
+<h2 id="quando-usar-quando-evitar">Quando usar, quando evitar</h2>
+<p><strong>Use quando a ação</strong> movimenta dinheiro em qualquer valor, fala com outra pessoa ou empresa em nome de quem usa, compartilha dados com terceiros ou não tem desfazer (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco, Intent Preview</a>; <a href="https://aiuxplayground.com/pattern/human-in-the-loop">AI UX Playground</a>).</p>
+<p><strong>Evite quando</strong> a ação é consulta, rascunho ou simulação, ou quando a pessoa já autorizou aquele tipo de ação dentro de um limite. Pedir aprovação para tudo cansa; o nível de fricção deve acompanhar o risco (<a href="https://www.shapeof.ai/patterns/verification">Shape of AI, Verification</a>).</p>
+<h2 id="autonomia-e-atores">Autonomia e atores</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Papel da pessoa</th>
+<th>Como o padrão aparece</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operadora</td>
+<td>Não se aplica. A pessoa faz; o agente, no máximo, confere.</td>
+</tr>
+<tr>
+<td>Colaboradora</td>
+<td>O plano é montado junto. A pessoa edita passos antes de qualquer coisa rodar.</td>
+</tr>
+<tr>
+<td>Consultora</td>
+<td>O agente propõe e a pessoa executa. O botão principal é "Faço eu mesmo".</td>
+</tr>
+<tr>
+<td>Aprovadora</td>
+<td>Forma principal. O agente monta, a pessoa aprova, o agente executa.</td>
+</tr>
+<tr>
+<td>Observadora</td>
+<td>Não se aplica. O plano vira registro depois da ação: ver <a href="historico-de-acoes.html">Histórico de ações</a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Papéis segundo <a href="https://arxiv.org/abs/2506.12469">Feng et al.</a>. Ver <a href="../fundamentos/papeis-e-atores.html">Papéis e atores</a>.</p>
+<h2 id="variacoes">Variações</h2>
+<ul>
+<li><strong>Plano em passos.</strong> Vários passos em sequência, cada um com verbo, objeto e valor.</li>
+<li><strong>Plano consultivo ou contratual.</strong> O Shape of AI separa o plano que só mostra o raciocínio do plano que exige aprovação para seguir (<a href="https://www.shapeof.ai/patterns/action-plan">Shape of AI, Action plan</a>).</li>
+<li><strong>Aprovação fora da tela.</strong> O pedido chega por notificação quando o agente roda em segundo plano; integrações como Slack e e-mail aceleram a resposta (<a href="https://www.shapeof.ai/patterns/verification">Shape of AI, Verification</a>).</li>
+</ul>
+<p>Para uma ação única, ver <a href="confirmacao.html">Confirmação</a>. Para testar antes do lote, ver <a href="amostra-antes-de-rodar.html">Amostra antes de rodar</a>.</p>
+<h2 id="estados">Estados</h2>
+<p>Usa o <a href="../fundamentos/ciclos-de-vida.html">ciclo de vida da tarefa</a>. Cada passo do plano mostra o nível de <a href="../fundamentos/da-para-voltar.html">reversibilidade</a>.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Estado</th>
+<th>O que a interface mostra</th>
+<th>Texto de exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proposto</td>
+<td>O plano completo, os botões de decisão e o prazo de validade</td>
+<td>"Vou pagar 3 boletos e deixar 1 com você."</td>
+</tr>
+<tr>
+<td>Editando</td>
+<td>Passos editáveis, total recalculado, botão para voltar ao original</td>
+<td>"Total atualizado: R$ 14.430,00"</td>
+</tr>
+<tr>
+<td>Aprovado</td>
+<td>Quem aprovou, quando, o que acontece agora</td>
+<td>"Aprovado por você às 10h12. Começo agora."</td>
+</tr>
+<tr>
+<td>Rodando</td>
+<td>Ver <a href="acompanhar-execucao.html">Acompanhar execução</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Recusado</td>
+<td>Confirmação de que nada foi feito</td>
+<td>"Tudo bem, não paguei nada."</td>
+</tr>
+<tr>
+<td>Vencido</td>
+<td>O plano ficou velho antes de ser aprovado</td>
+<td>"O saldo mudou desde que montei este plano. Refaço?"</td>
+</tr>
+</tbody>
+</table></div>
+<p>"Vencido" não aparece em nenhuma fonte; entrou pelo caso financeiro. <span class="nc">nota da curadoria</span> Os demais seguem <a href="https://aiuxplayground.com/pattern/human-in-the-loop">AI UX Playground</a> (proposed, under review, editing, approved, rejected, executed) e <a href="https://design.gitlab.com/patterns/duo-agents-and-flows/">GitLab Pajamas</a> (awaiting user input).</p>
+<h2 id="anatomia">Anatomia</h2>
+<p>Elementos obrigatórios: <strong>o que</strong> vai acontecer, <strong>com o quê</strong> (escopo), <strong>quanto</strong> (impacto), <strong>por quê</strong>, <strong>o que ficou de fora</strong> e as <strong>decisões</strong>. Opcionais: alternativas, prazo de validade, como desfazer depois. Os elementos-chave seguem <a href="https://aiuxplayground.com/pattern/human-in-the-loop">AI UX Playground</a> (action, scope, impact, reason, alternatives, recovery).</p>
+<div class="mock"><div class="mock__head">Exemplo de tela · caso fictício, nota da curadoria</div><div class="mock__body">
+<p><strong>Pagamentos a fornecedores desta semana</strong><br />
+Encontrei 4 boletos com vencimento até sexta. Vou pagar 3 e deixar 1 com você.</p>
+<ol>
+<li>Pagar Gráfica Norte · R$ 3.200,00 · vence quinta, 24/09</li>
+<li>Pagar Transportes Lima · R$ 12.480,00 · vence sexta, 25/09</li>
+<li>Pagar Energia Sul · R$ 1.950,00 · vence sexta, 25/09</li>
+</ol>
+<p><strong>Fica com você:</strong> Papelaria Central. O boleto é de R$ 980,00 e a nota fiscal diz R$ 890,00.<br />
+Sai R$ 17.630,00 da conta corrente final 4412. Este plano vale até hoje, 18h.</p>
+<div class="btns"><span class="btn btn--primary">Pagar R$ 17.630,00</span> <span class="btn">Ajustar</span> <span class="btn">Faço eu mesmo</span></div>
+</div></div>
+<p>Os três botões seguem o exemplo de Yocco: Proceed with this Plan, Edit Plan, Handle it Myself (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>).</p>
+<h2 id="conteudo">Conteúdo</h2>
+<p>Linguagem simples no lugar de chamada técnica (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco, Intent Preview</a>). As regras abaixo são <em>nota da curadoria</em>.</p>
+<div class="rules">
+<div class="rule">
+<div class="rule__t">Passo com verbo, objeto e valor</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Executar pagamento_lote(id 88213)</div><div class="good"><span class="lbl">Prefira</span>Pagar Transportes Lima · R$ 12.480,00</div></div>
+</div>
+<div class="rule">
+<div class="rule__t">Botão diz a ação e o valor</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Confirmar · OK · Continuar</div><div class="good"><span class="lbl">Prefira</span>Pagar R$ 17.630,00</div></div>
+</div>
+<div class="rule">
+<div class="rule__t">Diga o que ficou de fora</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>3 pagamentos prontos.</div><div class="good"><span class="lbl">Prefira</span>Vou pagar 3 e deixar 1 com você. O boleto da Papelaria Central não bate com a nota.</div></div>
+</div>
+</div>
+
+<p>No estado Aguardando decisão, abra pelo que precisa, depois o motivo, depois o que já foi feito. O Pajamas pede "dizer claramente qual entrada é necessária e por quê" (<a href="https://design.gitlab.com/patterns/duo-agents-and-flows/">GitLab Pajamas</a>).</p>
+<h2 id="anti-padroes">Anti-padrões</h2>
+<ul>
+<li><strong>Aprovação depois da execução</strong> e <strong>"sempre permitir" sem limite</strong> (<a href="https://aiuxplayground.com/pattern/human-in-the-loop">AI UX Playground</a>).</li>
+<li><strong>Aprovar tudo.</strong> Confirmação em ação de baixo risco treina a pessoa a clicar sem ler (<a href="https://www.shapeof.ai/patterns/verification">Shape of AI, Verification</a>).</li>
+<li><strong>Plano que não vence</strong>, <strong>botão genérico</strong> e <strong>plano sem o que ficou de fora</strong>. <span class="nc">nota da curadoria</span></li>
+</ul>
+<h2 id="notas-por-dominio">Notas por domínio</h2>
+<p><strong>Financeiro.</strong> Saldo muda, boleto vence, fornecedor troca a conta: o plano precisa de prazo de validade. Pagamentos obedecem ao horário de corte do banco. <span class="nc">nota da curadoria</span></p>
+<h2 id="risco-da-omissao">Risco da omissão</h2>
+<p>A pessoa se sente atropelada pelo agente e desliga a função para recuperar o controle (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>).</p>
+<h2 id="por-que-funciona">Por que funciona</h2>
+<p>Ver o plano antes reduz a carga de adivinhar o que o agente entendeu e elimina a surpresa (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>). É argumento do autor, não resultado medido.</p>
+<h2 id="como-medir">Como medir</h2>
+<ul>
+<li><strong>Aprovação sem edição:</strong> planos aprovados sem ajuste sobre o total exibido. Yocco propõe acima de 85% (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>).</li>
+<li><strong>"Faço eu mesmo":</strong> acima de 10% pede revisão de como o agente monta o plano (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>).</li>
+<li><strong>Tempo até decidir:</strong> decisões muito rápidas em valores altos podem indicar clique automático. <span class="nc">nota da curadoria</span></li>
+</ul>
+<h2 id="relacionados">Relacionados</h2>
+<ul>
+<li><a href="confirmacao.html">Confirmação</a>: a mesma decisão para uma ação só.</li>
+<li><a href="estimativa-de-custo.html">Estimativa de custo</a>: quando o impacto é tempo ou processamento.</li>
+<li><a href="nivel-de-autonomia.html">Nível de autonomia</a>: define quando este padrão pode ser pulado.</li>
+<li><a href="desfazer.html">Desfazer</a>: o que resta quando a aprovação falhou.</li>
+</ul>
+<h2 id="referencias">Referências</h2>
+<h3 id="exemplo-encontrado-em">Exemplo encontrado em</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Produto</th>
+<th>Como aparece</th>
+<th>Citado por</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Replit, Cursor, Gamma, Zapier</td>
+<td>Plano antes de executar</td>
+<td><a href="https://www.shapeof.ai/patterns/action-plan">Shape of AI · Action plan</a></td>
+</tr>
+<tr>
+<td>Claude (Projects), Perplexity Labs</td>
+<td>Plano em passos; plano adaptativo</td>
+<td><a href="https://www.shapeof.ai/patterns/action-plan">Shape of AI · Action plan</a></td>
+</tr>
+<tr>
+<td>GitHub Copilot, Gmail Smart Compose, ChatGPT, Gemini</td>
+<td>Aprovar, editar ou recusar antes de aplicar</td>
+<td><a href="https://aiuxplayground.com/pattern/human-in-the-loop">AI UX Playground · Human in the loop</a></td>
+</tr>
+<tr>
+<td>GitLab Duo</td>
+<td>Awaiting user input com Approve, Deny, Modify</td>
+<td><a href="https://design.gitlab.com/patterns/duo-agents-and-flows/">GitLab Pajamas</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="documentado-em">Documentado em</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Biblioteca</th>
+<th>Categoria original</th>
+<th>Nome original</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shape of AI</td>
+<td>Governors</td>
+<td>Action plan</td>
+<td><a href="https://www.shapeof.ai/patterns/action-plan">link</a></td>
+</tr>
+<tr>
+<td>Yocco (Smashing)</td>
+<td>Pre-action · Establishing Intent</td>
+<td>Intent Preview</td>
+<td><a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">link</a></td>
+</tr>
+<tr>
+<td>AI UX Playground</td>
+<td>Collab</td>
+<td>Human in the loop</td>
+<td><a href="https://aiuxplayground.com/pattern/human-in-the-loop">link</a></td>
+</tr>
+<tr>
+<td>AI UX Design Guide</td>
+<td>Human-AI Collaboration</td>
+<td>Intent Preview</td>
+<td><a href="https://www.aiuxdesign.guide/patterns">lista</a></td>
+</tr>
+<tr>
+<td>GitLab Pajamas</td>
+<td>Flows · Flow state communication</td>
+<td>Awaiting User Input</td>
+<td><a href="https://design.gitlab.com/patterns/duo-agents-and-flows/">link</a></td>
+</tr>
+<tr>
+<td>Agentic Design</td>
+<td>UI/UX Patterns</td>
+<td>Human-in-the-Loop (HITL)</td>
+<td><a href="https://agentic-design.ai/patterns/ui-ux-patterns/human-in-the-loop">link</a></td>
+</tr>
+<tr>
+<td>Feng, McDonald, Zhang</td>
+<td>Levels of Autonomy</td>
+<td>Approver</td>
+<td><a href="https://arxiv.org/abs/2506.12469">link</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Acessado em 23/09/2026. Produtos citados pelas bibliotecas, ainda não conferidos por nós.</p>
+</div>
+<nav class="pn" aria-label="Navegação sequencial"><a class="prev" href="../padroes/perguntar-em-vez-de-chutar.html"><small>← Anterior</small><span>Perguntar em vez de chutar</span></a><a class="next" href="../padroes/amostra-antes-de-rodar.html"><small>Próximo →</small><span>Amostra antes de rodar</span></a></nav>
+</div></div></main>
+<footer class="site-footer"><div class="wrapper"><div class="inner">
+<p><strong>Catálogo de padrões agênticos</strong> · curadoria para designers e content designers</p>
+<p><a href="../como-usar.html">Como usar</a> · <a href="../metodo-de-curadoria.html">Método de curadoria</a> · <a href="../glossario.html">Glossário</a> · <a href="../agenda-de-pesquisa.html">Agenda de pesquisa</a> · <a href="../log.html">Log</a></p>
+<p>Conteúdo de terceiros citado com link para a fonte. Casos de exemplo e pessoas citadas são fictícios.</p>
+</div></div></footer>
+</body>
+</html>

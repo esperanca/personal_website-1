@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estimativa de custo · Catálogo agêntico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/estilo.css">
+</head>
+<body>
+<header class="site-header"><div class="wrapper">
+<a class="brand" href="../index.html">catálogo agêntico</a>
+<ul class="nav"><li><a href="../necessidades/index.html">Necessidades</a></li><li><a href="../padroes/index.html" aria-current="page">Padrões</a></li><li><a href="../fundamentos/index.html">Fundamentos</a></li><li><a href="../componentes/index.html">Componentes</a></li><li><a href="../guia-de-conteudo.html">Conteúdo</a></li><li><a href="../fontes/index.html">Fontes</a></li></ul>
+</div></header>
+<div class="proto"><div class="wrapper"><div class="inner"><span>Protótipo · versão 1 · 23/09/2026 · curadoria em construção</span></div></div></div>
+<main><div class="wrapper"><div class="inner">
+<nav class="crumbs" aria-label="Você está em"><a href="../index.html">Início</a><span>›</span><a href="../padroes/index.html">Padrões</a><span>›</span><a href="../necessidades/04-decidir-antes.html">Quero decidir antes que aconteça</a></nav>
+<h1>Estimativa de custo</h1>
+<div class="tags"><span class="tag">Ficha</span><a class="tag tag--soft" href="../necessidades/04-decidir-antes.html">Quero decidir antes que aconteça</a><span class="tag tag--soft">Momento: antes da ação</span><span class="tag tag--soft">Papel principal: aprovadora</span><span class="tag tag--dash">rascunho</span></div>
+<p class="lede">Mostre quanto a ação vai custar (em tempo, processamento ou dinheiro) antes de ela rodar, na unidade que a pessoa entende.</p>
+<nav class="toc" aria-label="Nesta página"><a href="#problema">Problema</a><a href="#quando-usar-quando-evitar">Quando usar, quando evitar</a><a href="#autonomia-e-atores">Autonomia e atores</a><a href="#variacoes">Variações</a><a href="#estados">Estados</a><a href="#anatomia">Anatomia</a><a href="#conteudo">Conteúdo</a><a href="#anti-padroes">Anti-padrões</a><a href="#notas-por-dominio">Notas por domínio</a><a href="#relacionados">Relacionados</a><a href="#referencias">Referências</a></nav>
+<div class="content">
+<h2 id="problema">Problema</h2>
+<p>Pedidos diferentes custam muito diferente, e a pessoa só descobre depois. O Shape of AI descreve o custo transparente como o que "tira o véu" e ajuda a entender o custo relativo de cada combinação de pedido, parâmetro e modelo antes que algo rode (<a href="https://www.shapeof.ai/patterns/cost-estimates">Shape of AI, Cost estimates</a>).</p>
+<h2 id="quando-usar-quando-evitar">Quando usar, quando evitar</h2>
+<p><strong>Use quando</strong> o custo varia com a escolha da pessoa e é relevante para ela: fluxos de agente com vários passos, processamento longo, créditos ou dinheiro (<a href="https://www.shapeof.ai/patterns/cost-estimates">Shape of AI, Cost estimates</a>). <span class="todo">A completar: quando evitar.</span></p>
+<h2 id="autonomia-e-atores">Autonomia e atores</h2>
+<p>Principal para a aprovadora, que decide com o custo à vista. <span class="todo">A completar para os outros papéis.</span></p>
+<h2 id="variacoes">Variações</h2>
+<p>O custo pode depender de (<a href="https://www.shapeof.ai/patterns/cost-estimates">Shape of AI, Cost estimates</a>):</p>
+<ul>
+<li>tamanho e família do modelo;</li>
+<li>tamanho do pedido e do contexto;</li>
+<li>tamanho esperado da resposta;</li>
+<li>cadeias de vários passos ou fluxos de agente;</li>
+<li>repetições de processamento;</li>
+<li>créditos ou valor em dinheiro.</li>
+</ul>
+<h2 id="estados">Estados</h2>
+<p>Aparece no estado Proposto do <a href="../fundamentos/ciclos-de-vida.html">ciclo de vida da tarefa</a>. Durante a execução, a estimativa pode se atualizar em tempo real (<a href="https://www.shapeof.ai/patterns/cost-estimates">Shape of AI, Cost estimates</a>).</p>
+<h2 id="anatomia">Anatomia</h2>
+<p>Unidade explícita, faixa quando há incerteza, os itens que mais pesam no custo e uma alternativa mais barata (<a href="https://www.shapeof.ai/patterns/cost-estimates">Shape of AI, Cost estimates</a>).</p>
+<h2 id="conteudo">Conteúdo</h2>
+<ul>
+<li>Deixe a unidade explícita: tokens, caracteres, segundos, créditos (<a href="https://www.shapeof.ai/patterns/cost-estimates">Shape of AI, Cost estimates</a>).</li>
+<li>Ancore em unidades que a pessoa entende naturalmente (<a href="https://www.shapeof.ai/patterns/cost-estimates">Shape of AI, Cost estimates</a>).</li>
+<li>Para quem não é técnico, prefira tempo ou dinheiro a tokens. <span class="nc">nota da curadoria</span></li>
+</ul>
+<h2 id="anti-padroes">Anti-padrões</h2>
+<ul>
+<li><strong>Custo escondido nas configurações.</strong> A estimativa deve estar no momento da decisão (<a href="https://www.shapeof.ai/patterns/cost-estimates">Shape of AI, Cost estimates</a>).</li>
+<li><strong>Número exato para algo incerto.</strong> Mostre uma faixa (<a href="https://www.shapeof.ai/patterns/cost-estimates">Shape of AI, Cost estimates</a>).</li>
+</ul>
+<h2 id="notas-por-dominio">Notas por domínio</h2>
+<p><strong>Financeiro.</strong> Em produto para empresas, o custo que importa pode ser tarifa bancária, IOF ou juros de uma alternativa, e não processamento. <span class="nc">nota da curadoria</span></p>
+<h2 id="relacionados">Relacionados</h2>
+<ul>
+<li><a href="plano-com-aprovacao.html">Plano com aprovação</a>: a estimativa entra no plano.</li>
+<li><a href="amostra-antes-de-rodar.html">Amostra antes de rodar</a>: mostrar o custo de escalar a amostra.</li>
+</ul>
+<h2 id="referencias">Referências</h2>
+<h3 id="exemplo-encontrado-em">Exemplo encontrado em</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Produto</th>
+<th>Como aparece</th>
+<th>Citado por</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adobe Firefly, Console, ElevenLabs, FloraFauna.ai, Kling.ai, Krea, Udio</td>
+<td>Estimativa de custo antes de gerar</td>
+<td><a href="https://www.shapeof.ai/patterns/cost-estimates">Shape of AI · Cost estimates</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="documentado-em">Documentado em</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Biblioteca</th>
+<th>Categoria original</th>
+<th>Nome original</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shape of AI</td>
+<td>Governors</td>
+<td>Cost estimates</td>
+<td><a href="https://www.shapeof.ai/patterns/cost-estimates">link</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Acessado em 23/09/2026. Produtos citados pela biblioteca, ainda não conferidos por nós. Todos os exemplos são de geração de mídia; nenhum de agente financeiro.</p>
+</div>
+<nav class="pn" aria-label="Navegação sequencial"><a class="prev" href="../padroes/confirmacao.html"><small>← Anterior</small><span>Confirmação</span></a><a class="next" href="../padroes/acompanhar-execucao.html"><small>Próximo →</small><span>Acompanhar execução</span></a></nav>
+</div></div></main>
+<footer class="site-footer"><div class="wrapper"><div class="inner">
+<p><strong>Catálogo de padrões agênticos</strong> · curadoria para designers e content designers</p>
+<p><a href="../como-usar.html">Como usar</a> · <a href="../metodo-de-curadoria.html">Método de curadoria</a> · <a href="../glossario.html">Glossário</a> · <a href="../agenda-de-pesquisa.html">Agenda de pesquisa</a> · <a href="../log.html">Log</a></p>
+<p>Conteúdo de terceiros citado com link para a fonte. Casos de exemplo e pessoas citadas são fictícios.</p>
+</div></div></footer>
+</body>
+</html>

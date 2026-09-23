@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log de pesquisa · Catálogo agêntico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/estilo.css">
+</head>
+<body>
+<header class="site-header"><div class="wrapper">
+<a class="brand" href="index.html">catálogo agêntico</a>
+<ul class="nav"><li><a href="necessidades/index.html">Necessidades</a></li><li><a href="padroes/index.html">Padrões</a></li><li><a href="fundamentos/index.html">Fundamentos</a></li><li><a href="componentes/index.html">Componentes</a></li><li><a href="guia-de-conteudo.html">Conteúdo</a></li><li><a href="fontes/index.html">Fontes</a></li></ul>
+</div></header>
+<div class="proto"><div class="wrapper"><div class="inner"><span>Protótipo · versão 1 · 23/09/2026 · curadoria em construção</span></div></div></div>
+<main><div class="wrapper"><div class="inner">
+<nav class="crumbs" aria-label="Você está em"><a href="index.html">Início</a></nav>
+<h1>Log de pesquisa</h1>
+<div class="tags"><span class="tag">Cópia da aba &quot;Log de pesquisa&quot; do [Claude Doc](https://claude.ai/code/artifact/5d1d9439-4534-4274-8278-6deba919871b), do mais recente ao mais antigo</span></div>
+
+<nav class="toc" aria-label="Nesta página"><a href="#2309-prototipo-navegavel-no-estilo-do-blog">23/09 · Protótipo navegável no estilo do blog</a><a href="#2309-snapshot-e-versao-1-do-catalogo-em-markdown">23/09 · Snapshot e versão 1 do catálogo em Markdown</a><a href="#2309-revisao-da-estrutura-na-conversa">23/09 · Revisão da estrutura (na conversa)</a><a href="#2309-criacao-deste-log">23/09 · Criação deste log</a><a href="#2309-mudanca-de-eixo-catalogo-por-necessidades">23/09 · Mudança de eixo: catálogo por necessidades</a><a href="#2309-testes-3-a-6">23/09 · Testes 3 a 6</a><a href="#2309-teste-2-acompanhar-execucao">23/09 · Teste 2: Acompanhar execução</a><a href="#2309-teste-1-plano-com-aprovacao">23/09 · Teste 1: Plano com aprovação</a><a href="#2309-anatomia-dos-padroes">23/09 · Anatomia dos padrões</a><a href="#2309-pagina-html-no-estilo-do-blog-descartada">23/09 · Página HTML no estilo do blog (descartada)</a><a href="#2209-lista-de-padroes-agrupada-por-necessidades-descartada">22/09 · Lista de padrões agrupada por necessidades (descartada)</a><a href="#2209-levantamento-inicial-das-22-bibliotecas">22/09 · Levantamento inicial das 22 bibliotecas</a><a href="#fontes">Fontes</a></nav>
+<div class="content">
+<h2 id="2309-prototipo-navegavel-no-estilo-do-blog">23/09 · Protótipo navegável no estilo do blog</h2>
+<p><strong>O que mudou.</strong> O catálogo em Markdown virou um protótipo com 68 páginas HTML ligadas entre si, no estilo do blog (navy #000036, acento #0979fa só na interação, Playfair Display e Noto Sans). Entraram os componentes das páginas de teste: etiquetas de status, botões arredondados, exemplo de tela, pares Evite e Prefira, marcadores das escalas e selo de nota da curadoria. As páginas são geradas por um script a partir de <code>conteudo/</code>, então editar o Markdown e rodar o script atualiza tudo.</p>
+<p><strong>O que descobrimos.</strong> Faltavam páginas de índice para Necessidades e Fundamentos; o gerador cria as duas. A página de Padrões ganhou filtro por status.</p>
+<p><strong>Material.</strong> Pasta <code>prototipo/</code> (abrir <code>index.html</code>) e <code>ferramentas/gerar_prototipo.py</code>.</p>
+<h2 id="2309-snapshot-e-versao-1-do-catalogo-em-markdown">23/09 · Snapshot e versão 1 do catálogo em Markdown</h2>
+<p><strong>O que mudou.</strong> Tudo o que foi produzido até aqui foi copiado, sem edição, para <code>_snapshots/2026-09-23/</code>. O catálogo ganhou a primeira versão completa em Markdown, na arquitetura necessidade › padrão › fundamento › componente. As variações que tinham sido juntadas voltaram a ser padrões próprios quando existem com nome nas fontes (Confirmação, Estimativa de custo, Amostra antes de rodar e outras).</p>
+<p><strong>O que descobrimos.</strong></p>
+<ul>
+<li>10 necessidades, 22 fichas (9 revisadas, 13 em rascunho), 5 fundamentos, 7 componentes, 10 páginas de biblioteca.</li>
+<li>A necessidade 10 ganhou uma ficha (Nível de autonomia, a partir de Yocco e do AI UX Design Guide). O contrato de delegação com limites de valor, escopo e horário continua sem fonte.</li>
+<li>As tabelas de equivalências (78 linhas) e de exemplos (48 linhas) são geradas das próprias fichas; nenhum produto foi conferido por nós.</li>
+</ul>
+<p><strong>Material.</strong> Pasta <code>catalogo-agentico/</code> e o arquivo único <code>catalogo-completo.md</code>.</p>
+<h2 id="2309-revisao-da-estrutura-na-conversa">23/09 · Revisão da estrutura (na conversa)</h2>
+<p><strong>O que mudou.</strong> Paramos para revisar o conteúdo antes de seguir: índice com status de cada página, taxonomia das páginas de categoria e páginas que faltam. Daniel decidiu manter a mistura atual de curadoria e conteúdo nosso, marcado nas legendas. Regra reforçada: toda página termina com os links de onde a informação foi capturada, com citação inline quando necessário.</p>
+<p><strong>O que descobrimos.</strong></p>
+<ul>
+<li>Seis das nove fichas foram feitas antes da anatomia final e precisam ser alinhadas.</li>
+<li>Hoje cada necessidade tem uma ficha só. A página de necessidade só se justifica como hub: equivalência com as categorias originais das bibliotecas e lista de padrões.</li>
+<li>Faltam páginas de fundamentos, componentes, guia de conteúdo, fontes por biblioteca, equivalências, exemplos verificados, glossário e método de curadoria.</li>
+<li>O Shape of AI é publicado sob licença CC BY-NC-SA. Vale conferir com jurídico como citar e reaproveitar num catálogo interno.</li>
+</ul>
+<p><strong>Material.</strong> Proposta completa na conversa de 23/09.</p>
+<h2 id="2309-criacao-deste-log">23/09 · Criação deste log</h2>
+<p><strong>O que mudou.</strong> Esta aba passou a registrar o caminho da pesquisa, do mais recente ao mais antigo. Nada foi apagado: páginas e arquivos anteriores continuam acessíveis, inclusive os descartados.</p>
+<p><strong>Onde paramos.</strong> O catálogo está organizado por necessidades, com 9 fichas e 1 lacuna ("Quero definir até onde o agente pode ir"). Essa lacuna é o próximo passo.</p>
+<p><strong>Material.</strong> Cópias de todos os HTMLs foram enviadas como arquivos na conversa, para guardar fora do Claude. Todas as páginas também estão na galeria em <a href="https://claude.ai/code/artifacts">claude.ai/code/artifacts</a>.</p>
+<h2 id="2309-mudanca-de-eixo-catalogo-por-necessidades">23/09 · Mudança de eixo: catálogo por necessidades</h2>
+<p><strong>O que mudou.</strong> Daniel decidiu organizar o catálogo por necessidades, e não por momento ou categoria. Cada necessidade foi escrita em primeira pessoa ("Quero voltar atrás"). Entraram as três fichas que faltavam das sete necessidades originais: Explicar o motivo, Sinalizar incerteza e Memória sob controle.</p>
+<p><strong>O que descobrimos.</strong></p>
+<ul>
+<li>A necessidade funciona como porta de entrada e resolve o problema das categorias de origem, que enganavam. Proposta: uma necessidade principal por ficha, as outras nos relacionados.</li>
+<li>Todo resultado do agente responde a três perguntas: quem fez, quanto confiar e se dá para voltar. Proposta: as três escalas viram fundamentos do catálogo.</li>
+<li>Existem três ciclos de vida: tarefa, conversa e memória.</li>
+<li>A empresa também é um ator. Uma memória pode valer só para a pessoa ou para a empresa toda.</li>
+<li>Incerteza e memória têm pouca evidência de produto para agentes. Pedem protótipo e teste com usuários.</li>
+<li>Surgiram duas necessidades novas nos testes (ser avisado; chegar a uma pessoa). Uma ficou como lacuna: definir até onde o agente pode ir.</li>
+</ul>
+<p><strong>Material.</strong> <a href="https://claude.ai/artifact/6r9h9iDjygHgdgzSP8aUX8">Catálogo por necessidades</a> · arquivo catalogo-necessidades.html</p>
+<h2 id="2309-testes-3-a-6">23/09 · Testes 3 a 6</h2>
+<p><strong>O que mudou.</strong> Mais quatro padrões preenchidos na anatomia, escolhidos para forçar a taxonomia: Desfazer (depois da ação), Sugestão proativa (o agente sugere e a pessoa executa), Passar para uma pessoa (terceiro ator) e Identificar o agente (presente o tempo todo). O ciclo de vida do agente passou a ser definido uma vez só, no nível do catálogo. Também foi corrigido o estouro de largura das tabelas no celular nas páginas dos testes 1 e 2.</p>
+<p><strong>O que descobrimos.</strong></p>
+<ul>
+<li>Reversibilidade é propriedade de cada ação (desfaz, compensa, sem volta), não estado da tarefa. Em banco, desfazer quase sempre é compensar.</li>
+<li>O campo "Autonomia" virou "Autonomia e atores": os papéis de Feng não têm lugar para o gerente ou para outro agente.</li>
+<li>Identificar o agente não é padrão, é fundamento. Isso fechou três camadas: fundamentos, padrões e componentes.</li>
+<li>A categoria original de cada biblioteca engana: no Shape of AI, sugestões ficam em Wayfinders, a categoria de começar a usar.</li>
+<li>O Shape of AI não documenta Desfazer nem Passar para uma pessoa.</li>
+<li>Nova biblioteca encontrada: <a href="https://www.aiuxdesign.guide/patterns">AI UX Design Guide</a>, de Imran, com 38 padrões, vários agênticos. Falta incluí-la no levantamento.</li>
+<li>Aberto: os estados de passar para uma pessoa pertencem à conversa, não à tarefa.</li>
+</ul>
+<p><strong>Material.</strong> <a href="https://claude.ai/artifact/3F6YL76BuwWQSPPr6vH4c4">Mais quatro testes</a> · arquivo teste-quatro-padroes.html</p>
+<h2 id="2309-teste-2-acompanhar-execucao">23/09 · Teste 2: Acompanhar execução</h2>
+<p><strong>O que mudou.</strong> Segundo padrão preenchido, agora sem decisão explícita da pessoa. Caso: um agente que concilia 312 lançamentos do extrato com as notas fiscais. A ficha já usou os três ajustes do teste 1 e as referências no formato novo.</p>
+<p><strong>O que descobrimos.</strong></p>
+<ul>
+<li>Três padrões do Shape of AI viraram uma ficha (Stream of Thought, Shared vision, Controls). Controls não coube só aqui, o que levou à ideia de uma camada de componentes.</li>
+<li>A definição de padrão (um momento em que a pessoa precisa de algo do agente) aguentou sem ajuste.</li>
+<li>O campo de autonomia vira um mapa de cobertura: a consultora ficou sem padrão principal nas duas fichas.</li>
+<li>Estados se repetem entre padrões. Proposta: um ciclo de vida do agente definido uma vez só.</li>
+<li>O campo de notas por domínio funcionou (horário de corte, extrato aberto, fechamento do mês).</li>
+</ul>
+<p><strong>Material.</strong> <a href="https://claude.ai/artifact/SJdbuFezNQNN9CTWpYJqAA">Segundo teste: acompanhar o agente trabalhando</a> · arquivo teste-acompanhar-execucao.html</p>
+<h2 id="2309-teste-1-plano-com-aprovacao">23/09 · Teste 1: Plano com aprovação</h2>
+<p><strong>O que mudou.</strong> Primeiro padrão preenchido nos 14 campos da anatomia, com um caso fictício de agente que paga fornecedores. Depois, a pedido de Daniel, a página ganhou o formato de referências que vale para todas as fichas: "Exemplo encontrado em" (produto, como aparece, quem citou) e "Documentado em" (biblioteca, categoria original, nome original, link).</p>
+<p><strong>O que descobrimos.</strong></p>
+<ul>
+<li>A unidade do catálogo é o momento de decisão, não a tela. Action plan e Verification, do Shape of AI, viraram uma ficha só.</li>
+<li>Autonomia funciona como atributo, com "não se aplica" nos extremos.</li>
+<li>Texto de interface precisa ficar junto dos estados. A tabela de estados ganhou uma coluna de texto de exemplo.</li>
+<li>Cada setor cria estados próprios ("Vencido" no financeiro). Entrou um campo opcional de notas por domínio.</li>
+<li>"Por que funciona" e "Como medir" só têm uma fonte (Yocco) e ficaram opcionais.</li>
+<li>Os produtos listados foram citados pelas bibliotecas e ainda não foram conferidos por nós.</li>
+</ul>
+<p><strong>Material.</strong> <a href="https://claude.ai/artifact/SvayCvjwEYQSF7wmzC2FUt">Testando a taxonomia com um padrão</a> · arquivo teste-plano-aprovacao.html</p>
+<h2 id="2309-anatomia-dos-padroes">23/09 · Anatomia dos padrões</h2>
+<p><strong>O que mudou.</strong> Voltamos às fontes e abrimos as páginas de categoria e pelo menos uma entrada completa de sete catálogos: Shape of AI, HAX, AI UX Playground, Yocco, Agentic Design, GitLab Pajamas e Aiverse. A página também registra a correção da lista de 22/09.</p>
+<p><strong>O que descobrimos.</strong></p>
+<ul>
+<li>Cada catálogo descreve a categoria de um jeito: Shape of AI por função (frase com verbo), Aiverse por pergunta, HAX por imperativo.</li>
+<li>Shape of AI acerta na frase-resumo, nas variações e nos exemplos reais. Não tem problema explícito, quando não usar nem armadilhas.</li>
+<li>Faltam quase em todos três campos essenciais para agênticos: estados, nível de autonomia e texto de interface. Só o Pajamas documenta conteúdo.</li>
+<li>Proposta de anatomia com 14 campos, cada um com a fonte de onde veio.</li>
+<li>Quatro decisões ficaram em aberto: eixo principal, autonomia como categoria ou atributo, granularidade, idioma dos nomes.</li>
+</ul>
+<p><strong>Material.</strong> <a href="https://claude.ai/artifact/E8kwdtj7fjYbZhM3u2Wt9h">Como as bibliotecas descrevem um padrão</a> · arquivo anatomia-padroes.html</p>
+<h2 id="2309-pagina-html-no-estilo-do-blog-descartada">23/09 · Página HTML no estilo do blog (descartada)</h2>
+<p><strong>Descartada.</strong> O conteúdo era a lista de 22/09, com os mesmos nomes de padrão não verificados.</p>
+<p><strong>O que mudou.</strong> A lista virou uma página no estilo visual do blog, para leitura no celular. A primeira versão tinha texto genérico; a segunda foi reescrita na voz autoral de Daniel.</p>
+<p><strong>O que descobrimos.</strong> O estilo do blog e a voz autoral funcionaram e passaram a ser o padrão de todas as páginas seguintes.</p>
+<p><strong>Material.</strong> <a href="https://claude.ai/artifact/7Jy9QVN9fzZwUVwNRzrqHu">Padrões de UX para IA</a> (versão 2; a versão 1 fica no histórico da página) · arquivo patterns-blog.html</p>
+<h2 id="2209-lista-de-padroes-agrupada-por-necessidades-descartada">22/09 · Lista de padrões agrupada por necessidades (descartada)</h2>
+<p><strong>Descartada.</strong> Vários nomes de padrão não foram conferidos nas fontes e não existem: "Undo affordance" (Shape of AI), "Reliability badges" (Aiverse), "Uncertainty indicators" e "Interruption handling" (HAX, que se organiza por diretrizes G1 a G18), "AI presence indicators" (Apple). Não circular.</p>
+<p><strong>O que mudou.</strong> Os padrões do levantamento foram reorganizados sob as sete necessidades recorrentes, com nome e fonte. A tentativa de gravar a lista no doc falhou, e ela saiu como arquivo Markdown.</p>
+<p><strong>O que descobrimos.</strong> A ideia de organizar por necessidade estava certa e voltou em 23/09. A regra que ficou: só entra no catálogo nome de padrão conferido na página da fonte.</p>
+<p><strong>Material.</strong> Arquivo patterns-grouped-by-needs.md</p>
+<h2 id="2209-levantamento-inicial-das-22-bibliotecas">22/09 · Levantamento inicial das 22 bibliotecas</h2>
+<p><strong>O que mudou.</strong> Ponto de partida. Mapeamos as bibliotecas de padrões de UX para IA parecidas com o Shape of AI, em três famílias: catálogos de praticantes, diretrizes de empresas e taxonomias acadêmicas. Tudo lido pela lente de experiências agênticas.</p>
+<p><strong>O que descobrimos.</strong></p>
+<ul>
+<li>As bibliotecas se dividem pelo eixo principal: função do elemento (Shape of AI) ou momento da interação (Aiverse, HAX, Yocco).</li>
+<li>Só os grupos de pesquisa e os artigos acadêmicos declaram método. Nenhum catálogo mede se um padrão funciona.</li>
+<li>Sete necessidades se repetem sob nomes diferentes: dizer que é IA, explicar, sinalizar incerteza, mostrar antes de agir, controlar no meio, recuperar do erro, lembrar e adaptar.</li>
+<li>Lacunas: contrato de delegação, trabalho longo, passar para uma pessoa, vários agentes, contestação depois do fato, qualidade da conversa.</li>
+<li>Melhor combinação para agênticos: papéis de Feng et al. como espinha, Pajamas para estados, Yocco para o ciclo da ação, Governors do Shape of AI para componentes.</li>
+<li>Ficaram sem leitura automática: Agentic UX Patterns (Dustin Kirk) e SAP Fiori.</li>
+</ul>
+<p><strong>Material.</strong> Aba principal deste doc.</p>
+<h2 id="fontes">Fontes</h2>
+<p>Os links de cada entrada. Registro completo no <a href="https://claude.ai/code/artifact/5d1d9439-4534-4274-8278-6deba919871b">Claude Doc</a>.</p>
+</div>
+
+</div></div></main>
+<footer class="site-footer"><div class="wrapper"><div class="inner">
+<p><strong>Catálogo de padrões agênticos</strong> · curadoria para designers e content designers</p>
+<p><a href="como-usar.html">Como usar</a> · <a href="metodo-de-curadoria.html">Método de curadoria</a> · <a href="glossario.html">Glossário</a> · <a href="agenda-de-pesquisa.html">Agenda de pesquisa</a> · <a href="log.html">Log</a></p>
+<p>Conteúdo de terceiros citado com link para a fonte. Casos de exemplo e pessoas citadas são fictícios.</p>
+</div></div></footer>
+</body>
+</html>

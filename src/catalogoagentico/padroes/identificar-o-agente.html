@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Identificar o agente · Catálogo agêntico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/estilo.css">
+</head>
+<body>
+<header class="site-header"><div class="wrapper">
+<a class="brand" href="../index.html">catálogo agêntico</a>
+<ul class="nav"><li><a href="../necessidades/index.html">Necessidades</a></li><li><a href="../padroes/index.html" aria-current="page">Padrões</a></li><li><a href="../fundamentos/index.html">Fundamentos</a></li><li><a href="../componentes/index.html">Componentes</a></li><li><a href="../guia-de-conteudo.html">Conteúdo</a></li><li><a href="../fontes/index.html">Fontes</a></li></ul>
+</div></header>
+<div class="proto"><div class="wrapper"><div class="inner"><span>Protótipo · versão 1 · 23/09/2026 · curadoria em construção</span></div></div></div>
+<main><div class="wrapper"><div class="inner">
+<nav class="crumbs" aria-label="Você está em"><a href="../index.html">Início</a><span>›</span><a href="../padroes/index.html">Padrões</a><span>›</span><a href="../necessidades/01-com-quem-estou-lidando.html">Quero saber com quem estou lidando</a></nav>
+<h1>Identificar o agente</h1>
+<div class="tags"><span class="tag">Ficha</span><a class="tag tag--soft" href="../necessidades/01-com-quem-estou-lidando.html">Quero saber com quem estou lidando</a><span class="tag tag--soft">Momento: o tempo todo</span><span class="tag tag--soft">Papel principal: todos</span><span class="tag tag--solid">revisada</span><a class="tag tag--soft" href="../fundamentos/quem-fez.html">Fundamento: Quem fez</a></div>
+<p class="lede">Deixe claro, em todo lugar e o tempo todo, quando é um agente que fala ou age, qual agente é e em nome de quem.</p>
+<nav class="toc" aria-label="Nesta página"><a href="#problema">Problema</a><a href="#quando-usar-quando-evitar">Quando usar, quando evitar</a><a href="#autonomia-e-atores">Autonomia e atores</a><a href="#variacoes">Variações</a><a href="#estados">Estados</a><a href="#anatomia">Anatomia</a><a href="#conteudo">Conteúdo</a><a href="#anti-padroes">Anti-padrões</a><a href="#notas-por-dominio">Notas por domínio</a><a href="#relacionados">Relacionados</a><a href="#referencias">Referências</a></nav>
+<div class="content">
+<h2 id="problema">Problema</h2>
+<p>No mesmo aplicativo, quem fala pode ser o assistente de pagamentos, o de conciliação ou a gerente. Um lançamento pode ter sido classificado pela pessoa, por um colega ou por um agente. Se isso não está marcado, a pessoa confia errado. <span class="nc">nota da curadoria</span></p>
+<p>Como deixar claro quem fez o quê sem transformar a interface num mar de etiquetas?</p>
+<h2 id="quando-usar-quando-evitar">Quando usar, quando evitar</h2>
+<p><strong>Use sempre.</strong> Nunca finja ser gente (<a href="https://www.shapeof.ai/patterns/disclosure">Shape of AI, Disclosure</a>).</p>
+<p><strong>O que muda é a intensidade:</strong> rótulo discreto em conteúdo gerado; identificação forte quando o agente fala ou age em nome da pessoa; marca visível quando o interlocutor muda. <span class="nc">nota da curadoria</span> A marca de IA identifica; não é decoração (<a href="https://carbondesignsystem.com/guidelines/carbon-for-ai/">Carbon for AI</a>).</p>
+<h2 id="autonomia-e-atores">Autonomia e atores</h2>
+<p>Igual em todos os papéis. O que importa aqui são os atores: a pessoa, colegas, o agente, outros agentes, atendentes. Cada um precisa ser distinguível. Ver <a href="../fundamentos/papeis-e-atores.html">Papéis e atores</a>.</p>
+<h2 id="variacoes">Variações</h2>
+<ul>
+<li><strong>Rótulo de assistente:</strong> nome, avatar, selo (<a href="https://www.shapeof.ai/patterns/disclosure">Shape of AI, Disclosure</a>).</li>
+<li><strong>Rótulo de recurso:</strong> chips como "AI Assist" (<a href="https://www.shapeof.ai/patterns/disclosure">Shape of AI, Disclosure</a>).</li>
+<li><strong>Atribuição do resultado:</strong> marca d'água, selo de "gerado por IA" (<a href="https://www.shapeof.ai/patterns/disclosure">Shape of AI, Disclosure</a>).</li>
+<li><strong>Rótulo que abre a explicação:</strong> o AI label do Carbon leva a um painel que é "a primeira camada de explicabilidade" (<a href="https://carbondesignsystem.com/guidelines/carbon-for-ai/">Carbon for AI</a>).</li>
+<li><strong>Marca na ação fora do app:</strong> o e-mail enviado pelo agente diz que foi ele. <span class="nc">nota da curadoria</span></li>
+</ul>
+<p>O nome em si está em <a href="nome-do-agente.html">Nome do agente</a>.</p>
+<h2 id="estados">Estados</h2>
+<p>Não usa estados. Visível em todos. A troca de interlocutor está em <a href="passar-para-uma-pessoa.html">Passar para uma pessoa</a>.</p>
+<h2 id="anatomia">Anatomia</h2>
+<p>Obrigatórios: <strong>nome</strong> que diga a função, <strong>marca de IA</strong> consistente, <strong>atribuição</strong> em cada conteúdo ou ação, <strong>acesso ao porquê</strong> a partir da marca.</p>
+<div class="mock"><div class="mock__head">Exemplo de tela · caso fictício, nota da curadoria</div><div class="mock__body">
+<ul>
+<li>Transportes Lima · −R$ 12.480,00 · Fornecedores · classificado pelo <strong>Assistente de conciliação (IA)</strong> · <span class="btn">Por quê?</span></li>
+<li>Aluguel galpão · −R$ 8.000,00 · Aluguel · classificado por <strong>você</strong></li>
+<li>Papelaria Central · −R$ 890,00 · Fornecedores · negociado por <strong>Carla Mendes, gerente</strong></li>
+</ul>
+</div></div>
+<h2 id="conteudo">Conteúdo</h2>
+<div class="rules">
+<div class="rule">
+<div class="rule__t">Rotule a ação com verbo (<a href="https://www.shapeof.ai/patterns/disclosure">Shape of AI, Disclosure</a>)</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>✨ IA</div><div class="good"><span class="lbl">Prefira</span>Classificado pelo assistente</div></div>
+</div>
+<div class="rule">
+<div class="rule__t">Diga em nome de quem <span class="nc">nota da curadoria</span></div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Enviado automaticamente</div><div class="good"><span class="lbl">Prefira</span>Enviado pelo assistente de pagamentos em nome de Construtora Alfa</div></div>
+</div>
+</div>
+
+<p>Nome, remetente e avatar consistentes (<a href="https://www.shapeof.ai/patterns/disclosure">Shape of AI, Disclosure</a>). Regras de nome em <a href="nome-do-agente.html">Nome do agente</a>.</p>
+<h2 id="anti-padroes">Anti-padrões</h2>
+<ul>
+<li><strong>Fingir ser gente</strong> (<a href="https://www.shapeof.ai/patterns/disclosure">Shape of AI, Disclosure</a>).</li>
+<li><strong>Rótulo como enfeite</strong> (<a href="https://carbondesignsystem.com/guidelines/carbon-for-ai/">Carbon for AI</a>).</li>
+<li><strong>Não distinguir humano de agente</strong> na mesma conversa ou documento (<a href="https://aiuxplayground.com/pattern/live-presence">AI UX Playground, Live Presence</a>).</li>
+</ul>
+<h2 id="notas-por-dominio">Notas por domínio</h2>
+<p><strong>Financeiro.</strong> Em disputa ou auditoria, "quem classificou isso?" precisa de resposta registrada, não só visual. <span class="nc">nota da curadoria</span></p>
+<h2 id="relacionados">Relacionados</h2>
+<ul>
+<li><a href="nome-do-agente.html">Nome do agente</a></li>
+<li><a href="explicar-o-motivo.html">Explicar o motivo</a>: o rótulo é a porta de entrada.</li>
+<li><a href="passar-para-uma-pessoa.html">Passar para uma pessoa</a></li>
+<li><a href="historico-de-acoes.html">Histórico de ações</a>: usa a mesma atribuição.</li>
+</ul>
+<h2 id="referencias">Referências</h2>
+<h3 id="exemplo-encontrado-em">Exemplo encontrado em</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Produto</th>
+<th>Como aparece</th>
+<th>Citado por</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Intercom Fin, Zoom, Zapier, Productboard, Tactiq, iA Writer, TikTok, Character.ai</td>
+<td>Rótulos de assistente, de recurso e de conteúdo</td>
+<td><a href="https://www.shapeof.ai/patterns/disclosure">Shape of AI · Disclosure</a></td>
+</tr>
+<tr>
+<td>Produtos IBM</td>
+<td>AI label com painel de explicação</td>
+<td><a href="https://carbondesignsystem.com/guidelines/carbon-for-ai/">Carbon for AI</a></td>
+</tr>
+<tr>
+<td>GitLab Duo</td>
+<td>Prefixos e handles de agentes (@duo-…)</td>
+<td><a href="https://design.gitlab.com/patterns/duo-agents-and-flows/">GitLab Pajamas</a></td>
+</tr>
+<tr>
+<td>Figma, Notion, Google Docs, Linear</td>
+<td>Presença de quem está no documento</td>
+<td><a href="https://aiuxplayground.com/pattern/live-presence">AI UX Playground · Live Presence</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="documentado-em">Documentado em</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Biblioteca</th>
+<th>Categoria original</th>
+<th>Nome original</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shape of AI</td>
+<td>Trust builders</td>
+<td>Disclosure</td>
+<td><a href="https://www.shapeof.ai/patterns/disclosure">link</a></td>
+</tr>
+<tr>
+<td>Carbon for AI (IBM)</td>
+<td>Componentes</td>
+<td>AI label</td>
+<td><a href="https://carbondesignsystem.com/guidelines/carbon-for-ai/">link</a></td>
+</tr>
+<tr>
+<td>GitLab Pajamas</td>
+<td>Agents · Content guidelines</td>
+<td>Naming conventions</td>
+<td><a href="https://design.gitlab.com/patterns/duo-agents-and-flows/">link</a></td>
+</tr>
+<tr>
+<td>HAX (Microsoft)</td>
+<td>Initially</td>
+<td>G1 · Make clear what the system can do</td>
+<td><a href="https://www.microsoft.com/en-us/haxtoolkit/library/">link</a></td>
+</tr>
+<tr>
+<td>AI UX Playground</td>
+<td>Collab</td>
+<td>Live Presence</td>
+<td><a href="https://aiuxplayground.com/pattern/live-presence">link</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Acessado em 23/09/2026. Produtos citados pelas bibliotecas, ainda não conferidos por nós.</p>
+</div>
+<nav class="pn" aria-label="Navegação sequencial"><span></span><a class="next" href="../padroes/nome-do-agente.html"><small>Próximo →</small><span>Nome do agente</span></a></nav>
+</div></div></main>
+<footer class="site-footer"><div class="wrapper"><div class="inner">
+<p><strong>Catálogo de padrões agênticos</strong> · curadoria para designers e content designers</p>
+<p><a href="../como-usar.html">Como usar</a> · <a href="../metodo-de-curadoria.html">Método de curadoria</a> · <a href="../glossario.html">Glossário</a> · <a href="../agenda-de-pesquisa.html">Agenda de pesquisa</a> · <a href="../log.html">Log</a></p>
+<p>Conteúdo de terceiros citado com link para a fonte. Casos de exemplo e pessoas citadas são fictícios.</p>
+</div></div></footer>
+</body>
+</html>

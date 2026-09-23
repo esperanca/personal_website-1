@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quero voltar atrás · Catálogo agêntico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/estilo.css">
+</head>
+<body>
+<header class="site-header"><div class="wrapper">
+<a class="brand" href="../index.html">catálogo agêntico</a>
+<ul class="nav"><li><a href="../necessidades/index.html" aria-current="page">Necessidades</a></li><li><a href="../padroes/index.html">Padrões</a></li><li><a href="../fundamentos/index.html">Fundamentos</a></li><li><a href="../componentes/index.html">Componentes</a></li><li><a href="../guia-de-conteudo.html">Conteúdo</a></li><li><a href="../fontes/index.html">Fontes</a></li></ul>
+</div></header>
+<div class="proto"><div class="wrapper"><div class="inner"><span>Protótipo · versão 1 · 23/09/2026 · curadoria em construção</span></div></div></div>
+<main><div class="wrapper"><div class="inner">
+<nav class="crumbs" aria-label="Você está em"><a href="../index.html">Início</a><span>›</span><a href="../necessidades/index.html">Necessidades</a></nav>
+<h1>Quero voltar atrás</h1>
+<div class="tags"><span class="tag">Necessidade 6</span></div>
+<p class="lede">Como a pessoa corrige o agente sem entender como cada sistema por trás funciona?</p>
+<nav class="toc" aria-label="Nesta página"><a href="#padroes">Padrões</a><a href="#como-as-bibliotecas-chamam-isso">Como as bibliotecas chamam isso</a><a href="#relacionadas">Relacionadas</a><a href="#fontes">Fontes</a></nav>
+<div class="content">
+<p>A pessoa só aceita delegar quando sabe que dá para reverter erros (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco, Action Audit &amp; Undo</a>). O desfazer tradicional não basta: ações de agente cruzam sistemas, acontecem fora da tela e têm consequências em cadeia (<a href="https://www.aiuxdesign.guide/patterns/action-audit-trail">AI UX Design Guide, Action Audit Trail</a>). Em banco, quase nada que envolve dinheiro realmente se desfaz; o que existe é compensar. <span class="nc">nota da curadoria</span></p>
+<h2 id="padroes">Padrões</h2>
+<div class="cards">
+<a class="card" href="../padroes/desfazer.html"><span class="card__t">Desfazer</span><span class="card__d">O agente agiu e a pessoa quer voltar ao estado anterior, ou compensar</span><span><span class="tag tag--solid">revisada</span></span></a>
+<a class="card" href="../padroes/historico-de-acoes.html"><span class="card__t">Histórico de ações</span><span class="card__d">A pessoa, o suporte ou a auditoria precisam saber o que o agente fez e por quê</span><span><span class="tag tag--dash">rascunho</span></span></a>
+</div>
+
+<h2 id="como-as-bibliotecas-chamam-isso">Como as bibliotecas chamam isso</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Biblioteca</th>
+<th>Categoria original</th>
+<th>Nome original</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yocco (Smashing)</td>
+<td>Post-action · Safety and Recovery</td>
+<td><a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Action Audit &amp; Undo</a></td>
+</tr>
+<tr>
+<td>AI UX Design Guide</td>
+<td>Trustworthy &amp; Reliable AI</td>
+<td><a href="https://www.aiuxdesign.guide/patterns/action-audit-trail">Action Audit Trail</a>; Error Recovery &amp; Graceful Degradation</td>
+</tr>
+<tr>
+<td>Shape of AI</td>
+<td>Trust builders</td>
+<td><a href="https://www.shapeof.ai/patterns/footprints">Footprints</a></td>
+</tr>
+<tr>
+<td>HAX (Microsoft)</td>
+<td>When wrong</td>
+<td><a href="https://www.microsoft.com/en-us/haxtoolkit/library/">G9 · Support efficient correction</a></td>
+</tr>
+<tr>
+<td>GitLab Pajamas</td>
+<td>Flows · estados</td>
+<td><a href="https://design.gitlab.com/patterns/duo-agents-and-flows/">Failed, Cancelled (com Retry)</a></td>
+</tr>
+<tr>
+<td>Agentic Design</td>
+<td>UI/UX Patterns</td>
+<td><a href="https://agentic-design.ai/patterns/ui-ux-patterns">Error Handling and Recovery (ERP)</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>O Shape of AI não documenta desfazer ação de agente. <span class="nc">nota da curadoria</span></p>
+<h2 id="relacionadas">Relacionadas</h2>
+<p><a href="04-decidir-antes.html">Quero decidir antes que aconteça</a> · <a href="09-chegar-a-uma-pessoa.html">Quero chegar a uma pessoa</a></p>
+<h2 id="fontes">Fontes</h2>
+<p>Os links das tabelas e do texto acima, acessados em 23/09/2026.</p>
+</div>
+<nav class="pn" aria-label="Navegação sequencial"><a class="prev" href="../necessidades/05-saber-o-que-acontece.html"><small>← Anterior</small><span>Quero saber o que está acontecendo, e poder parar</span></a><a class="next" href="../necessidades/07-lembrar-e-esquecer.html"><small>Próximo →</small><span>Quero que lembre o que importa, e esqueça o que eu pedir</span></a></nav>
+</div></div></main>
+<footer class="site-footer"><div class="wrapper"><div class="inner">
+<p><strong>Catálogo de padrões agênticos</strong> · curadoria para designers e content designers</p>
+<p><a href="../como-usar.html">Como usar</a> · <a href="../metodo-de-curadoria.html">Método de curadoria</a> · <a href="../glossario.html">Glossário</a> · <a href="../agenda-de-pesquisa.html">Agenda de pesquisa</a> · <a href="../log.html">Log</a></p>
+<p>Conteúdo de terceiros citado com link para a fonte. Casos de exemplo e pessoas citadas são fictícios.</p>
+</div></div></footer>
+</body>
+</html>

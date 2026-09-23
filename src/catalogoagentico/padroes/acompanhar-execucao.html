@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acompanhar execução · Catálogo agêntico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/estilo.css">
+</head>
+<body>
+<header class="site-header"><div class="wrapper">
+<a class="brand" href="../index.html">catálogo agêntico</a>
+<ul class="nav"><li><a href="../necessidades/index.html">Necessidades</a></li><li><a href="../padroes/index.html" aria-current="page">Padrões</a></li><li><a href="../fundamentos/index.html">Fundamentos</a></li><li><a href="../componentes/index.html">Componentes</a></li><li><a href="../guia-de-conteudo.html">Conteúdo</a></li><li><a href="../fontes/index.html">Fontes</a></li></ul>
+</div></header>
+<div class="proto"><div class="wrapper"><div class="inner"><span>Protótipo · versão 1 · 23/09/2026 · curadoria em construção</span></div></div></div>
+<main><div class="wrapper"><div class="inner">
+<nav class="crumbs" aria-label="Você está em"><a href="../index.html">Início</a><span>›</span><a href="../padroes/index.html">Padrões</a><span>›</span><a href="../necessidades/05-saber-o-que-acontece.html">Quero saber o que está acontecendo, e poder parar</a></nav>
+<h1>Acompanhar execução</h1>
+<div class="tags"><span class="tag">Ficha</span><a class="tag tag--soft" href="../necessidades/05-saber-o-que-acontece.html">Quero saber o que está acontecendo, e poder parar</a><span class="tag tag--soft">Momento: durante a ação</span><span class="tag tag--soft">Papel principal: observadora</span><span class="tag tag--solid">revisada</span></div>
+<p class="lede">Mostre o que o agente está fazendo enquanto faz (passo atual, progresso e o que já encontrou) e deixe claro que a pessoa pode sair da tela.</p>
+<nav class="toc" aria-label="Nesta página"><a href="#problema">Problema</a><a href="#quando-usar-quando-evitar">Quando usar, quando evitar</a><a href="#autonomia-e-atores">Autonomia e atores</a><a href="#variacoes">Variações</a><a href="#estados">Estados</a><a href="#anatomia">Anatomia</a><a href="#conteudo">Conteúdo</a><a href="#anti-padroes">Anti-padrões</a><a href="#notas-por-dominio">Notas por domínio</a><a href="#risco-da-omissao">Risco da omissão</a><a href="#por-que-funciona">Por que funciona</a><a href="#como-medir">Como medir</a><a href="#relacionados">Relacionados</a><a href="#referencias">Referências</a></nav>
+<div class="content">
+<h2 id="problema">Problema</h2>
+<p>O agente trabalha por minutos ou horas. Sem sinal, a pessoa não sabe se ele travou, se está indo pelo caminho certo ou se pode sair da tela. Ela interrompe cedo demais, ou descobre tarde demais que o trabalho saiu errado. <span class="nc">nota da curadoria</span></p>
+<p>Como deixar a pessoa confiar no que o agente está fazendo sem obrigá-la a assistir?</p>
+<h2 id="quando-usar-quando-evitar">Quando usar, quando evitar</h2>
+<p><strong>Use quando</strong> a tarefa leva mais que alguns segundos, tem vários passos ou ferramentas, gera resultados parciais úteis, ou roda em segundo plano.</p>
+<p><strong>Evite quando</strong> a resposta é instantânea ou o detalhe vira ruído. A visibilidade deve se ajustar à complexidade da tarefa e ao contexto da pessoa (<a href="https://www.shapeof.ai/patterns/stream-of-thought">Shape of AI, Stream of Thought</a>).</p>
+<h2 id="autonomia-e-atores">Autonomia e atores</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Papel da pessoa</th>
+<th>Como o padrão aparece</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operadora</td>
+<td>Não se aplica. Não há execução do agente para acompanhar.</td>
+</tr>
+<tr>
+<td>Colaboradora</td>
+<td>Acompanha passo a passo e corrige no meio. Visão detalhada.</td>
+</tr>
+<tr>
+<td>Consultora</td>
+<td>Não se aplica. Quem executa é a pessoa; ver <a href="plano-com-aprovacao.html">Plano com aprovação</a>.</td>
+</tr>
+<tr>
+<td>Aprovadora</td>
+<td>Acompanha o que aprovou. O estado mais importante é Aguardando decisão.</td>
+</tr>
+<tr>
+<td>Observadora</td>
+<td>Forma principal. Status resumido, aviso no fim, detalhe só se pedir.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="variacoes">Variações</h2>
+<ul>
+<li><strong>Status discreto:</strong> indicador pequeno e persistente de que o agente está rodando.</li>
+<li><strong>Progresso em passos:</strong> cada passo com seu estado (<a href="https://www.shapeof.ai/patterns/stream-of-thought">Shape of AI, Stream of Thought</a>: "represent each step as a distinct state").</li>
+<li><strong>Resumo na volta:</strong> o que mudou desde que a pessoa saiu; o Pajamas mantém um log cronológico de atividade por sessão (<a href="https://design.gitlab.com/patterns/duo-agents-and-flows/">GitLab Pajamas</a>).</li>
+</ul>
+<p>O registro detalhado é <a href="mostrar-o-raciocinio.html">Mostrar o raciocínio</a>. O agente agindo num espaço visível é <a href="visao-compartilhada.html">Visão compartilhada</a>. Os botões são <a href="pausar-e-parar.html">Pausar e parar</a>.</p>
+<h2 id="estados">Estados</h2>
+<p>Usa do <a href="../fundamentos/ciclos-de-vida.html">ciclo de vida da tarefa</a> os estados abaixo, que seguem o GitLab Pajamas (<a href="https://design.gitlab.com/patterns/duo-agents-and-flows/">Pajamas</a>). Textos de exemplo: <em>nota da curadoria</em>.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Estado</th>
+<th>O que a interface mostra</th>
+<th>Texto de exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Na fila</td>
+<td>Quando vai começar e por que ainda não começou</td>
+<td>"Começo assim que terminar a conciliação de agosto."</td>
+</tr>
+<tr>
+<td>Rodando</td>
+<td>Passo atual, progresso na unidade do trabalho, parciais, controles</td>
+<td>"Cruzando lançamentos com notas fiscais · 214 de 312"</td>
+</tr>
+<tr>
+<td>Aguardando decisão</td>
+<td>O que precisa, por quê, o que já foi feito</td>
+<td>"Preciso que você confirme 3 lançamentos antes de seguir. Os outros 214 já foram conferidos."</td>
+</tr>
+<tr>
+<td>Pausado</td>
+<td>Onde parou, desde quando, que nada se perdeu</td>
+<td>"Pausado às 14h12, no lançamento 214 de 312. O que já conferi está salvo."</td>
+</tr>
+<tr>
+<td>Concluído</td>
+<td>Resultado e o que ficou para a pessoa</td>
+<td>"Conciliação pronta. 296 lançamentos batem e 16 precisam de você."</td>
+</tr>
+<tr>
+<td>Falhou</td>
+<td>Onde parou, por quê, o que ficou salvo, o que fazer</td>
+<td>"Parei no lançamento 214 porque o extrato ficou fora do ar. Tento de novo às 15h?"</td>
+</tr>
+<tr>
+<td>Cancelado</td>
+<td>O que ficou salvo e o que não foi feito</td>
+<td>"214 conferidos ficam salvos; 98 não foram verificados."</td>
+</tr>
+</tbody>
+</table></div>
+<p>Fora da tela, avise só nos momentos que pedem a pessoa: fim, falha, decisão.</p>
+<h2 id="anatomia">Anatomia</h2>
+<p>Obrigatórios: <strong>o que está fazendo agora</strong>, <strong>quanto já fez</strong> na unidade do trabalho, <strong>o que já encontrou</strong> e os <strong>controles</strong>. Opcionais: tempo estimado (só se for confiável), próximos passos, aviso de que dá para sair da tela.</p>
+<div class="mock"><div class="mock__head">Exemplo de tela · caso fictício, nota da curadoria</div><div class="mock__body">
+<p><strong>Conciliação de setembro</strong><br />
+Cruzando lançamentos do extrato com as notas fiscais<br />
+214 de 312 lançamentos · faltam uns 10 minutos<br />
+✓ Ler o extrato de setembro · 312 lançamentos<br />
+✓ Buscar as notas fiscais do mês · 287 notas<br />
+● Cruzar lançamentos com notas · 214 de 312<br />
+○ Separar o que não bateu</p>
+<p><strong>Até agora:</strong> 198 conciliados, 11 sem nota, 5 com valor diferente.<br />
+Pode fechar esta tela. Eu aviso quando terminar ou se precisar de você.<br />
+<span class="btn">Pausar</span> <span class="btn">Parar</span></p>
+</div></div>
+<h2 id="conteudo">Conteúdo</h2>
+<p><span class="nc">nota da curadoria</span></p>
+<div class="rules">
+<div class="rule">
+<div class="rule__t">Passo com verbo e objeto do trabalho</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Processando… · Chamando nf_lookup()</div><div class="good"><span class="lbl">Prefira</span>Buscando a nota da Gráfica Norte</div></div>
+</div>
+<div class="rule">
+<div class="rule__t">Progresso na unidade do trabalho</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>68% concluído</div><div class="good"><span class="lbl">Prefira</span>214 de 312 lançamentos</div></div>
+</div>
+<div class="rule">
+<div class="rule__t">Diga o que acontece antes de parar</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Tem certeza que deseja cancelar?</div><div class="good"><span class="lbl">Prefira</span>Parar agora? Os 214 conferidos ficam salvos. Os outros 98 não serão verificados.</div></div>
+</div>
+</div>
+
+<p>Seja honesto com o tempo: "faltam uns 10 minutos" é melhor que "9 min 42 s" quando a estimativa é grosseira. Autorize a saída: "Pode fechar esta tela".</p>
+<h2 id="anti-padroes">Anti-padrões</h2>
+<ul>
+<li><strong>Avisar cada passo.</strong> A frequência de intervenção precisa ser calibrada (<a href="https://www.shapeof.ai/patterns/shared-vision">Shape of AI, Shared vision</a>).</li>
+<li><strong>Tratar acompanhar como segurança.</strong> Ver o agente não impede ataques como injeção de instruções (<a href="https://www.shapeof.ai/patterns/shared-vision">Shape of AI, Shared vision</a>).</li>
+<li><strong>Spinner mudo</strong>, <strong>log técnico como única visão</strong>, <strong>parar que apaga tudo</strong>, <strong>esconder os parciais</strong>. <span class="nc">nota da curadoria</span></li>
+</ul>
+<h2 id="notas-por-dominio">Notas por domínio</h2>
+<p><strong>Financeiro.</strong> Extrato do dia ainda está aberto; o agente precisa dizer até que horário conciliou. Pagamentos disparados durante a execução obedecem ao horário de corte. No fechamento do mês, o prazo pesa mais. <span class="nc">nota da curadoria</span></p>
+<h2 id="risco-da-omissao">Risco da omissão</h2>
+<p>Quando o agente age sem mostrar o caminho, ações corretas parecem aleatórias ou parecem erro (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco, Explainable Rationale</a>).</p>
+<h2 id="por-que-funciona">Por que funciona</h2>
+<p>Ver o resultado chegando aos poucos muda a percepção de espera; o Aiverse remete à Nielsen Norman Group sobre desempenho percebido (<a href="https://www.aiverse.design/patterns/observing-streaming">Aiverse, Streaming + Realtime</a>). Nenhuma fonte mede isso em agentes que rodam por minutos.</p>
+<h2 id="como-medir">Como medir</h2>
+<p><span class="nc">nota da curadoria</span></p>
+<ul>
+<li>Execuções canceladas no meio sobre o total.</li>
+<li>Volta à tela durante a execução (muitas visitas indicam ansiedade).</li>
+<li>Chamados do tipo "o agente travou?", adaptando a métrica de chamados "Why?" de <a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>.</li>
+</ul>
+<h2 id="relacionados">Relacionados</h2>
+<ul>
+<li><a href="plano-com-aprovacao.html">Plano com aprovação</a>: vem antes; Aguardando decisão devolve a pessoa para lá.</li>
+<li><a href="historico-de-acoes.html">Histórico de ações</a>: vem depois.</li>
+<li><a href="desfazer.html">Desfazer</a>: o que resta quando o erro aparece tarde.</li>
+</ul>
+<h2 id="referencias">Referências</h2>
+<h3 id="exemplo-encontrado-em">Exemplo encontrado em</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Produto</th>
+<th>Como aparece</th>
+<th>Citado por</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT, Perplexity, Grok, Lovable, V0, Accio</td>
+<td>Trilha visível do raciocínio e das ferramentas</td>
+<td><a href="https://www.shapeof.ai/patterns/stream-of-thought">Shape of AI · Stream of Thought</a></td>
+</tr>
+<tr>
+<td>GitLab Duo</td>
+<td>Sessão com estado, log de atividade e retomada</td>
+<td><a href="https://design.gitlab.com/patterns/duo-agents-and-flows/">GitLab Pajamas</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="documentado-em">Documentado em</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Biblioteca</th>
+<th>Categoria original</th>
+<th>Nome original</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shape of AI</td>
+<td>Governors</td>
+<td>Stream of Thought</td>
+<td><a href="https://www.shapeof.ai/patterns/stream-of-thought">link</a></td>
+</tr>
+<tr>
+<td>GitLab Pajamas</td>
+<td>Flows · Flow state communication</td>
+<td>In progress, Paused, Completed, Failed, Cancelled</td>
+<td><a href="https://design.gitlab.com/patterns/duo-agents-and-flows/">link</a></td>
+</tr>
+<tr>
+<td>Aiverse</td>
+<td>Observing</td>
+<td>Streaming + Realtime</td>
+<td><a href="https://www.aiverse.design/patterns/observing-streaming">link</a></td>
+</tr>
+<tr>
+<td>AI UX Design Guide</td>
+<td>Performance &amp; Efficiency</td>
+<td>Agent Status &amp; Monitoring</td>
+<td><a href="https://www.aiuxdesign.guide/patterns">lista</a></td>
+</tr>
+<tr>
+<td>Agentic Design</td>
+<td>UI/UX Patterns</td>
+<td>Agent Status &amp; Activity (ASP)</td>
+<td><a href="https://agentic-design.ai/patterns/ui-ux-patterns">lista</a></td>
+</tr>
+<tr>
+<td>Feng, McDonald, Zhang</td>
+<td>Levels of Autonomy</td>
+<td>Observer</td>
+<td><a href="https://arxiv.org/abs/2506.12469">link</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Acessado em 23/09/2026. Produtos citados pelas bibliotecas, ainda não conferidos por nós.</p>
+</div>
+<nav class="pn" aria-label="Navegação sequencial"><a class="prev" href="../padroes/estimativa-de-custo.html"><small>← Anterior</small><span>Estimativa de custo</span></a><a class="next" href="../padroes/pausar-e-parar.html"><small>Próximo →</small><span>Pausar e parar</span></a></nav>
+</div></div></main>
+<footer class="site-footer"><div class="wrapper"><div class="inner">
+<p><strong>Catálogo de padrões agênticos</strong> · curadoria para designers e content designers</p>
+<p><a href="../como-usar.html">Como usar</a> · <a href="../metodo-de-curadoria.html">Método de curadoria</a> · <a href="../glossario.html">Glossário</a> · <a href="../agenda-de-pesquisa.html">Agenda de pesquisa</a> · <a href="../log.html">Log</a></p>
+<p>Conteúdo de terceiros citado com link para a fonte. Casos de exemplo e pessoas citadas são fictícios.</p>
+</div></div></footer>
+</body>
+</html>

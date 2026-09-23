@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perguntar em vez de chutar · Catálogo agêntico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/estilo.css">
+</head>
+<body>
+<header class="site-header"><div class="wrapper">
+<a class="brand" href="../index.html">catálogo agêntico</a>
+<ul class="nav"><li><a href="../necessidades/index.html">Necessidades</a></li><li><a href="../padroes/index.html" aria-current="page">Padrões</a></li><li><a href="../fundamentos/index.html">Fundamentos</a></li><li><a href="../componentes/index.html">Componentes</a></li><li><a href="../guia-de-conteudo.html">Conteúdo</a></li><li><a href="../fontes/index.html">Fontes</a></li></ul>
+</div></header>
+<div class="proto"><div class="wrapper"><div class="inner"><span>Protótipo · versão 1 · 23/09/2026 · curadoria em construção</span></div></div></div>
+<main><div class="wrapper"><div class="inner">
+<nav class="crumbs" aria-label="Você está em"><a href="../index.html">Início</a><span>›</span><a href="../padroes/index.html">Padrões</a><span>›</span><a href="../necessidades/03-quanto-posso-confiar.html">Quero saber quanto posso confiar nisso</a></nav>
+<h1>Perguntar em vez de chutar</h1>
+<div class="tags"><span class="tag">Ficha</span><a class="tag tag--soft" href="../necessidades/03-quanto-posso-confiar.html">Quero saber quanto posso confiar nisso</a><span class="tag tag--soft">Momento: antes da ação</span><span class="tag tag--soft">Papel principal: todos</span><span class="tag tag--dash">rascunho</span></div>
+<p class="lede">Quando o pedido é ambíguo e errar custa caro, pergunte ou ofereça opções em vez de adivinhar.</p>
+<nav class="toc" aria-label="Nesta página"><a href="#problema">Problema</a><a href="#quando-usar-quando-evitar">Quando usar, quando evitar</a><a href="#variacoes">Variações</a><a href="#estados">Estados</a><a href="#conteudo">Conteúdo</a><a href="#risco-da-omissao">Risco da omissão</a><a href="#como-medir">Como medir</a><a href="#relacionados">Relacionados</a><a href="#referencias">Referências</a></nav>
+<div class="content">
+<h2 id="problema">Problema</h2>
+<p>"Paga o fornecedor na terça" pode ser esta terça ou a próxima. O HAX pede que, na dúvida sobre o objetivo da pessoa, o sistema busque desambiguar ou reduza o que se propõe a fazer (<a href="https://www.microsoft.com/en-us/haxtoolkit/library/">HAX, G10</a>).</p>
+<h2 id="quando-usar-quando-evitar">Quando usar, quando evitar</h2>
+<p>Priorize quando a intenção depende do contexto e há mais de um caminho válido (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco, Escalation Pathway</a>). <span class="todo">A completar: quando evitar (perguntar demais também cansa).</span></p>
+<h2 id="variacoes">Variações</h2>
+<p>Três formas (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco, Escalation Pathway</a>):</p>
+<ul>
+<li><strong>Pedir esclarecimento:</strong> "You mentioned 'next Tuesday.' Do you mean September 30th or October 7th?"</li>
+<li><strong>Oferecer opções:</strong> mostrar os caminhos possíveis.</li>
+<li><strong>Pedir uma pessoa:</strong> ver <a href="passar-para-uma-pessoa.html">Passar para uma pessoa</a>.</li>
+</ul>
+<h2 id="estados">Estados</h2>
+<p>Leva ao estado Aguardando decisão do <a href="../fundamentos/ciclos-de-vida.html">ciclo de vida da tarefa</a>.</p>
+<h2 id="conteudo">Conteúdo</h2>
+<div class="rules">
+<div class="rule">
+<div class="rule__t">Pergunta fechada, com as opções <span class="nc">nota da curadoria</span></div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Pode esclarecer a data?</div><div class="good"><span class="lbl">Prefira</span>Terça que vem é dia 29/09 ou 06/10?</div></div>
+</div>
+</div>
+
+<h2 id="risco-da-omissao">Risco da omissão</h2>
+<p>Sem esse caminho, o agente acaba dando um palpite confiante e catastrófico (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>).</p>
+<h2 id="como-medir">Como medir</h2>
+<p>Frequência de pedidos de ajuda entre 5% e 15% das tarefas; resolução depois da escalada acima de 90% (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>).</p>
+<h2 id="relacionados">Relacionados</h2>
+<ul>
+<li><a href="declarar-limites.html">Declarar limites</a></li>
+<li><a href="passar-para-uma-pessoa.html">Passar para uma pessoa</a></li>
+</ul>
+<h2 id="referencias">Referências</h2>
+<h3 id="exemplo-encontrado-em">Exemplo encontrado em</h3>
+<p>Nenhum produto citado pelas fontes para esta forma. <span class="todo">A completar.</span></p>
+<h3 id="documentado-em">Documentado em</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Biblioteca</th>
+<th>Categoria original</th>
+<th>Nome original</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HAX (Microsoft)</td>
+<td>When wrong</td>
+<td>G10 · Scope services when in doubt</td>
+<td><a href="https://www.microsoft.com/en-us/haxtoolkit/library/">link</a></td>
+</tr>
+<tr>
+<td>Yocco (Smashing)</td>
+<td>Post-action · Safety and Recovery</td>
+<td>Escalation Pathway</td>
+<td><a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">link</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Acessado em 23/09/2026.</p>
+</div>
+<nav class="pn" aria-label="Navegação sequencial"><a class="prev" href="../padroes/declarar-limites.html"><small>← Anterior</small><span>Declarar limites</span></a><a class="next" href="../padroes/plano-com-aprovacao.html"><small>Próximo →</small><span>Plano com aprovação</span></a></nav>
+</div></div></main>
+<footer class="site-footer"><div class="wrapper"><div class="inner">
+<p><strong>Catálogo de padrões agênticos</strong> · curadoria para designers e content designers</p>
+<p><a href="../como-usar.html">Como usar</a> · <a href="../metodo-de-curadoria.html">Método de curadoria</a> · <a href="../glossario.html">Glossário</a> · <a href="../agenda-de-pesquisa.html">Agenda de pesquisa</a> · <a href="../log.html">Log</a></p>
+<p>Conteúdo de terceiros citado com link para a fonte. Casos de exemplo e pessoas citadas são fictícios.</p>
+</div></div></footer>
+</body>
+</html>

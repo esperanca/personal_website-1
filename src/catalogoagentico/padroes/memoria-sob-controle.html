@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memória sob controle · Catálogo agêntico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/estilo.css">
+</head>
+<body>
+<header class="site-header"><div class="wrapper">
+<a class="brand" href="../index.html">catálogo agêntico</a>
+<ul class="nav"><li><a href="../necessidades/index.html">Necessidades</a></li><li><a href="../padroes/index.html" aria-current="page">Padrões</a></li><li><a href="../fundamentos/index.html">Fundamentos</a></li><li><a href="../componentes/index.html">Componentes</a></li><li><a href="../guia-de-conteudo.html">Conteúdo</a></li><li><a href="../fontes/index.html">Fontes</a></li></ul>
+</div></header>
+<div class="proto"><div class="wrapper"><div class="inner"><span>Protótipo · versão 1 · 23/09/2026 · curadoria em construção</span></div></div></div>
+<main><div class="wrapper"><div class="inner">
+<nav class="crumbs" aria-label="Você está em"><a href="../index.html">Início</a><span>›</span><a href="../padroes/index.html">Padrões</a><span>›</span><a href="../necessidades/07-lembrar-e-esquecer.html">Quero que lembre o que importa, e esqueça o que eu pedir</a></nav>
+<h1>Memória sob controle</h1>
+<div class="tags"><span class="tag">Ficha</span><a class="tag tag--soft" href="../necessidades/07-lembrar-e-esquecer.html">Quero que lembre o que importa, e esqueça o que eu pedir</a><span class="tag tag--soft">Momento: o tempo todo</span><span class="tag tag--soft">Papel principal: todos</span><span class="tag tag--solid">revisada</span></div>
+<p class="lede">Deixe o agente guardar o que torna o trabalho melhor, mostre quando ele guarda e quando usa, e faça o esquecer ser de verdade.</p>
+<nav class="toc" aria-label="Nesta página"><a href="#problema">Problema</a><a href="#quando-usar-quando-evitar">Quando usar, quando evitar</a><a href="#autonomia-e-atores">Autonomia e atores</a><a href="#variacoes">Variações</a><a href="#estados">Estados</a><a href="#anatomia">Anatomia</a><a href="#conteudo">Conteúdo</a><a href="#anti-padroes">Anti-padrões</a><a href="#notas-por-dominio">Notas por domínio</a><a href="#risco-da-omissao">Risco da omissão</a><a href="#como-medir">Como medir</a><a href="#relacionados">Relacionados</a><a href="#referencias">Referências</a></nav>
+<div class="content">
+<h2 id="problema">Problema</h2>
+<p>A pessoa já explicou três vezes que a Transportes Lima é paga sempre no vencimento. Se o agente não lembra, ela repete. Se lembra sem avisar, um dia usa uma regra antiga que ela nem lembrava de ter dado. <span class="nc">nota da curadoria</span></p>
+<p>Como fazer o agente aprender sem que a pessoa perca a noção do que ele sabe sobre ela?</p>
+<h2 id="quando-usar-quando-evitar">Quando usar, quando evitar</h2>
+<p><strong>Use quando</strong> o contexto se acumula com o tempo, a informação guardada é pessoal ou sensível, e a personalização é parte central do produto (<a href="https://www.aiuxdesign.guide/patterns/selective-memory">AI UX Design Guide, Selective Memory</a>).</p>
+<p><strong>Não use</strong> quando o esquecer não puder ser cumprido de verdade (<a href="https://www.aiuxdesign.guide/patterns/selective-memory">AI UX Design Guide</a>).</p>
+<h2 id="autonomia-e-atores">Autonomia e atores</h2>
+<p>Vale em todos os papéis. O que muda são os atores: numa empresa, várias pessoas usam o mesmo agente. <span class="nc">nota da curadoria</span></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Ator</th>
+<th>O que fica com ele</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A pessoa</td>
+<td>Preferências dela</td>
+</tr>
+<tr>
+<td>A empresa</td>
+<td>Regras que valem para todos; precisa estar claro quem pode mudar</td>
+</tr>
+<tr>
+<td>O agente</td>
+<td>O que concluiu sozinho observando; aparece separado do que alguém disse</td>
+</tr>
+</tbody>
+</table></div>
+<p>Separar preferências de conhecimento vem do <a href="https://www.shapeof.ai/patterns/memory">Shape of AI, Memory</a>.</p>
+<h2 id="variacoes">Variações</h2>
+<p>Memória global, por escopo (espaço, projeto, conversa) e efêmera, só da sessão (<a href="https://www.shapeof.ai/patterns/memory">Shape of AI, Memory</a>). Sem memória nenhuma: ver <a href="sessao-sem-memoria.html">Sessão sem memória</a>.</p>
+<h2 id="estados">Estados</h2>
+<p>A memória tem ciclo próprio. Ver <a href="../fundamentos/ciclos-de-vida.html">Ciclos de vida</a>. Textos: <em>nota da curadoria</em>.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Estado</th>
+<th>O que mostra</th>
+<th>Texto de exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proposta</td>
+<td>O agente pergunta se deve guardar</td>
+<td>"Você sempre paga a Transportes Lima no vencimento. Quer que eu lembre disso?"</td>
+</tr>
+<tr>
+<td>Guardada</td>
+<td>Confirmação leve (<a href="https://www.shapeof.ai/patterns/memory">Shape of AI</a>: "Saved to memory")</td>
+<td>"Vou lembrar disso."</td>
+</tr>
+<tr>
+<td>Em uso</td>
+<td>Quando a memória muda o que o agente fez (<a href="https://www.aiuxdesign.guide/patterns/selective-memory">AI UX Design Guide</a>)</td>
+<td>"Agendei para o vencimento, como você pediu em agosto."</td>
+</tr>
+<tr>
+<td>Desatualizada</td>
+<td>Algo novo contradiz o guardado</td>
+<td>"Você pagou antes do vencimento hoje. Mudou a regra?"</td>
+</tr>
+<tr>
+<td>Esquecida</td>
+<td>Saiu de todo lugar</td>
+<td>"Esqueci. Não uso mais isso em nenhuma tarefa."</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="anatomia">Anatomia</h2>
+<p>Obrigatórios: <strong>o que foi guardado</strong>, <strong>de onde veio</strong> (dito ou concluído), <strong>para quem vale</strong>, <strong>último uso</strong> e <strong>esquecer</strong>. O AI UX Design Guide pede mostrar também o que o sistema inferiu (<a href="https://www.aiuxdesign.guide/patterns/selective-memory">AI UX Design Guide</a>).</p>
+<div class="mock"><div class="mock__head">Exemplo de tela · caso fictício, nota da curadoria</div><div class="mock__body">
+<p><strong>O que eu lembro sobre os pagamentos</strong></p>
+<ul>
+<li>Pagar a Transportes Lima sempre no vencimento · você disse em agosto · vale para a empresa · usado ontem · <span class="btn">Esquecer</span></li>
+<li>Você prefere ver os valores sem centavos no resumo · você disse em julho · só para você · <span class="btn">Esquecer</span></li>
+<li>Pagamentos acima de R$ 10 mil costumam ser aprovados pelo Rui · eu concluí olhando o histórico · vale para a empresa · <span class="btn">Corrigir</span></li>
+</ul>
+<p>Nesta conversa, não guardo nada novo. <span class="btn">Ativar</span></p>
+</div></div>
+<h2 id="conteudo">Conteúdo</h2>
+<div class="rules">
+<div class="rule">
+<div class="rule__t">Mostre a memória quando ela muda o que o agente fez (<a href="https://www.aiuxdesign.guide/patterns/selective-memory">AI UX Design Guide</a>)</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Agendei o pagamento para 25/09.</div><div class="good"><span class="lbl">Prefira</span>Agendei para 25/09, no vencimento, como você pediu em agosto.</div></div>
+</div>
+<div class="rule">
+<div class="rule__t">Esquecer quer dizer esquecer (<a href="https://www.aiuxdesign.guide/patterns/selective-memory">AI UX Design Guide</a>)</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Esquecido ✓ (e continua em uso)</div><div class="good"><span class="lbl">Prefira</span>Esqueci. Não uso mais isso em nenhuma tarefa.</div></div>
+</div>
+</div>
+
+<p>Separe "você disse" de "eu percebi". Pergunte antes de guardar o que afeta outras pessoas. <span class="nc">nota da curadoria</span></p>
+<h2 id="anti-padroes">Anti-padrões</h2>
+<ul>
+<li><strong>Memória fantasma:</strong> some da lista e continua em uso (<a href="https://www.aiuxdesign.guide/patterns/selective-memory">AI UX Design Guide</a>, "the ghost memory").</li>
+<li><strong>Caixa-preta</strong> e <strong>vazamento de contexto</strong> entre situações (<a href="https://www.shapeof.ai/patterns/memory">Shape of AI, Memory</a>).</li>
+<li><strong>Mudança brusca</strong> de comportamento ao aprender (<a href="https://www.microsoft.com/en-us/haxtoolkit/library/">HAX, G14</a>).</li>
+<li><strong>Inferência apresentada como fato.</strong> <span class="nc">nota da curadoria</span></li>
+</ul>
+<h2 id="notas-por-dominio">Notas por domínio</h2>
+<p><strong>Financeiro.</strong> A LGPD dá à pessoa o direito de saber o que foi guardado e pedir exclusão; a tela de memória precisa corresponder ao que o sistema guarda. Numa conta empresa, o sigilo vale entre usuários. <span class="nc">nota da curadoria; não é orientação jurídica</span></p>
+<h2 id="risco-da-omissao">Risco da omissão</h2>
+<p>Sem memória, a pessoa repete tudo. Com memória sem controle, descobre que o agente sabia algo que ela não autorizou. <span class="nc">nota da curadoria</span></p>
+<h2 id="como-medir">Como medir</h2>
+<p><span class="nc">nota da curadoria; nenhuma fonte propõe métrica para memória</span> Repetição de instrução; memórias corrigidas ou esquecidas, separando ditas de concluídas; uso da sessão sem memória.</p>
+<h2 id="relacionados">Relacionados</h2>
+<ul>
+<li><a href="sessao-sem-memoria.html">Sessão sem memória</a></li>
+<li><a href="explicar-o-motivo.html">Explicar o motivo</a></li>
+<li><a href="nivel-de-autonomia.html">Nível de autonomia</a>: regras da empresa na memória são, na prática, limites.</li>
+</ul>
+<h2 id="referencias">Referências</h2>
+<h3 id="exemplo-encontrado-em">Exemplo encontrado em</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Produto</th>
+<th>Como aparece</th>
+<th>Citado por</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td>Memória com confirmação no meio da conversa</td>
+<td><a href="https://www.shapeof.ai/patterns/memory">Shape of AI · Memory</a></td>
+</tr>
+<tr>
+<td>Claude</td>
+<td>Consulta conversas anteriores</td>
+<td><a href="https://www.shapeof.ai/patterns/memory">Shape of AI · Memory</a></td>
+</tr>
+<tr>
+<td>Gemini, Perplexity</td>
+<td>Memórias pedidas pela pessoa, com gestão</td>
+<td><a href="https://www.shapeof.ai/patterns/memory">Shape of AI · Memory</a></td>
+</tr>
+<tr>
+<td>ChatGPT, Google Assistant, Replika</td>
+<td>Ver e apagar; controles de atividade; conversa temporária</td>
+<td><a href="https://www.aiuxdesign.guide/patterns/selective-memory">AI UX Design Guide · Selective Memory</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Todos os exemplos são de memória pessoal; nenhum de memória compartilhada numa empresa.</p>
+<h3 id="documentado-em">Documentado em</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Biblioteca</th>
+<th>Categoria original</th>
+<th>Nome original</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shape of AI</td>
+<td>Governors</td>
+<td>Memory</td>
+<td><a href="https://www.shapeof.ai/patterns/memory">link</a></td>
+</tr>
+<tr>
+<td>AI UX Design Guide</td>
+<td>Privacy &amp; Control</td>
+<td>Selective Memory</td>
+<td><a href="https://www.aiuxdesign.guide/patterns/selective-memory">link</a></td>
+</tr>
+<tr>
+<td>HAX (Microsoft)</td>
+<td>Over time</td>
+<td>G12, G13, G14, G17</td>
+<td><a href="https://www.microsoft.com/en-us/haxtoolkit/library/">link</a></td>
+</tr>
+<tr>
+<td>Aiverse</td>
+<td>Adapting</td>
+<td>Fase inteira</td>
+<td><a href="https://www.aiverse.design/patterns">link</a></td>
+</tr>
+<tr>
+<td>Agentic Design</td>
+<td>UI/UX Patterns</td>
+<td>Adaptive Interface Patterns (AIP)</td>
+<td><a href="https://agentic-design.ai/patterns/ui-ux-patterns">lista</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Acessado em 23/09/2026. Produtos citados pelas bibliotecas, ainda não conferidos por nós.</p>
+</div>
+<nav class="pn" aria-label="Navegação sequencial"><a class="prev" href="../padroes/historico-de-acoes.html"><small>← Anterior</small><span>Histórico de ações</span></a><a class="next" href="../padroes/sessao-sem-memoria.html"><small>Próximo →</small><span>Sessão sem memória</span></a></nav>
+</div></div></main>
+<footer class="site-footer"><div class="wrapper"><div class="inner">
+<p><strong>Catálogo de padrões agênticos</strong> · curadoria para designers e content designers</p>
+<p><a href="../como-usar.html">Como usar</a> · <a href="../metodo-de-curadoria.html">Método de curadoria</a> · <a href="../glossario.html">Glossário</a> · <a href="../agenda-de-pesquisa.html">Agenda de pesquisa</a> · <a href="../log.html">Log</a></p>
+<p>Conteúdo de terceiros citado com link para a fonte. Casos de exemplo e pessoas citadas são fictícios.</p>
+</div></div></footer>
+</body>
+</html>

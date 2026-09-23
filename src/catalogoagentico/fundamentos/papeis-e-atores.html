@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Papéis e atores · Catálogo agêntico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/estilo.css">
+</head>
+<body>
+<header class="site-header"><div class="wrapper">
+<a class="brand" href="../index.html">catálogo agêntico</a>
+<ul class="nav"><li><a href="../necessidades/index.html">Necessidades</a></li><li><a href="../padroes/index.html">Padrões</a></li><li><a href="../fundamentos/index.html" aria-current="page">Fundamentos</a></li><li><a href="../componentes/index.html">Componentes</a></li><li><a href="../guia-de-conteudo.html">Conteúdo</a></li><li><a href="../fontes/index.html">Fontes</a></li></ul>
+</div></header>
+<div class="proto"><div class="wrapper"><div class="inner"><span>Protótipo · versão 1 · 23/09/2026 · curadoria em construção</span></div></div></div>
+<main><div class="wrapper"><div class="inner">
+<nav class="crumbs" aria-label="Você está em"><a href="../index.html">Início</a><span>›</span><a href="../fundamentos/index.html">Fundamentos</a></nav>
+<h1>Papéis e atores</h1>
+<div class="tags"><span class="tag">Fundamento</span></div>
+<p class="lede">Todo padrão muda de forma conforme o papel da pessoa diante do agente, e conforme quem mais está em cena.</p>
+<nav class="toc" aria-label="Nesta página"><a href="#os-cinco-papeis-da-pessoa">Os cinco papéis da pessoa</a><a href="#os-atores-alem-da-pessoa">Os atores além da pessoa</a><a href="#mapa-de-cobertura">Mapa de cobertura</a><a href="#fontes">Fontes</a></nav>
+<div class="content">
+<h2 id="os-cinco-papeis-da-pessoa">Os cinco papéis da pessoa</h2>
+<p>Feng, McDonald e Zhang tratam autonomia como uma decisão de design, separada da capacidade do agente, e descrevem cinco papéis para a pessoa: operadora, colaboradora, consultora, aprovadora e observadora (<a href="https://arxiv.org/abs/2506.12469">Feng et al., Levels of Autonomy for AI Agents</a>).</p>
+<p>Como o catálogo usa cada papel (resumo da curadoria; conferir as definições no artigo):</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Papel</th>
+<th>Quem executa</th>
+<th>Exemplo no catálogo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operadora</td>
+<td>A pessoa; o agente ajuda pontualmente</td>
+<td>Sugestão dentro da tarefa</td>
+</tr>
+<tr>
+<td>Colaboradora</td>
+<td>Os dois, passo a passo</td>
+<td>Plano montado junto</td>
+</tr>
+<tr>
+<td>Consultora</td>
+<td>A pessoa, a partir do que o agente propõe</td>
+<td>"Faço eu mesmo"</td>
+</tr>
+<tr>
+<td>Aprovadora</td>
+<td>O agente, depois do sim da pessoa</td>
+<td><a href="../padroes/plano-com-aprovacao.html">Plano com aprovação</a></td>
+</tr>
+<tr>
+<td>Observadora</td>
+<td>O agente sozinho; a pessoa acompanha ou é avisada</td>
+<td><a href="../padroes/acompanhar-execucao.html">Acompanhar execução</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Cada ficha tem uma tabela "Autonomia e atores" com a forma do padrão em cada papel. "Não se aplica" é resposta válida, com remissão para o padrão que assume aquele papel. <span class="nc">nota da curadoria</span></p>
+<p>Yocco propõe quatro níveis que a pessoa escolhe (Observe &amp; Suggest, Plan &amp; Propose, Act with Confirmation, Act Autonomously) (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco, Autonomy Dial</a>). Ver <a href="../padroes/nivel-de-autonomia.html">Nível de autonomia</a>.</p>
+<h2 id="os-atores-alem-da-pessoa">Os atores além da pessoa</h2>
+<p>Os papéis descrevem a relação entre a pessoa e o agente. Os testes mostraram outros atores que precisam aparecer nas fichas. <span class="nc">nota da curadoria</span></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Ator</th>
+<th>Onde aparece</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Atendente, gerente</td>
+<td><a href="../padroes/passar-para-uma-pessoa.html">Passar para uma pessoa</a></td>
+</tr>
+<tr>
+<td>A empresa (regras que valem para todos)</td>
+<td><a href="../padroes/memoria-sob-controle.html">Memória sob controle</a></td>
+</tr>
+<tr>
+<td>Suporte, auditoria, compliance</td>
+<td><a href="../padroes/historico-de-acoes.html">Histórico de ações</a></td>
+</tr>
+<tr>
+<td>Outros agentes</td>
+<td>Lacuna. Ver <a href="../agenda-de-pesquisa.html">agenda de pesquisa</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="mapa-de-cobertura">Mapa de cobertura</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Padrão</th>
+<th>Operadora</th>
+<th>Colaboradora</th>
+<th>Consultora</th>
+<th>Aprovadora</th>
+<th>Observadora</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Plano com aprovação</td>
+<td>–</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Acompanhar execução</td>
+<td>–</td>
+<td>○</td>
+<td>–</td>
+<td>○</td>
+<td>●</td>
+</tr>
+<tr>
+<td>Desfazer</td>
+<td>–</td>
+<td>○</td>
+<td>–</td>
+<td>○</td>
+<td>●</td>
+</tr>
+<tr>
+<td>Sugestão proativa</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>–</td>
+<td>○</td>
+</tr>
+<tr>
+<td>Passar para uma pessoa</td>
+<td>–</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+</tr>
+<tr>
+<td>Identificar o agente</td>
+<td>●</td>
+<td>●</td>
+<td>●</td>
+<td>●</td>
+<td>●</td>
+</tr>
+<tr>
+<td>Explicar o motivo</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+</tr>
+<tr>
+<td>Sinalizar incerteza</td>
+<td>○</td>
+<td>○</td>
+<td>○</td>
+<td>●</td>
+<td>●</td>
+</tr>
+</tbody>
+</table></div>
+<p>● forma principal · ○ se aplica · – não se aplica. Só as fichas revisadas. A colaboradora aparece em quase tudo, mas nunca como forma principal. <span class="nc">nota da curadoria</span></p>
+<h2 id="fontes">Fontes</h2>
+<ul>
+<li><a href="https://arxiv.org/abs/2506.12469">Feng, McDonald, Zhang, Levels of Autonomy for AI Agents (2025)</a> · acessado em 22/09/2026</li>
+<li><a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco, Designing for Agentic AI</a> · acessado em 23/09/2026</li>
+</ul>
+</div>
+<nav class="pn" aria-label="Navegação sequencial"><a class="prev" href="../fundamentos/ciclos-de-vida.html"><small>← Anterior</small><span>Ciclos de vida</span></a></nav>
+</div></div></main>
+<footer class="site-footer"><div class="wrapper"><div class="inner">
+<p><strong>Catálogo de padrões agênticos</strong> · curadoria para designers e content designers</p>
+<p><a href="../como-usar.html">Como usar</a> · <a href="../metodo-de-curadoria.html">Método de curadoria</a> · <a href="../glossario.html">Glossário</a> · <a href="../agenda-de-pesquisa.html">Agenda de pesquisa</a> · <a href="../log.html">Log</a></p>
+<p>Conteúdo de terceiros citado com link para a fonte. Casos de exemplo e pessoas citadas são fictícios.</p>
+</div></div></footer>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sinalizar incerteza · Catálogo agêntico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/estilo.css">
+</head>
+<body>
+<header class="site-header"><div class="wrapper">
+<a class="brand" href="../index.html">catálogo agêntico</a>
+<ul class="nav"><li><a href="../necessidades/index.html">Necessidades</a></li><li><a href="../padroes/index.html" aria-current="page">Padrões</a></li><li><a href="../fundamentos/index.html">Fundamentos</a></li><li><a href="../componentes/index.html">Componentes</a></li><li><a href="../guia-de-conteudo.html">Conteúdo</a></li><li><a href="../fontes/index.html">Fontes</a></li></ul>
+</div></header>
+<div class="proto"><div class="wrapper"><div class="inner"><span>Protótipo · versão 1 · 23/09/2026 · curadoria em construção</span></div></div></div>
+<main><div class="wrapper"><div class="inner">
+<nav class="crumbs" aria-label="Você está em"><a href="../index.html">Início</a><span>›</span><a href="../padroes/index.html">Padrões</a><span>›</span><a href="../necessidades/03-quanto-posso-confiar.html">Quero saber quanto posso confiar nisso</a></nav>
+<h1>Sinalizar incerteza</h1>
+<div class="tags"><span class="tag">Ficha</span><a class="tag tag--soft" href="../necessidades/03-quanto-posso-confiar.html">Quero saber quanto posso confiar nisso</a><span class="tag tag--soft">Momento: junto do resultado</span><span class="tag tag--soft">Papel principal: aprovadora e observadora</span><span class="tag tag--solid">revisada</span></div>
+<p class="lede">Mostre onde o agente tem certeza e onde não tem, em poucas faixas que a pessoa consegue usar, e diga o que fazer com o que ficou em dúvida.</p>
+<nav class="toc" aria-label="Nesta página"><a href="#problema">Problema</a><a href="#quando-usar-quando-evitar">Quando usar, quando evitar</a><a href="#autonomia-e-atores">Autonomia e atores</a><a href="#variacoes">Variações</a><a href="#estados">Estados</a><a href="#anatomia">Anatomia</a><a href="#conteudo">Conteúdo</a><a href="#anti-padroes">Anti-padrões</a><a href="#notas-por-dominio">Notas por domínio</a><a href="#risco-da-omissao">Risco da omissão</a><a href="#como-medir">Como medir</a><a href="#relacionados">Relacionados</a><a href="#referencias">Referências</a></nav>
+<div class="content">
+<h2 id="problema">Problema</h2>
+<p>A conciliação terminou com 312 lançamentos. A maioria está certa, alguns são palpites. Se tudo aparece igual, a pessoa aceita no automático palpites fracos ou confere com ansiedade o que já estava certo (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco, Confidence Signal</a>).</p>
+<p>Como mostrar onde vale a pena olhar sem vender uma precisão que o agente não tem?</p>
+<h2 id="quando-usar-quando-evitar">Quando usar, quando evitar</h2>
+<p><strong>Use quando</strong> a decisão tem custo que varia com a confiabilidade, a confiança do modelo é calibrada, os resultados variam de verdade e a dúvida leva a um caminho concreto de verificação (<a href="https://www.aiuxdesign.guide/patterns/confidence-visualization">AI UX Design Guide, Confidence Visualization</a>).</p>
+<p><strong>Evite quando</strong> o agente não tem medida calibrada, ou quando quase tudo cai na mesma faixa e o sinal vira papel de parede (<a href="https://www.aiuxdesign.guide/patterns/confidence-visualization">AI UX Design Guide</a>).</p>
+<h2 id="autonomia-e-atores">Autonomia e atores</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Papel da pessoa</th>
+<th>Como o padrão aparece</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operadora</td>
+<td>Dúvida sobre uma sugestão pontual.</td>
+</tr>
+<tr>
+<td>Colaboradora</td>
+<td>Dúvida marcada em cada passo, para decidirem juntos.</td>
+</tr>
+<tr>
+<td>Consultora</td>
+<td>Força da recomendação, ao lado das alternativas.</td>
+</tr>
+<tr>
+<td>Aprovadora</td>
+<td>Forma principal. Itens incertos saem do plano ou pedem confirmação à parte.</td>
+</tr>
+<tr>
+<td>Observadora</td>
+<td>Forma principal. A dúvida diz o que conferir depois.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="variacoes">Variações</h2>
+<ul>
+<li><strong>Faixas por item</strong>, agrupadas. Faixas no lugar de números falsamente precisos (<a href="https://www.aiuxdesign.guide/patterns/confidence-visualization">AI UX Design Guide</a>).</li>
+<li><strong>Marcadores visuais:</strong> verde para certeza, amarelo para dúvida (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>).</li>
+</ul>
+<p>Declaração de escopo e pergunta no lugar do palpite têm fichas próprias: <a href="declarar-limites.html">Declarar limites</a> e <a href="perguntar-em-vez-de-chutar.html">Perguntar em vez de chutar</a>.</p>
+<h2 id="estados">Estados</h2>
+<p>Não tem estados próprios. Confiança é uma propriedade de cada resultado. Ver o fundamento <a href="../fundamentos/quanto-confiar.html">Quanto confiar</a>: <strong>Bate · Confira · Não sei</strong>.</p>
+<h2 id="anatomia">Anatomia</h2>
+<p>Obrigatórios: <strong>a faixa</strong>, <strong>o motivo da dúvida</strong> e <strong>a ação</strong> que resolve (<a href="https://www.aiuxdesign.guide/patterns/confidence-visualization">AI UX Design Guide</a>: "tie signals to user actions"). Opcional: a quantidade em cada faixa.</p>
+<div class="mock"><div class="mock__head">Exemplo de tela · caso fictício, nota da curadoria</div><div class="mock__body">
+<p><strong>Conciliação de setembro · 312 lançamentos</strong><br />
+<span class="mk mk--g">Bate · 298</span> · Valor, data e CNPJ conferem com a nota.<br />
+<span class="mk mk--a">Confira · 11</span></p>
+<ul>
+<li>Energia Sul · R$ 1.950,00 · A nota é de R$ 1.905,00. A diferença parece juros de atraso. <span class="btn">Aceitar</span></li>
+<li>Gráfica Norte · R$ 3.200,00 · Achei duas notas com o mesmo valor. Escolhi a de agosto. <span class="btn">Trocar</span></li>
+</ul>
+<p><span class="mk mk--r">Não sei · 3</span></p>
+<ul>
+<li>Pix recebido · R$ 4.300,00 · Não achei nota nem cliente com esse valor. <span class="btn">Identificar</span></li>
+</ul>
+</div></div>
+<h2 id="conteudo">Conteúdo</h2>
+<div class="rules">
+<div class="rule">
+<div class="rule__t">Troque número por motivo <span class="nc">nota da curadoria</span></div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Confiança: 74%</div><div class="good"><span class="lbl">Prefira</span>A nota é de R$ 1.905,00. A diferença parece juros de atraso.</div></div>
+</div>
+<div class="rule">
+<div class="rule__t">Faixas pelo que fazer <span class="nc">nota da curadoria</span></div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Alta · Média · Baixa confiança</div><div class="good"><span class="lbl">Prefira</span>Bate · Confira · Não sei</div></div>
+</div>
+</div>
+
+<p>"Não sei" é resposta. Aviso só onde há dúvida: um "a IA pode cometer erros" fixo no rodapé tende a ser ignorado (<a href="https://www.shapeof.ai/patterns/caveat">Shape of AI, Caveat</a>).</p>
+<h2 id="anti-padroes">Anti-padrões</h2>
+<ul>
+<li><strong>Porcentagem decorativa</strong>, <strong>tudo na mesma faixa</strong>, <strong>dúvida sem saída</strong> (<a href="https://www.aiuxdesign.guide/patterns/confidence-visualization">AI UX Design Guide</a>: "decorative percentage", "uniformity trap", "missing action path").</li>
+<li><strong>Aviso genérico como solução.</strong> O Shape of AI registra que a eficácia desses avisos é incerta (<a href="https://www.shapeof.ai/patterns/caveat">Shape of AI, Caveat</a>).</li>
+</ul>
+<h2 id="notas-por-dominio">Notas por domínio</h2>
+<p><strong>Financeiro.</strong> Em conciliação, "Confira" precisa de dono e prazo por causa do fechamento. Em crédito ou fraude, faixa mostrada ao cliente pode ser lida como decisão: separe o que o cliente vê do que o analista vê. <span class="nc">nota da curadoria</span></p>
+<h2 id="risco-da-omissao">Risco da omissão</h2>
+<p>Automação cega: aceitar palpites fracos, ou conferir com ansiedade o que estava certo (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>).</p>
+<h2 id="como-medir">Como medir</h2>
+<ul>
+<li><strong>Calibração:</strong> correlação entre confiança e aceitação; Yocco propõe acima de 0,8 (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>).</li>
+<li><strong>Diferença de escrutínio:</strong> mais tempo nos itens em dúvida do que nos seguros (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>).</li>
+<li><strong>Erros em "Bate":</strong> decide se as faixas podem ser mostradas. <span class="nc">nota da curadoria</span></li>
+</ul>
+<h2 id="relacionados">Relacionados</h2>
+<ul>
+<li><a href="explicar-o-motivo.html">Explicar o motivo</a></li>
+<li><a href="plano-com-aprovacao.html">Plano com aprovação</a></li>
+<li><a href="passar-para-uma-pessoa.html">Passar para uma pessoa</a></li>
+</ul>
+<h2 id="referencias">Referências</h2>
+<h3 id="exemplo-encontrado-em">Exemplo encontrado em</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Produto</th>
+<th>Como aparece</th>
+<th>Citado por</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GitHub Copilot, ChatGPT, Notion AI</td>
+<td>Sinais de confiança</td>
+<td><a href="https://www.aiuxdesign.guide/patterns/confidence-visualization">AI UX Design Guide · Confidence Visualization</a></td>
+</tr>
+<tr>
+<td>Previsão do tempo, tradutores, filtros de spam</td>
+<td>Confiança fora da IA generativa</td>
+<td><a href="https://www.aiuxdesign.guide/patterns/confidence-visualization">AI UX Design Guide · Confidence Visualization</a></td>
+</tr>
+<tr>
+<td>Adobe PDF, Character.ai, GitHub Copilot, Notion AI</td>
+<td>Aviso de que a IA pode errar</td>
+<td><a href="https://www.shapeof.ai/patterns/caveat">Shape of AI · Caveat</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Nenhum exemplo citado mostra faixas por item em resultado de agente.</p>
+<h3 id="documentado-em">Documentado em</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Biblioteca</th>
+<th>Categoria original</th>
+<th>Nome original</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yocco (Smashing)</td>
+<td>In-action · Providing Context</td>
+<td>Confidence Signal</td>
+<td><a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">link</a></td>
+</tr>
+<tr>
+<td>AI UX Design Guide</td>
+<td>Trustworthy &amp; Reliable AI</td>
+<td>Confidence Visualization</td>
+<td><a href="https://www.aiuxdesign.guide/patterns/confidence-visualization">link</a></td>
+</tr>
+<tr>
+<td>Shape of AI</td>
+<td>Trust builders</td>
+<td>Caveat</td>
+<td><a href="https://www.shapeof.ai/patterns/caveat">link</a></td>
+</tr>
+<tr>
+<td>HAX (Microsoft)</td>
+<td>Initially</td>
+<td>G2 · Make clear how well the system can do what it can do</td>
+<td><a href="https://www.microsoft.com/en-us/haxtoolkit/library/">link</a></td>
+</tr>
+<tr>
+<td>Agentic Design</td>
+<td>UI/UX Patterns</td>
+<td>Confidence Visualization UI Patterns (CVP)</td>
+<td><a href="https://agentic-design.ai/patterns/ui-ux-patterns">lista</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Acessado em 23/09/2026. Produtos citados pelas bibliotecas, ainda não conferidos por nós.</p>
+</div>
+<nav class="pn" aria-label="Navegação sequencial"><a class="prev" href="../padroes/mostrar-o-raciocinio.html"><small>← Anterior</small><span>Mostrar o raciocínio</span></a><a class="next" href="../padroes/declarar-limites.html"><small>Próximo →</small><span>Declarar limites</span></a></nav>
+</div></div></main>
+<footer class="site-footer"><div class="wrapper"><div class="inner">
+<p><strong>Catálogo de padrões agênticos</strong> · curadoria para designers e content designers</p>
+<p><a href="../como-usar.html">Como usar</a> · <a href="../metodo-de-curadoria.html">Método de curadoria</a> · <a href="../glossario.html">Glossário</a> · <a href="../agenda-de-pesquisa.html">Agenda de pesquisa</a> · <a href="../log.html">Log</a></p>
+<p>Conteúdo de terceiros citado com link para a fonte. Casos de exemplo e pessoas citadas são fictícios.</p>
+</div></div></footer>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confirmação · Catálogo agêntico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/estilo.css">
+</head>
+<body>
+<header class="site-header"><div class="wrapper">
+<a class="brand" href="../index.html">catálogo agêntico</a>
+<ul class="nav"><li><a href="../necessidades/index.html">Necessidades</a></li><li><a href="../padroes/index.html" aria-current="page">Padrões</a></li><li><a href="../fundamentos/index.html">Fundamentos</a></li><li><a href="../componentes/index.html">Componentes</a></li><li><a href="../guia-de-conteudo.html">Conteúdo</a></li><li><a href="../fontes/index.html">Fontes</a></li></ul>
+</div></header>
+<div class="proto"><div class="wrapper"><div class="inner"><span>Protótipo · versão 1 · 23/09/2026 · curadoria em construção</span></div></div></div>
+<main><div class="wrapper"><div class="inner">
+<nav class="crumbs" aria-label="Você está em"><a href="../index.html">Início</a><span>›</span><a href="../padroes/index.html">Padrões</a><span>›</span><a href="../necessidades/04-decidir-antes.html">Quero decidir antes que aconteça</a></nav>
+<h1>Confirmação</h1>
+<div class="tags"><span class="tag">Ficha</span><a class="tag tag--soft" href="../necessidades/04-decidir-antes.html">Quero decidir antes que aconteça</a><span class="tag tag--soft">Momento: antes da ação</span><span class="tag tag--soft">Papel principal: aprovadora</span><span class="tag tag--dash">rascunho</span></div>
+<p class="lede">Antes de uma ação única com consequência, peça um sim ou não claro, com a ação e o impacto escritos no próprio pedido.</p>
+<nav class="toc" aria-label="Nesta página"><a href="#problema">Problema</a><a href="#quando-usar-quando-evitar">Quando usar, quando evitar</a><a href="#autonomia-e-atores">Autonomia e atores</a><a href="#variacoes">Variações</a><a href="#estados">Estados</a><a href="#anatomia">Anatomia</a><a href="#conteudo">Conteúdo</a><a href="#anti-padroes">Anti-padrões</a><a href="#notas-por-dominio">Notas por domínio</a><a href="#risco-da-omissao">Risco da omissão</a><a href="#relacionados">Relacionados</a><a href="#referencias">Referências</a></nav>
+<div class="content">
+<h2 id="problema">Problema</h2>
+<p>Nem toda ação tem plano. Às vezes é uma coisa só: mandar um e-mail, cancelar um agendamento, compartilhar um arquivo. Se o agente segue sem perguntar, um erro custa reputação, dinheiro, segurança, trabalho ou tempo (<a href="https://www.shapeof.ai/patterns/verification">Shape of AI, Verification</a>).</p>
+<h2 id="quando-usar-quando-evitar">Quando usar, quando evitar</h2>
+<p><strong>Use quando</strong> a ação tem consequência real. <strong>Evite</strong> em tarefas de baixo risco, como buscas e rascunhos, para não criar atrito sem motivo (<a href="https://www.shapeof.ai/patterns/verification">Shape of AI, Verification</a>).</p>
+<h2 id="autonomia-e-atores">Autonomia e atores</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Papel da pessoa</th>
+<th>Como o padrão aparece</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operadora</td>
+<td>Não se aplica.</td>
+</tr>
+<tr>
+<td>Colaboradora</td>
+<td>Confirmação pontual dentro do trabalho conjunto.</td>
+</tr>
+<tr>
+<td>Consultora</td>
+<td>Não se aplica. A pessoa executa.</td>
+</tr>
+<tr>
+<td>Aprovadora</td>
+<td>Forma principal.</td>
+</tr>
+<tr>
+<td>Observadora</td>
+<td>Só nas ações que a pessoa marcou como "sempre perguntar". Ver <a href="nivel-de-autonomia.html">Nível de autonomia</a>.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="variacoes">Variações</h2>
+<p>Três formas documentadas (<a href="https://www.shapeof.ai/patterns/verification">Shape of AI, Verification</a>):</p>
+<ul>
+<li><strong>Confirmação simples.</strong> Sim ou não, antes de seguir.</li>
+<li><strong>Regras da plataforma.</strong> A própria plataforma para quando há dado sensível em jogo, como o modo Operator do ChatGPT.</li>
+<li><strong>Preferências da pessoa.</strong> Configurações que definem quando a confirmação aparece.</li>
+</ul>
+<h2 id="estados">Estados</h2>
+<p>Usa do <a href="../fundamentos/ciclos-de-vida.html">ciclo de vida da tarefa</a>: Aguardando decisão, Aprovado, Recusado. <span class="todo">A completar: textos de exemplo por estado.</span></p>
+<h2 id="anatomia">Anatomia</h2>
+<p>Obrigatórios: a ação, o alvo, o impacto e os dois botões. <span class="nc">nota da curadoria</span></p>
+<div class="mock"><div class="mock__head">Exemplo de tela</div><div class="mock__body">
+<p><strong>Enviar a correção para a Gráfica Norte?</strong><br />
+O e-mail vai para financeiro@graficanorte.com.br e não pode ser desfeito.<br />
+<span class="btn btn--primary">Enviar correção</span> <span class="btn">Agora não</span></p>
+</div></div>
+<p><span class="nc">caso fictício, nota da curadoria</span></p>
+<h2 id="conteudo">Conteúdo</h2>
+<div class="rules">
+<div class="rule">
+<div class="rule__t">O botão diz a ação</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Confirmar</div><div class="good"><span class="lbl">Prefira</span>Enviar correção</div></div>
+</div>
+<div class="rule">
+<div class="rule__t">Diga se tem volta</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Tem certeza?</div><div class="good"><span class="lbl">Prefira</span>O e-mail não pode ser desfeito.</div></div>
+</div>
+</div>
+
+<p><span class="nc">nota da curadoria</span> Ver também <a href="../guia-de-conteudo.html">Guia de conteúdo</a>.</p>
+<h2 id="anti-padroes">Anti-padrões</h2>
+<ul>
+<li><strong>Fricção igual para tudo.</strong> O nível de atrito deve acompanhar o risco (<a href="https://www.shapeof.ai/patterns/verification">Shape of AI, Verification</a>).</li>
+<li><strong>Confirmação desligada sem aviso.</strong> Quando a pessoa desliga a verificação, a interface precisa mostrar isso de forma clara (<a href="https://www.shapeof.ai/patterns/verification">Shape of AI, Verification</a>).</li>
+</ul>
+<h2 id="notas-por-dominio">Notas por domínio</h2>
+<p><span class="todo">A completar.</span></p>
+<h2 id="risco-da-omissao">Risco da omissão</h2>
+<p><span class="todo">A completar.</span> Ver <a href="plano-com-aprovacao.html">Plano com aprovação</a>, que tem a mesma base.</p>
+<h2 id="relacionados">Relacionados</h2>
+<ul>
+<li><a href="plano-com-aprovacao.html">Plano com aprovação</a>: quando são várias ações.</li>
+<li><a href="estimativa-de-custo.html">Estimativa de custo</a> e <a href="amostra-antes-de-rodar.html">Amostra antes de rodar</a>: relacionados no Shape of AI.</li>
+</ul>
+<h2 id="referencias">Referências</h2>
+<h3 id="exemplo-encontrado-em">Exemplo encontrado em</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Produto</th>
+<th>Como aparece</th>
+<th>Citado por</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Atlassian, Chronicle, Cofounder, Dovetail, Notion</td>
+<td>Confirmação antes de executar, inline ou por aprovação de roteiro</td>
+<td><a href="https://www.shapeof.ai/patterns/verification">Shape of AI · Verification</a></td>
+</tr>
+<tr>
+<td>ChatGPT (Operator)</td>
+<td>Para sozinho quando há dado sensível</td>
+<td><a href="https://www.shapeof.ai/patterns/verification">Shape of AI · Verification</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="documentado-em">Documentado em</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Biblioteca</th>
+<th>Categoria original</th>
+<th>Nome original</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shape of AI</td>
+<td>Governors</td>
+<td>Verification</td>
+<td><a href="https://www.shapeof.ai/patterns/verification">link</a></td>
+</tr>
+<tr>
+<td>AI UX Playground</td>
+<td>Collab</td>
+<td>Human in the loop</td>
+<td><a href="https://aiuxplayground.com/pattern/human-in-the-loop">link</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Acessado em 23/09/2026. Produtos citados pelas bibliotecas, ainda não conferidos por nós.</p>
+</div>
+<nav class="pn" aria-label="Navegação sequencial"><a class="prev" href="../padroes/amostra-antes-de-rodar.html"><small>← Anterior</small><span>Amostra antes de rodar</span></a><a class="next" href="../padroes/estimativa-de-custo.html"><small>Próximo →</small><span>Estimativa de custo</span></a></nav>
+</div></div></main>
+<footer class="site-footer"><div class="wrapper"><div class="inner">
+<p><strong>Catálogo de padrões agênticos</strong> · curadoria para designers e content designers</p>
+<p><a href="../como-usar.html">Como usar</a> · <a href="../metodo-de-curadoria.html">Método de curadoria</a> · <a href="../glossario.html">Glossário</a> · <a href="../agenda-de-pesquisa.html">Agenda de pesquisa</a> · <a href="../log.html">Log</a></p>
+<p>Conteúdo de terceiros citado com link para a fonte. Casos de exemplo e pessoas citadas são fictícios.</p>
+</div></div></footer>
+</body>
+</html>

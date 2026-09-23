@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sugestão proativa · Catálogo agêntico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/estilo.css">
+</head>
+<body>
+<header class="site-header"><div class="wrapper">
+<a class="brand" href="../index.html">catálogo agêntico</a>
+<ul class="nav"><li><a href="../necessidades/index.html">Necessidades</a></li><li><a href="../padroes/index.html" aria-current="page">Padrões</a></li><li><a href="../fundamentos/index.html">Fundamentos</a></li><li><a href="../componentes/index.html">Componentes</a></li><li><a href="../guia-de-conteudo.html">Conteúdo</a></li><li><a href="../fontes/index.html">Fontes</a></li></ul>
+</div></header>
+<div class="proto"><div class="wrapper"><div class="inner"><span>Protótipo · versão 1 · 23/09/2026 · curadoria em construção</span></div></div></div>
+<main><div class="wrapper"><div class="inner">
+<nav class="crumbs" aria-label="Você está em"><a href="../index.html">Início</a><span>›</span><a href="../padroes/index.html">Padrões</a><span>›</span><a href="../necessidades/08-ser-avisado.html">Quero ser avisado do que importa</a></nav>
+<h1>Sugestão proativa</h1>
+<div class="tags"><span class="tag">Ficha</span><a class="tag tag--soft" href="../necessidades/08-ser-avisado.html">Quero ser avisado do que importa</a><span class="tag tag--soft">Momento: antes de qualquer pedido</span><span class="tag tag--soft">Papel principal: consultora</span><span class="tag tag--solid">revisada</span></div>
+<p class="lede">Ofereça ajuda quando houver um sinal forte de que a pessoa precisa dela, num formato fácil de ignorar, e deixe a decisão e a execução com ela.</p>
+<nav class="toc" aria-label="Nesta página"><a href="#problema">Problema</a><a href="#quando-usar-quando-evitar">Quando usar, quando evitar</a><a href="#autonomia-e-atores">Autonomia e atores</a><a href="#variacoes">Variações</a><a href="#estados">Estados</a><a href="#anatomia">Anatomia</a><a href="#conteudo">Conteúdo</a><a href="#anti-padroes">Anti-padrões</a><a href="#notas-por-dominio">Notas por domínio</a><a href="#como-medir">Como medir</a><a href="#relacionados">Relacionados</a><a href="#referencias">Referências</a></nav>
+<div class="content">
+<h2 id="problema">Problema</h2>
+<p>O agente percebe algo antes da pessoa: um boleto que vence amanhã sem saldo para cobrir. Se não fala, ela descobre tarde. Se fala toda hora, ela para de ouvir. <span class="nc">nota da curadoria</span> As pessoas precisam de orientação mas muitas vezes não sabem quando nem o que pedir, e a ajuda tradicional interrompe (<a href="https://www.aiuxdesign.guide/patterns/contextual-assistance">AI UX Design Guide, Contextual Assistance</a>).</p>
+<h2 id="quando-usar-quando-evitar">Quando usar, quando evitar</h2>
+<p><strong>Use quando</strong> o sinal é forte e específico, e o formato é fácil de ignorar (<a href="https://www.aiuxdesign.guide/patterns/contextual-assistance">AI UX Design Guide</a>).</p>
+<p><strong>Evite</strong> sinal fraco ("a pessoa abriu o extrato"), formatos que roubam o foco e sugestões feitas para cobrir volume. O silêncio é o padrão (<a href="https://www.aiuxdesign.guide/patterns/contextual-assistance">AI UX Design Guide</a>). Agir ou interromper conforme a tarefa e o ambiente da pessoa (<a href="https://www.microsoft.com/en-us/haxtoolkit/library/">HAX, G3</a>).</p>
+<h2 id="autonomia-e-atores">Autonomia e atores</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Papel da pessoa</th>
+<th>Como o padrão aparece</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operadora</td>
+<td>Sugestão dentro da tarefa que a pessoa faz.</td>
+</tr>
+<tr>
+<td>Colaboradora</td>
+<td>Sugestão que já vem com um plano para montar junto.</td>
+</tr>
+<tr>
+<td>Consultora</td>
+<td>Forma principal. O agente aponta e explica; a pessoa decide e executa.</td>
+</tr>
+<tr>
+<td>Aprovadora</td>
+<td>Não se aplica sozinho: a sugestão vira <a href="plano-com-aprovacao.html">Plano com aprovação</a>.</td>
+</tr>
+<tr>
+<td>Observadora</td>
+<td>Aviso sem proposta; Yocco chama esse nível de "Observe &amp; Suggest" (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>).</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="variacoes">Variações</h2>
+<p><em>(nota da curadoria, a partir dos formatos "glanceable, ignorable" do <a href="https://www.aiuxdesign.guide/patterns/contextual-assistance">AI UX Design Guide</a>)</em></p>
+<ul>
+<li><strong>Aviso discreto</strong> no próprio conteúdo.</li>
+<li><strong>Cartão de sugestão</strong> com problema, motivo e saídas.</li>
+<li><strong>Sugestão com plano pronto</strong>, que vira Plano com aprovação se aceita.</li>
+<li><strong>Aviso fora da tela</strong>, só com prazo curto e custo alto de não agir.</li>
+</ul>
+<h2 id="estados">Estados</h2>
+<p>Acontece antes da tarefa existir. Usa os estados de sugestão do <a href="../fundamentos/ciclos-de-vida.html">ciclo de vida da tarefa</a>. Textos: <em>nota da curadoria</em>.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Estado</th>
+<th>O que mostra</th>
+<th>Texto de exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Detectado</td>
+<td>Nada; o sinal ainda não justifica falar</td>
+<td>(silêncio)</td>
+</tr>
+<tr>
+<td>Sugerido</td>
+<td>O que percebeu, por que importa, as saídas</td>
+<td>"O boleto da Transportes Lima vence amanhã e o saldo não cobre."</td>
+</tr>
+<tr>
+<td>Aceito</td>
+<td>Vira tarefa: Proposto ou Na fila</td>
+<td>"Montei o plano. Confere antes de eu fazer?"</td>
+</tr>
+<tr>
+<td>Dispensado</td>
+<td>Some; não volta pelo mesmo motivo</td>
+<td>(silêncio)</td>
+</tr>
+<tr>
+<td>Adiado</td>
+<td>Volta no horário escolhido</td>
+<td>"Te lembro amanhã às 9h."</td>
+</tr>
+<tr>
+<td>Vencido</td>
+<td>O motivo deixou de existir</td>
+<td>"O saldo foi coberto. Tirei o aviso."</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="anatomia">Anatomia</h2>
+<p>Obrigatórios: <strong>o que percebeu</strong>, <strong>por que importa agora</strong>, <strong>as saídas possíveis</strong> e <strong>como dispensar</strong> (uma vez e para sempre). Sempre dar controle para desligar (<a href="https://www.aiuxdesign.guide/patterns/contextual-assistance">AI UX Design Guide</a>).</p>
+<div class="mock"><div class="mock__head">Exemplo de tela · caso fictício, nota da curadoria</div><div class="mock__body">
+<p><strong>Falta saldo para um boleto de amanhã</strong><br />
+O boleto da Transportes Lima (R$ 12.480,00) vence amanhã. O saldo da conta final 4412 hoje é R$ 10.100,00. Faltam R$ 2.380,00.</p>
+<ul>
+<li>Resgatar da aplicação de liquidez diária · cobre sem custo; o valor cai hoje</li>
+<li>Pedir à Transportes Lima para pagar na segunda · o contrato prevê 2% de multa</li>
+</ul>
+<div class="btns"><span class="btn btn--primary">Ver como resgatar</span> <span class="btn">Agora não</span> <span class="btn">Não avisar isso</span></div>
+</div></div>
+<h2 id="conteudo">Conteúdo</h2>
+<p><span class="nc">nota da curadoria</span></p>
+<div class="rules">
+<div class="rule">
+<div class="rule__t">Abra pelo fato, não pelo agente</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Tenho uma sugestão para você! 💡</div><div class="good"><span class="lbl">Prefira</span>Falta saldo para um boleto de amanhã</div></div>
+</div>
+<div class="rule">
+<div class="rule__t">Mostre a conta</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Seu saldo pode não ser suficiente</div><div class="good"><span class="lbl">Prefira</span>Faltam R$ 2.380,00</div></div>
+</div>
+</div>
+
+<p>Dê o custo de cada saída, inclusive o de não fazer nada. Separe "agora não" de "nunca".</p>
+<h2 id="anti-padroes">Anti-padrões</h2>
+<ul>
+<li><strong>Reflexo do Clippy:</strong> ajuda disparada com sinal fraco (<a href="https://www.aiuxdesign.guide/patterns/contextual-assistance">AI UX Design Guide</a>, "Clippy reflex").</li>
+<li><strong>Medir cobertura em vez de aceitação</strong> (<a href="https://www.aiuxdesign.guide/patterns/contextual-assistance">AI UX Design Guide</a>).</li>
+<li><strong>Isca:</strong> sugerir o que a pessoa não pode usar para vender algo (<a href="https://www.shapeof.ai/patterns/nudges">Shape of AI, Nudges</a>).</li>
+<li><strong>Sugestão que age</strong> e <strong>dispensar que não dispensa</strong>. <span class="nc">nota da curadoria</span></li>
+</ul>
+<h2 id="notas-por-dominio">Notas por domínio</h2>
+<p><strong>Financeiro.</strong> Sugerir produto financeiro tem regras de adequação ao perfil e não pode parecer oferta disfarçada de alerta. Validar com jurídico e compliance. <span class="nc">nota da curadoria</span></p>
+<h2 id="como-medir">Como medir</h2>
+<ul>
+<li><strong>Taxa de aceitação</strong>, não de exibição (<a href="https://www.aiuxdesign.guide/patterns/contextual-assistance">AI UX Design Guide</a>).</li>
+<li>"Não avisar isso" por tipo de sugestão; problemas evitados. <span class="nc">nota da curadoria</span></li>
+</ul>
+<h2 id="relacionados">Relacionados</h2>
+<ul>
+<li><a href="plano-com-aprovacao.html">Plano com aprovação</a></li>
+<li><a href="identificar-o-agente.html">Identificar o agente</a>: quem sugere, e com que interesse.</li>
+</ul>
+<h2 id="referencias">Referências</h2>
+<h3 id="exemplo-encontrado-em">Exemplo encontrado em</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Produto</th>
+<th>Como aparece</th>
+<th>Citado por</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gmail Smart Compose, Notion AI, GitHub Copilot</td>
+<td>Ajuda no meio da tarefa</td>
+<td><a href="https://www.aiuxdesign.guide/patterns/contextual-assistance">AI UX Design Guide · Contextual Assistance</a></td>
+</tr>
+<tr>
+<td>GitHub Copilot, Adobe, Figma, Grammarly</td>
+<td>Pistas no próprio app</td>
+<td><a href="https://www.shapeof.ai/patterns/nudges">Shape of AI · Nudges</a></td>
+</tr>
+<tr>
+<td>Canva, Gemini, Granola, LinkedIn, Miro, Typeform</td>
+<td>Sugestões conforme o contexto</td>
+<td><a href="https://www.shapeof.ai/patterns/suggestions">Shape of AI · Suggestions</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Todos são sugestões dentro de uma ferramenta; nenhum de agente que percebe um problema fora da tela.</p>
+<h3 id="documentado-em">Documentado em</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Biblioteca</th>
+<th>Categoria original</th>
+<th>Nome original</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI UX Design Guide</td>
+<td>Human-AI Collaboration</td>
+<td>Contextual Assistance</td>
+<td><a href="https://www.aiuxdesign.guide/patterns/contextual-assistance">link</a></td>
+</tr>
+<tr>
+<td>AI UX Design Guide</td>
+<td>Adaptive &amp; Intelligent Systems</td>
+<td>Predictive Anticipation</td>
+<td><a href="https://www.aiuxdesign.guide/patterns">lista</a></td>
+</tr>
+<tr>
+<td>Shape of AI</td>
+<td>Wayfinders</td>
+<td>Nudges; Suggestions</td>
+<td><a href="https://www.shapeof.ai/patterns/nudges">link</a> · <a href="https://www.shapeof.ai/patterns/suggestions">link</a></td>
+</tr>
+<tr>
+<td>HAX (Microsoft)</td>
+<td>During interaction · When wrong</td>
+<td>G3; G8</td>
+<td><a href="https://www.microsoft.com/en-us/haxtoolkit/library/">link</a></td>
+</tr>
+<tr>
+<td>Yocco (Smashing)</td>
+<td>Pre-action · Autonomy Dial</td>
+<td>Observe &amp; Suggest (nível)</td>
+<td><a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">link</a></td>
+</tr>
+<tr>
+<td>Agentic Design</td>
+<td>UI/UX Patterns</td>
+<td>Ambient Agent Patterns (AAP)</td>
+<td><a href="https://agentic-design.ai/patterns/ui-ux-patterns">lista</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Acessado em 23/09/2026. Produtos citados pelas bibliotecas, ainda não conferidos por nós.</p>
+</div>
+<nav class="pn" aria-label="Navegação sequencial"><a class="prev" href="../padroes/sessao-sem-memoria.html"><small>← Anterior</small><span>Sessão sem memória</span></a><a class="next" href="../padroes/passar-para-uma-pessoa.html"><small>Próximo →</small><span>Passar para uma pessoa</span></a></nav>
+</div></div></main>
+<footer class="site-footer"><div class="wrapper"><div class="inner">
+<p><strong>Catálogo de padrões agênticos</strong> · curadoria para designers e content designers</p>
+<p><a href="../como-usar.html">Como usar</a> · <a href="../metodo-de-curadoria.html">Método de curadoria</a> · <a href="../glossario.html">Glossário</a> · <a href="../agenda-de-pesquisa.html">Agenda de pesquisa</a> · <a href="../log.html">Log</a></p>
+<p>Conteúdo de terceiros citado com link para a fonte. Casos de exemplo e pessoas citadas são fictícios.</p>
+</div></div></footer>
+</body>
+</html>

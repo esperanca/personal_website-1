@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desfazer · Catálogo agêntico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/estilo.css">
+</head>
+<body>
+<header class="site-header"><div class="wrapper">
+<a class="brand" href="../index.html">catálogo agêntico</a>
+<ul class="nav"><li><a href="../necessidades/index.html">Necessidades</a></li><li><a href="../padroes/index.html" aria-current="page">Padrões</a></li><li><a href="../fundamentos/index.html">Fundamentos</a></li><li><a href="../componentes/index.html">Componentes</a></li><li><a href="../guia-de-conteudo.html">Conteúdo</a></li><li><a href="../fontes/index.html">Fontes</a></li></ul>
+</div></header>
+<div class="proto"><div class="wrapper"><div class="inner"><span>Protótipo · versão 1 · 23/09/2026 · curadoria em construção</span></div></div></div>
+<main><div class="wrapper"><div class="inner">
+<nav class="crumbs" aria-label="Você está em"><a href="../index.html">Início</a><span>›</span><a href="../padroes/index.html">Padrões</a><span>›</span><a href="../necessidades/06-voltar-atras.html">Quero voltar atrás</a></nav>
+<h1>Desfazer</h1>
+<div class="tags"><span class="tag">Ficha</span><a class="tag tag--soft" href="../necessidades/06-voltar-atras.html">Quero voltar atrás</a><span class="tag tag--soft">Momento: depois da ação</span><span class="tag tag--soft">Papel principal: observadora</span><span class="tag tag--solid">revisada</span></div>
+<p class="lede">Deixe a pessoa voltar atrás no que o agente fez, e diga com honestidade o que dá para desfazer, o que só dá para compensar e o que não tem volta.</p>
+<nav class="toc" aria-label="Nesta página"><a href="#problema">Problema</a><a href="#quando-usar-quando-evitar">Quando usar, quando evitar</a><a href="#autonomia-e-atores">Autonomia e atores</a><a href="#variacoes">Variações</a><a href="#estados">Estados</a><a href="#anatomia">Anatomia</a><a href="#conteudo">Conteúdo</a><a href="#anti-padroes">Anti-padrões</a><a href="#notas-por-dominio">Notas por domínio</a><a href="#risco-da-omissao">Risco da omissão</a><a href="#como-medir">Como medir</a><a href="#relacionados">Relacionados</a><a href="#referencias">Referências</a></nav>
+<div class="content">
+<h2 id="problema">Problema</h2>
+<p>O agente agiu errado: pagou duas vezes o mesmo boleto, classificou lançamentos na conta errada. A pessoa quer voltar atrás, mas não sabe o que pode ser revertido, por quanto tempo, nem o que acontece com o resto. O desfazer comum falha em agentes porque as ações cruzam sistemas, acontecem fora da tela e têm efeito em cadeia (<a href="https://www.aiuxdesign.guide/patterns/action-audit-trail">AI UX Design Guide, Action Audit Trail</a>).</p>
+<p>Como deixar a pessoa corrigir o agente sem entender como cada sistema por trás funciona?</p>
+<h2 id="quando-usar-quando-evitar">Quando usar, quando evitar</h2>
+<p><strong>Use sempre que o agente agir por conta própria.</strong> Yocco trata como padrão de base para quase todo sistema agêntico, e essencial quando o erro tem consequência financeira, social ou de dados (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco, Action Audit &amp; Undo</a>).</p>
+<p><strong>Não finja desfazer</strong> quando a ação não tem volta. Aí o padrão vira aviso antes (<a href="plano-com-aprovacao.html">Plano com aprovação</a>) e compensação depois. <span class="nc">nota da curadoria</span></p>
+<h2 id="autonomia-e-atores">Autonomia e atores</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Papel da pessoa</th>
+<th>Como o padrão aparece</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operadora</td>
+<td>Não se aplica. É o desfazer comum de qualquer interface.</td>
+</tr>
+<tr>
+<td>Colaboradora</td>
+<td>Desfaz passo a passo, durante o trabalho conjunto.</td>
+</tr>
+<tr>
+<td>Consultora</td>
+<td>Não se aplica. Quem executou foi a pessoa.</td>
+</tr>
+<tr>
+<td>Aprovadora</td>
+<td>Desfaz o que aprovou, se o resultado não saiu como o plano prometia.</td>
+</tr>
+<tr>
+<td>Observadora</td>
+<td>Forma principal. É o que torna aceitável deixar o agente agir sozinho.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="variacoes">Variações</h2>
+<ul>
+<li><strong>Desfazer imediato</strong>, com prazo visível (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>: "Undo available for 15 minutes").</li>
+<li><strong>Desfazer por item</strong> no <a href="historico-de-acoes.html">Histórico de ações</a>.</li>
+<li><strong>Desfazer a tarefa inteira</strong>, na ordem certa. <span class="nc">nota da curadoria</span></li>
+<li><strong>Compensação:</strong> quando não dá para reverter, o agente propõe a ação contrária (pedir devolução, enviar correção). <span class="nc">nota da curadoria</span></li>
+</ul>
+<h2 id="estados">Estados</h2>
+<p>Parte de Concluído, Falhou ou Cancelado e usa os estados de desfazer do <a href="../fundamentos/ciclos-de-vida.html">ciclo de vida da tarefa</a>. Cada ação mostra seu nível de <a href="../fundamentos/da-para-voltar.html">reversibilidade</a>. Textos: <em>nota da curadoria</em>.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Estado</th>
+<th>O que mostra</th>
+<th>Texto de exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desfazendo</td>
+<td>O que está sendo revertido, em que ordem</td>
+<td>"Desfazendo a classificação de 14 lançamentos…"</td>
+</tr>
+<tr>
+<td>Desfeito</td>
+<td>O que voltou ao estado anterior</td>
+<td>"Os 14 lançamentos voltaram para 'A classificar'."</td>
+</tr>
+<tr>
+<td>Desfeito em parte</td>
+<td>O que voltou, o que não voltou e por quê</td>
+<td>"Cancelei o agendamento de sexta. O pagamento de quinta já saiu; posso pedir a devolução à Gráfica Norte."</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="anatomia">Anatomia</h2>
+<p>Obrigatórios: <strong>o que o agente fez</strong> em linguagem simples, <strong>nível de reversibilidade</strong> de cada ação, <strong>até quando</strong> vale e <strong>o que acontece com o resto</strong>.</p>
+<div class="mock"><div class="mock__head">Exemplo de tela · caso fictício, nota da curadoria</div><div class="mock__body">
+<p><strong>Pagamentos a fornecedores · quinta, 24/09</strong></p>
+<ul>
+<li>Classificou 14 lançamentos como "Fornecedores" · <span class="mk mk--g">Desfaz</span> sem prazo · <span class="btn">Desfazer</span></li>
+<li>Agendou Energia Sul · R$ 1.950,00 para sexta · <span class="mk mk--g">Desfaz</span> até sexta, 17h · <span class="btn">Cancelar</span></li>
+<li>Pagou Gráfica Norte · R$ 3.200,00 · <span class="mk mk--a">Compensa</span> · <span class="btn">Pedir devolução</span></li>
+<li>Avisou a Gráfica Norte por e-mail · <span class="mk mk--r">Sem volta</span> · <span class="btn">Escrever correção</span></li>
+</ul>
+<div class="btns"><span class="btn">Desfazer o que for possível</span></div>
+</div></div>
+<h2 id="conteudo">Conteúdo</h2>
+<p><span class="nc">nota da curadoria</span></p>
+<div class="rules">
+<div class="rule">
+<div class="rule__t">Chame cada ação pelo nome</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Desfazer pagamento</div><div class="good"><span class="lbl">Prefira</span>Pedir devolução à Gráfica Norte</div></div>
+</div>
+<div class="rule">
+<div class="rule__t">Prazo em hora do relógio</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Você tem 00:14:32 para desfazer</div><div class="good"><span class="lbl">Prefira</span>Dá para cancelar até sexta, 17h</div></div>
+</div>
+<div class="rule">
+<div class="rule__t">Conte o efeito em cadeia</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Desfeito.</div><div class="good"><span class="lbl">Prefira</span>Se eu desfizer, a conciliação de setembro volta a ter 14 pendências.</div></div>
+</div>
+</div>
+
+<h2 id="anti-padroes">Anti-padrões</h2>
+<ul>
+<li><strong>Registro que ninguém consegue ler</strong> na hora do problema ("write-only trap", <a href="https://www.aiuxdesign.guide/patterns/action-audit-trail">AI UX Design Guide</a>).</li>
+<li><strong>Desfazer que mente</strong>, <strong>prazo escondido</strong>, <strong>desfazer que quebra o resto</strong>. <span class="nc">nota da curadoria</span></li>
+</ul>
+<h2 id="notas-por-dominio">Notas por domínio</h2>
+<p><strong>Financeiro.</strong> Pix e TED feitos só voltam se o recebedor devolver; boleto pago só volta por estorno. Agendamentos se cancelam até o horário de corte. Em banco, desfazer quase sempre é compensar. <span class="nc">nota da curadoria</span></p>
+<h2 id="risco-da-omissao">Risco da omissão</h2>
+<p>Um único erro sem volta destrói a confiança, porque a pessoa descobre que não há rede de proteção (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>).</p>
+<h2 id="como-medir">Como medir</h2>
+<ul>
+<li><strong>Taxa de reversão</strong> por tipo de tarefa; Yocco sugere desligar a automação da tarefa acima de 5% (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>).</li>
+<li><strong>Conversão da rede de proteção:</strong> quem usou o desfazer e passou a autorizar o agente a agir sozinho em 7 dias (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>).</li>
+</ul>
+<h2 id="relacionados">Relacionados</h2>
+<ul>
+<li><a href="historico-de-acoes.html">Histórico de ações</a></li>
+<li><a href="plano-com-aprovacao.html">Plano com aprovação</a>: o aviso quando a ação é "sem volta".</li>
+<li><a href="passar-para-uma-pessoa.html">Passar para uma pessoa</a>: compensações que dependem de alguém de fora.</li>
+</ul>
+<h2 id="referencias">Referências</h2>
+<h3 id="exemplo-encontrado-em">Exemplo encontrado em</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Produto</th>
+<th>Como aparece</th>
+<th>Citado por</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GitHub Actions, Zapier</td>
+<td>Registro de execução por tarefa</td>
+<td><a href="https://www.aiuxdesign.guide/patterns/action-audit-trail">AI UX Design Guide · Action Audit Trail</a></td>
+</tr>
+<tr>
+<td>GitLab Duo</td>
+<td>Failed e Cancelled, com Retry e resultados parciais</td>
+<td><a href="https://design.gitlab.com/patterns/duo-agents-and-flows/">GitLab Pajamas</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Poucos exemplos citados, e nenhum de desfazer ação de agente em serviço financeiro.</p>
+<h3 id="documentado-em">Documentado em</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Biblioteca</th>
+<th>Categoria original</th>
+<th>Nome original</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yocco (Smashing)</td>
+<td>Post-action · Safety and Recovery</td>
+<td>Action Audit &amp; Undo</td>
+<td><a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">link</a></td>
+</tr>
+<tr>
+<td>AI UX Design Guide</td>
+<td>Trustworthy &amp; Reliable AI</td>
+<td>Action Audit Trail</td>
+<td><a href="https://www.aiuxdesign.guide/patterns/action-audit-trail">link</a></td>
+</tr>
+<tr>
+<td>AI UX Design Guide</td>
+<td>Trustworthy &amp; Reliable AI</td>
+<td>Error Recovery &amp; Graceful Degradation</td>
+<td><a href="https://www.aiuxdesign.guide/patterns">lista</a></td>
+</tr>
+<tr>
+<td>HAX (Microsoft)</td>
+<td>When wrong</td>
+<td>G9 · Support efficient correction</td>
+<td><a href="https://www.microsoft.com/en-us/haxtoolkit/library/">link</a></td>
+</tr>
+<tr>
+<td>Agentic Design</td>
+<td>UI/UX Patterns</td>
+<td>Error Handling and Recovery (ERP)</td>
+<td><a href="https://agentic-design.ai/patterns/ui-ux-patterns">lista</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Acessado em 23/09/2026. Produtos citados pelas bibliotecas, ainda não conferidos por nós.</p>
+</div>
+<nav class="pn" aria-label="Navegação sequencial"><a class="prev" href="../padroes/visao-compartilhada.html"><small>← Anterior</small><span>Visão compartilhada</span></a><a class="next" href="../padroes/historico-de-acoes.html"><small>Próximo →</small><span>Histórico de ações</span></a></nav>
+</div></div></main>
+<footer class="site-footer"><div class="wrapper"><div class="inner">
+<p><strong>Catálogo de padrões agênticos</strong> · curadoria para designers e content designers</p>
+<p><a href="../como-usar.html">Como usar</a> · <a href="../metodo-de-curadoria.html">Método de curadoria</a> · <a href="../glossario.html">Glossário</a> · <a href="../agenda-de-pesquisa.html">Agenda de pesquisa</a> · <a href="../log.html">Log</a></p>
+<p>Conteúdo de terceiros citado com link para a fonte. Casos de exemplo e pessoas citadas são fictícios.</p>
+</div></div></footer>
+</body>
+</html>

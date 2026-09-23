@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explicar o motivo · Catálogo agêntico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/estilo.css">
+</head>
+<body>
+<header class="site-header"><div class="wrapper">
+<a class="brand" href="../index.html">catálogo agêntico</a>
+<ul class="nav"><li><a href="../necessidades/index.html">Necessidades</a></li><li><a href="../padroes/index.html" aria-current="page">Padrões</a></li><li><a href="../fundamentos/index.html">Fundamentos</a></li><li><a href="../componentes/index.html">Componentes</a></li><li><a href="../guia-de-conteudo.html">Conteúdo</a></li><li><a href="../fontes/index.html">Fontes</a></li></ul>
+</div></header>
+<div class="proto"><div class="wrapper"><div class="inner"><span>Protótipo · versão 1 · 23/09/2026 · curadoria em construção</span></div></div></div>
+<main><div class="wrapper"><div class="inner">
+<nav class="crumbs" aria-label="Você está em"><a href="../index.html">Início</a><span>›</span><a href="../padroes/index.html">Padrões</a><span>›</span><a href="../necessidades/02-entender-por-que.html">Quero entender por que o agente fez isso</a></nav>
+<h1>Explicar o motivo</h1>
+<div class="tags"><span class="tag">Ficha</span><a class="tag tag--soft" href="../necessidades/02-entender-por-que.html">Quero entender por que o agente fez isso</a><span class="tag tag--soft">Momento: depois da ação, ou no plano</span><span class="tag tag--soft">Papel principal: observadora</span><span class="tag tag--solid">revisada</span></div>
+<p class="lede">Quando o agente decide ou age, deixe a pessoa ver por quê, em termos do que ela mesma disse ou fez, e dê a ela um jeito de dizer &quot;isso está errado&quot;.</p>
+<nav class="toc" aria-label="Nesta página"><a href="#problema">Problema</a><a href="#quando-usar-quando-evitar">Quando usar, quando evitar</a><a href="#autonomia-e-atores">Autonomia e atores</a><a href="#variacoes">Variações</a><a href="#estados">Estados</a><a href="#anatomia">Anatomia</a><a href="#conteudo">Conteúdo</a><a href="#anti-padroes">Anti-padrões</a><a href="#notas-por-dominio">Notas por domínio</a><a href="#risco-da-omissao">Risco da omissão</a><a href="#como-medir">Como medir</a><a href="#relacionados">Relacionados</a><a href="#referencias">Referências</a></nav>
+<div class="content">
+<h2 id="problema">Problema</h2>
+<p>O agente classificou um pagamento como "Fornecedores" e a pessoa achava que era "Frete". Sem saber o motivo, ela não sabe se o agente errou, se ela errou ou se existe uma regra que desconhece. <span class="nc">nota da curadoria</span></p>
+<p>Como mostrar o motivo de cada decisão sem transformar a tela num relatório técnico?</p>
+<h2 id="quando-usar-quando-evitar">Quando usar, quando evitar</h2>
+<p><strong>Use</strong> em tarefas em segundo plano ou autônomas, em que o motivo não é óbvio pelo contexto (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco, Explainable Rationale</a>); em decisões contestáveis; e quando a pessoa pode fazer algo com a explicação: corrigir, ajustar, recorrer (<a href="https://www.aiuxdesign.guide/patterns/explainable-ai">AI UX Design Guide, Explainable AI</a>).</p>
+<p><strong>Evite</strong> em decisões triviais e fáceis de desfazer, e quando a explicação seria inventada depois do fato, sem relação com o que realmente levou à decisão (<a href="https://www.aiuxdesign.guide/patterns/explainable-ai">AI UX Design Guide</a>).</p>
+<h2 id="autonomia-e-atores">Autonomia e atores</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Papel da pessoa</th>
+<th>Como o padrão aparece</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operadora</td>
+<td>Motivo de uma sugestão dentro da tarefa.</td>
+</tr>
+<tr>
+<td>Colaboradora</td>
+<td>Motivo de cada passo proposto.</td>
+</tr>
+<tr>
+<td>Consultora</td>
+<td>Motivo da recomendação, com as alternativas descartadas.</td>
+</tr>
+<tr>
+<td>Aprovadora</td>
+<td>Motivo do plano, dentro do pedido de aprovação.</td>
+</tr>
+<tr>
+<td>Observadora</td>
+<td>Forma principal. O motivo fica ao lado de cada coisa que o agente fez sozinho.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="variacoes">Variações</h2>
+<ul>
+<li><strong>Motivo por precedente:</strong> "Porque você disse X, eu fiz Y" (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>).</li>
+<li><strong>Motivo por regra:</strong> aponta a regra e quem pode mudá-la. <span class="nc">nota da curadoria</span></li>
+</ul>
+<p>Fontes e caminho têm fichas próprias: <a href="citar-as-fontes.html">Citar as fontes</a> e <a href="mostrar-o-raciocinio.html">Mostrar o raciocínio</a>.</p>
+<h2 id="estados">Estados</h2>
+<p>Não tem estados próprios. Acompanha Proposto ("vou fazer porque"), Aguardando decisão e Concluído ("fiz porque") no <a href="../fundamentos/ciclos-de-vida.html">ciclo de vida da tarefa</a>.</p>
+<h2 id="anatomia">Anatomia</h2>
+<p>Obrigatórios: <strong>o que foi decidido</strong>, <strong>motivos em ordem de peso</strong>, <strong>de onde vem cada motivo</strong> e <strong>como contestar</strong> (<a href="https://www.aiuxdesign.guide/patterns/explainable-ai">AI UX Design Guide</a>). O rótulo de IA é a porta de entrada (<a href="https://carbondesignsystem.com/guidelines/carbon-for-ai/">Carbon for AI</a>).</p>
+<div class="mock"><div class="mock__head">Exemplo de tela · caso fictício, nota da curadoria</div><div class="mock__body">
+<p><strong>Transportes Lima · −R$ 12.480,00</strong><br />
+Classificado como <strong>Fornecedores</strong> pelo Assistente de conciliação (IA)<br />
+<strong>Por que Fornecedores</strong></p>
+<ul>
+<li>Você classificou os últimos 6 pagamentos à Transportes Lima assim.</li>
+<li>O CNPJ está no seu cadastro de fornecedores desde março.</li>
+</ul>
+<p>"Frete" também seria possível pela descrição do boleto. Fiquei com o que você costuma usar.<br />
+<span class="btn">Está certo</span> <span class="btn">Mudar para Frete</span> <span class="btn">Mudar a regra</span></p>
+</div></div>
+<p>Exemplo publicado por Yocco: "I've rebooked your canceled flight… Why I took this action: Your original flight was canceled by the airline. You've pre-approved autonomous rebooking for same-day, non-stop flights." (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>)</p>
+<h2 id="conteudo">Conteúdo</h2>
+<div class="rules">
+<div class="rule">
+<div class="rule__t">Comece pelo que a pessoa reconhece <span class="nc">nota da curadoria</span></div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Classificação baseada em similaridade semântica (0,87)</div><div class="good"><span class="lbl">Prefira</span>Você classificou os últimos 6 pagamentos assim</div></div>
+</div>
+<div class="rule">
+<div class="rule__t">Poucos motivos, em ordem de peso (<a href="https://www.aiuxdesign.guide/patterns/explainable-ai">AI UX Design Guide</a>)</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Lista longa sem ordem</div><div class="good"><span class="lbl">Prefira</span>Dois ou três, do mais forte ao mais fraco</div></div>
+</div>
+</div>
+
+<p>Diga o que ficou de fora ("Frete também seria possível"). Se o agente não sabe o motivo real, não invente um. <span class="nc">nota da curadoria</span></p>
+<h2 id="anti-padroes">Anti-padrões</h2>
+<ul>
+<li><strong>Transparência de fachada:</strong> motivos arrumados que não correspondem à decisão real (<a href="https://www.aiuxdesign.guide/patterns/explainable-ai">AI UX Design Guide</a>, "fake transparency").</li>
+<li><strong>Explicação sem saída:</strong> sem opção de dizer "isso está errado" (<a href="https://www.aiuxdesign.guide/patterns/explainable-ai">AI UX Design Guide</a>).</li>
+<li><strong>Despejo técnico</strong> e <strong>explicar tudo</strong>. <span class="nc">nota da curadoria</span></li>
+</ul>
+<h2 id="notas-por-dominio">Notas por domínio</h2>
+<p><strong>Financeiro.</strong> Quando a decisão afeta crédito, limite ou recusa de operação, o texto precisa passar por jurídico e o motivo precisa ficar registrado para auditoria. <span class="nc">nota da curadoria</span></p>
+<h2 id="risco-da-omissao">Risco da omissão</h2>
+<p>A pessoa lê ações corretas como aleatórias ou como erro, e não consegue formar uma ideia de como o agente funciona (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>).</p>
+<h2 id="como-medir">Como medir</h2>
+<ul>
+<li>Chamados "Agent Behavior — Unclear" por mil pessoas ativas (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>).</li>
+<li>Explicações avaliadas como úteis em pesquisa pós-interação (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>).</li>
+<li>Correções feitas depois de abrir o "Por quê?". <span class="nc">nota da curadoria</span></li>
+</ul>
+<h2 id="relacionados">Relacionados</h2>
+<ul>
+<li><a href="sinalizar-incerteza.html">Sinalizar incerteza</a></li>
+<li><a href="identificar-o-agente.html">Identificar o agente</a></li>
+<li><a href="memoria-sob-controle.html">Memória sob controle</a>: "como você pediu em agosto" é explicação por memória.</li>
+</ul>
+<h2 id="referencias">Referências</h2>
+<h3 id="exemplo-encontrado-em">Exemplo encontrado em</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Produto</th>
+<th>Como aparece</th>
+<th>Citado por</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claude, Perplexity</td>
+<td>Raciocínio passo a passo; fonte para cada afirmação</td>
+<td><a href="https://www.aiuxdesign.guide/patterns/explainable-ai">AI UX Design Guide · Explainable AI</a></td>
+</tr>
+<tr>
+<td>Produtos IBM</td>
+<td>Rótulo de IA que abre a explicação</td>
+<td><a href="https://carbondesignsystem.com/guidelines/carbon-for-ai/">Carbon for AI</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Quase todos os exemplos públicos explicam respostas; poucos explicam decisões de agente por precedente.</p>
+<h3 id="documentado-em">Documentado em</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Biblioteca</th>
+<th>Categoria original</th>
+<th>Nome original</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yocco (Smashing)</td>
+<td>In-action · Providing Context</td>
+<td>Explainable Rationale</td>
+<td><a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">link</a></td>
+</tr>
+<tr>
+<td>HAX (Microsoft)</td>
+<td>When wrong</td>
+<td>G11 · Make clear why the system did what it did</td>
+<td><a href="https://www.microsoft.com/en-us/haxtoolkit/library/">link</a></td>
+</tr>
+<tr>
+<td>Carbon for AI (IBM)</td>
+<td>Componentes</td>
+<td>Explainability popover</td>
+<td><a href="https://carbondesignsystem.com/guidelines/carbon-for-ai/">link</a></td>
+</tr>
+<tr>
+<td>AI UX Design Guide</td>
+<td>Trustworthy &amp; Reliable AI</td>
+<td>Explainable AI (XAI)</td>
+<td><a href="https://www.aiuxdesign.guide/patterns/explainable-ai">link</a></td>
+</tr>
+<tr>
+<td>Agentic Design</td>
+<td>UI/UX Patterns</td>
+<td>Trust and Transparency Patterns (TTP)</td>
+<td><a href="https://agentic-design.ai/patterns/ui-ux-patterns">lista</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Acessado em 23/09/2026. Produtos citados pelas bibliotecas, ainda não conferidos por nós.</p>
+</div>
+<nav class="pn" aria-label="Navegação sequencial"><a class="prev" href="../padroes/nome-do-agente.html"><small>← Anterior</small><span>Nome do agente</span></a><a class="next" href="../padroes/citar-as-fontes.html"><small>Próximo →</small><span>Citar as fontes</span></a></nav>
+</div></div></main>
+<footer class="site-footer"><div class="wrapper"><div class="inner">
+<p><strong>Catálogo de padrões agênticos</strong> · curadoria para designers e content designers</p>
+<p><a href="../como-usar.html">Como usar</a> · <a href="../metodo-de-curadoria.html">Método de curadoria</a> · <a href="../glossario.html">Glossário</a> · <a href="../agenda-de-pesquisa.html">Agenda de pesquisa</a> · <a href="../log.html">Log</a></p>
+<p>Conteúdo de terceiros citado com link para a fonte. Casos de exemplo e pessoas citadas são fictícios.</p>
+</div></div></footer>
+</body>
+</html>

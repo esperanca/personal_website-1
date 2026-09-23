@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia de conteúdo · Catálogo agêntico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/estilo.css">
+</head>
+<body>
+<header class="site-header"><div class="wrapper">
+<a class="brand" href="index.html">catálogo agêntico</a>
+<ul class="nav"><li><a href="necessidades/index.html">Necessidades</a></li><li><a href="padroes/index.html">Padrões</a></li><li><a href="fundamentos/index.html">Fundamentos</a></li><li><a href="componentes/index.html">Componentes</a></li><li><a href="guia-de-conteudo.html" aria-current="page">Conteúdo</a></li><li><a href="fontes/index.html">Fontes</a></li></ul>
+</div></header>
+<div class="proto"><div class="wrapper"><div class="inner"><span>Protótipo · versão 1 · 23/09/2026 · curadoria em construção</span></div></div></div>
+<main><div class="wrapper"><div class="inner">
+<nav class="crumbs" aria-label="Você está em"><a href="index.html">Início</a></nav>
+<h1>Guia de conteúdo</h1>
+<div class="tags"><span class="tag">Página transversal</span></div>
+<p class="lede">As regras de texto que se repetiram nas fichas. Para content designers, é o ponto de partida; o detalhe por estado está em cada ficha.</p>
+<nav class="toc" aria-label="Nesta página"><a href="#1-nomear">1. Nomear</a><a href="#2-decidir">2. Decidir</a><a href="#3-acompanhar">3. Acompanhar</a><a href="#4-explicar-e-duvidar">4. Explicar e duvidar</a><a href="#5-voltar-atras">5. Voltar atrás</a><a href="#6-lembrar">6. Lembrar</a><a href="#7-passar-adiante">7. Passar adiante</a><a href="#fontes">Fontes</a></nav>
+<div class="content">
+<p>Fora o GitLab Pajamas, nenhuma biblioteca lida documenta o texto da interface de agentes. A maior parte destas regras é <em>nota da curadoria</em>, construída nos testes; onde há fonte, ela está citada.</p>
+<h2 id="1-nomear">1. Nomear</h2>
+<div class="rules">
+<div class="rule">
+<div class="rule__t">Agente pelo que faz</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Oi, eu sou a Bia!</div><div class="good"><span class="lbl">Prefira</span>Assistente de pagamentos · IA</div></div>
+<div class="rule__src">Base: Nota da curadoria; estratégias de nome em <a href="https://www.shapeof.ai/patterns/name">Shape of AI, Name</a></div>
+</div>
+<div class="rule">
+<div class="rule__t">Mesmo nome em todo canal</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Nomes diferentes no chat e no e-mail</div><div class="good"><span class="lbl">Prefira</span>Um nome só</div></div>
+<div class="rule__src">Base: <a href="https://www.shapeof.ai/patterns/name">Shape of AI, Name</a></div>
+</div>
+<div class="rule">
+<div class="rule__t">Ação com verbo</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>✨ IA</div><div class="good"><span class="lbl">Prefira</span>Classificado pelo assistente</div></div>
+<div class="rule__src">Base: <a href="https://www.shapeof.ai/patterns/disclosure">Shape of AI, Disclosure</a></div>
+</div>
+<div class="rule">
+<div class="rule__t">Passo com verbo, objeto e valor</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Executar pagamento_lote(id 88213)</div><div class="good"><span class="lbl">Prefira</span>Pagar Transportes Lima · R$ 12.480,00</div></div>
+<div class="rule__src">Base: Linguagem simples: <a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a></div>
+</div>
+</div>
+
+<h2 id="2-decidir">2. Decidir</h2>
+<div class="rules">
+<div class="rule">
+<div class="rule__t">Botão diz a ação e o valor</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Confirmar</div><div class="good"><span class="lbl">Prefira</span>Pagar R$ 17.630,00</div></div>
+<div class="rule__src">Base: Nota da curadoria</div>
+</div>
+<div class="rule">
+<div class="rule__t">Diga o que ficou de fora</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>3 pagamentos prontos.</div><div class="good"><span class="lbl">Prefira</span>Vou pagar 3 e deixar 1 com você.</div></div>
+<div class="rule__src">Base: Nota da curadoria</div>
+</div>
+<div class="rule">
+<div class="rule__t">Separe "agora não" de "nunca"</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Fechar</div><div class="good"><span class="lbl">Prefira</span>Agora não · Não avisar isso</div></div>
+<div class="rule__src">Base: Nota da curadoria</div>
+</div>
+<div class="rule">
+<div class="rule__t">Pedido de decisão: o que precisa, por quê, o que já foi feito</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Ação necessária</div><div class="good"><span class="lbl">Prefira</span>Preciso que você confirme 3 lançamentos. Os outros 214 já foram conferidos.</div></div>
+<div class="rule__src">Base: <a href="https://design.gitlab.com/patterns/duo-agents-and-flows/">GitLab Pajamas</a>: "clearly state what input is needed and why"</div>
+</div>
+</div>
+
+<h2 id="3-acompanhar">3. Acompanhar</h2>
+<div class="rules">
+<div class="rule">
+<div class="rule__t">Progresso na unidade do trabalho</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>68% concluído</div><div class="good"><span class="lbl">Prefira</span>214 de 312 lançamentos</div></div>
+<div class="rule__src">Base: Nota da curadoria</div>
+</div>
+<div class="rule">
+<div class="rule__t">Tempo honesto</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>9 min 42 s (estimativa grosseira)</div><div class="good"><span class="lbl">Prefira</span>Faltam uns 10 minutos</div></div>
+<div class="rule__src">Base: Nota da curadoria</div>
+</div>
+<div class="rule">
+<div class="rule__t">Autorize a saída</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>(nada)</div><div class="good"><span class="lbl">Prefira</span>Pode fechar esta tela. Eu aviso.</div></div>
+<div class="rule__src">Base: Nota da curadoria</div>
+</div>
+<div class="rule">
+<div class="rule__t">Diga o efeito de parar</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Tem certeza?</div><div class="good"><span class="lbl">Prefira</span>Os 214 conferidos ficam salvos.</div></div>
+<div class="rule__src">Base: Nota da curadoria</div>
+</div>
+</div>
+
+<h2 id="4-explicar-e-duvidar">4. Explicar e duvidar</h2>
+<div class="rules">
+<div class="rule">
+<div class="rule__t">Motivo pelo que a pessoa reconhece</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Similaridade semântica 0,87</div><div class="good"><span class="lbl">Prefira</span>Você classificou os últimos 6 assim</div></div>
+<div class="rule__src">Base: "Because you said X, I did Y": <a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a></div>
+</div>
+<div class="rule">
+<div class="rule__t">Poucos motivos, em ordem de peso</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Lista longa</div><div class="good"><span class="lbl">Prefira</span>Dois ou três</div></div>
+<div class="rule__src">Base: <a href="https://www.aiuxdesign.guide/patterns/explainable-ai">AI UX Design Guide, Explainable AI</a></div>
+</div>
+<div class="rule">
+<div class="rule__t">Motivo no lugar de número</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Confiança: 74%</div><div class="good"><span class="lbl">Prefira</span>A nota é de R$ 1.905,00. A diferença parece juros.</div></div>
+<div class="rule__src">Base: <a href="https://www.aiuxdesign.guide/patterns/confidence-visualization">AI UX Design Guide, Confidence Visualization</a></div>
+</div>
+<div class="rule">
+<div class="rule__t">"Não sei" é resposta</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Possivelmente…</div><div class="good"><span class="lbl">Prefira</span>Não achei nota nem cliente com esse valor.</div></div>
+<div class="rule__src">Base: Nota da curadoria</div>
+</div>
+<div class="rule">
+<div class="rule__t">Aviso só onde há dúvida</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>"A IA pode cometer erros" em tudo</div><div class="good"><span class="lbl">Prefira</span>Aviso no item em dúvida</div></div>
+<div class="rule__src">Base: <a href="https://www.shapeof.ai/patterns/caveat">Shape of AI, Caveat</a></div>
+</div>
+</div>
+
+<h2 id="5-voltar-atras">5. Voltar atrás</h2>
+<div class="rules">
+<div class="rule">
+<div class="rule__t">Cada ação pelo nome</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Desfazer pagamento</div><div class="good"><span class="lbl">Prefira</span>Pedir devolução à Gráfica Norte</div></div>
+<div class="rule__src">Base: Nota da curadoria</div>
+</div>
+<div class="rule">
+<div class="rule__t">Prazo em hora do relógio</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>00:14:32</div><div class="good"><span class="lbl">Prefira</span>Até sexta, 17h</div></div>
+<div class="rule__src">Base: Prazo visível: <a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a></div>
+</div>
+<div class="rule">
+<div class="rule__t">Diga o efeito em cadeia</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Desfeito.</div><div class="good"><span class="lbl">Prefira</span>A conciliação volta a ter 14 pendências.</div></div>
+<div class="rule__src">Base: Nota da curadoria</div>
+</div>
+</div>
+
+<h2 id="6-lembrar">6. Lembrar</h2>
+<div class="rules">
+<div class="rule">
+<div class="rule__t">Mostre a memória quando ela age</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Agendei para 25/09.</div><div class="good"><span class="lbl">Prefira</span>Agendei para 25/09, como você pediu em agosto.</div></div>
+<div class="rule__src">Base: <a href="https://www.aiuxdesign.guide/patterns/selective-memory">AI UX Design Guide, Selective Memory</a></div>
+</div>
+<div class="rule">
+<div class="rule__t">Esquecer é esquecer</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Esquecido ✓ (e continua em uso)</div><div class="good"><span class="lbl">Prefira</span>Esqueci. Não uso mais isso.</div></div>
+<div class="rule__src">Base: <a href="https://www.aiuxdesign.guide/patterns/selective-memory">AI UX Design Guide, Selective Memory</a></div>
+</div>
+<div class="rule">
+<div class="rule__t">Dito e concluído separados</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Você prefere… (inferido)</div><div class="good"><span class="lbl">Prefira</span>Eu percebi que…</div></div>
+<div class="rule__src">Base: Nota da curadoria</div>
+</div>
+</div>
+
+<h2 id="7-passar-adiante">7. Passar adiante</h2>
+<div class="rules">
+<div class="rule">
+<div class="rule__t">Por que o agente não segue</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Não consegui entender.</div><div class="good"><span class="lbl">Prefira</span>Negociar com fornecedor não é algo que eu possa fazer.</div></div>
+<div class="rule__src">Base: Nota da curadoria</div>
+</div>
+<div class="rule">
+<div class="rule__t">Prazo que existe</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Em breve</div><div class="good"><span class="lbl">Prefira</span>Até amanhã, 12h</div></div>
+<div class="rule__src">Base: Expectativa honesta: <a href="https://www.aiuxplayground.com/pattern/human-handoff/">AI UX Playground, Human Handoff</a></div>
+</div>
+<div class="rule">
+<div class="rule__t">O que foi junto</div>
+<div class="pair"><div class="bad"><span class="lbl">Evite</span>Transferindo…</div><div class="good"><span class="lbl">Prefira</span>Passei a conversa, o boleto e a nota.</div></div>
+<div class="rule__src">Base: Contexto anexado: <a href="https://www.aiuxplayground.com/pattern/human-handoff/">AI UX Playground</a></div>
+</div>
+</div>
+
+<h2 id="fontes">Fontes</h2>
+<ul>
+<li><a href="https://design.gitlab.com/patterns/duo-agents-and-flows/">GitLab Pajamas, Agents and Flows</a> · <a href="https://www.shapeof.ai/patterns/name">Shape of AI: Name</a>, <a href="https://www.shapeof.ai/patterns/disclosure">Disclosure</a>, <a href="https://www.shapeof.ai/patterns/caveat">Caveat</a> · <a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a> · <a href="https://www.aiuxdesign.guide/patterns/explainable-ai">AI UX Design Guide: Explainable AI</a>, <a href="https://www.aiuxdesign.guide/patterns/confidence-visualization">Confidence Visualization</a>, <a href="https://www.aiuxdesign.guide/patterns/selective-memory">Selective Memory</a> · <a href="https://www.aiuxplayground.com/pattern/human-handoff/">AI UX Playground, Human Handoff</a>. Acessados em 23/09/2026.</li>
+</ul>
+</div>
+
+</div></div></main>
+<footer class="site-footer"><div class="wrapper"><div class="inner">
+<p><strong>Catálogo de padrões agênticos</strong> · curadoria para designers e content designers</p>
+<p><a href="como-usar.html">Como usar</a> · <a href="metodo-de-curadoria.html">Método de curadoria</a> · <a href="glossario.html">Glossário</a> · <a href="agenda-de-pesquisa.html">Agenda de pesquisa</a> · <a href="log.html">Log</a></p>
+<p>Conteúdo de terceiros citado com link para a fonte. Casos de exemplo e pessoas citadas são fictícios.</p>
+</div></div></footer>
+</body>
+</html>

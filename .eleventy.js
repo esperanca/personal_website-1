@@ -80,6 +80,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/robots.txt');
   eleventyConfig.addPassthroughCopy('src/desafio-filosofia-educacao.html');
   eleventyConfig.addPassthroughCopy('src/estudo/filosofia');
+  // Catálogo agêntico: HTML estático copiado 1:1 (links relativos funcionam em /catalogoagentico/)
+  eleventyConfig.addPassthroughCopy('src/catalogoagentico');
   eleventyConfig.addPassthroughCopy({'src/_includes/css/style.css': 'css/style.css'});
   eleventyConfig.addPassthroughCopy({'src/rootfiles/_redirects': '_redirects'});
   eleventyConfig.addPassthroughCopy({'src/rootfiles/_headers': '_headers'});

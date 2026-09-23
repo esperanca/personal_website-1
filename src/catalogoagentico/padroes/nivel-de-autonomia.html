@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nível de autonomia · Catálogo agêntico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/estilo.css">
+</head>
+<body>
+<header class="site-header"><div class="wrapper">
+<a class="brand" href="../index.html">catálogo agêntico</a>
+<ul class="nav"><li><a href="../necessidades/index.html">Necessidades</a></li><li><a href="../padroes/index.html" aria-current="page">Padrões</a></li><li><a href="../fundamentos/index.html">Fundamentos</a></li><li><a href="../componentes/index.html">Componentes</a></li><li><a href="../guia-de-conteudo.html">Conteúdo</a></li><li><a href="../fontes/index.html">Fontes</a></li></ul>
+</div></header>
+<div class="proto"><div class="wrapper"><div class="inner"><span>Protótipo · versão 1 · 23/09/2026 · curadoria em construção</span></div></div></div>
+<main><div class="wrapper"><div class="inner">
+<nav class="crumbs" aria-label="Você está em"><a href="../index.html">Início</a><span>›</span><a href="../padroes/index.html">Padrões</a><span>›</span><a href="../necessidades/10-definir-limites.html">Quero definir até onde o agente pode ir</a></nav>
+<h1>Nível de autonomia</h1>
+<div class="tags"><span class="tag">Ficha</span><a class="tag tag--soft" href="../necessidades/10-definir-limites.html">Quero definir até onde o agente pode ir</a><span class="tag tag--soft">Momento: antes, e revisto com o tempo</span><span class="tag tag--soft">Papel principal: todos</span><span class="tag tag--dash">rascunho</span></div>
+<p class="lede">Deixe a pessoa escolher, por tipo de tarefa, quanto o agente decide sozinho, com níveis que mudam o comportamento de verdade e que dá para rebaixar tão fácil quanto subir.</p>
+<nav class="toc" aria-label="Nesta página"><a href="#problema">Problema</a><a href="#quando-usar-quando-evitar">Quando usar, quando evitar</a><a href="#autonomia-e-atores">Autonomia e atores</a><a href="#variacoes">Variações</a><a href="#anatomia">Anatomia</a><a href="#conteudo">Conteúdo</a><a href="#anti-padroes">Anti-padrões</a><a href="#notas-por-dominio">Notas por domínio</a><a href="#como-medir">Como medir</a><a href="#relacionados">Relacionados</a><a href="#referencias">Referências</a></nav>
+<div class="content">
+<h2 id="problema">Problema</h2>
+<p>Controles de IA costumam ser binários. Agentes pedem nuance, e uma única experiência ruim em autonomia alta leva ao abandono completo (<a href="https://www.aiuxdesign.guide/patterns/autonomy-spectrum">AI UX Design Guide, Autonomy Spectrum</a>). Deixar a pessoa ajustar a autonomia dá a ela a sensação de controle e permite casar o comportamento com a tolerância a risco dela (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco, Autonomy Dial</a>).</p>
+<h2 id="quando-usar-quando-evitar">Quando usar, quando evitar</h2>
+<p><strong>Use quando</strong> as tarefas variam em risco e reversibilidade, a confiança se forma de forma desigual entre domínios, cada nível produz comportamento observavelmente diferente, e é possível rebaixar depois de falhas (<a href="https://www.aiuxdesign.guide/patterns/autonomy-spectrum">AI UX Design Guide</a>). Priorize em ferramentas financeiras e de comunicação, e no começo do uso (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>).</p>
+<h2 id="autonomia-e-atores">Autonomia e atores</h2>
+<p>Este padrão é o próprio controle do papel da pessoa. Ver <a href="../fundamentos/papeis-e-atores.html">Papéis e atores</a>.</p>
+<h2 id="variacoes">Variações</h2>
+<p>Os níveis de Yocco (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco, Autonomy Dial</a>):</p>
+<ol>
+<li><strong>Observe &amp; Suggest:</strong> a pessoa é avisada, o agente nunca propõe plano.</li>
+<li><strong>Plan &amp; Propose:</strong> o agente monta planos para revisão.</li>
+<li><strong>Act with Confirmation:</strong> o agente prepara e a pessoa dá o sim final.</li>
+<li><strong>Act Autonomously:</strong> em tarefas pré-aprovadas, age e avisa depois.</li>
+</ol>
+<p>O AI UX Design Guide usa quatro níveis parecidos (Observe &amp; Suggest, Propose &amp; Confirm, Act &amp; Notify, Full Autonomy), ajustáveis por tarefa ou domínio (<a href="https://www.aiuxdesign.guide/patterns/autonomy-spectrum">AI UX Design Guide</a>).</p>
+<h2 id="anatomia">Anatomia</h2>
+<p>Nível ativo visível onde a ação acontece, não escondido em configurações (<a href="https://www.aiuxdesign.guide/patterns/autonomy-spectrum">AI UX Design Guide</a>). Começo conservador; subir de nível por confiabilidade demonstrada (<a href="https://www.aiuxdesign.guide/patterns/autonomy-spectrum">AI UX Design Guide</a>).</p>
+<h2 id="conteudo">Conteúdo</h2>
+<p><span class="todo">A completar.</span></p>
+<h2 id="anti-padroes">Anti-padrões</h2>
+<ul>
+<li><strong>Autonomia que escorrega:</strong> o nível escolhido e a liberdade que o agente toma se afastam sem ninguém perceber (<a href="https://www.aiuxdesign.guide/patterns/autonomy-spectrum">AI UX Design Guide</a>, "autonomy creep").</li>
+<li><strong>Níveis de enfeite:</strong> configurações diferentes com o mesmo comportamento (<a href="https://www.aiuxdesign.guide/patterns/autonomy-spectrum">AI UX Design Guide</a>).</li>
+<li><strong>Catraca de mão única:</strong> sobe com acerto e não desce com erro (<a href="https://www.aiuxdesign.guide/patterns/autonomy-spectrum">AI UX Design Guide</a>).</li>
+</ul>
+<h2 id="notas-por-dominio">Notas por domínio</h2>
+<p><strong>Financeiro.</strong> Nível sozinho não basta: a pessoa quer dizer "até R$ 5 mil, só para estes fornecedores, só em dia útil". Esse contrato de delegação não está documentado em nenhuma fonte lida. Ver <a href="../agenda-de-pesquisa.html">agenda de pesquisa</a>. <span class="nc">nota da curadoria</span></p>
+<h2 id="como-medir">Como medir</h2>
+<p>Distribuição das pessoas por nível e quantas vezes por mês mudam de nível (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>: "Trust Density", "Setting Churn").</p>
+<h2 id="relacionados">Relacionados</h2>
+<ul>
+<li><a href="plano-com-aprovacao.html">Plano com aprovação</a> e <a href="confirmacao.html">Confirmação</a>: o que acontece nos níveis intermediários.</li>
+<li><a href="desfazer.html">Desfazer</a>: quem usou o desfazer com sucesso tende a subir de nível (<a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">Yocco</a>).</li>
+<li><a href="sugestao-proativa.html">Sugestão proativa</a>: o nível mais baixo.</li>
+</ul>
+<h2 id="referencias">Referências</h2>
+<h3 id="exemplo-encontrado-em">Exemplo encontrado em</h3>
+<p>Nenhum produto citado nominalmente pelas fontes. O AI UX Design Guide menciona agentes de e-mail, arquivamento de recibos e comunicação com clientes, sem nomear produtos (<a href="https://www.aiuxdesign.guide/patterns/autonomy-spectrum">AI UX Design Guide</a>).</p>
+<h3 id="documentado-em">Documentado em</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Biblioteca</th>
+<th>Categoria original</th>
+<th>Nome original</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yocco (Smashing)</td>
+<td>Pre-action · Establishing Intent</td>
+<td>Autonomy Dial</td>
+<td><a href="https://www.smashingmagazine.com/2026/02/designing-agentic-ai-practical-ux-patterns/">link</a></td>
+</tr>
+<tr>
+<td>AI UX Design Guide</td>
+<td>Human-AI Collaboration</td>
+<td>Autonomy Spectrum</td>
+<td><a href="https://www.aiuxdesign.guide/patterns/autonomy-spectrum">link</a></td>
+</tr>
+<tr>
+<td>Shape of AI</td>
+<td>Governors</td>
+<td>Verification (user overrides)</td>
+<td><a href="https://www.shapeof.ai/patterns/verification">link</a></td>
+</tr>
+<tr>
+<td>HAX (Microsoft)</td>
+<td>Over time</td>
+<td>G17 · Provide global controls</td>
+<td><a href="https://www.microsoft.com/en-us/haxtoolkit/library/">link</a></td>
+</tr>
+<tr>
+<td>Feng, McDonald, Zhang</td>
+<td>Levels of Autonomy</td>
+<td>Cinco papéis</td>
+<td><a href="https://arxiv.org/abs/2506.12469">link</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Acessado em 23/09/2026.</p>
+</div>
+<nav class="pn" aria-label="Navegação sequencial"><a class="prev" href="../padroes/passar-para-uma-pessoa.html"><small>← Anterior</small><span>Passar para uma pessoa</span></a></nav>
+</div></div></main>
+<footer class="site-footer"><div class="wrapper"><div class="inner">
+<p><strong>Catálogo de padrões agênticos</strong> · curadoria para designers e content designers</p>
+<p><a href="../como-usar.html">Como usar</a> · <a href="../metodo-de-curadoria.html">Método de curadoria</a> · <a href="../glossario.html">Glossário</a> · <a href="../agenda-de-pesquisa.html">Agenda de pesquisa</a> · <a href="../log.html">Log</a></p>
+<p>Conteúdo de terceiros citado com link para a fonte. Casos de exemplo e pessoas citadas são fictícios.</p>
+</div></div></footer>
+</body>
+</html>
