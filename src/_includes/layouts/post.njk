@@ -8,7 +8,7 @@
       "headline": {{ title | dump | safe }},
       "description": {{ metaDesc | dump | safe }},
       "image": "{{ site.url }}{{ socialImage or '/images/social-share.jpg' }}",
-      "datePublished": "{{ date | w3DateFilter }}",
+      "datePublished": "{% if date %}{{ date | w3DateFilter }}{% endif %}",
       "author": {
         "@type": "Person",
         "name": {{ site.authorName | dump | safe }}

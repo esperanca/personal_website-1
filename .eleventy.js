@@ -48,17 +48,17 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary('md', markdownLibrary);
 
   eleventyConfig.addFilter('postDate', (dateObj) => {
-    return DateTime.fromJSDate(dateObj)
-      .setZone('America/Sao_Paulo')
-      .setLocale('pt-BR')
-      .toFormat("d 'de' MMMM 'de' yyyy, HH:mm");
+    if (dateObj == null || dateObj === '') return '';
+    const dt = DateTime.fromJSDate(new Date(dateObj), { zone: 'America/Sao_Paulo' }).setLocale('pt-BR');
+    if (!dt.isValid) return '';
+    return dt.toFormat("d 'de' MMMM 'de' yyyy, HH:mm");
   });
 
   eleventyConfig.addFilter('livroDate', (dateObj) => {
-    return DateTime.fromJSDate(dateObj)
-      .setZone('America/Sao_Paulo')
-      .setLocale('pt-BR')
-      .toFormat("d 'de' MMMM 'de' yyyy · HH:mm");
+    if (dateObj == null || dateObj === '') return '';
+    const dt = DateTime.fromJSDate(new Date(dateObj), { zone: 'America/Sao_Paulo' }).setLocale('pt-BR');
+    if (!dt.isValid) return '';
+    return dt.toFormat("d 'de' MMMM 'de' yyyy · HH:mm");
   });
 
   // Filters
@@ -80,7 +80,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/robots.txt');
   eleventyConfig.addPassthroughCopy('src/desafio-filosofia-educacao.html');
   eleventyConfig.addPassthroughCopy('src/estudo/filosofia');
-  eleventyConfig.addPassthroughCopy('src/posts/revision-logs');
   eleventyConfig.addPassthroughCopy({'src/_includes/css/style.css': 'css/style.css'});
   eleventyConfig.addPassthroughCopy({'src/rootfiles/_redirects': '_redirects'});
   eleventyConfig.addPassthroughCopy({'src/rootfiles/_headers': '_headers'});
