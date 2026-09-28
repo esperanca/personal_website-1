@@ -12,14 +12,13 @@ tags:
   - ia
   - agentes
   - grice
-  - confiança
   - linguagem
 ---
-Essa foi uma semana interessantíssima para mim, conversando com o time sobre linguistica. \
+Essa foi uma semana interessantíssima para mim, conversando com o time sobre vários assuntos, e também sobre linguistica. \
 \
 Você já leu um elogio que, no fundo, era uma crítica?
 
-O filósofo Paul Grice tinha um exemplo preferido para isso.
+O filósofo Paul Grice tem meu exemplo preferido para isso, no livro *Logic and Conversation,* de 1975:  
 
 Um professor, ao responder a uma solicitação de carta de recomendação para um aluno candidato a uma vaga de doutorado, escreve apenas:
 
@@ -29,13 +28,10 @@ A resposta não é, em essência, ruim. Mesmo assim, qualquer pessoa entende o r
 
 Grice chamava esse preenchimento de implicatura: o que se comunica sem ser dito. Sua pesquisa tentava entender como as pessoas se entendem. E a teoria dizia que, partindo da premissa de que existe cooperação entre os interlocutores, quatro máximas podem ser observadas em uma conversa:
 
-**Qualidade**: afirme apenas o que pode ser comprovado.
-
-**Quantidade**: diga o essencial. Nem menos, para não gerar dúvida; nem mais, para não sobrecarregar.
-
-**Relação**: responda diretamente à pergunta, respeitando o contexto.
-
-**Modo**: seja claro, organizado e prático. Sem rodeios.
+> **Qualidade**: afirme apenas o que pode ser comprovado.
+> **Quantidade**: diga o essencial. Nem menos, para não gerar dúvida; nem mais, para não sobrecarregar.
+> **Relação**: responda diretamente à pergunta, respeitando o contexto.
+> **Modo**: seja claro, organizado e prático. 
 
 O exemplo é direto: o professor segue literalmente a máxima de Qualidade, dizendo apenas o que é verdadeiro. E, conceitualmente, usa bem a da Quantidade, dizendo só o necessário. Mas viola a de Relação, pois a resposta não é relevante ao propósito da solicitação. Um texto prolixo ou com termos vagos violaria o Modo, porque dificultaria a compreensão imediata.
 
