@@ -14,7 +14,7 @@ tags:
   - grice
   - linguagem
 ---
-Essa foi uma semana interessantíssima para mim, conversando com o time sobre vários assuntos, e também sobre linguistica. \
+Essa foi uma semana interessantíssima para mim, conversando com o time sobre vários assuntos, e também sobre linguistica. Um dos papos foi sobre a máxima de qualidade e as ambiguidades intencionais.  \
 \
 Você já leu um elogio que, no fundo, era uma crítica?
 
@@ -37,15 +37,15 @@ O exemplo é direto: o professor segue literalmente a máxima de Qualidade, dize
 
 Quando alguém pede uma recomendação e você responde apenas “escreve bem e frequenta aulas”, o silêncio sobre competência acadêmica implica que ela não existe. Caso contrário, seria relevante mencionar.
 
-Com pessoas, isso funciona razoavelmente bem. O acordo implícito é que existe um reconhecimento mútuo de que ambas as partes compartilham um mesmo propósito. Reconhecer que o outro é uma pessoa que age racionalmente é o que permite a implicatura funcionar, mesmo com uma máxima sendo ignorada. 
+Com pessoas, isso funciona razoavelmente bem. O acordo implícito é que existe um reconhecimento mútuo de que ambas as partes compartilham um mesmo propósito. Reconhecer que o outro é uma pessoa que age racionalmente (agente racional) é o que permite a implicatura funcionar, mesmo com uma máxima sendo ignorada. 
 
 Agentes de IA podem gerar uma resposta que viola brutalmente a máxima de Qualidade, por não saber distinguir fatos de invenções. Não é desonestidade, os agentes apenas foram programados para soar convincentes a qualquer custo, mesmo quando a informação é falsa. A sensação de cooperação é real para você, mas não há agente racional do outro lado fazendo suposições sobre o que você quer. Há apenas tokens e previsão estatística.
 
-O agente de IA não fez escolhas; fez previsões. A cooperação que você sente é projeção: você completa um espaço em branco, atribuindo intenção a um padrão estatístico que parece intencional porque imita a lógica griciana.
+O agente de IA não faz escolhas; faz previsões. A cooperação que você sente é projeção: você completa um espaço em branco, atribuindo intenção a um padrão estatístico que parece intencional porque imita a lógica griciana.
 
-Para o design de agentes de IA, a cooperação não pode ser assumida; precisa ser construída. O “contrato” de Grice é usado para criar conversas e como *evals* (avaliação de agentes), com rubricas para validar fontes (Qualidade), dimensionar a resposta (Quantidade), manter relevância ao objetivo do usuário (Relação) e estruturar a saída de forma clara (Modo). \
+Para o design de agentes de IA, a cooperação não pode ser assumida, precisa ser construída. O “contrato” de Grice é usado para criar conversas e *evals* ( teste estruturados que medem o desempenho, comportamento e a precisão de um modelo). Rubricas são criadas para validar fontes (Qualidade), dimensionar a resposta (Quantidade), manter relevância ao objetivo do usuário (Relação) e estruturar a saída de forma clara (Modo).  \
 \
-As máximas são usadas para reduzir diversos tipos *intent drift*  (Desvio de intenção), que é o fenômeno em que um agente de IA gradualmente se desvia dos resultados, metas ou instruções originalmente esperados pelo usuário. Uma aplicação prática são prompts para evitar *Context Loss* (perda de contexto, comum em agentes multitarefa), por meio de *pruning* (otimização do contexto). Um exemplo: 
+As máximas são usadas também para reduzir diversos tipos *intent drift*  (Desvio de intenção), que é o fenômeno em que um agente de IA gradualmente se desvia dos resultados, metas ou instruções originalmente esperados pelo usuário. Uma aplicação prática são prompts para evitar *Context Loss* (perda de contexto, comum em agentes multitarefa), por meio de *pruning* (otimização do contexto). Um exemplo de prompt: 
 
 ```
 You are a Context Pruning Agent. Your task is to analyze the provided conversation history and extract ONLY the current, active state of the user's request. 
@@ -78,9 +78,9 @@ Output your analysis strictly as a JSON object using the exact schema below. Do 
 }
 ```
 
-Esse é um assunto fascinante. Esta semana escrevi um skill sobre isso. E tem feito também parte do meu dia a dia no trabalho. Tive uma troca muito legal com meu time na semana passada. Ana e Gabriel ligaram alguns pontos que estavam confusos para mim. \
+Esse é um assunto fascinante e essa semana escrevi até um skill sobre isso. E daí continuei pesquisando. E hoje encontrei mais uma pérola ligando a filosofia de 1975 com o desenvolvimento de agentes. \
 \
-E daí continuei pesquisando. Hoje encontrei mais uma pérola ligando a filosofia de 1975 com o desenvolvimento de agentes. Em junho desse ano, roboticistas japoneses fizeram um experimentos curioso, usando as máximas de forma criativa, concatenadas com a Teoria da Relevância \[3]. Sato e sua equipe descobriram que as IAs armazenam conhecimento em seus parâmetros, mas não sabem acessá-lo sozinhas ou "ler nas entrelinhas". A solução que testaram foi transformar a teoria de Grice em instrução. Quando colocam um resumo dessas regras pragmáticas no prompt, a IA consegue organizar seu raciocínio e decifrar implicaturas. \
+Em junho desse ano, roboticistas japoneses fizeram um experimentos curioso, usando as máximas de forma criativa, concatenadas com a Teoria da Relevância \[3]. Sato e sua equipe descobriram que as IAs armazenam conhecimento em seus parâmetros, mas não sabem acessá-lo sozinhas ou "ler nas entrelinhas". A solução que testaram foi transformar a teoria de Grice em instrução. Quando colocam um resumo dessas regras pragmáticas no prompt, a IA consegue organizar seu raciocínio e decifrar implicaturas. \
 \
 Máquinas aprendendo as regras invisíveis da cooperação humana. Que futuro. 
 
