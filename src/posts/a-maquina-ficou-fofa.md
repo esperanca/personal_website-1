@@ -1,8 +1,8 @@
 ---
 layout: layouts/post.njk
-title: "A máquina ficou fofa"
-metaTitle: "A máquina ficou fofa — design, intimidade e antropomorfização de agentes de IA"
-metaDesc: "Como o design de agentes de IA para criar intimidade muda a forma como percebemos confiança e os erros das máquinas"
+title: "Notas #011 - A máquina ficou fofa"
+metaTitle: "Notas #011 - A máquina ficou fofa"
+metaDesc: "sobre design de agentes, intimidade e antropomorfização de máquinas"
 date: 2026-10-10
 tags:
   - IA
@@ -49,7 +49,7 @@ E isso aparece até na hora do erro. Uma pesquisa mostrou que, quanto mais human
 
 ## Para quem desenha
 
-A pergunta da Simone continua sem uma resposta simples. Criar experiências agradáveis faz parte do nosso trabalho. A gente escolhe o tom de voz, desenha pequenos gestos, dá personalidade aos agentes. Tudo isso é design.
+A pergunta da Simone continua sem uma resposta simples. Criar experiências agradáveis faz parte do nosso trabalho. A gente escolhe o tom de voz, desenha pequenos gestos, dá personalidade aos agentes. [Define o comportamento esperado](/posts/notas-007/). Tudo isso é design.
 
 Mas essas escolhas também mudam a maneira como as pessoas percebem a máquina, o que esperam dela e como interpretam seus erros.
 
