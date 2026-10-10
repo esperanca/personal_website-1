@@ -11,7 +11,7 @@ tags:
 lang: "pt-BR"
 ---
 
-Outro dia, conversando com a Simone, uma colega de trabalho, a gente caiu num assunto espinhoso: será que faz sentido desenhar agentes de IA para criar uma sensação de intimidade?
+Outro dia, conversando com a Simone Tobias, Especialista de Conteúdo e colega de trabalho, a gente caiu num assunto espinhoso: será que faz sentido desenhar agentes de IA para criar uma sensação de intimidade? É daqueles tópicos que ela e eu revisitamos interminavelmente quando o assunto é tom de voz.
 
 Fui atrás de como a psicologia social entende a intimidade. Uma das explicações descreve a intimidade como um processo entre duas pessoas, envolvendo três elementos [1]:
 
