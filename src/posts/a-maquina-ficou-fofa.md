@@ -43,9 +43,9 @@ A Meta quer que você goste da máquina. A Anthropic considera a possibilidade d
 
 E isso aparece até na hora do erro. Uma pesquisa mostrou que, quanto mais humano um chatbot parece, maior a nossa disposição para perdoar suas falhas e assumir parte da culpa [8]. Perdoar um amigo é ótimo. Perdoar um chaveiro que remarcou sua reunião para o dia errado e ainda pensar "acho que eu expliquei mal", é bem diferente.
 
-## Para quem desenha
+## Para quem desenha agentes
 
-A pergunta da Simone continua sem uma resposta simples. Mas o design de agentes — a escolha do tom de voz, da apresentação, do comportamento — influencia como o usuário decide e entende o que é certo quando algo falha.
+A pergunta da Simone continua sem uma resposta simples. Mas no design de agentes, a escolha do tom de voz, da apresentação, do comportamento e até de uma personalidade influenciam a maneira como as pessoas percebem a máquina, o que esperam dela e como interpretam seus erros.
 
 ---
 
