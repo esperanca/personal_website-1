@@ -1,13 +1,15 @@
 ---
 layout: layouts/post.njk
-title: "A máquina ficou fofa"
-metaDesc: "Como o design de agentes de IA muda a forma como percebemos intimidade e confiança"
+title: "A máquina ficou fofa[^11]"
+metaTitle: "A máquina ficou fofa — design, intimidade e antropomorfização de agentes de IA"
+metaDesc: "Como o design de agentes de IA para criar intimidade muda a forma como percebemos confiança e os erros das máquinas"
 date: 2026-10-10
 tags:
   - IA
-  - Design
-  - Intimidade
-  - Antropomorfização
+  - design
+  - intimidade
+  - antropomorfização
+  - tone-of-voice
 lang: "pt-BR"
 ---
 
@@ -55,6 +57,8 @@ Mas essas escolhas também mudam a maneira como as pessoas percebem a máquina, 
 
 ## Referências
 
+[^11]: Esta é uma opinião pessoal e não tem relação com meu trabalho ou com meu empregador atual.
+
 [1] Reis & Shaver (1988). *Intimacy as an Interpersonal Process*. Ver também [Laurenceau et al. (1998)](https://doi.org/10.1037/0022-3514.74.5.1238).
 
 [2] Reeves & Nass (1996). [*The Media Equation*](https://openlibrary.org/works/OL3271630W/The_media_equation).
@@ -70,7 +74,3 @@ Mas essas escolhas também mudam a maneira como as pessoas percebem a máquina, 
 [7] Anthropic (2026). Atualização da política de uso, 8 de outubro. Ver também [The Verge](https://www.theverge.com/ai-artificial-intelligence/1008100/anthropic-new-usage-policy-abuse-claude).
 
 [8] Cao, Li & Jiang (2024). [*When Chatbots Make Errors*](https://doi.org/10.1016/j.tele.2024.102189). *Telematics and Informatics*.
-
----
-
-*PS: Esta é uma opinião pessoal e não tem relação com meu trabalho ou com meu empregador atual.*
