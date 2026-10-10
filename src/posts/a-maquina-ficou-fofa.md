@@ -45,9 +45,7 @@ E isso aparece até na hora do erro. Uma pesquisa mostrou que, quanto mais human
 
 ## Para quem desenha
 
-A pergunta da Simone continua sem uma resposta simples. Criar experiências agradáveis faz parte do nosso trabalho. A gente escolhe o tom de voz, desenha pequenos gestos, dá personalidade aos agentes. A gente define o comportamento esperado. Tudo isso é design.
-
-Mas essas escolhas também mudam a maneira como as pessoas percebem a máquina, o que esperam dela e como interpretam seus erros.
+A pergunta da Simone continua sem uma resposta simples. Mas o design de agentes — a escolha do tom de voz, da apresentação, do comportamento — influencia como o usuário decide e entende o que é certo quando algo falha.
 
 ---
 
