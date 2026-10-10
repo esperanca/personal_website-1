@@ -3,7 +3,7 @@ layout: layouts/post.njk
 title: "Notas #011 - A máquina ficou fofa"
 metaTitle: "Notas #011 - A máquina ficou fofa"
 metaDesc: "sobre design de agentes, intimidade e antropomorfização de máquinas"
-date: 2026-10-10T18:00:00.000Z
+date: 2026-10-10T20:49:00.000Z
 tags:
   - IA
   - design
