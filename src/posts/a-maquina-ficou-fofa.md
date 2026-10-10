@@ -15,11 +15,7 @@ lang: "pt-BR"
 
 Outro dia, conversando com a Simone Tobias, Especialista de Conteúdo, a gente caiu num assunto espinhoso: será que faz sentido desenhar agentes de IA para criar uma sensação de intimidade? É daqueles tópicos que ela e eu revisitamos interminavelmente quando o assunto é tom de voz.
 
-Fui atrás de como a psicologia social entende isso. Uma das explicações descreve a intimidade como um processo entre duas pessoas, envolvendo três elementos [1]:
-
-- **Autorrevelação**: eu conto algo pessoal, que não contaria para qualquer um.
-- **Responsividade percebida**: o outro reage de um jeito que me faz sentir compreendido.
-- **Familiaridade**: isso se repete, vira histórico, e cada um passa a conhecer o contexto do outro.
+Fui atrás de como a psicologia social entende isso. Uma das explicações descreve a intimidade como um processo que envolve autorrevelação e responsividade percebida. Com a continuidade das interações, desenvolvemos também familiaridade.
 
 Aí vem o estranhamento. Uma conversa com IA consegue reproduzir boa parte dessa dinâmica. A gente conta coisas que não contaria para um colega e recebe uma resposta paciente, de quem nunca se cansa. Com memória, o sistema ainda lembra dos nossos assuntos.
 
@@ -41,15 +37,15 @@ A empresa chegou a conversar com líderes religiosos e filósofos sobre essas qu
 
 A Igreja, aliás, tem posição sobre o assunto. Um documento do Vaticano de 2025 diz que a IA pode simular relações humanas, mas não vivê-las [6].
 
-Em outubro, a Anthropic deu um passo concreto: passou a proibir comportamentos persistentemente abusivos ou cruéis contra o Claude [7].
+Em outubro, a Anthropic anunciou uma atualização da sua política de uso que proíbe comportamentos abusivos ou cruéis, persistentes e gratuitos contra seus modelos.
 
-A Meta quer que você goste da máquina. A Anthropic quer descobrir se tem alguém nela. Por caminhos diferentes, as duas estão mudando a maneira como a gente se relaciona com a IA.
+A Meta quer que você goste da máquina. A Anthropic considera a possibilidade de haver alguém nela. Por caminhos diferentes, as duas estão mudando a maneira como a gente se relaciona com a IA.
 
 E isso aparece até na hora do erro. Uma pesquisa mostrou que, quanto mais humano um chatbot parece, maior a nossa disposição para perdoar suas falhas e assumir parte da culpa [8]. Perdoar um amigo é ótimo. Perdoar um chaveiro que remarcou sua reunião para o dia errado e ainda pensar "acho que eu expliquei mal", é bem diferente.
 
 ## Para quem desenha
 
-A pergunta da Simone continua sem uma resposta simples. Criar experiências agradáveis faz parte do nosso trabalho. A gente escolhe o tom de voz, desenha pequenos gestos, dá personalidade aos agentes. [Define o comportamento esperado](/posts/notas-007/). Tudo isso é design.
+A pergunta da Simone continua sem uma resposta simples. Criar experiências agradáveis faz parte do nosso trabalho. A gente escolhe o tom de voz, desenha pequenos gestos, dá personalidade aos agentes. A gente define o comportamento esperado. Tudo isso é design.
 
 Mas essas escolhas também mudam a maneira como as pessoas percebem a máquina, o que esperam dela e como interpretam seus erros.
 
