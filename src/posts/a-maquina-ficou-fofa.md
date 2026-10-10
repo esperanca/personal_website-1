@@ -3,7 +3,7 @@ layout: layouts/post.njk
 title: "Notas #011 - A máquina ficou fofa"
 metaTitle: "Notas #011 - A máquina ficou fofa"
 metaDesc: "sobre design de agentes, intimidade e antropomorfização de máquinas"
-date: 2026-10-10
+date: 2026-10-10T18:00:00.000Z
 tags:
   - IA
   - design
@@ -23,7 +23,7 @@ Fui atrás de como a psicologia social entende isso. Uma das explicações descr
 
 Aí vem o estranhamento. Uma conversa com IA consegue reproduzir boa parte dessa dinâmica. A gente conta coisas que não contaria para um colega e recebe uma resposta paciente, de quem nunca se cansa. Com memória, o sistema ainda lembra dos nossos assuntos.
 
-Parte desse estranhamento tem nome: antropomorfização, a nossa mania de enxergar gente onde não tem. Já falei dela aqui no blog. Não precisa de muito para acontecer. Há trinta anos sabemos que a gente trata computadores com regras sociais, sendo educado e retribuindo gentileza, mesmo sabendo que são máquinas [2].
+Parte desse estranhamento tem nome: antropomorfização, a nossa mania de enxergar gente onde não tem. Não precisa de muito para acontecer. Há trinta anos sabemos que a gente trata computadores com regras sociais, sendo educado e retribuindo gentileza, mesmo sabendo que são máquinas [2].
 
 As big techs e os frontier labs estão lidando com essa questão de jeitos bem diferentes.
 
