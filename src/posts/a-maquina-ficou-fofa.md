@@ -17,7 +17,7 @@ Outro dia, conversando com a Simone Tobias, Especialista de Conteúdo, a gente c
 
 ![Jolly, o agente pessoal da Meta](/images/jolly-cat.png)
 
-Fui atrás de como a psicologia social entende isso. Uma das explicações descreve a intimidade como um processo que envolve autorrevelação e responsividade percebida. Com a continuidade das interações, desenvolvemos também familiaridade.
+Fui atrás de como a psicologia social entende isso. Para ela, a intimidade cresce num ciclo [1]. Alguém se abre e conta algo pessoal, o que os pesquisadores chamam de autorrevelação. A outra pessoa responde de um jeito que faz quem se abriu se sentir compreendido, aceito e cuidado. É a responsividade percebida. Quando esse ciclo se repete ao longo do tempo, nasce a familiaridade.
 
 Aí vem o estranhamento. Uma conversa com IA consegue reproduzir boa parte dessa dinâmica. A gente conta coisas que não contaria para um colega e recebe uma resposta paciente, de quem nunca se cansa. Com memória, o sistema ainda lembra dos nossos assuntos.
 
