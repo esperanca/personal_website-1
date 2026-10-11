@@ -15,6 +15,8 @@ lang: "pt-BR"
 
 Outro dia, conversando com a Simone Tobias, Especialista de Conteúdo, a gente caiu num assunto espinhoso: será que faz sentido desenhar agentes de IA para criar uma sensação de intimidade? É daqueles tópicos que ela e eu revisitamos interminavelmente quando o assunto é tom de voz.
 
+![Jolly, o agente pessoal da Meta](/images/jolly-cat.png)
+
 Fui atrás de como a psicologia social entende isso. Uma das explicações descreve a intimidade como um processo que envolve autorrevelação e responsividade percebida. Com a continuidade das interações, desenvolvemos também familiaridade.
 
 Aí vem o estranhamento. Uma conversa com IA consegue reproduzir boa parte dessa dinâmica. A gente conta coisas que não contaria para um colega e recebe uma resposta paciente, de quem nunca se cansa. Com memória, o sistema ainda lembra dos nossos assuntos.
