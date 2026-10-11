@@ -19,9 +19,9 @@ Outro dia, conversando com a Simone Tobias, Especialista de Conteúdo, a gente c
 
 Fui atrás de como a psicologia social entende isso. Para ela, a intimidade cresce num ciclo [1]. Alguém se abre e conta algo pessoal, o que os pesquisadores chamam de autorrevelação. A outra pessoa responde de um jeito que faz quem se abriu se sentir compreendido, aceito e cuidado. É a responsividade percebida. Quando esse ciclo se repete ao longo do tempo, nasce a familiaridade.
 
-Aí vem o estranhamento. Uma conversa com IA consegue reproduzir boa parte dessa dinâmica. A gente conta coisas que não contaria para um colega e recebe uma resposta paciente, de quem nunca se cansa. Com memória, o sistema ainda lembra dos nossos assuntos.
+Uma conversa com IA consegue reproduzir boa parte dessa dinâmica. A gente conta coisas que não contaria para um colega e recebe uma resposta paciente, de quem nunca se cansa. Com memória, o sistema ainda lembra dos nossos assuntos. E isso pode soar estranho para muitas pessoas, mas é um comportamento social comum.
 
-Parte desse estranhamento tem nome: antropomorfização, a nossa mania de enxergar gente onde não tem. Não precisa de muito para acontecer. Há trinta anos sabemos que a gente trata computadores com regras sociais, sendo educado e retribuindo gentileza, mesmo sabendo que são máquinas [2].
+O nome é antropomorfização: nossa mania de enxergar gente onde não tem. Não precisa de muito para acontecer. Há trinta anos sabemos que a gente trata computadores com regras sociais, sendo educado e retribuindo gentileza, mesmo sabendo que são máquinas [2].
 
 As big techs e os frontier labs estão lidando com essa questão de jeitos bem diferentes.
 
@@ -47,7 +47,7 @@ E isso aparece até na hora do erro. Uma pesquisa mostrou que, quanto mais human
 
 ## Para quem desenha agentes
 
-A pergunta da Simone continua sem uma resposta simples. Mas no design de agentes, a escolha do tom de voz, da apresentação, do comportamento e até de uma personalidade influenciam a maneira como as pessoas percebem a máquina, o que esperam dela e como interpretam seus erros.
+A pergunta da Simone continua sem uma resposta simples. Mas no design de agentes, a escolha do tom de voz, da apresentação, do comportamento e até de uma personalidade influenciam a maneira como as pessoas percebem a máquina, o que esperam dela e como interpretam seus erros. No nosso time, temos falado muito sobre o conceito de calibração de confiança: ajudar as pessoas a confiar em um sistema na medida certa, compreendendo suas capacidades e limitações. 
 
 ---
 
