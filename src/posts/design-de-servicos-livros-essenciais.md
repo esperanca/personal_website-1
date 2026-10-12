@@ -24,7 +24,7 @@ De Chris Risdon e Patrick Quattlebaum. A narrativa é direta e ajuda a entender 
 
 ## Good Services
 
-De Louise Downe. Sou fã declarada da Lou. Fundou a disciplina de design de serviços no GOV.UK e hoje é fundadora da School of Good Services. O livro traz 10 princípios que tornam um serviço bom e explica o motivo. Vale também conferir o Bad Services, que fala sobre os cinco problemas que impedem organizações de oferecer serviços que funcionam.
+De Louise Downe. Sou fã declarado da Lou. Fundou a disciplina de design de serviços no GOV.UK e hoje é fundadora da School of Good Services. O livro traz 10 princípios que tornam um serviço bom e explica o motivo. Vale também conferir o Bad Services, que fala sobre os cinco problemas que impedem organizações de oferecer serviços que funcionam.
 
 ## The Experience Economy (O Espetáculo dos Negócios)
 
