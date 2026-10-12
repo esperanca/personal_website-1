@@ -3,7 +3,7 @@ layout: layouts/post.njk
 title: "Notas #012 - Design de serviços: livros essenciais"
 metaTitle: "Notas #012 - Design de serviços: livros essenciais"
 metaDesc: "sobre cinco referências essenciais em design de serviços"
-date: 2026-10-11T00:00:00-03:00
+date: 2026-10-12T08:21:00-03:00
 tags:
   - design de serviços
   - experiência do cliente
