@@ -24,7 +24,7 @@ De [Chris Risdon](https://rosenverse.rosenfeldmedia.com/people/chris-risdon) e P
 
 ## Good Services
 
-De [Louise Downe](https://loudowne.com/). Sou fã declarado de Lou. Fundou a disciplina de design de serviços no GOV.UK e hoje está à frente da School of Good Services. O livro traz 10 princípios que tornam um serviço bom e explica o motivo. Vale também conferir o Bad Services, que fala sobre os cinco problemas que impedem organizações de oferecer serviços que funcionam.
+De [Louise Downe](https://loudowne.com/). Sou fã declarado de Lou. Fundou a disciplina de design de serviços no GOV.UK e hoje está à frente da School of Good Services. O livro traz 10 princípios que tornam um serviço bom e explica o motivo. Vale também conferir o Bad Services, que fala sobre os cinco problemas que impedem organizações de oferecer serviços que funcionam. Para avaliar a qualidade de um serviço com base nesses princípios, use a [Good Service Scale](https://good.services/the-good-services-scale).
 
 ## The Experience Economy (O Espetáculo dos Negócios)
 
@@ -36,4 +36,4 @@ Uma [cópia do artigo original](https://enlillebid.dk/mmd/wp-content/uploads/201
 
 ## Just Enough Research
 
-De [Erika Hall](https://www.muledesign.com/mule-design-founder-bios), cofundadora da Mule Design. Este livro fala de pesquisa. Boa pesquisa, porém, evita que a gente desenhe a coisa errada. O livro reúne métodos práticos e ajuda quem quer começar a fazer pesquisa sem depender de muito tempo ou orçamento. A seção de [links no site do livro](https://www.mulebooks.com/just-enough-research/resources) é um tesouro.
+De [Erika Hall](https://www.muledesign.com/mule-design-founder-bios), cofundadora da Mule Design. Este livro fala de fazer pesquisa sem depender de muito tempo ou orçamento. A seção de [links no site do livro](https://www.mulebooks.com/just-enough-research/resources) é um tesouro.
