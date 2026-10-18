@@ -37,3 +37,11 @@ Uma [cópia do artigo original](https://enlillebid.dk/mmd/wp-content/uploads/201
 ## Just Enough Research
 
 De [Erika Hall](https://www.muledesign.com/mule-design-founder-bios), cofundadora da Mule Design. Este livro fala de fazer pesquisa sem depender de muito tempo ou orçamento. A seção de [links no site do livro](https://www.mulebooks.com/just-enough-research/resources) é um tesouro.
+
+Se você quer se aprofundar:
+
+O Luis Alt (também da Livework) fez uma lista públicas de livros: https://luisalt.com/leituras/ que tem várias pérolas.
+
+Érico Fileno compartilhou comigo em 2011 um belo website, com 120 livros: [Service Design Books](http://www.servicedesignbooks.org/)
+
+E você, qual livro colocaria nessa lista inicial?
