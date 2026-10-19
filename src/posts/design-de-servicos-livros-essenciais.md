@@ -40,7 +40,7 @@ De [Erika Hall](https://www.muledesign.com/mule-design-founder-bios), cofundador
 
 Se você quer se aprofundar:
 
-O Luis Alt (também da Livework) fez uma lista públicas de livros: https://luisalt.com/leituras/ que tem várias pérolas.
+O Luis Alt (também da Livework) fez uma lista pública de livros: [luisalt.com/leituras](https://luisalt.com/leituras/) que tem várias pérolas.
 
 Érico Fileno compartilhou comigo em 2011 um belo website, com 120 livros: [Service Design Books](http://www.servicedesignbooks.org/)
 
