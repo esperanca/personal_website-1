@@ -31,11 +31,11 @@
   border-radius: $radius-lg;
   border-width: 0;
   max-width: $space-xxl * 2.5;
-  width: 100%;
+  width: auto;
   font-weight: 700;
   font-family: 'Playfair Display', serif;
   font-size: $text-2xl;
-  padding: $space-xs;
+  padding: $space-xs $space-lg;
   transition: all $transition-base;
 
   &:focus {
