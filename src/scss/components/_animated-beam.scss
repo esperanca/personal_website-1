@@ -1,0 +1,140 @@
+// Animated beam (port do Magic UI). Cores do sistema: navy como base,
+// azul de acento só no brilho que percorre a linha, em baixa intensidade.
+.beam {
+  margin-top: $space-xl;
+
+  &__stage {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 34rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: $space-sm 0;
+  }
+
+  &__lines {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    pointer-events: none;
+  }
+
+  &__path {
+    fill: none;
+    stroke: $black;
+    stroke-opacity: 0.12;
+    stroke-width: 1;
+  }
+
+  &__glow {
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+  }
+
+  &__stop-start {
+    stop-color: $black;
+  }
+
+  &__stop-end {
+    stop-color: $accent;
+  }
+
+  &__col {
+    position: relative;
+    z-index: $z-base;
+    display: flex;
+    flex-direction: column;
+    gap: $space-lg;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-xxs;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background: $white;
+    border: 1px solid rgba(0, 0, 54, 0.2);
+    color: $black;
+
+    svg,
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+      max-width: none;
+      margin: 0;
+    }
+
+    svg {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.25;
+      stroke-linejoin: round;
+    }
+  }
+
+  &__label {
+    font-size: $text-xs;
+    line-height: 1.2;
+    color: $gray-6;
+  }
+
+  &__hub {
+    position: relative;
+    z-index: $z-base;
+    width: 6rem;
+    height: 6rem;
+    padding: $space-xxs;
+    background: $white;
+    border: 1px solid $black;
+
+    img {
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      margin: 0;
+      object-fit: cover;
+    }
+  }
+
+  &__caption {
+    margin-top: $space-md;
+    text-align: center;
+    font-size: $text-sm;
+    color: $gray-6;
+  }
+
+  @include phone {
+    &__stage {
+      max-width: 22rem;
+    }
+
+    &__col {
+      gap: $space-md;
+    }
+
+    &__icon {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    &__hub {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+  }
+}

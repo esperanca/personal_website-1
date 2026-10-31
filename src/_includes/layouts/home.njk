@@ -25,6 +25,9 @@
             <img loading="lazy" src="{{ introImage | url }}" alt="">
           </div>
         </div>
+        {% if integrations and integrations.apps.length %}
+          {% include "partials/components/animated-beam.njk" %}
+        {% endif %}
         <hr/>
       </div>
 

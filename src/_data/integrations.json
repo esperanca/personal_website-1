@@ -1,0 +1,14 @@
+{
+  "caption": "Conecta com as ferramentas que você já usa.",
+  "hub": {
+    "label": "Daniel Souza",
+    "image": "/images/favicon.png"
+  },
+  "apps": [
+    { "label": "E-mail", "icon": "mail", "side": "left" },
+    { "label": "Agenda", "icon": "calendar", "side": "left" },
+    { "label": "Chat", "icon": "chat", "side": "left" },
+    { "label": "Documentos", "icon": "doc", "side": "right" },
+    { "label": "Planilhas", "icon": "sheet", "side": "right" }
+  ]
+}
