@@ -1,0 +1,1 @@
+function e(e){return!e||!e.startsWith(`/`)?e:`/benchmark/`.replace(/\/$/,``)+e}export{e as t};
