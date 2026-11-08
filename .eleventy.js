@@ -74,6 +74,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/js');
   eleventyConfig.addPassthroughCopy('src/admin');
   eleventyConfig.addPassthroughCopy('src/robots.txt');
+  // Apresentação estática (Slidev), publicada em /benchmark/. Não passa pelo Eleventy.
+  eleventyConfig.addPassthroughCopy('src/benchmark');
+  eleventyConfig.ignores.add('src/benchmark/**');
   eleventyConfig.addPassthroughCopy('src/desafio-filosofia-educacao.html');
   eleventyConfig.addPassthroughCopy('src/estudo/filosofia');
   // Catálogo agêntico: HTML estático copiado 1:1 (links relativos funcionam em /catalogoagentico/)

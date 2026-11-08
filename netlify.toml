@@ -11,3 +11,8 @@
   for = "/estudo/*"
   [headers.values]
     X-Robots-Tag = "noindex, nofollow, noarchive"
+
+[[redirects]]
+  from = "/benchmark/*"
+  to = "/benchmark/index.html"
+  status = 200
