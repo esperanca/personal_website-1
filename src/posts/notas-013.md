@@ -5,15 +5,13 @@ metaTitle: "Comprar é mais do que comprar"
 metaDesc: sobre agentes, compras, confiança e a sensação de autonomia nas decisões do cotidiano
 socialImage: "/images/leili-feira.jpg"
 date: 2026-11-15T15:00:00.000Z
-draft: true
+draft: false
 tags:
   - agentic
   - confiança
   - automação
   - design de serviço
 ---
-
-# Comprar é mais do que comprar
 
 Hoje de manhã mostrei para a Leili o Instinct, um agente que faz coisas em seu nome. Ela me mostrou, no celular, a lista de compras que tinha feito nas Notas da Apple, com tudo o que queria comprar. E meio que pensou no trabalho que dá entrar no site do Pão de Açúcar, colocar todos os itens no carrinho e passar pelo checkout. Eu sugeri que ela tirasse um print e mandasse para o agente, que ele faria isso por ela.
 
@@ -31,9 +29,14 @@ Em termos técnicos, o agente fez o que foi pedido. Mas sempre haverá demandas 
 
 Isso me fez pensar na sensação de tomar decisões no detalhe. E que as pessoas precisam sentir algo mais do que eficiência quando fazem compras ou tomam decisões importantes para elas.
 
-O antropólogo Daniel Miller explora justamente essa relação em *A Theory of Shopping*, publicado pela Polity em 1998. Em um ano de estudo sobre compras numa rua do norte de Londres, ele mostra como o consumo também pode ser uma prática de cuidado, mediada pelas relações que temos com outras pessoas. Muitas vezes, a gente compra pensando em alguém.
-
 Ela apagou o carrinho do app e agora estamos na feira. Ela quis escolher com mais cuidado o que vamos comer nesta semana.
+
+<figure>
+  <img src="/images/leili-feira.jpg" alt="Leili na feira, comprando suas ervas com a Lucy" loading="lazy" />
+  <figcaption>Leili na feira, comprando suas ervas com a Lucy.</figcaption>
+</figure>
+
+O antropólogo Daniel Miller explora justamente essa relação em [*A Theory of Shopping*](https://www.wiley.com/en-us/a-theory-of-shopping-p-9780745619460), publicado pela Polity em 1998. Em um ano de estudo sobre compras numa rua do norte de Londres, ele mostra como o consumo também pode ser uma prática de cuidado, mediada pelas relações que temos com outras pessoas. Muitas vezes, a gente compra pensando em alguém.
 
 Isso me faz pensar no desafio da automação e da adoção dos agentes. A adoção passa pela técnica e pelo social ao mesmo tempo. Vamos precisar entender melhor não só como as pessoas decidem, mas também como se sentem ao comprar ou decidir coisas na vida delas.
 
