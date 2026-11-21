@@ -4,8 +4,7 @@ title: "Notas #014 - Não tem ninguém do outro lado"
 metaTitle: "Não tem ninguém do outro lado"
 metaDesc: sobre atendimento automatizado, transparência operacional e responsabilidade no desenho de serviços
 date: 2026-11-21
-draft: true
-eleventyExcludeFromCollections: true
+draft: false
 tags:
   - confiança
   - automação
@@ -72,10 +71,10 @@ Alguém decidiu que o bot diria que o atendimento era humanizado.
 
 Alguém decidiu que os brindes viriam sem nenhuma menção ao atraso.
 
-Segundo as heurísticas de Nielsen, faltou visibilidade do estado do sistema: o app, o chat e o WhatsApp, e a equipe, juntos, precisam oferecer transparência operacional em todos os casos, principalmente nos erros. Mas o que me parece que faltou foi antes de tudo, responsabilidade em desenhar o "human in the loop", o ponto em que as pessoas entram no processo.
+Segundo as heurísticas de Nielsen, faltou visibilidade do estado do sistema: o app, o chat, o WhatsApp e a equipe, juntos, precisam oferecer transparência operacional em todos os casos, principalmente nos erros. Mas o que me parece que faltou foi, antes de tudo, responsabilidade em desenhar o "human in the loop", o ponto em que as pessoas entram no processo.
 
-Na minha visão, são decisões de design do serviço como um todo, mesmo quando ninguém as trata assim. Num mundo em que grande parte das interações vai acontecer por meio de conversas entre pessoas e agentes, o design de conversação e suas ferramentas são exatamente o que precisamos para remover ambiguidade e esclarecer não só intenções, mas também percepções e frustrações. No final das contas, é uma conversa entre a empresa e o cliente, independente da tecnologia.
+Na minha visão, são decisões de design do serviço como um todo, mesmo quando ninguém as trata assim. Num mundo em que grande parte das interações vai acontecer por meio de conversas entre pessoas e agentes, o design de conversação e suas ferramentas são exatamente o que precisamos para remover ambiguidade e esclarecer não só intenções, mas também percepções e frustrações. No final das contas, é uma conversa entre a empresa e o cliente, independentemente da tecnologia.
 
-Ela decidiu que não vai mais comprar nesse app. Eu aprendi com os erros da empresa, e foi ótimo para pensar nesses detalhes na hora de projetar as experiências que cuido com o meu time.
+Ela decidiu que não vai mais comprar nesse app. Eu aprendi com os erros da empresa, e foi ótimo para pensar nesses detalhes na hora de projetar as experiências de que cuido com o meu time.
 
 E você, já teve alguma experiência parecida com um serviço digital?
