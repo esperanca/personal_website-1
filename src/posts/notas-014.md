@@ -25,7 +25,7 @@ Uma coisa que faço com frequência é pedir para [Leili](https://leiliane.com.b
 
 Acho que é porque existe uma questão de ética de pesquisa que sempre me acompanhou no trabalho, principalmente quando estive na Babylon Health e meu time tinha que conversar com pessoas que estavam buscando atendimento médico. O código internacional da ESOMAR, a associação mundial de pesquisa de mercado e de usuário, começa pelo dever de cuidado: quem pesquisa precisa garantir que participar não resulte em dano. Quando a pessoa observada é alguém com quem você tem uma relação, esse cuidado pesa ainda mais.
 
-Foi o que aconteceu essa semana. Indiquei para Leili um app de compras que o time do trabalho tinha me recomendado, muito porque ela já me falou que o Pão de Açúcar, o mercado predileto dela, tem vários problemas no app. No primeiro uso ela ficou impressionada. O processo de compra no app, a entrega, o cuidado com a embalagem para itens frios, os brindes.
+Foi o que aconteceu essa semana. Indiquei para Leili um app de compras que amigos tinham me recomendado, muito porque ela já me falou que o mercado onde costuma fazer compras tem vários problemas no app. No primeiro uso ela ficou impressionada. O processo de compra no app, a entrega, o cuidado com a embalagem para itens frios, os brindes.
 
 Tudo funcionou muito bem, até o momento em que algo deu errado.
 
@@ -75,6 +75,6 @@ Segundo as heurísticas de Nielsen, faltou visibilidade do estado do sistema: o 
 
 Na minha visão, são decisões de design do serviço como um todo, mesmo quando ninguém as trata assim. Num mundo em que grande parte das interações vai acontecer por meio de conversas entre pessoas e agentes, o design de conversação e suas ferramentas são exatamente o que precisamos para remover ambiguidade e esclarecer não só intenções, mas também percepções e frustrações. No final das contas, é uma conversa entre a empresa e o cliente, independentemente da tecnologia.
 
-Ela decidiu que não vai mais comprar nesse app. Eu aprendi com os erros da empresa, e foi ótimo para pensar nesses detalhes na hora de projetar as experiências de que cuido com o meu time.
+Ela decidiu que não vai mais comprar nesse app, e com razão.
 
 E você, já teve alguma experiência parecida com um serviço digital?
