@@ -67,9 +67,11 @@ A compra foi resolvida. A embalagem e o brinde não impressionaram desta vez. O 
 
 Por trás de cada uma dessas falhas, houve escolhas de projeto:
 
-Alguém decidiu que o bot diria que o atendimento era humanizado, mascarando a ausência de pessoas.
-Alguém decidiu que a janela de remarcação seria de uma hora, transferindo o ônus do erro para o cliente.
-Alguém decidiu que os brindes viriam sem nenhuma menção ao atraso, separando o agrado da reparação.
+Alguém decidiu que o bot diria que o atendimento era humanizado.
+
+Alguém decidiu que a janela para remarcar seria de uma hora e que a automação cobriria todos os casos.
+
+Alguém decidiu que os brindes viriam sem nenhuma menção ao atraso.
 
 Quando olhamos para as heurísticas de Nielsen, o que falta evidente é a visibilidade do estado do sistema. O app, o chat, o WhatsApp e a equipe deveriam funcionar juntos para oferecer transparência operacional — sobretudo nos momentos de falha. Mais do que isso, faltou responsabilidade em desenhar o "human in the loop", definindo onde e como as pessoas entram quando o fluxo automatizado colapsa.
 
