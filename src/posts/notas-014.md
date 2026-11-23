@@ -47,7 +47,7 @@ Só depois ela percebeu que o [atendimento automático simulava uma pessoa](/pos
 
 > "Em nenhum momento a pessoa que me respondeu falou 'olá, fulano, meu nome é tal e eu estou aqui pra te ajudar'. Não teve uma pessoa com nome conversando comigo. Eu tenho que me identificar o tempo todo, mas lá do outro lado não tinha ninguém com nenhum nome pra eu falar 'fulano, e aí?'."
 
-Não tinha ninguém do outro lado. E aí a questão não é a experiência da marca, o preço e tal, mas uma sensação de desrespeito. Não só por não ter o problema resolvido, mas por sentir que a empresa fingiu escutar.
+Não tinha ninguém do outro lado. E aí a questão não é preço, relevância da marca ou experiência. A sensação é parecida com desrespeito. Não só por não ter o problema resolvido, mas por sentir que a empresa fingiu escutar.
 
 Vejo que esse é o caminho que levou milhões de pessoas a perderem a confiança no atendimento automatizado. Nem sempre é sobre ter alguém imediatamente pra falar com você, mas sobre ter a certeza de que existe alguém responsável do outro lado, acompanhando quando algo pode dar errado. Quando esse alguém não aparece, a responsabilidade não some. Ela só muda de lado e vai parar no cliente.
 
