@@ -65,13 +65,13 @@ Ninguém nem perguntou para ela o que tinha dado errado. A empresa assumiu que o
 
 A compra foi resolvida. A embalagem e o brinde não impressionaram desta vez. O que ficou foi a sensação de que não tinha ninguém nos bastidores.
 
-Alguém decidiu que a janela para remarcar seria de uma hora e que a automação cobriria todos os casos.
+Por trás de cada uma dessas falhas, houve escolhas de projeto:
 
-Alguém decidiu que o bot diria que o atendimento era humanizado.
+Alguém decidiu que o bot diria que o atendimento era humanizado, mascarando a ausência de pessoas.
+Alguém decidiu que a janela de remarcação seria de uma hora, transferindo o ônus do erro para o cliente.
+Alguém decidiu que os brindes viriam sem nenhuma menção ao atraso, separando o agrado da reparação.
 
-Alguém decidiu que os brindes viriam sem nenhuma menção ao atraso.
-
-Segundo as heurísticas de Nielsen, faltou visibilidade do estado do sistema: o app, o chat, o WhatsApp e a equipe, juntos, precisam oferecer transparência operacional em todos os casos, principalmente nos erros. Mas o que me parece que faltou foi, antes de tudo, responsabilidade em desenhar o "human in the loop", o ponto em que as pessoas entram no processo.
+Quando olhamos para as heurísticas de Nielsen, o que falta evidente é a visibilidade do estado do sistema. O app, o chat, o WhatsApp e a equipe deveriam funcionar juntos para oferecer transparência operacional — sobretudo nos momentos de falha. Mais do que isso, faltou responsabilidade em desenhar o "human in the loop", definindo onde e como as pessoas entram quando o fluxo automatizado colapsa.
 
 Na minha visão, são decisões de design do serviço como um todo, mesmo quando ninguém as trata assim. Num mundo em que grande parte das interações vai acontecer por meio de conversas entre pessoas e agentes, o design de conversação e suas ferramentas são exatamente o que precisamos para remover ambiguidade e esclarecer não só intenções, mas também percepções e frustrações. No final das contas, é uma conversa entre a empresa e o cliente, independentemente da tecnologia.
 
