@@ -4,7 +4,7 @@ title: "Notas #015 - Desenhando conversas"
 metaTitle: "Desenhando conversas"
 metaDesc: "sobre os fundamentos, os termos e os princípios do design conversacional — e por que desenhar conversas melhores virou prioridade"
 date: 2026-11-28T09:00:00-03:00
-updated: 2026-11-28T13:31:14-03:00
+updated: 2026-11-28T13:36:46-03:00
 draft: false
 tags:
   - design conversacional
@@ -14,11 +14,11 @@ tags:
 lang: "pt-BR"
 ---
 
-Muitas vezes me pego pensando que, apesar das mudanças nos materiais e nas tecnologias, muitos dos fundamentos se mantêm. Os materiais e a forma do fazer mudam, mas design é sempre sobre intenção, percepção, propósito. Os fundamentos (*first principles*) se mantêm. E as necessidades também: nunca foi tão necessário no mundo criar conversas melhores, e design é uma das ferramentas para isso.
+Para me atualizar profissionalmente, tenho pesquisado bastante sobre design conversacional. Agora uma parte boa do meu time é de conversation designers, e o tema também ocupa um capítulo do meu livro sobre agentes.
 
-Fiquei pensando especificamente nos fundamentos da disciplina de design conversacional, que para mim é uma mistura bela entre o design de interação e as disciplinas de conteúdo.
+Para mim, design conversacional é uma mistura bela entre o design de interação e as disciplinas de conteúdo.
 
-Para me atualizar profissionalmente, já que agora uma parte boa do meu time é de conversation designers, e também porque o tema ocupa um capítulo do meu livro sobre agentes, tenho pesquisado bastante.
+Os materiais, as tecnologias e a forma do fazer mudam, mas design continua sendo sobre intenção, percepção e propósito. A necessidade de criar conversas melhores também permanece, e design é uma das ferramentas para isso.
 
 Reli alguns livros, entre eles o [*Conversational Design*](https://drive.google.com/file/d/1aqbMTt_T-P66C6GonZnKVoQr0SGaZfxg/view?usp=sharing) (primeira edição, disponível gratuitamente pela autora) e o [*Just Enough Research*](https://abookapart.com/products/just-enough-research.html), ambos da Erika Hall — cofundadora da [Mule Design](https://www.muledesign.com/) e uma referência para mim em design e pesquisa aplicada. Acompanho de perto o trabalho da Dra. Carmen Martinez, que tem doutorado em Linguística Aplicada e experiência em sistemas reais de atendimento e automação no contexto global e latino-americano. O Brasil tem várias autoras e especialistas, e tenho o privilégio de trabalhar com algumas delas. Não dá para citar todo mundo, mas uma pessoa com quem converso muito sobre o assunto é a Janaína Pereira Silva.
 
